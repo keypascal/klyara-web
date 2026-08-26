@@ -1,74 +1,87 @@
 # klyara-web
 
-The Klyara website, deployed as a Cloudflare Worker, plus the business documentation set.
+The Klyara website, deployed as a Cloudflare Worker, plus the documentation set.
 
-This repo's working copy **is** the live working folder:
+The working copy **is** the live working folder — one tree, no second copy:
 
 ```
 ...\OneDrive\Projects\WLDFIN\Companies\klyara.com\Klyara\05_Website
 ```
 
-Edit in place, then `git add -A && git commit -m "..." && git push`. There is no second copy.
-Pushing to `main` triggers the Cloudflare build, which runs `npx wrangler deploy`.
+Edit in place, then `git add -A && git commit -m "..." && git push`. Pushing to
+`main` triggers the Cloudflare build, which runs `npx wrangler deploy`.
+
+## ⚠️ Everything in this repo is publicly served
+
+`assets.directory` is `"."` — the repo root. Every file here is on the public
+internet at `https://klyara.com/<path>` unless `.assetsignore` excludes it.
+
+`.assetsignore` currently keeps out `.git`, `wrangler.jsonc`, `.gitignore`,
+`.gitattributes`, `.htaccess`, `build-admin.py` and `README-admin.txt`.
+**Do not remove the `.git` line** — Workers, unlike Pages, does not exclude it
+automatically, and publishing `.git` publishes the entire commit history.
+
+Before adding a file to this repo, decide whether the world should be able to
+read it. If not, it needs an `.assetsignore` entry in the same commit.
+
+### Known: the document library is public
+
+`assets/docs/` (148 files) and `marketing/`, `build/`, `app/`, `misc/` are all
+publicly downloadable. That includes the business plan, financial model, pricing
+and scope strategy, competitor benchmark, risk register and the offer letter.
+
+`login.html` is **not** access control — it compares credentials against string
+literals in the page source on a static site, so anyone can read them with View
+Source. Access control is a known outstanding task, not an oversight.
 
 ## Layout
 
 | Path | What it is |
 |---|---|
-| `public/` | **The site.** Everything here is served. `public/index.html` is the homepage. |
-| `_internal/` | Business documentation. Not served — see below. |
-| `wrangler.jsonc` | Worker config. `assets.directory` is `./public`. |
-| `README.md`, `.gitignore`, `.gitattributes` | Repo housekeeping, not served. |
-
-Site URLs are unchanged by the `public/` folder: `public/` *is* the web root, so
-`public/pricing.html` is still `https://klyara.com/pricing`.
-
-## Why the site sits in `public/`
-
-`_internal/` holds the business plan, pricing strategy, competitor benchmark, market intelligence
-and risk register. If the assets directory were the repo root, a single wrong line in an ignore file
-would publish all of it — along with `.git`, which would expose the entire history.
-
-Putting the site in `public/` makes that structurally impossible: `_internal/` and `.git` are
-siblings of the assets directory, not inside it, so Wrangler never sees them.
-`public/.assetsignore` is a second layer, not the only one.
-
-**Do not change `assets.directory` to `"."`.**
+| `index.html`, `pricing.html`, … | Site pages, served from the root |
+| `services/`, `blog/`, `tools/` | Site sections |
+| `assets/` | Images, fonts, CSS/JS, and the `assets/docs/` library |
+| `fonts/` | Web fonts |
+| `marketing/` | 23 launch, SEO, pricing, sales and ops documents (markdown) |
+| `build/` | Build Manual & Business Plan |
+| `app/` | Portal platform decision, app build plan, Lovable prompt |
+| `misc/` | Content generator, Craig intake notes |
+| `archive/` | Superseded revisions — see `archive/README.md` |
+| `DOCS-INDEX.md` | Document-by-document index of the above |
+| `worker/` | Cloudflare Worker code — to be added |
 
 ## Deploying
 
 Cloudflare Workers Builds is connected to this repo:
 
 - **Deploy command:** `npx wrangler deploy`
-- **Build command:** none — the site is plain HTML, nothing to compile
-- **Root directory:** repo root (where `wrangler.jsonc` lives)
+- **Build command:** none — plain HTML, nothing to compile
+- **Root directory:** repo root
 
 Locally: `npx wrangler dev` to preview, `npx wrangler deploy` to ship.
 
-`404.html` is wired up via `not_found_handling`, and `html_handling` is set to
-`auto-trailing-slash` so `/about` serves `about.html`.
+`404.html` is wired via `not_found_handling`; `html_handling` is
+`auto-trailing-slash`, so `/pricing` serves `pricing.html`.
 
-## `_internal/`
+### Domain
 
-| Path | Contents |
-|---|---|
-| `_internal/marketing/` | 24 launch, SEO, pricing, sales and ops documents |
-| `_internal/build/` | Klyara Build Manual & Business Plan |
-| `_internal/app/` | Portal platform decision, app build plan, Lovable prompt |
-| `_internal/misc/` | Content generator script, Craig intake notes |
-| `_internal/admin-tooling/` | `build-admin.py` and its README |
-| `_internal/legacy/` | Old Apache `.htaccess`, kept for reference only — Cloudflare ignores it |
+`klyara.com` is attached as a Custom Domain — Cloudflare manages its DNS record
+and certificate, so do not hand-edit that record.
 
-See `_internal/README.md` for the document-by-document index.
+`www.klyara.com` is **not** attached. It still has an old proxied placeholder
+record serving `webserver is functioning normally`. A Custom Domain cannot be
+created on a hostname that already has a DNS record, so delete that record
+first, then add to `wrangler.jsonc`:
 
-**Note on `build-admin.py`:** it resolves paths relative to its own location and reads from a Linux
-path (`/root/klyara/v2/out/`) that does not exist on this machine, so it cannot run as-is. Moving it
-out of the site root does not make it any more broken, but if you revive it, its output paths now
-need to point at `public/`.
+```jsonc
+{ "pattern": "www.klyara.com", "custom_domain": true }
+```
+
+Fallback URL, always available: `klyara-web.keys-domains-moveall.workers.dev`
 
 ## Related
 
-- [`keypascal/Klyara-WebSite`](https://github.com/keypascal/Klyara-WebSite) — earlier backup of the
-  same site, superseded by this repo. Archive it rather than pushing to both.
-- Source of truth for `_internal/` documents is the **klyara.com Claude project**; edits here do not
-  flow back to it automatically.
+- Source of truth for the markdown documents is the **klyara.com Claude
+  project**; edits here do not flow back to it.
+- `keypascal/Klyara-WebSite` is the earlier backup of this site and is
+  superseded. Delete or archive it — pushing there deploys nothing.
