@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klyara Control</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Internal control panel. Not a public page.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Bricolage-Display-sub.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Instrument-Reg-sub.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Bricolage-Semi-sub.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+<div id="veil" aria-hidden="true"><div class="vk">KLYARA<i>.</i></div></div>
+<div id="progress"></div>
+
+<header class="hdr ahdr">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Klyara home"><span class="kmk"><svg viewBox="0 0 88 88" aria-hidden="true"><polygon points="20,16 35,16 35,40 57,16 76,16 47.5,46 76,72 56,72 35,52 35,72 20,72"/></svg></span><b>Klyara</b></a>
+    <span class="ahdr-r">
+      <span class="clock" id="a-clock"></span>
+      <span class="badge">Control</span>
+      <a class="btn btn-line btn-sm" href="login.html"><span>Sign out</span></a>
+    </span>
+  </div>
+</header>
+
+<a class="a-skip" href="#a-main">Skip to the panel</a>
+
+<main class="wrap ashell" id="a-main">
+
+  <!-- ── rail ──────────────────────────────────────────────────────────── -->
+  <div class="arail">
+    <p class="arail-h">Views</p>
+    <div class="atabs" role="tablist" aria-label="Panel views">
+      <button class="atab" role="tab" data-view="plan" aria-selected="false" aria-controls="v-plan" id="t-plan">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></svg>
+        <span>90-day plan</span><span class="n" id="n-plan"></span></button>
+      <button class="atab" role="tab" data-view="bplan" aria-selected="false" aria-controls="v-bplan" id="t-bplan">
+        <svg viewBox="0 0 24 24"><path d="M4 4.5h7a3 3 0 0 1 3 3V21a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4.5h-3.5a2.5 2.5 0 0 0-2.5 2.5V21a2.5 2.5 0 0 1 2.5-2.5H20z"/></svg>
+        <span>Business plan</span><span class="n" id="n-bplan"></span></button>
+      <button class="atab" role="tab" data-view="library" aria-selected="false" aria-controls="v-library" id="t-library">
+        <svg viewBox="0 0 24 24"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>
+        <span>Documents</span><span class="n" id="n-library"></span></button>
+      <button class="atab" role="tab" data-view="compliance" aria-selected="false" aria-controls="v-compliance" id="t-compliance">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.4-3.1 8.3-7.5 9.5-4.4-1.2-7.5-5.1-7.5-9.5V6z"/><path d="m9 12 2 2 4-4.5"/></svg>
+        <span>Compliance</span><span class="n">4</span></button>
+      <button class="atab" role="tab" data-view="links" aria-selected="false" aria-controls="v-links" id="t-links">
+        <svg viewBox="0 0 24 24"><path d="M10 13.5a4 4 0 0 0 5.7.4l3-3a4 4 0 0 0-5.7-5.7l-1.2 1.2"/><path d="M14 10.5a4 4 0 0 0-5.7-.4l-3 3a4 4 0 0 0 5.7 5.7l1.2-1.2"/></svg>
+        <span>Quick links</span><span class="n">9</span></button>
+      <button class="atab" role="tab" data-view="launch" aria-selected="false" aria-controls="v-launch" id="t-launch">
+        <svg viewBox="0 0 24 24"><path d="M12 2.5c3.5 2.4 5.5 6.2 5.5 10.4L12 18l-5.5-5.1C6.5 8.7 8.5 4.9 12 2.5z"/><circle cx="12" cy="10.5" r="2"/><path d="M8.5 17 6 21l4-1.2M15.5 17 18 21l-4-1.2"/></svg>
+        <span>Launch control</span><span class="n">06</span></button>
+    </div>
+    <p class="arail-foot">Read-only. Nothing on this panel edits, uploads or saves.<br><span id="a-gen"></span></p>
+  </div>
+
+  <!-- ── views ─────────────────────────────────────────────────────────── -->
+  <div class="aviews">
+
+  <!-- (a) 90-day plan ─────────────────────────────────────────────────── -->
+  <section class="aview" id="v-plan" role="tabpanel" aria-labelledby="t-plan">
+    <div class="ahead">
+      <span class="kicker">The plan</span>
+      <h1 class="h1">Ninety days, dated.</h1>
+      <p class="lede">Setup runs Tuesday 1 September to Sunday 13 September. Day 1 is Monday 14 September 2026.
+        Day 90 is Saturday 12 December 2026. Each day has one thing on it.</p>
+    </div>
+
+    <div id="p-now"></div>
+
+    <div class="ablock">
+      <h2 class="h2">The whole window</h2>
+      <p class="small">Four phases, seven milestones, and where today sits against them.</p>
+      <div id="p-rail"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Every day</h2>
+      <p class="small">Tap a day to open its tasks. Filled tiles are days that have passed.</p>
+      <div class="plegend" id="p-legend" role="group" aria-label="Filter phases"></div>
+      <div class="flegend" id="p-flegend"></div>
+      <div id="p-phases"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Milestones</h2>
+      <p class="small">The dates the rest of the plan keys off.</p>
+      <div class="mlist2" id="p-miles"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Hard dates inside the ninety days</h2>
+      <p class="small">Everything marked as a hard deadline in the plan. Where a deadline falls on a weekend, work to the last working day before it.</p>
+      <div class="acard"><div class="ascroll"><table class="atable" id="p-hard"></table></div></div>
+    </div>
+  </section>
+
+  <!-- (b) business plan ───────────────────────────────────────────────── -->
+  <section class="aview" id="v-bplan" role="tabpanel" aria-labelledby="t-bplan">
+    <div class="ahead">
+      <span class="kicker">The document</span>
+      <h1 class="h1">Business plan.</h1>
+      <p class="lede">Fourteen sections, read in the browser with every chart in place. The Word and PDF versions are the same document.</p>
+      <div class="dlrow" id="bp-dl"></div>
+    </div>
+    <div class="bp">
+      <nav class="bp-nav" aria-label="Business plan sections"><ol id="bp-nav"></ol></nav>
+      <div class="bp-body" id="bp-body"></div>
+    </div>
+  </section>
+
+  <!-- (c) library ─────────────────────────────────────────────────────── -->
+  <section class="aview" id="v-library" role="tabpanel" aria-labelledby="t-library">
+    <div class="ahead">
+      <span class="kicker">The pack</span>
+      <h1 class="h1">Document library.</h1>
+      <p class="lede" id="lib-lede">Everything in the delivery, in the same nine folders as the ZIP. View it here or download the file.</p>
+    </div>
+    <div class="lib-bar">
+      <label class="lib-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="lib-q" placeholder="Search titles, folders and descriptions" aria-label="Search the library">
+      </label>
+      <div class="lib-filters" id="lib-f" role="group" aria-label="Filter by folder"></div>
+    </div>
+    <div id="lib-out"></div>
+  </section>
+
+  <!-- (d) compliance ──────────────────────────────────────────────────── -->
+  <section class="aview" id="v-compliance" role="tabpanel" aria-labelledby="t-compliance">
+    <div class="ahead">
+      <span class="kicker">Status board</span>
+      <h1 class="h1">Four things stand between Klyara and trading.</h1>
+      <p class="lede">Nothing here is claimed as held. Every item is at the state it is genuinely at today.</p>
+    </div>
+
+    <div class="cbanner" data-reveal>
+      <b>Klyara is not yet AML supervised.</b>
+      <p>Until supervision lands, Klyara cannot lawfully carry on bookkeeping by way of business. Everything that offers or
+        sells the service is written for the day supervision is confirmed. There are no clients, no trading history and no results
+        to report, and nothing on the public site may say otherwise.</p>
+    </div>
+
+    <div class="cboard" id="c-board"></div>
+
+    <div class="ablock cclaims">
+      <h2 class="h2">Site claims to check against the CAP Code</h2>
+      <p class="small">From the website audit. Each one has to be true today, or future-tensed, or taken down.</p>
+      <div class="acard" id="c-claims"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">What the risk register says about these</h2>
+      <p class="small">Scored likelihood &times; impact. Anything 15 or over needs a decision this month.</p>
+      <div class="acard"><div class="ascroll"><table class="atable">
+        <thead><tr><th>Risk</th><th>L</th><th>I</th><th>Score</th><th>Early warning sign</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Fabricated testimonials stay live</td><td>4</td><td>5</td><td><b>20</b></td><td>They are still there. That is the warning sign.</td></tr>
+          <tr><td class="k">AML supervision slips past November</td><td>3</td><td>5</td><td><b>15</b></td><td>No application submitted by mid-September</td></tr>
+          <tr><td class="k">A published tax figure is wrong</td><td>2</td><td>4</td><td>8</td><td>Anything published without checking gov.uk that week</td></tr>
+        </tbody>
+      </table></div></div>
+    </div>
+  </section>
+
+  <!-- (e) quick links ─────────────────────────────────────────────────── -->
+  <section class="aview" id="v-links" role="tabpanel" aria-labelledby="t-links">
+    <div class="ahead">
+      <span class="kicker">Shortcuts</span>
+      <h1 class="h1">Quick links.</h1>
+      <p class="lede">The accounts the ninety days run on. Sign-in pages open in a new tab.</p>
+    </div>
+
+    <div class="ablock" style="margin-top:6px">
+      <h2 class="h2">Files and calendar</h2>
+      <p class="small">The OneDrive link is a placeholder until Craig pastes the real folder URL into this file.</p>
+      <div class="qgrid" data-stagger>
+        <a class="qlink ph" href="#" id="q-onedrive" aria-disabled="true">
+          <span class="qi">OD</span>
+          <span><b>OneDrive folder</b><span>The shared delivery folder</span><span class="qph">[PASTE ONEDRIVE FOLDER URL HERE]</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="https://app.cal.com/" target="_blank" rel="noopener">
+          <span class="qi">Cal</span>
+          <span><b>Cal.com</b><span>app.cal.com &middot; the booking calendar behind every CTA</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="https://app.brevo.com/" target="_blank" rel="noopener">
+          <span class="qi">Bre</span>
+          <span><b>Brevo</b><span>app.brevo.com &middot; newsletter, sequences and SMS</span></span>
+          <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Books and tax</h2>
+      <div class="qgrid" data-stagger>
+        <a class="qlink" href="https://quickbooks.intuit.com/uk/" target="_blank" rel="noopener">
+          <span class="qi">QB</span>
+          <span><b>QuickBooks Online</b><span>quickbooks.intuit.com/uk &middot; the client ledgers</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="https://www.gov.uk/guidance/get-an-hmrc-agent-services-account" target="_blank" rel="noopener">
+          <span class="qi">HM</span>
+          <span><b>HMRC Agent Services Account</b><span>gov.uk &middot; CIS, VAT and MTD filing as an agent</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="https://www.bookkeepers.org.uk/" target="_blank" rel="noopener">
+          <span class="qi">ICB</span>
+          <span><b>ICB</b><span>bookkeepers.org.uk &middot; practice licence and MLR supervision</span></span>
+          <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Presence and compliance</h2>
+      <div class="qgrid" data-stagger>
+        <a class="qlink" href="https://business.google.com/" target="_blank" rel="noopener">
+          <span class="qi">GBP</span>
+          <span><b>Google Business Profile</b><span>business.google.com &middot; verification takes 5 to 14 days</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="https://ico.org.uk/for-organisations/data-protection-fee/" target="_blank" rel="noopener">
+          <span class="qi">ICO</span>
+          <span><b>ICO data protection fee</b><span>ico.org.uk &middot; register before processing client data</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="https://www.asa.org.uk/codes-and-rulings/advertising-codes.html" target="_blank" rel="noopener">
+          <span class="qi">ASA</span>
+          <span><b>ASA / CAP Code</b><span>asa.org.uk &middot; the rules every site claim is judged against</span></span>
+          <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+
+    <p class="gate">These are sign-in pages, not credentials. Nothing on this panel stores a password, a token or a session.</p>
+  </section>
+
+  <!-- (f) launch control ──────────────────────────────────────────────── -->
+  <section class="aview" id="v-launch" role="tabpanel" aria-labelledby="t-launch">
+    <div class="ahead">
+      <span class="kicker">Launch control</span>
+      <h1 class="h1">Everything is written. The gate is a licence and five reviews.</h1>
+      <p class="lede">Twenty-seven documents, twenty web pages and a full asset set, all built and all checked.
+        What is left is not content. It is <b>one regulatory wait</b>, <b>thirty decisions only you can make</b>,
+        and the habit of asking every client for a review.</p>
+    </div>
+
+    <div class="counts" id="lc-counts">
+      <div><b data-acount="27">0</b><span>Documents</span></div>
+      <div><b data-acount="108" data-suffix="k">0</b><span>Words</span></div>
+      <div><b data-acount="20">0</b><span>Web pages</span></div>
+      <div><b data-acount="168">0</b><span>Images</span></div>
+      <div><b data-acount="14">0</b><span>Videos</span></div>
+      <div><b data-acount="12">0</b><span>PDFs</span></div>
+      <div><b data-acount="63">0</b><span>Schema blocks</span></div>
+      <div><b data-acount="0">0</b><span>Audit failures</span></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">01 &middot; Do these five things this week</h2>
+      <p class="small">Four of the five have a waiting period attached, which is the whole reason they come first.</p>
+      <ol class="steps5" data-stagger>
+        <li class="step5"><span class="n">01</span><div>
+          <h4>Take the homepage testimonials down</h4>
+          <p>Five named testimonials on klyara.com are invented. Nothing else on this page matters until they are gone.</p>
+          <p class="why">Fake reviews are a banned practice under the DMCC Act 2024 and a conduct issue during a licence application. Replacement copy is written and ready in the website audit. <span class="fchip blocking">Blocking</span></p></div></li>
+        <li class="step5"><span class="n">02</span><div>
+          <h4>Apply for the ICB practice licence</h4>
+          <p>&pound;94 application, then &pound;373&ndash;&pound;406 a year, and it includes anti-money-laundering supervision. Stated processing time is 28 days.</p>
+          <p class="why">Cheaper and faster than registering with HMRC directly, and it comes with a professional body attached. Write the application date on a wall. <span class="fchip wait">28-day wait</span></p></div></li>
+        <li class="step5"><span class="n">03</span><div>
+          <h4>Start Google Business Profile verification</h4>
+          <p>Five to fourteen days. Every local-search result in the plan depends on it, and nothing else is blocked by it.</p>
+          <p class="why">While you wait, seed the first four Q&amp;A entries &mdash; they are written out. An empty Q&amp;A panel eventually gets answered by a stranger. <span class="fchip wait">5&ndash;14 day wait</span></p></div></li>
+        <li class="step5"><span class="n">04</span><div>
+          <h4>Publish the pricing page and the tools page</h4>
+          <p>Nineteen pages already link to one or both. Until they are live, those are broken links on your own site.</p>
+          <p class="why">Of eleven firms surveyed around Guildford, one published a full price list and it was the London one. Publishing yours is the clearest competitive difference you have. <span class="fchip cost">Ready now</span></p></div></li>
+        <li class="step5"><span class="n">05</span><div>
+          <h4>Add &ldquo;founding client rate&rdquo; to every price you publish</h4>
+          <p>Twenty minutes. It is what makes the 2027 increase a scheduled event instead of a confrontation.</p>
+          <p class="why">Without it, every client who joins in the next twelve months has an implied permanent price. The modelling says the increase is worth &pound;14,160 a year at twenty clients. <span class="fchip cost">Ready now</span></p></div></li>
+      </ol>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">02 &middot; Thirty decisions only you can make</h2>
+      <p class="small">Seven blocks, about 105 minutes in one sitting. Craig is needed for two of them.</p>
+      <div class="acard"><div class="bars" id="lc-decide"></div></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">03 &middot; The ninety days</h2>
+      <p class="small">Drawn from the same plan file this panel's tracker uses, so the dates cannot drift apart.</p>
+      <div class="acard"><div class="ptl" id="lc-phases"></div></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">04 &middot; What is in the pack</h2>
+      <p class="small">Counted live from the staged delivery folders, not typed in.</p>
+      <div class="acard"><div class="bars" id="lc-pack"></div></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">05 &middot; What ships with it</h2>
+      <p class="small">Nothing here was drawn by hand. Every image, video and PDF comes out of a script.</p>
+      <div class="boxes" data-stagger>
+        <div class="bx"><h4>Web</h4><p>Twenty production pages: five local, twelve guides, the pricing page, a tools page with four working calculators, and the guide index.</p>
+          <ul><li>Cross-linked, no orphans, no broken internal links</li><li>63 JSON-LD blocks, all valid</li><li>Clean at desktop and at 390px</li><li>An Open Graph card on every page</li></ul></div>
+        <div class="bx"><h4>Content</h4><p>Sixty days of posts written in full, not outlined. Fifty-two Google Business Profile posts, dated. Twenty-four fortnightly newsletters.</p>
+          <ul><li>Fourteen vertical videos</li><li>Nine carousels, sixty slides</li><li>Twenty-two pre-written community answers</li></ul></div>
+        <div class="bx"><h4>Print &amp; sales</h4><p>Twelve PDFs, including the lead magnet, a schedule of services for the engagement letter, and the monthly client report template.</p>
+          <ul><li>A3 wall planner, A4 brand sheet</li><li>Trade counter card and review card, each with a QR</li><li>Proposal generator &mdash; edit one block, re-run</li></ul></div>
+        <div class="bx"><h4>Numbers</h4><p>A KPI workbook with 235 formulas, zero errors, every figure hand-checked.</p>
+          <ul><li>Twenty-six week tracker, four numbers a week</li><li>Twelve-month pipeline model with partner commission</li><li>Price scenario sheet for the 2027 review</li></ul></div>
+      </div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">06 &middot; What the checks found</h2>
+      <p class="small">An audit that finds nothing has usually not looked. These are the defects the checks turned up in work already called finished. All fixed.</p>
+      <div class="deflist" id="lc-defects"></div>
+      <div class="acard" style="margin-top:16px">
+        <h3 class="h3">The check is in the pack</h3>
+        <p class="small" style="margin-top:8px">Run <code>tools/audit.py</code> before any publish. It checks date-and-weekday pairs, the day-numbered plans against the launch date,
+          HTML tag balance, JSON-LD validity, meta lengths, horizontal overflow at 390px, the internal link graph, unresolved placeholders,
+          brand-token compliance, and whether every asset referenced in the documents actually exists. It should print <b>TOTAL PROBLEMS: 0</b>. It currently does.</p>
+      </div>
+    </div>
+  </section>
+
+  </div>
+</main>
+
+<div class="wrap"><div class="afoot">
+  <span>Klyara &middot; internal control panel &middot; view and download only</span>
+  <span>Prices ex VAT &middot; general guidance, not tax advice</span>
+</div></div>
+
+<div class="pvw" id="pvw" hidden role="dialog" aria-modal="true" aria-label="Document preview">
+  <div class="pvw-in">
+    <div class="pvw-h"><b id="pvw-t"></b><button class="x" id="pvw-x" aria-label="Close preview">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="pvw-b" id="pvw-b"></div>
+    <div class="pvw-f" id="pvw-f"></div>
+  </div>
+</div>
+
+<script src="assets/data/plan.js"></script>
+<script src="assets/data/library.js"></script>
+<script src="assets/data/bplan.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

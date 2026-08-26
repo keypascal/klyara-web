@@ -1,0 +1,211 @@
+KLYARA PRINT SPECIFICATION
+Everything in this folder, what size it is, and how to get it printed.
+Written 26 August 2026. Paste any section of this straight into an email to a printer.
+
+
+-------------------------------------------------------------------------------
+1. HOW THE FILES ARE NAMED
+-------------------------------------------------------------------------------
+
+  ...-PRINT.pdf     For a commercial printer. Trim size plus 3 mm bleed on every
+                    side, crop marks outside the bleed, and a real TrimBox and
+                    BleedBox written into the PDF so their software knows where
+                    the cut is. Do not print these on an office printer: the page
+                    is bigger than the finished piece.
+
+  ...-OFFICE.pdf    Exact finished size, no bleed, no marks. This is the one to
+                    print on your own laser printer or take to a high street copy
+                    shop. Print at 100%, never "fit to page".
+
+  ...-artwork.pdf   Envelopes. Exactly the finished envelope size. No bleed and no
+                    crop marks, because the envelope is already made up.
+
+  ...-guide.pdf     Envelopes. The same artwork with the window position and the
+                    Royal Mail clear zones drawn on in dashed lines. It says
+                    GUIDE LAYER - DO NOT PRINT across the bottom. Send this to
+                    the printer for reference and the -artwork file to print.
+
+
+-------------------------------------------------------------------------------
+2. THE FILE LIST AND TRIM SIZES
+-------------------------------------------------------------------------------
+
+BUSINESS CARDS                                        85 x 55 mm, double sided
+  Klyara-Business-Card-Key-85x55-PRINT.pdf            2 pages: front, then back
+  Klyara-Business-Card-Craig-85x55-PRINT.pdf          2 pages: front, then back
+  Klyara-Business-Card-Blank-85x55-PRINT.pdf          2 pages: name lines left blank
+  Klyara-Business-Cards-Key-A4-10up.pdf               10 up on A4, 2 x 5, butted
+  Klyara-Business-Cards-Craig-A4-10up.pdf             10 up on A4
+  Klyara-Business-Cards-Blank-A4-10up.pdf             10 up on A4
+
+  The 10-up sheets: page 1 is the fronts, page 2 is the backs and the backs are
+  already mirrored left to right. Print duplex, FLIP ON LONG EDGE. Cut on the
+  crop marks in the sheet margins.
+
+LETTERHEAD                                            A4, 210 x 297 mm
+  Klyara-Letterhead-A4-PRINT.pdf                      p1 first sheet, p2 continuation
+  Klyara-Letterhead-A4.docx                           the editable one, for typing in
+
+  Order the continuation sheet on the same stock, usually 1 continuation for
+  every 4 first sheets. If you are laser-printing letters at the desk instead,
+  use the .docx and forget the PDF.
+
+COMPLIMENT SLIP                                       210 x 99 mm
+  Klyara-Compliment-Slip-210x99-PRINT.pdf             single slip, bleed + marks
+  Klyara-Compliment-Slips-A4-3up.pdf                  3 up on A4, no bleed
+
+  Three 99 mm slips fill an A4 sheet exactly, so the 3-up cannot carry a bleed
+  or crop marks: there is no spare paper for them. Print A4 at 100% and
+  guillotine straight across at 99 mm and 198 mm up from the foot. For a proper
+  printed run send the single-slip PRINT file instead.
+
+ENVELOPES                                             overprint on made envelopes
+  Klyara-Envelope-DL-220x110-artwork.pdf              DL, 220 x 110 mm
+  Klyara-Envelope-DL-220x110-guide.pdf                DL with window + clear zones
+  Klyara-Envelope-C5-229x162-artwork.pdf              C5, 229 x 162 mm
+  Klyara-Envelope-C5-229x162-guide.pdf                C5 with window + clear zones
+
+SERVICE SHEETS                                        A4, 210 x 297 mm
+  Klyara-Service-Sheet-Solo-A4-PRINT.pdf
+  Klyara-Service-Sheet-Start-A4-PRINT.pdf
+  Klyara-Service-Sheet-Trade-A4-PRINT.pdf
+  Klyara-Service-Sheet-Pro-A4-PRINT.pdf
+  Klyara-Service-Sheet-Overview-A4-PRINT.pdf
+  Klyara-Service-Sheets-A4-OFFICE.pdf                 all five, exact A4, no marks
+
+  Single sided. Print the OFFICE file yourself for the van; order the PRINT
+  files when you want a box of them.
+
+LEAFLET                                               A5, 148 x 210 mm
+  Klyara-Leaflet-A5-PRINT.pdf                         2 pages, bleed + marks
+  Klyara-Leaflet-A5-OFFICE.pdf                        2 pages, exact A5
+  Klyara-Leaflet-A5-on-A4-PRINT.pdf                   one up on A4 stock, bleed + marks
+
+  Two A5 sheets side by side come to 296 mm, and A4 is 297 mm wide, so a two-up
+  A5 sheet on A4 has no room for bleed at all. The A4-hosted file above is one
+  leaflet per A4 sheet with proper bleed and marks, for a copy shop that only
+  takes A4 stock.
+
+BRAND SHEET                                           A4, 210 x 297 mm
+  Klyara-Brand-One-Pager-A4-PRINT.pdf
+  Klyara-Brand-One-Pager-A4-OFFICE.pdf
+
+EMAIL SIGNATURE                                       not printed
+  Klyara-Email-Signature-Craig.html / .txt
+  Klyara-Email-Signature-Key.html / .txt
+  Klyara-Email-Signature-TEMPLATE.html / .txt         swap the name and role in
+  Klyara-Email-Signature-INSTALL.txt                  how to fit it, per app
+
+
+-------------------------------------------------------------------------------
+3. WHAT TO TELL THE PRINTER
+-------------------------------------------------------------------------------
+
+  Colour            Supplied in RGB. Convert with your own profile. The hex
+                    values and a reference CMYK breakdown are printed on the
+                    brand sheet in this folder.
+
+  Rich black        The dark green ground is #16352A. Do not run it as a flat
+                    single-plate black. Ask for a rich build, or it will look
+                    grey and blotchy across large areas.
+
+  Bleed             3 mm on every side of every -PRINT file. TrimBox and BleedBox
+                    are set in the PDF, so an imposition program will pick the
+                    trim up automatically.
+
+  Safety            No text sits closer than 4 mm to the trim on any piece.
+
+  Fonts             Fully embedded as subsets. Nothing needs installing.
+
+  Overprint         None set. No spot colours. No transparency flattening needed.
+
+  Stock, suggested  Business cards      400 gsm uncoated, matt laminate optional
+                    Letterhead          120 gsm uncoated
+                    Compliment slips    120 gsm uncoated, same stock as the letterhead
+                    Service sheets      170 gsm silk or uncoated
+                    Leaflet             170 gsm silk
+                    Brand sheet         whatever is on the shelf
+
+                    Uncoated suits this palette better than gloss. The warm paper
+                    colour is printed ink, not the stock, so a plain white
+                    uncoated sheet is the right base.
+
+
+-------------------------------------------------------------------------------
+4. ENVELOPES: THE PRINT AREA
+-------------------------------------------------------------------------------
+
+Envelopes are overprinted after they are made, so there is no bleed and no trim.
+Whatever you send is what lands on a finished envelope. Three things constrain
+where the artwork can go.
+
+  a) THE MACHINE. Most digital envelope presses cannot print within about 5 mm of
+     any edge, and cannot print over the gummed flap or the double-thickness seams
+     down the sides. The Klyara return address sits 12 mm in from the left and
+     11 mm down from the top, which clears all of that on both sizes.
+
+  b) THE WINDOW. Two window positions are common in the UK and suppliers differ.
+     Both are drawn on the -guide files:
+
+       DL, 220 x 110 mm
+         Window A   90 x 45 mm, 20 mm from the left edge, 15 mm up from the foot
+         Window B   89 x 39 mm, 20 mm from the left edge, 18 mm up from the foot
+
+       C5, 229 x 162 mm
+         Window A   100 x 45 mm, 20 mm from the left edge, 55 mm up from the foot
+         Window B   90 x 45 mm, 25 mm from the left edge, 57 mm up from the foot
+
+     Check the actual window against the envelope you are buying before you order
+     a print run. The artwork clears both variants on both sizes, so if your
+     supplier's window is anywhere in that region you are covered.
+
+  c) ROYAL MAIL. Two areas must stay clear of any printing:
+
+       The bottom 15 mm of the whole face. This is where the sorting machines
+       spray the barcode. Nothing may be printed there, in any colour.
+
+       The top right corner, roughly 40 x 40 mm, for the stamp or the frank.
+
+     Both are drawn on the -guide files in dashed red.
+
+  d) RETURN ADDRESS. It is on the front, top left, which is the usual place for a
+     small firm and keeps it well clear of the window. If you would rather follow
+     Royal Mail's own preference, move it to the back flap: it is a single block
+     of text and moving it is a two-line change in the generator.
+
+  Send the printer the -artwork file. Send the -guide file as a reference only,
+  and say plainly that the dashed lines are not to be printed.
+
+
+-------------------------------------------------------------------------------
+5. IF SOMETHING HAS TO CHANGE
+-------------------------------------------------------------------------------
+
+Every file here is generated by a script, so a change is a one-line edit and a
+rebuild rather than a redraw:
+
+  /root/klyara/v2/build/04_brand/kprint.py        bleed, crop marks, the mark,
+                                                  the QR codes, the icon set
+  /root/klyara/v2/build/04_brand/cards.py         business cards, names and roles
+  /root/klyara/v2/build/04_brand/stationery.py    letterhead, slip, envelopes
+  /root/klyara/v2/build/04_brand/letterhead_docx.py  the editable Word letterhead
+  /root/klyara/v2/build/04_brand/sheets.py        service sheets, plan content
+  /root/klyara/v2/build/04_brand/leaflet.py       the A5 leaflet
+  /root/klyara/v2/build/04_brand/onepager.py      the brand sheet
+  /root/klyara/v2/build/04_brand/signature.py     the email signatures
+  /root/klyara/v2/build/04_brand/assets.py        the PNG logo files Word needs
+
+The names, roles and email addresses on the business cards are a dictionary at
+the top of cards.py. The plan prices and everything listed under each plan are a
+list at the top of sheets.py. Nothing is typed twice.
+
+
+-------------------------------------------------------------------------------
+6. ONE THING THAT IS DELIBERATELY MISSING
+-------------------------------------------------------------------------------
+
+There is no professional body logo, no licence number and no "AML supervised by"
+line anywhere in this pack, because the supervision is not in place yet. The
+email signature carries that line already written and commented out. Unhide it
+the day the practice licence arrives, add it to the letterhead footer at the same
+time, and not before.

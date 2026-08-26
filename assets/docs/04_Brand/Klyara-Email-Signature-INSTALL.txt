@@ -1,0 +1,70 @@
+KLYARA EMAIL SIGNATURE - HOW TO INSTALL
+
+You have three files per person:
+  Klyara-Email-Signature-<Name>.html   the signature itself
+  Klyara-Email-Signature-<Name>.txt    the plain-text version
+  this note
+
+There are no images in it. That is deliberate. Most signatures break because
+the recipient's email client blocks images and the logo turns into a grey box.
+This one is built out of coloured table cells and text, so it always shows.
+
+
+GMAIL, IN A BROWSER
+
+1. Open the .html file in Chrome or Edge. You will see the signature on a
+   white page.
+2. Select all of it: click just before the K, then press Ctrl+A (Cmd+A on a
+   Mac). Copy with Ctrl+C.
+3. In Gmail, click the cog, top right, then See all settings.
+4. Scroll down to Signature and click Create new. Give it a name.
+5. Click into the big box and paste with Ctrl+Shift+V if you can. If that
+   loses the colours, use plain Ctrl+V instead.
+6. Underneath, set both Signature defaults dropdowns to your new signature.
+7. Scroll to the bottom and click Save Changes. Gmail does not save on its own.
+
+
+OUTLOOK, THE NEW WINDOWS APP AND OUTLOOK ON THE WEB
+
+1. Open the .html file in a browser, select all, copy.
+2. Settings (cog, top right), then Accounts, then Signatures.
+3. Click New signature, name it, paste into the box.
+4. Set it for New messages and for Replies and forwards.
+5. Save.
+
+
+OUTLOOK, THE OLD DESKTOP APP
+
+1. Open the .html file in a browser, select all, copy.
+2. In Outlook: File, Options, Mail, Signatures.
+3. New, name it, paste into the Edit signature box.
+4. On the right, set New messages and Replies/forwards to it.
+5. OK.
+
+Outlook's old desktop app draws email with Word, which ignores rounded
+corners. The green square behind the K will have square corners there. That
+is expected and it is not broken.
+
+
+APPLE MAIL
+
+1. Mail, Settings, Signatures.
+2. Pick your account on the left, click +.
+3. Untick "Always match my default message font".
+4. Paste the signature in.
+
+
+IF YOU EVER NEED IT PLAIN
+
+Some systems only take plain text. Use the .txt file for those.
+
+
+WHAT NOT TO DO
+
+Do not add a photo or a logo image. Do not add "Please consider the
+environment before printing". Do not add social icons that are images.
+Every one of those is a thing that can fail to load.
+
+One more line will be added the day the practice licence arrives: the
+supervising body and the licence number. It is already written into the
+.html file as a comment; unhide it then, and not before.

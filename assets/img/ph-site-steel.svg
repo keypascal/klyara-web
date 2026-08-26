@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAE3D2"/><stop offset="1" stop-color="#F4EFE4"/></linearGradient>
+<linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D4534"/><stop offset="1" stop-color="#16352A"/></linearGradient></defs>
+<rect width="900" height="640" fill="url(#sky)"/>
+<circle cx="740" cy="120" r="64" fill="#C08A2E" opacity=".9"/>
+<rect y="490" width="900" height="190" fill="#196A48" opacity=".16"/><rect y="516" width="900" height="200" fill="url(#pg)"/><g stroke="#16352A" stroke-width="14" fill="none" stroke-linecap="round">
+<path d="M110 560 V150 M110 150 H620 M620 150 V200 M110 150 L200 220 M110 260 L180 190"/>
+<path d="M560 150 V330" stroke-width="6"/></g>
+<rect x="520" y="330" width="84" height="60" fill="#C08A2E"/><rect x="70" y="540" width="80" height="40" fill="#16352A"/><rect x="560" y="250" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="630" y="250" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="700" y="250" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="560" y="320" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="630" y="320" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="700" y="320" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="560" y="390" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="630" y="390" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="700" y="390" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="560" y="460" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="630" y="460" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="700" y="460" width="58" height="58" fill="none" stroke="#16352A" stroke-width="8"/><rect x="548" y="530" width="226" height="18" fill="#16352A"/>
+<rect y="614" width="900" height="26" fill="#16352A"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAE3D2"/><stop offset="1" stop-color="#F4EFE4"/></linearGradient>
+<linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D4534"/><stop offset="1" stop-color="#16352A"/></linearGradient></defs>
+<rect width="900" height="640" fill="url(#sky)"/>
+<circle cx="740" cy="120" r="64" fill="#C08A2E" opacity=".9"/>
+<rect x="150" y="120" width="600" height="410" rx="18" fill="#fff" stroke="#EAE3D2" stroke-width="4"/><rect x="150" y="120" width="600" height="54" rx="18" fill="#16352A"/><circle cx="185" cy="147" r="8" fill="#C08A2E"/><circle cx="210" cy="147" r="8" fill="#7BC79A"/><rect x="190" y="210" width="240" height="120" rx="10" fill="#196A48"/><rect x="450" y="210" width="260" height="18" rx="9" fill="#EAE3D2"/><rect x="450" y="244" width="220" height="18" rx="9" fill="#EAE3D2"/><rect x="450" y="290" width="150" height="40" rx="20" fill="#C08A2E"/><rect x="190" y="360" width="520" height="14" rx="7" fill="#EAE3D2"/><rect x="190" y="390" width="480" height="14" rx="7" fill="#EAE3D2"/><rect x="190" y="430" width="500" height="60" rx="10" fill="#7BC79A" opacity=".5"/>
+<rect y="614" width="900" height="26" fill="#16352A"/>
+</svg>
