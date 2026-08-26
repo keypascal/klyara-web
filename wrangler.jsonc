@@ -1,0 +1,16 @@
+{
+  // Klyara — static site served by a Cloudflare Worker.
+  // Only ./public is uploaded. _internal/ is a sibling of the assets directory,
+  // so business documents cannot be served even if this file is misedited.
+  "name": "klyara-web",
+  "compatibility_date": "2026-08-26",
+  "assets": {
+    "directory": "./public",
+
+    // /about -> /about.html, and /about/ redirects to /about
+    "html_handling": "auto-trailing-slash",
+
+    // unmatched paths render public/404.html with a 404 status
+    "not_found_handling": "404-page"
+  }
+}
