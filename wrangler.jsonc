@@ -17,8 +17,14 @@
 
   // Custom Domains: the Worker IS the origin. Cloudflare creates the DNS records
   // and issues the certificates on deploy — do not also hand-edit DNS for these.
+  //
+  // www is deliberately NOT here yet. A Custom Domain cannot be created on a
+  // hostname that already has a DNS record, and www.klyara.com still has an old
+  // proxied placeholder record. Including it failed the whole deploy and rolled
+  // the apex back with it. Delete the www record in the Cloudflare dashboard
+  // (DNS > Records), then add:
+  //   { "pattern": "www.klyara.com", "custom_domain": true }
   "routes": [
-    { "pattern": "klyara.com", "custom_domain": true },
-    { "pattern": "www.klyara.com", "custom_domain": true }
+    { "pattern": "klyara.com", "custom_domain": true }
   ]
 }
