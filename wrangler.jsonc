@@ -17,14 +17,15 @@
     "not_found_handling": "404-page"
   },
 
-  // Custom Domain: the Worker IS the origin. Cloudflare creates the DNS record
-  // and issues the certificate on deploy.
+  // Custom Domains: the Worker IS the origin. Cloudflare creates the DNS
+  // records and issues the certificates on deploy — do not hand-edit these
+  // rows in the dashboard.
   //
-  // www is not here: a Custom Domain cannot be created on a hostname that
-  // already has a DNS record, and www.klyara.com still has an old proxied
-  // placeholder. Delete that record, then add:
-  //   { "pattern": "www.klyara.com", "custom_domain": true }
+  // A Custom Domain cannot be created on a hostname that already has a DNS
+  // record. If either of these ever fails to attach, check DNS > Records for a
+  // leftover row on that hostname and delete it before redeploying.
   "routes": [
-    { "pattern": "klyara.com", "custom_domain": true }
+    { "pattern": "klyara.com", "custom_domain": true },
+    { "pattern": "www.klyara.com", "custom_domain": true }
   ]
 }
