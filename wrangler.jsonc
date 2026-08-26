@@ -1,28 +1,28 @@
 {
   // Klyara — static site served by a Cloudflare Worker.
-  // Only ./public is uploaded. _internal/ is a sibling of the assets directory,
-  // so business documents cannot be served even if this file is misedited.
+  //
+  // The assets directory is the repo root: one tree, matching the OneDrive
+  // folder. That means EVERYTHING here is publicly served unless .assetsignore
+  // excludes it. Read .assetsignore before adding anything to this repo.
   "name": "klyara-web",
   "compatibility_date": "2026-08-26",
 
   "assets": {
-    "directory": "./public",
+    "directory": ".",
 
     // /about -> /about.html, and /about/ redirects to /about
     "html_handling": "auto-trailing-slash",
 
-    // unmatched paths render public/404.html with a 404 status
+    // unmatched paths render 404.html with a 404 status
     "not_found_handling": "404-page"
   },
 
-  // Custom Domains: the Worker IS the origin. Cloudflare creates the DNS records
-  // and issues the certificates on deploy — do not also hand-edit DNS for these.
+  // Custom Domain: the Worker IS the origin. Cloudflare creates the DNS record
+  // and issues the certificate on deploy.
   //
-  // www is deliberately NOT here yet. A Custom Domain cannot be created on a
-  // hostname that already has a DNS record, and www.klyara.com still has an old
-  // proxied placeholder record. Including it failed the whole deploy and rolled
-  // the apex back with it. Delete the www record in the Cloudflare dashboard
-  // (DNS > Records), then add:
+  // www is not here: a Custom Domain cannot be created on a hostname that
+  // already has a DNS record, and www.klyara.com still has an old proxied
+  // placeholder. Delete that record, then add:
   //   { "pattern": "www.klyara.com", "custom_domain": true }
   "routes": [
     { "pattern": "klyara.com", "custom_domain": true }

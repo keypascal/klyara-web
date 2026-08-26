@@ -1,0 +1,28 @@
+# Files at the repo root that must NOT be uploaded as public assets.
+# Same syntax as .gitignore.
+#
+# CRITICAL: assets.directory is the repo root, and Workers — unlike Pages —
+# does not exclude .git automatically. Removing the .git line below publishes
+# the entire commit history of this repository. Do not remove it.
+**/.git
+**/.github
+**/node_modules
+**/.wrangler
+**/.DS_Store
+**/Thumbs.db
+**/desktop.ini
+
+# repo housekeeping, not site content
+.gitignore
+.gitattributes
+.assetsignore
+wrangler.jsonc
+package.json
+package-lock.json
+
+# server config that is meaningless on Cloudflare and reveals rewrite rules
+.htaccess
+
+# build tooling
+build-admin.py
+README-admin.txt
