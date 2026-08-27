@@ -136,7 +136,7 @@
       <tr><td class="k">Phone</td><td>Five tabs along the bottom — Home, Jobs, Receipts, Invoices, More. Everything else lives behind <b>More</b>. The camera button on Receipts is deliberately the biggest target on the screen.</td></tr>
       <tr><td class="k">Tablet and desktop</td><td>A full sidebar with every screen listed. Same app, same data, more room.</td></tr>
       <tr><td class="k">Installed</td><td>Add to Home Screen turns it into an app icon with no browser chrome. It is the same web app — nothing to update, nothing from an app store.</td></tr>
-      <tr><td class="k">Offline</td><td>Screens you have already opened still load. Anything that needs the server will wait and tell you, rather than silently failing.</td></tr>
+      <tr><td class="k">Offline</td><td>Screens you have already opened still load, with the right typefaces — nothing is fetched from anyone else's server. A receipt photographed with no signal is kept on the phone and sent later. Anything else that needs the server says so rather than silently failing.</td></tr>
     </tbody>
   </table></div>
 
@@ -191,6 +191,15 @@
       <tr><td class="k"><span class="chip d">Rejected</span></td><td>We could not use it — the reason is on the receipt. Usually blurred, cut off, or a duplicate. Photograph it again.</td></tr>
     </tbody>
   </table></div>
+  <div class="flag good"><p class="t">No signal is not a problem</p>
+    <p>A builder standing in a basement with one bar is the normal case, not the edge case, and the
+    worst thing this app could do is lose a photograph because the upload failed. It does not try:
+    the picture goes onto the phone first, into a queue that survives the app being closed and the
+    phone being locked, and it uploads itself the next time there is a connection. The screen says
+    how many are waiting; a strip across the top says the same thing from anywhere in the app.</p>
+    <p>If someone says the receipt never arrived, ask them to open the app while they have signal
+    and leave it open for ten seconds. That is all it takes.</p></div>
+
   <div class="flag"><p class="t">The one rule</p>
     <p>A client can never move their own receipt through the workflow. Only an admin can approve,
     send or reject. This is enforced in the database, not in the screen — see Part 3.</p></div>
@@ -290,6 +299,30 @@
   spreadsheet with a UTF-8 byte order mark so Excel opens it correctly, and with any cell that
   starts with <code>=</code>, <code>+</code>, <code>-</code> or <code>@</code> made inert so a supplier
   name can never execute as a formula.</p>
+
+  <h3>Get it out</h3>
+  <p>The month-end evening of typing, removed. Pick a period, pick the platform, and download the
+  file it will take as it is.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>File</th><th>Goes into</th><th>Worth knowing</th></tr></thead>
+    <tbody>
+      <tr><td class="k">FreeAgent bank CSV</td><td>FreeAgent</td><td>No header row, money out negative. FreeAgent rejects a file with headers.</td></tr>
+      <tr><td class="k">Spending spreadsheet</td><td>QuickBooks, Xero, Excel</td><td>Expenses, receipts we have a figure for, and the mileage claim in one list.</td></tr>
+      <tr><td class="k">Xero invoice import</td><td>Xero</td><td>One row per line. Tax types included — check the rate names against the account once, because both platforms let you rename them.</td></tr>
+      <tr><td class="k">QuickBooks invoice import</td><td>QuickBooks Online</td><td>Same shape, QuickBooks' own column names and tax codes.</td></tr>
+      <tr><td class="k">VAT return figures</td><td>Anywhere</td><td>The nine boxes for the period, to check against the return the software produces. If they disagree, something is missing from one of them.</td></tr>
+      <tr><td class="k">Everything</td><td>Anywhere</td><td>Invoices, expenses and receipts as plain spreadsheets. Nobody is locked in.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag good"><p class="t">Two things this gets right</p>
+    <p><b>Mileage is in the money-out list.</b> It is a real deduction that never appears on a bank
+    statement, which is exactly why it gets forgotten at year end.</p>
+    <p><b>Reverse charge survives the export.</b> Those sales carry no output VAT so nothing goes in
+    box 1, but the net still belongs in box 6 — and the invoice files carry the reverse-charge tax
+    code rather than a plain 20%. That is the part most hand-rolled exports get wrong.</p></div>
+  <p>A direct API connection to all three is the next piece of work. It needs OAuth and somewhere to
+  hold a refresh token, which is a server rather than an afternoon. These files get the figures
+  across in the meantime.</p>
 
   <h3>Documents</h3>
   <p>Everything we publish: accounts, VAT returns, CIS statements, letters. Read-only — a client
@@ -393,6 +426,8 @@
   <div class="twrap" tabindex="0"><table>
     <thead><tr><th>Symptom</th><th>Almost always</th></tr></thead>
     <tbody>
+      <tr><td class="k">A screen says “That screen fell over”</td><td>A bug in one page. Nothing sent is lost — it is the app failing to draw, not data going missing. Tap <b>Try that again</b>; if it repeats, read us the line of code at the bottom, which says exactly where to look.</td></tr>
+      <tr><td class="k">A receipt that was photographed never arrived</td><td>Almost always taken with no signal. Open the app somewhere with a connection and leave it open — the queue drains on its own. The Receipts screen says how many are waiting.</td></tr>
       <tr><td class="k">A screen says “We cannot find that one”</td><td>The record was deleted or the link is old. It is not a crash — go back to the list.</td></tr>
       <tr><td class="k">A screen shows a setup message instead of the app</td><td>The build went out without its environment variables. Rebuild; the build now refuses rather than shipping an empty bundle.</td></tr>
       <tr><td class="k">A client says they cannot see a document</td><td>Check it was published to <em>their</em> client record. Publishing is per business.</td></tr>
@@ -407,6 +442,8 @@
     <p><strong>The tests that prove all of this.</strong> Run from the portal folder:</p>
     <ul>
       <li><code>node scripts/test-tax.ts</code> — every rate and date rule, 61 assertions.</li>
+      <li><code>node scripts/test-exports.ts</code> — every accounting export and every VAT box, 31 assertions.</li>
+      <li><code>node scripts/test-invoice-maths.mjs</code> — CIS and VAT against hand-worked figures, on the live database.</li>
       <li><code>node scripts/verify-db.mjs</code> — the live schema: tables, policies, triggers, grants, views.</li>
       <li><code>node scripts/rls-test.mjs</code> — 37 real attacks against the live database.</li>
       <li><code>node scripts/smoke-live.mjs https://app.klyara.com</code> — the deployed site, signed in as a client and as an admin.</li>
