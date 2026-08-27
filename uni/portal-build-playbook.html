@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal Build Playbook | Klyara Uni</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Internal guide. How the Klyara client portal is built, what it costs and what it runs on.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root{
+    --paper:#F4EFE4;
+    --card:#FBF8F0;
+    --sunk:#EDE6D6;
+    --ink:#14231C;
+    --mute:#57685C;
+    --dim:#87947F;
+    --pine:#16352A;
+    --pine2:#1D4534;
+    --on-pine:#F4EFE4;
+    --emerald:#196A48;
+    --brass:#C08A2E;
+    --terra:#A6592E;
+    --rule:rgba(20,35,28,.14);
+    --rule-strong:rgba(20,35,28,.26);
+    --rule-pine:rgba(244,239,228,.18);
+    --shadow:0 26px 70px rgba(20,35,28,.13);
+    --shadow-sm:0 2px 10px rgba(20,35,28,.07);
+
+    --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+    --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+    --mono:"Spline Sans Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1A15;
+      --card:#16241E;
+      --sunk:#12201A;
+      --ink:#EDE8DC;
+      --mute:#9CAB9F;
+      --dim:#79876F;
+      --pine:#0A1410;
+      --pine2:#1D4534;
+      --on-pine:#EDE8DC;
+      --emerald:#46A87A;
+      --brass:#DCA84E;
+      --terra:#CB7C4D;
+      --rule:rgba(237,232,220,.14);
+      --rule-strong:rgba(237,232,220,.26);
+      --rule-pine:rgba(237,232,220,.16);
+      --shadow:0 26px 70px rgba(0,0,0,.5);
+      --shadow-sm:0 2px 10px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1A15;
+    --card:#16241E;
+    --sunk:#12201A;
+    --ink:#EDE8DC;
+    --mute:#9CAB9F;
+    --dim:#79876F;
+    --pine:#0A1410;
+    --pine2:#1D4534;
+    --on-pine:#EDE8DC;
+    --emerald:#46A87A;
+    --brass:#DCA84E;
+    --terra:#CB7C4D;
+    --rule:rgba(237,232,220,.14);
+    --rule-strong:rgba(237,232,220,.26);
+    --rule-pine:rgba(237,232,220,.16);
+    --shadow:0 26px 70px rgba(0,0,0,.5);
+    --shadow-sm:0 2px 10px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16.5px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--brass);color:#14231C}
+
+  /* ---------- shell ---------- */
+  .shell{max-width:1240px;margin:0 auto;padding:0 22px 90px}
+
+  .masthead{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:26px;
+    flex-wrap:wrap;
+    padding:38px 0 22px;
+    border-bottom:1px solid var(--rule-strong);
+  }
+  .mark{display:flex;align-items:center;gap:13px}
+  .mark svg{display:block;flex:none}
+  .wordmark{
+    font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.02em;line-height:1;
+  }
+  .mast-sub{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--dim);margin-top:5px;
+  }
+  .mast-meta{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--mute);text-align:right;line-height:1.9;
+  }
+  .mast-meta b{color:var(--ink);font-weight:600}
+
+  /* ---------- chapter rail ---------- */
+  .rail{
+    position:sticky;top:0;z-index:40;
+    background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    margin:0 -22px 34px;padding:0 22px;
+  }
+  .rail-inner{
+    display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin;
+    padding:9px 0;
+  }
+  .rail-inner::-webkit-scrollbar{height:5px}
+  .rail-inner::-webkit-scrollbar-thumb{background:var(--rule-strong);border-radius:3px}
+  .chip{
+    flex:none;display:flex;align-items:baseline;gap:8px;
+    border:1px solid transparent;background:none;cursor:pointer;
+    padding:7px 13px;border-radius:9px;
+    font-family:var(--body);font-size:14px;font-weight:500;color:var(--mute);
+    white-space:nowrap;transition:background .15s,color .15s,border-color .15s;
+  }
+  .chip .n{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.06em}
+  .chip:hover{background:var(--sunk);color:var(--ink)}
+  .chip[aria-selected="true"]{background:var(--pine);color:var(--on-pine);border-color:var(--pine)}
+  .chip[aria-selected="true"] .n{color:var(--brass)}
+  .chip:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+
+  /* ---------- typography ---------- */
+  .measure{max-width:70ch}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
+    color:var(--brass);margin:0 0 10px;
+  }
+  h1.ch{
+    font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.03;
+    font-size:clamp(31px,5.1vw,50px);margin:0 0 16px;text-wrap:balance;
+  }
+  h2{
+    font-family:var(--display);font-weight:700;letter-spacing:-.02em;line-height:1.15;
+    font-size:clamp(21px,2.7vw,27px);margin:52px 0 14px;text-wrap:balance;
+  }
+  h3{
+    font-family:var(--display);font-weight:700;letter-spacing:-.01em;
+    font-size:18.5px;margin:32px 0 9px;
+  }
+  .lede{font-size:19px;line-height:1.55;color:var(--mute);margin:0 0 30px;max-width:62ch}
+  p{margin:0 0 15px}
+  a{color:var(--emerald);text-underline-offset:3px;text-decoration-thickness:1px}
+  strong{font-weight:600}
+  ul,ol{margin:0 0 16px;padding-left:1.15em}
+  li{margin-bottom:7px}
+  li::marker{color:var(--dim)}
+  code{
+    font-family:var(--mono);font-size:.87em;background:var(--sunk);
+    padding:.12em .38em;border-radius:5px;border:1px solid var(--rule);
+  }
+  hr.rule{border:0;border-top:1px solid var(--rule);margin:44px 0}
+
+  /* ---------- panels ---------- */
+  .panel{
+    background:var(--card);border:1px solid var(--rule);border-radius:16px;
+    padding:22px 24px;box-shadow:var(--shadow-sm);
+  }
+  .panel-title{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--mute);margin:0 0 12px;
+  }
+  .verdict{
+    border-left:4px solid var(--brass);
+    background:var(--card);border-radius:14px;padding:20px 22px;
+    border-top:1px solid var(--rule);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    margin:0 0 22px;
+  }
+  .verdict p:last-child{margin-bottom:0}
+  .verdict .q{
+    font-family:var(--display);font-weight:700;font-size:17.5px;letter-spacing:-.01em;
+    margin:0 0 8px;
+  }
+  .flag{
+    border-left:4px solid var(--terra);background:var(--card);border-radius:14px;
+    border-top:1px solid var(--rule);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    padding:18px 22px;margin:24px 0;
+  }
+  .flag .panel-title{color:var(--terra)}
+  .flag p:last-child{margin-bottom:0}
+  .good{border-left-color:var(--emerald)}
+  .good .panel-title{color:var(--emerald)}
+
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:16px;margin:22px 0}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px;margin:22px 0}
+
+  .stat{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:16px 18px}
+  .stat .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+  .stat .v{
+    font-family:var(--display);font-weight:800;font-size:29px;letter-spacing:-.025em;
+    line-height:1.1;margin:5px 0 3px;font-variant-numeric:tabular-nums;
+  }
+  .stat .s{font-size:13.5px;color:var(--mute);line-height:1.45}
+
+  /* ---------- tables ---------- */
+  .twrap{overflow-x:auto;margin:22px 0;border:1px solid var(--rule);border-radius:14px;background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--rule);vertical-align:top}
+  thead th{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--on-pine);background:var(--pine);border-bottom:none;font-weight:500;
+  }
+  thead th:first-child{border-top-left-radius:13px}
+  thead th:last-child{border-top-right-radius:13px}
+  tbody tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  td.k{font-weight:600;white-space:nowrap}
+  .tag{
+    display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.09em;
+    text-transform:uppercase;padding:2.5px 8px;border-radius:20px;border:1px solid;white-space:nowrap;
+  }
+  .tag.yes{color:var(--emerald);border-color:var(--emerald)}
+  .tag.no{color:var(--terra);border-color:var(--terra)}
+  .tag.mid{color:var(--brass);border-color:var(--brass)}
+
+  /* ---------- diagram ---------- */
+  .diagram{
+    background:var(--card);border:1px solid var(--rule);border-radius:18px;
+    padding:16px;margin:26px 0 0;overflow-x:auto;
+  }
+  .diagram svg{display:block;width:100%;min-width:660px;height:auto}
+  .node{cursor:pointer}
+  .node rect{transition:fill .14s,stroke .14s}
+  .node:hover rect.box,.node.on rect.box{stroke:var(--brass);stroke-width:2}
+  .node.on rect.box{fill:var(--sunk)}
+  .node:focus-visible{outline:none}
+  .node:focus-visible rect.box{stroke:var(--brass);stroke-width:2.5}
+  .hint{
+    font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--dim);margin:12px 0 0;text-align:center;
+  }
+  .detail{
+    margin:14px 0 0;background:var(--pine);color:var(--on-pine);
+    border-radius:16px;padding:22px 24px;
+  }
+  .detail h4{
+    font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.015em;margin:0 0 4px;
+  }
+  .detail .role{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);margin:0 0 12px}
+  .detail p{color:rgba(244,239,228,.86);margin:0 0 12px;max-width:66ch}
+  .detail p:last-child{margin:0}
+  .detail dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:16px 0 0;padding-top:16px;border-top:1px solid var(--rule-pine)}
+  .detail dt{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:3px}
+  .detail dd{margin:0;font-size:14px;color:rgba(244,239,228,.9);line-height:1.45}
+  .detail code{background:rgba(244,239,228,.1);border-color:rgba(244,239,228,.18);color:var(--on-pine)}
+
+  /* ---------- calculator ---------- */
+  .calc{
+    display:grid;grid-template-columns:minmax(240px,300px) 1fr;gap:24px;
+    background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:24px;margin:24px 0;
+  }
+  @media (max-width:760px){.calc{grid-template-columns:1fr}}
+  .controls{display:flex;flex-direction:column;gap:20px}
+  .ctl label{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);
+    margin-bottom:7px;
+  }
+  .ctl label b{
+    font-family:var(--display);font-size:17px;font-weight:700;color:var(--ink);letter-spacing:-.01em;
+    font-variant-numeric:tabular-nums;text-transform:none;
+  }
+  input[type=range]{width:100%;accent-color:var(--emerald);height:22px;cursor:pointer}
+  input[type=range]:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+  .seg{display:flex;gap:0;border:1px solid var(--rule-strong);border-radius:10px;overflow:hidden}
+  .seg button{
+    flex:1;border:0;background:none;cursor:pointer;padding:8px 4px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--mute);
+    border-right:1px solid var(--rule-strong);
+  }
+  .seg button:last-child{border-right:0}
+  .seg button[aria-pressed="true"]{background:var(--emerald);color:#fff}
+  .seg button:focus-visible{outline:2px solid var(--brass);outline-offset:-2px}
+  .readout{display:flex;flex-direction:column;gap:12px}
+  .row{
+    display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+    padding:11px 15px;border:1px solid var(--rule);border-radius:11px;background:var(--paper);
+  }
+  .row.hi{border-color:var(--emerald);border-width:1.5px}
+  .row.lo{border-color:var(--terra)}
+  .row .lbl{font-size:14px;line-height:1.35}
+  .row .lbl small{display:block;color:var(--mute);font-size:12px}
+  .row .amt{
+    font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  .row.hi .amt{color:var(--emerald)}
+  .row.lo .amt{color:var(--terra)}
+  .calc-note{font-size:12.5px;color:var(--mute);margin:16px 0 0;line-height:1.5}
+
+  /* ---------- steps ---------- */
+  ol.steps{list-style:none;padding:0;margin:22px 0;counter-reset:s}
+  ol.steps>li{
+    counter-increment:s;position:relative;padding:0 0 20px 52px;margin:0;
+    border-left:1px solid var(--rule);
+  }
+  ol.steps>li:last-child{border-left-color:transparent;padding-bottom:0}
+  ol.steps>li::before{
+    content:counter(s,decimal-leading-zero);
+    position:absolute;left:-16px;top:-2px;width:32px;height:32px;border-radius:50%;
+    background:var(--pine);color:var(--brass);
+    font-family:var(--mono);font-size:11px;font-weight:500;
+    display:flex;align-items:center;justify-content:center;
+  }
+  ol.steps>li b{display:block;font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+  ol.steps>li p{margin:0 0 8px;color:var(--mute)}
+  ol.steps>li p:last-child{margin:0}
+  ol.steps code{font-size:12.5px}
+
+  pre{
+    background:var(--pine);color:var(--on-pine);border-radius:14px;padding:18px 20px;
+    overflow-x:auto;font-family:var(--mono);font-size:13px;line-height:1.72;margin:16px 0;
+  }
+  pre .c{color:var(--dim)}
+  pre .h{color:var(--brass)}
+
+  /* ---------- checklist ---------- */
+  .check{display:flex;flex-direction:column;gap:0;margin:22px 0;border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--card)}
+  .check label{
+    display:flex;gap:13px;align-items:flex-start;padding:13px 17px;cursor:pointer;
+    border-bottom:1px solid var(--rule);transition:background .12s;
+  }
+  .check label:last-child{border-bottom:0}
+  .check label:hover{background:var(--sunk)}
+  .check input{margin-top:4px;accent-color:var(--emerald);width:17px;height:17px;flex:none;cursor:pointer}
+  .check input:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+  .check .txt{font-size:15px;line-height:1.5}
+  .check .txt small{display:block;color:var(--mute);font-size:13px;margin-top:2px}
+  .check input:checked + .txt{color:var(--dim);text-decoration:line-through;text-decoration-color:var(--rule-strong)}
+  .check input:checked + .txt small{text-decoration:none}
+  .progress{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mute);margin:0 0 10px;
+  }
+
+  section[role=tabpanel]{animation:fade .28s ease}
+  section[hidden]{display:none}
+  @keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+  .footer{
+    margin-top:64px;padding-top:22px;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--dim);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+
+  .unibar{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:14px 0 0;font-family:var(--mono);font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  }
+  .unibar a{color:var(--mute);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .unibar a:hover{color:var(--ink);border-bottom-color:var(--brass)}
+  .unibar a:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+</style>
+
+<div class="shell">
+
+  <div class="unibar">
+    <a href="index.html">&larr; Klyara Uni</a>
+    <span>Guide 01 &middot; Build</span>
+  </div>
+
+  <header class="masthead">
+    <div class="mark">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="var(--brass)"></circle>
+        <polygon points="13,9 18,9 18,17.5 26,9 32,9 22.5,19 32,31 26,31 18,21.5 18,31 13,31" fill="var(--pine)"></polygon>
+      </svg>
+      <div>
+        <div class="wordmark">Klyara</div>
+        <div class="mast-sub">Portal build playbook</div>
+      </div>
+    </div>
+    <div class="mast-meta">
+      <div>Prepared for <b>Key</b> &middot; 27 Aug 2026</div>
+      <div>Decision: <b>build it yourself, not in Lovable</b></div>
+    </div>
+  </header>
+
+  <nav class="rail" aria-label="Chapters">
+    <div class="rail-inner" role="tablist" id="rail"></div>
+  </nav>
+
+  <!-- ============ 1 · VERDICT ============ -->
+  <section role="tabpanel" id="p-verdict" aria-labelledby="t-verdict">
+    <p class="eyebrow">Chapter one &middot; The four questions you asked</p>
+    <h1 class="ch">Straight answers first.</h1>
+    <p class="lede">Your read on the plan is right in shape. Two details in it are wrong, one number is optimistic, and there is one trap that will bite you in the first ten minutes if nobody warns you about it.</p>
+
+    <div class="verdict">
+      <p class="q">"It's a web app, not a Play Store or App Store app &mdash; and we do that because it's easier, then do the real apps later if it works."</p>
+      <p><strong>Correct, and it's the right order.</strong> One thing to adjust in your head though: on Android a well-built installable web app is <em>functionally the same thing</em> as a native app &mdash; own icon, own storage, push notifications, offline. It is not a compromise. iOS is where the gap is real, and it's narrow: your client has to install it manually from the share sheet before push notifications work at all.</p>
+      <p>So "do the real apps later" is really "do the <em>iPhone</em> app later, if iPhone clients ever complain." Chapter 8 has the ladder and what each rung costs.</p>
+    </div>
+
+    <div class="verdict">
+      <p class="q">"Are we tied and locked into Lovable, or is it just a build we host ourselves somewhere cheaper?"</p>
+      <p><strong>Lovable itself does not lock you in. Lovable <em>Cloud</em> does &mdash; and it switches itself on by default.</strong></p>
+      <p>Lovable writes an ordinary React app into a GitHub repo you own. You can clone it, run it, and deploy it to Netlify or Cloudflare for £0. Nothing proprietary ships in that code. That half is genuinely clean.</p>
+      <p>The trap is the back end. The moment you ask Lovable for anything involving a login or a database, it silently spins up <strong>Lovable Cloud</strong> &mdash; a Supabase instance held inside Lovable's account. You get no Supabase dashboard, no service-role key, no direct database URL, and the billing runs through Lovable's credits. There is a "remove" button but no migration path, and getting off it later costs you every user's password and every user ID in your database.</p>
+      <p>Fix: connect <em>your own</em> Supabase project before your very first back-end prompt. Chapter 4 spells out the exact order.</p>
+    </div>
+
+    <div class="verdict">
+      <p class="q">"I'm worried about AI costs and Lovable build costs. Is there a better platform? Is this the right way to do this?"</p>
+      <p><strong>The worry is justified and my answer is: skip Lovable and build it here, with me, against the same Supabase.</strong> Same stack, same output, same five-day timeline &mdash; and the tooling line on your P&amp;L goes to zero because you already pay for it.</p>
+      <p>Lovable's meter is the specific problem. A credit is roughly a prompt, Pro gives you 100 a month for $25, and the money doesn't go on building &mdash; it goes on <em>fixing</em>. One documented authentication bug ate 15 credits. Someone else burned a whole month's allowance in one afternoon on a Stripe integration. Those are exactly the two jobs on your build list.</p>
+      <p>And the deciding factor is you: you're technically capable, you hate vendor lock-in, and the design system is already fixed and extracted from klyara.com. Lovable's real advantage is a visual editor for people who can't read the code &mdash; you'd be paying for a feature you don't need. Chapter 5 is the full route.</p>
+    </div>
+
+    <h2>What I'd change in the build plan</h2>
+
+    <div class="flag">
+      <p class="panel-title">Correction 1 &middot; The budget line is light</p>
+      <p>The manual budgets <strong>£25&ndash;45/month for "Lovable + Supabase"</strong>. Realistic on the Lovable route is <strong>£45&ndash;90/month during the build weeks</strong> ($25&ndash;100 Lovable, plus Supabase). And within two or three months, receipt photos push you past Supabase's free storage tier onto Pro at $25/month <em>regardless of which route you take</em> &mdash; so put a permanent £20/month Supabase line in the model, not £0.</p>
+    </div>
+
+    <div class="flag">
+      <p class="panel-title">Correction 2 &middot; Two different payment systems are being conflated</p>
+      <p>The manual has <strong>GoCardless Direct Debit</strong> for monthly retainers (correct &mdash; it's what UK practices use, and it's ~1% capped £4 against 2.8%&nbsp;+&nbsp;20p for a business card). It separately has <strong>"Stripe checkout in the add-on store"</strong> at weeks 6&ndash;12. Those are two different integrations for two different jobs. Don't let one get built as if it replaces the other. Chapter 7.</p>
+    </div>
+
+    <div class="flag good">
+      <p class="panel-title">What the plan already gets right &mdash; don't touch these</p>
+      <p>PWA before native. Supabase in the EU/London region, set at creation. Row-level security on from prompt one. The email-forwarding bridge to Xero/FreeAgent/QuickBooks instead of OAuth integrations in week one &mdash; that single decision saves you about three weeks. Ship ugly by day five. All correct.</p>
+    </div>
+
+    <h2>The one-line answer</h2>
+    <p class="measure">Build a React + Supabase progressive web app, hosted on <strong>Cloudflare Pages</strong> at <code>app.klyara.com</code>, written here rather than in Lovable, with your own Supabase project in London from minute one. It installs to a phone home screen like an app, it costs about £20/month to run, and every part of it is portable.</p>
+  </section>
+
+  <!-- ============ 2 · STACK ============ -->
+  <section role="tabpanel" id="p-stack" aria-labelledby="t-stack" hidden>
+    <p class="eyebrow">Chapter two &middot; Every moving part</p>
+    <h1 class="ch">The whole system, on one screen.</h1>
+    <p class="lede">Four bands: the people, the two websites, the back end, and the outside services. Click any box for what it is, what it costs, and what you'd replace it with.</p>
+
+    <div class="diagram">
+      <svg viewBox="0 0 960 660" role="img" aria-label="Klyara portal system architecture">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--dim)"></path>
+          </marker>
+          <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="var(--brass)"></path>
+          </marker>
+        </defs>
+
+        <g font-family="var(--mono)" font-size="11" letter-spacing="2.2" fill="var(--dim)">
+          <text x="60" y="20">1 &#183; PEOPLE</text>
+          <text x="60" y="150">2 &#183; WHAT THEY OPEN</text>
+          <text x="60" y="300">3 &#183; SUPABASE &#183; EU (LONDON)</text>
+          <text x="60" y="490">4 &#183; OUTSIDE SERVICES</text>
+        </g>
+
+        <!-- band 1 -->
+        <g class="node" data-key="client" tabindex="0" role="button">
+          <rect class="box" x="60" y="36" width="250" height="58" rx="11" fill="var(--sunk)" stroke="var(--rule-strong)"></rect>
+          <text x="80" y="62" font-family="var(--display)" font-weight="700" font-size="15" fill="var(--ink)">Client &mdash; a builder, on site</text>
+          <text x="80" y="80" font-family="var(--mono)" font-size="11" fill="var(--mute)">phone, one thumb, gloves off</text>
+        </g>
+        <g class="node" data-key="craig" tabindex="0" role="button">
+          <rect class="box" x="650" y="36" width="250" height="58" rx="11" fill="var(--sunk)" stroke="var(--rule-strong)"></rect>
+          <text x="670" y="62" font-family="var(--display)" font-weight="700" font-size="15" fill="var(--ink)">Craig &mdash; admin</text>
+          <text x="670" y="80" font-family="var(--mono)" font-size="11" fill="var(--mute)">review queue, 2 min per client</text>
+        </g>
+
+        <!-- band 2 -->
+        <g class="node" data-key="wp" tabindex="0" role="button">
+          <rect class="box" x="60" y="166" width="250" height="66" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="80" y="192" font-family="var(--display)" font-weight="700" font-size="15" fill="var(--ink)">klyara.com</text>
+          <text x="80" y="211" font-family="var(--mono)" font-size="11" fill="var(--mute)">static site on Cloudflare</text>
+        </g>
+        <g class="node" data-key="app" tabindex="0" role="button">
+          <rect class="box" x="380" y="166" width="270" height="66" rx="11" fill="var(--card)" stroke="var(--emerald)" stroke-width="1.6"></rect>
+          <text x="400" y="192" font-family="var(--display)" font-weight="700" font-size="15" fill="var(--ink)">app.klyara.com</text>
+          <text x="400" y="211" font-family="var(--mono)" font-size="11" fill="var(--mute)">React PWA on Cloudflare &#183; the portal</text>
+        </g>
+
+        <!-- band 3 container -->
+        <rect x="60" y="316" width="840" height="122" rx="16" fill="none" stroke="var(--rule-strong)" stroke-dasharray="5 5"></rect>
+        <g class="node" data-key="auth" tabindex="0" role="button">
+          <rect class="box" x="80" y="344" width="192" height="66" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="98" y="371" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Auth</text>
+          <text x="98" y="390" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">logins, tokens, resets</text>
+        </g>
+        <g class="node" data-key="db" tabindex="0" role="button">
+          <rect class="box" x="292" y="344" width="192" height="66" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="310" y="371" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Postgres + RLS</text>
+          <text x="310" y="390" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">clients, receipts, docs</text>
+        </g>
+        <g class="node" data-key="storage" tabindex="0" role="button">
+          <rect class="box" x="504" y="344" width="192" height="66" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="522" y="371" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Storage</text>
+          <text x="522" y="390" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">receipt photos, PDFs</text>
+        </g>
+        <g class="node" data-key="edge" tabindex="0" role="button">
+          <rect class="box" x="716" y="344" width="192" height="66" rx="11" fill="var(--card)" stroke="var(--brass)" stroke-width="1.6"></rect>
+          <text x="734" y="371" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Edge Functions</text>
+          <text x="734" y="390" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">the only trusted code</text>
+        </g>
+
+        <!-- band 4 -->
+        <g class="node" data-key="gc" tabindex="0" role="button">
+          <rect class="box" x="60" y="510" width="192" height="62" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="78" y="536" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">GoCardless</text>
+          <text x="78" y="554" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">monthly Direct Debit</text>
+        </g>
+        <g class="node" data-key="stripe" tabindex="0" role="button">
+          <rect class="box" x="272" y="510" width="192" height="62" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="290" y="536" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Stripe</text>
+          <text x="290" y="554" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">one-off add-ons</text>
+        </g>
+        <g class="node" data-key="brevo" tabindex="0" role="button">
+          <rect class="box" x="484" y="510" width="192" height="62" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="502" y="536" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Brevo SMTP</text>
+          <text x="502" y="554" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">outbound email</text>
+        </g>
+        <g class="node" data-key="books" tabindex="0" role="button">
+          <rect class="box" x="696" y="510" width="204" height="62" rx="11" fill="var(--card)" stroke="var(--rule-strong)"></rect>
+          <text x="714" y="536" font-family="var(--display)" font-weight="700" font-size="14.5" fill="var(--ink)">Xero &#183; FreeAgent &#183; QBO</text>
+          <text x="714" y="554" font-family="var(--mono)" font-size="10.5" fill="var(--mute)">the client's actual books</text>
+        </g>
+
+        <!-- arrows -->
+        <g fill="none" stroke="var(--dim)" stroke-width="1.4" marker-end="url(#ar)">
+          <path d="M150 98 L150 160"></path>
+          <path d="M310 199 L372 199"></path>
+          <path d="M255 98 Q 340 130 430 160"></path>
+          <path d="M740 98 Q 660 130 600 160"></path>
+          <path d="M678 541 L690 541"></path>
+        </g>
+        <g fill="none" stroke="var(--brass)" stroke-width="1.6" marker-end="url(#ar2)">
+          <path d="M515 238 L515 338"></path>
+          <path d="M800 416 Q 760 460 600 504"></path>
+          <path d="M800 416 Q 600 450 380 504"></path>
+          <path d="M800 416 Q 480 440 170 504"></path>
+        </g>
+        <text x="318" y="192" font-family="var(--mono)" font-size="10" fill="var(--brass)" letter-spacing="1.4">LOGIN &#8594;</text>
+        <text x="527" y="290" font-family="var(--mono)" font-size="10" fill="var(--brass)" letter-spacing="1.4">every request carries the user's token</text>
+      </svg>
+      <p class="hint">Click a box &#183; keyboard: tab to it, press enter</p>
+      <div class="detail" id="detail" aria-live="polite"></div>
+    </div>
+
+    <h2>The full component list</h2>
+    <div class="twrap">
+      <table>
+        <thead>
+          <tr><th>Layer</th><th>Technology</th><th>Its job</th><th class="num">£/mo</th><th>Swap cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="k">Marketing site</td><td>Static HTML on Cloudflare Workers</td><td>Public pages, SEO, lead magnets. Already live, repo <code>keypascal/klyara-web</code>.</td><td class="num">0</td><td><span class="tag mid">Days</span></td></tr>
+          <tr><td class="k">Portal front end</td><td>React 19 + Vite + TypeScript</td><td>Everything a logged-in user sees. Plain, boring, standard.</td><td class="num">0</td><td><span class="tag no">It is the app</span></td></tr>
+          <tr><td class="k">Styling</td><td>Tailwind CSS + shadcn/ui</td><td>Your klyara.com colours and fonts as reusable components.</td><td class="num">0</td><td><span class="tag yes">Free</span></td></tr>
+          <tr><td class="k">Portal hosting</td><td>Cloudflare Pages</td><td>Serves the app worldwide, free SSL, deploy on every git push. Same account and DNS as klyara.com.</td><td class="num">0</td><td><span class="tag yes">1 hour</span></td></tr>
+          <tr><td class="k">Login</td><td>Supabase Auth</td><td>Sign-up, email verification, password reset, session tokens.</td><td class="num" rowspan="4" style="vertical-align:middle">0&nbsp;&rarr;&nbsp;20</td><td><span class="tag mid">Days</span></td></tr>
+          <tr><td class="k">Database</td><td>Postgres + row-level security</td><td>Clients, receipts, documents. RLS is what stops client A seeing client B.</td><td><span class="tag yes">It's plain Postgres</span></td></tr>
+          <tr><td class="k">File storage</td><td>Supabase Storage</td><td>Private buckets, one folder per client. Receipt photos and PDFs.</td><td><span class="tag yes">Free</span></td></tr>
+          <tr><td class="k">Server logic</td><td>Edge Functions (Deno)</td><td>The only code allowed to hold secrets: routing receipts, payment webhooks.</td><td><span class="tag mid">Half a day</span></td></tr>
+          <tr><td class="k">Transactional email</td><td>Brevo SMTP</td><td>Receipt-approved notices, and the receipt hand-off to the books.</td><td class="num">0&ndash;15</td><td><span class="tag yes">1 hour</span></td></tr>
+          <tr><td class="k">Retainer billing</td><td>GoCardless</td><td>Monthly Direct Debit. ~1%, capped £4.</td><td class="num">0</td><td><span class="tag mid">Days</span></td></tr>
+          <tr><td class="k">Add-on payments</td><td>Stripe Checkout</td><td>One-off card purchases in the add-on store. Week 6+.</td><td class="num">0</td><td><span class="tag mid">Days</span></td></tr>
+          <tr><td class="k">Booking</td><td>Cal.com embed</td><td>Discovery calls, on both the site and the portal.</td><td class="num">0</td><td><span class="tag yes">Minutes</span></td></tr>
+          <tr><td class="k">Source control</td><td>GitHub</td><td>Every version of the code. This is what you actually own.</td><td class="num">0</td><td><span class="tag yes">Free</span></td></tr>
+          <tr><td class="k">Build tool</td><td>Claude Code &mdash; <em>or</em> Lovable Pro</td><td>Writes the code. The one line where the two routes differ.</td><td class="num">0 / 20&ndash;80</td><td><span class="tag yes">Free either way</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="measure" style="color:var(--mute);font-size:14.5px">Everything above except the two payment providers is free at your scale until you cross Supabase's storage limit &mdash; which receipt photos will do in month two or three. Budget £20/month for Supabase Pro from the start and the rest is noise.</p>
+  </section>
+
+  <!-- ============ 3 · WIRING ============ -->
+  <section role="tabpanel" id="p-wiring" aria-labelledby="t-wiring" hidden>
+    <p class="eyebrow">Chapter three &middot; How it actually connects</p>
+    <h1 class="ch">Site, app, login, database, receipts.</h1>
+    <p class="lede">Four connections do all the work. None of them is complicated, and one of them is the entire security model.</p>
+
+    <h2>1 &middot; The website and the app are two separate things</h2>
+    <p class="measure">klyara.com stays exactly as it is: a static site served by a Cloudflare Worker out of the <code>keypascal/klyara-web</code> repo. The portal is a completely separate application on a subdomain, in the same Cloudflare account. They are not integrated, and they don't need to be.</p>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Name</th><th>DNS record</th><th>Points at</th><th>What lives there</th></tr></thead>
+        <tbody>
+          <tr><td class="k">klyara.com</td><td>Cloudflare custom domain</td><td>The <code>klyara-web</code> Worker</td><td>Marketing pages, blog, tools, lead magnets <span class="tag yes">Live</span></td></tr>
+          <tr><td class="k">www.klyara.com</td><td>Cloudflare custom domain</td><td>The same Worker</td><td>Same site <span class="tag yes">Live</span></td></tr>
+          <tr><td class="k">app.klyara.com</td><td>Cloudflare custom domain</td><td>The portal&rsquo;s Pages project</td><td>Login, receipts, documents, admin <span class="tag no">Does not exist yet</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="measure">The "Client login" button in the site header becomes an ordinary link to <code>https://app.klyara.com</code>. That's the whole integration. No shared sessions, no single sign-on, no plugin. It takes about ten minutes.</p>
+
+    <div class="flag">
+      <p class="panel-title">Two things about the live site to fix, checked 27 Aug 2026</p>
+      <p><strong>app.klyara.com does not exist.</strong> klyara.com and www.klyara.com both resolve to Cloudflare and serve the Worker. There is no DNS record of any kind on <code>app</code> &mdash; nothing answers there. Nothing is broken; it simply has not been created. Attaching the custom domain to the portal's Cloudflare Pages project creates the record and the certificate for you, because Cloudflare already runs the zone.</p>
+      <p><strong>The "Client login" button in the header points at <code>login.html</code></strong> &mdash; the hidden control-panel gate, which is for you and Craig, not for clients. Anyone clicking it today lands on an internal login. Repoint it at <code>app.klyara.com</code> the moment the portal is live, and until then point it at the contact page or hide it.</p>
+    </div>
+
+    <h2>2 &middot; Authentication &mdash; who someone is</h2>
+    <ol class="steps">
+      <li><b>Someone signs up</b><p>Email and password go straight to Supabase Auth. Your app never sees or stores the password.</p></li>
+      <li><b>Supabase creates the user, a database trigger creates their profile</b><p>One row in <code>auth.users</code> (Supabase's own table), one row in your <code>profiles</code> table with their name, company, phone and role &mdash; <code>client</code> or <code>admin</code>.</p></li>
+      <li><b>The browser gets a signed token</b><p>A JWT, valid for an hour, refreshed silently. It sits in the browser and gets attached to every single request the app makes.</p></li>
+      <li><b>Postgres reads that token and decides what they can see</b><p>This is the part that matters. Read the next section twice.</p></li>
+    </ol>
+
+    <h2>3 &middot; Row-level security &mdash; the whole security model</h2>
+    <p class="measure">Your app talks to the database <em>directly</em> from the browser, using a public key. That sounds alarming and it is fine &mdash; but only because of row-level security. RLS is a rule written on each table that says, in effect: <em>"you may only see rows where <code>client_id</code> equals the user ID in the token you just presented."</em> Postgres enforces it. There is no way around it from the browser.</p>
+
+    <div class="flag">
+      <p class="panel-title">This is the single biggest failure mode of AI-built apps</p>
+      <p>If RLS is off, or a policy is written loosely, the public key in your JavaScript bundle &mdash; which anyone can read in DevTools &mdash; will happily return <em>every row of every table</em>. Every publicised vibe-coded data breach is this exact bug.</p>
+      <p>You are holding builders' receipts, ID documents and financial records. So: RLS enabled on every table from the first migration, policies written as SQL in files you have read, and a test that logs in as client A and confirms client B's receipts return nothing. Never let a tool add a table without you reading its policy.</p>
+    </div>
+
+    <h3>The two keys, and the rule about them</h3>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Key</th><th>Where it lives</th><th>Power</th></tr></thead>
+        <tbody>
+          <tr><td class="k">anon key</td><td>In the browser bundle. Public. Fine.</td><td>Only what RLS policies allow for that logged-in user.</td></tr>
+          <tr><td class="k">service-role key</td><td><strong>Edge Functions only.</strong> Never in the front end. Never in git.</td><td>Bypasses RLS entirely. Reads and writes everything.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>4 &middot; The receipt journey, end to end</h2>
+    <ol class="steps">
+      <li><b>Dave photographs a diesel receipt in the portal</b><p>An <code>&lt;input type="file" capture&gt;</code> opens the phone camera. The image is shrunk in the browser to roughly 300&nbsp;KB before it uploads &mdash; this matters, both for site signal and for your storage bill.</p></li>
+      <li><b>It lands in Supabase Storage under his folder</b><p>Private bucket, path <code>receipts/&lt;client_id&gt;/&lt;uuid&gt;.jpg</code>. A row goes into the <code>receipts</code> table with status <code>new</code>. Dave sees the chip flip to "Received".</p></li>
+      <li><b>Craig sees it in the review queue</b><p>Admin-only screen. Approve or reject with a reason. This is the two-minutes-a-day routine the whole product is built around.</p></li>
+      <li><b>An Edge Function emails it into the client's books</b><p>On approval, the function reads that client's <code>platform_inbox_email</code> &mdash; their QuickBooks receipt-forwarding address, their Xero email-to-Files address, or their FreeAgent auto-extract inbox &mdash; and sends the file there through Brevo. Status flips to <code>sent</code>, Dave's chip reads "In your books".</p></li>
+      <li><b>Xero, FreeAgent or QuickBooks extracts it as normal</b><p>Their OCR, their workflow, their problem. You wrote no integration code.</p></li>
+    </ol>
+
+    <div class="flag good">
+      <p class="panel-title">Why this design is worth defending</p>
+      <p>Switching a client's back end &mdash; from QuickBooks receipt capture to Dext, say, at client 12 &mdash; is <strong>changing one email address in the admin panel</strong>. The client sees nothing. Building real OAuth integrations in week one would have cost you three weeks and locked the same behaviour behind three times the code. Do them at month three, QuickBooks first, once clients are paying.</p>
+    </div>
+
+    <h2>5 &middot; What "it's an app on my phone" actually means</h2>
+    <p class="measure">A web app manifest file plus a service worker turns the site into an installable one. Dave taps Share &rarr; Add to Home Screen on an iPhone, or gets a proper install prompt on Android. He then has a Klyara icon, a full-screen app with no browser chrome, and a splash screen. It is indistinguishable from a downloaded app to him. It cost you about half a day.</p>
+  </section>
+
+  <!-- ============ 4 · LOVABLE ============ -->
+  <section role="tabpanel" id="p-lovable" aria-labelledby="t-lovable" hidden>
+    <p class="eyebrow">Chapter four &middot; The tutorial you asked for</p>
+    <h1 class="ch">Lovable, honestly explained.</h1>
+    <p class="lede">Even though I'd steer you elsewhere, you should understand it properly &mdash; partly to make the decision yourself, partly because the setup order below is what saves you if you do use it.</p>
+
+    <h2>What it is, mechanically</h2>
+    <p class="measure">A chat box next to a live preview of your app. You describe what you want, it writes and edits files, the preview refreshes, you look, you describe the next thing. Under the hood it produces an entirely ordinary front end &mdash; <strong>Vite + React + TypeScript + Tailwind + shadcn/ui + React Router</strong>, the same stack a developer would pick by hand &mdash; and connects it to Supabase for the back end. There is no proprietary runtime. That's why the exit is clean, if you set it up right.</p>
+
+    <div class="grid3">
+      <div class="stat"><div class="k">Plan / chat mode</div><div class="v">1</div><div class="s">credit per message. Talks, doesn't touch code. Use this to think.</div></div>
+      <div class="stat"><div class="k">Build mode</div><div class="v">0.5&ndash;2</div><div class="s">credits per message, depending on how much it has to change.</div></div>
+      <div class="stat"><div class="k">Pro plan</div><div class="v">$25</div><div class="s">for 100 credits a month, plus 5 free build credits a day.</div></div>
+    </div>
+
+    <p class="measure">Lovable's own published examples: "make the button grey" 0.5 credits, "remove the footer" 0.9, "add authentication with sign-up and login" 1.2, "build me a landing page with images" 1.7&ndash;2.0. On those numbers, 100 credits a month sounds generous.</p>
+
+    <div class="flag">
+      <p class="panel-title">It isn't building that costs money. It's fixing.</p>
+      <p>The first working version of a screen always costs less than you expect. Every revision after it costs more. Documented cases: <strong>a single authentication bug consumed 15 credits</strong> &mdash; 15% of a Pro month &mdash; for something a person would fix by hand in two minutes. Another developer <strong>spent an entire month's Pro allowance in one afternoon</strong> debugging a Stripe integration. Roughly two thirds of builders report hitting loops where the same fix is attempted three or four different ways.</p>
+      <p>Auth and payments are two of the three hard things on your build list. That is not a coincidence &mdash; they're hard for the same reason they're hard for a person: the failure is invisible in the preview.</p>
+    </div>
+
+    <h2>The setup order &mdash; this part is not optional</h2>
+    <p class="measure">If you use Lovable, do these five things <em>before</em> you type a single word about a login or a table. After that point, undoing them costs you real damage.</p>
+
+    <ol class="steps">
+      <li><b>Create your Supabase project first, in the EU (London) region</b><p>Region is fixed at creation and cannot be changed later. You're holding UK client identity documents and financial records; London is the answer. Do this in the Supabase dashboard, in your own account, before you open Lovable.</p></li>
+      <li><b>Connect GitHub before the first prompt</b><p>Two-way sync: what Lovable writes appears in your repo, what you push to the active branch appears in Lovable. One caveat &mdash; it watches <em>one branch</em>, and if you ever disconnect and reconnect it creates a <em>brand new repository</em> and orphans the old one. Connect once, never disconnect.</p></li>
+      <li><b>Connect your own Supabase project &mdash; before you ask for anything with a login</b><p><strong>This is the whole ballgame.</strong> Ask for auth or a database first and Lovable silently enables <em>Lovable Cloud</em>: a Supabase instance inside their account that you cannot see in any Supabase dashboard, with no service-role key and no database URL, billed through credits. There is no migration path off it.</p></li>
+      <li><b>Turn off model training</b><p>Lovable's terms give them a perpetual licence to use your project data, including for training. The opt-out is free on every plan and applies going forward. Flip it on day one and note the date &mdash; you're building a system that will hold client financial records.</p></li>
+      <li><b>One small feature per prompt</b><p>Vague, multi-part prompts are where credits die. "Add a receipt upload button to the receipts page that opens the camera" is a prompt. "Build the receipts feature" is a bill.</p></li>
+    </ol>
+
+    <h2>What connecting your own Supabase costs you</h2>
+    <p class="measure">It's the right trade, but it isn't free &mdash; several Lovable features only work on Lovable Cloud:</p>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Feature</th><th>On your own Supabase</th><th>What you do instead</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Built-in Stripe / Paddle payments</td><td><span class="tag no">Unavailable</span></td><td>Write the Stripe integration by hand in an Edge Function. You were going to anyway &mdash; retainers run on GoCardless.</td></tr>
+          <tr><td class="k">Configuring logins by chatting</td><td><span class="tag no">Unavailable</span></td><td>Two minutes in the Supabase dashboard.</td></tr>
+          <tr><td class="k">Email from your own domain</td><td><span class="tag no">Unavailable</span></td><td>Brevo SMTP, which the manual already requires for SPF/DKIM.</td></tr>
+          <tr><td class="k">Database views inside the editor</td><td><span class="tag no">Unavailable</span></td><td>The Supabase dashboard, which is better.</td></tr>
+          <tr><td class="k">Everything else</td><td><span class="tag yes">Works</span></td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Getting out, if you ever want to</h2>
+    <p class="measure">Assuming you followed the order above, leaving Lovable is genuinely easy &mdash; roughly an hour:</p>
+    <pre><span class="c"># the repo is already yours; it's a normal Vite app</span>
+git clone git@github.com:you/klyara-portal.git
+cd klyara-portal
+npm install
+npm run dev          <span class="c"># it just runs</span>
+
+<span class="c"># then point Netlify at the repo and set two env vars</span>
+<span class="h">VITE_SUPABASE_URL</span>=https://xxxx.supabase.co
+<span class="h">VITE_SUPABASE_ANON_KEY</span>=eyJhbGci...</pre>
+    <p class="measure">Your database, storage, users and Edge Functions never moved &mdash; they were always in your Supabase account. You lose the visual editor and the preview URL. Nothing else.</p>
+
+    <div class="flag">
+      <p class="panel-title">If you were on Lovable Cloud instead</p>
+      <p>Then leaving means: every user's <strong>password is lost</strong> (force a reset for all of them), every <strong>user ID changes</strong> to a new UUID so you must hand-patch every table that references one, storage files are downloaded and re-uploaded bucket by bucket, login providers and email templates are rebuilt from scratch, and any table created through the interface rather than a migration file quietly doesn't come with you. Community guides for this run to 33 steps. The existence of four separate third-party migration tools tells you how often people need it.</p>
+    </div>
+  </section>
+
+  <!-- ============ 5 · THE ROUTE I'D TAKE ============ -->
+  <section role="tabpanel" id="p-route" aria-labelledby="t-route" hidden>
+    <p class="eyebrow">Chapter five &middot; The recommendation</p>
+    <h1 class="ch">Build it here instead.</h1>
+    <p class="lede">Identical stack, identical output, identical five-day plan &mdash; written in this session against the repo, with no meter running and nothing between you and the code.</p>
+
+    <h2>Why this is the call for you specifically</h2>
+    <div class="grid2">
+      <div class="panel">
+        <p class="panel-title">The four reasons</p>
+        <ul style="margin-bottom:0">
+          <li><strong>Zero marginal cost.</strong> You already pay for this. Lovable adds $25&ndash;100/month, and it's the only line in the whole build with an unpredictable meter.</li>
+          <li><strong>No lock-in at all.</strong> Your stated position, and the repo is the product from minute one &mdash; no Cloud instance, no perpetual data licence, no export step.</li>
+          <li><strong>The design is already decided.</strong> Colours, fonts, radii and tone are extracted from the live klyara.com and written into the prompt file. There is no visual exploration to do, which is the one thing Lovable is genuinely better at.</li>
+          <li><strong>The hard parts are the metered parts.</strong> RLS policies, the payment webhook, the Bacs state machine. Those need reading and testing, not re-prompting.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="panel-title">What you give up &mdash; honestly</p>
+        <ul style="margin-bottom:0">
+          <li><strong>Click-an-element-and-restyle.</strong> Real loss. You describe changes instead of clicking them. For a design system this fixed, it costs you very little.</li>
+          <li><strong>A one-click shareable preview URL.</strong> Cloudflare Pages gives you a live preview URL per branch automatically, so this is basically solved &mdash; but it's a setup step rather than a default.</li>
+          <li><strong>Automatic back-end provisioning.</strong> You create the Supabase project yourself. Ten minutes, once.</li>
+          <li><strong>Handing the keyboard to a non-technical person.</strong> Craig can't prompt this. He wasn't going to build the portal anyway.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>The build, step by step</h2>
+    <ol class="steps">
+      <li><b>Supabase project &mdash; EU (London)</b>
+        <p>supabase.com &rarr; New project &rarr; region <strong>West EU (London)</strong>. Copy the project URL and the anon key. Set a real database password and put it in Bitwarden. Ten minutes.</p></li>
+      <li><b>Scaffold the repo</b>
+        <p>One command block, then a GitHub repo. This is the only "typing" you personally do.</p>
+        <pre>npm create vite@latest klyara-portal -- --template react-ts
+cd klyara-portal &amp;&amp; npm install
+npm install @supabase/supabase-js react-router-dom
+npm install -D tailwindcss @tailwindcss/vite vite-plugin-pwa
+npx shadcn@latest init
+git init &amp;&amp; git add -A &amp;&amp; git commit -m "scaffold"
+gh repo create klyara-portal --private --source=. --push</pre></li>
+      <li><b>Point me at it and paste the prompts you already have</b>
+        <p>The prompt sequence in the build plan works unchanged &mdash; Prompt 1 foundations, then signup wizard, receipt upload, admin list, review queue, the email Edge Function, documents, add-on store, notifications, custom domain. Same milestones, same days. The difference is I write to files in the repo and you read the diff.</p></li>
+      <li><b>Database changes as SQL files, in git</b>
+        <p>Every table and every RLS policy lands in <code>supabase/migrations/</code> as a numbered SQL file you can read, review and roll back. Applied with <code>supabase db push</code>. This is the part that protects you.</p></li>
+      <li><b>The Edge Function for receipt routing</b>
+        <p><code>supabase functions deploy route-receipt</code>. Brevo SMTP credentials go in <code>supabase secrets set</code>, never in the repo.</p></li>
+      <li><b>Cloudflare Pages, connected to the repo</b>
+        <p>Build command <code>npm run build</code>, output directory <code>dist</code>, two environment variables. Add <code>app.klyara.com</code> as a custom domain &mdash; because Cloudflare already runs the DNS for klyara.com it creates the record and the certificate itself, the same way the main site works today. Every push to <code>main</code> deploys automatically; every branch gets its own preview URL. Free. Netlify does the same job identically if you ever prefer it, but there is no reason to add a second dashboard.</p></li>
+      <li><b>Make it installable</b>
+        <p><code>vite-plugin-pwa</code> with the manifest from the prompt file &mdash; name Klyara, theme colour <code>#16352A</code>, background <code>#F4EFE4</code>, the K monogram at 192 and 512&nbsp;px. Half a day including testing on a real phone.</p></li>
+      <li><b>Prove the security before a single real client</b>
+        <p>Two test client accounts. Log in as A, try to read B's receipts by ID, confirm you get nothing. Check the built JavaScript bundle for the string <code>service_role</code> &mdash; if it's there, stop everything. This is the acceptance test that matters more than any feature.</p></li>
+    </ol>
+
+    <div class="flag good">
+      <p class="panel-title">The door stays open in both directions</p>
+      <p>Because Lovable syncs two-way with a GitHub repo, you can point it at this repo later if you decide you want the visual editor for a polish pass. You are not choosing permanently &mdash; you're choosing what runs the meter this month.</p>
+    </div>
+
+    <h2>The others, briefly, and why not</h2>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Platform</th><th>Verdict</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Bolt.new</td><td><span class="tag mid">The best Lovable alternative</span></td><td>$25/month, first-class Netlify and Supabase from the start, cleanest exit of the metered tools. If you want a visual builder, use this rather than Lovable &mdash; it never had a "Cloud" to trap you in.</td></tr>
+          <tr><td class="k">v0 (Vercel)</td><td><span class="tag mid">Good, wrong shape</span></td><td>Excellent at generating screens, genuinely two-way GitHub, weakest lock-in of any of them. But it's Next.js-shaped and pulls you toward Vercel hosting, and it's a UI generator more than an app builder.</td></tr>
+          <tr><td class="k">Replit</td><td><span class="tag no">Avoid</span></td><td>Effort-based pricing shows you no price before it runs. Documented outcomes include $20 for one prompt and one user reaching $1,000 in a week. Hosting is billed separately on top.</td></tr>
+          <tr><td class="k">Base44 (Wix)</td><td><span class="tag no">Avoid</span></td><td>Export is <em>front end only</em> &mdash; you get React calling API endpoints that stop existing the moment you leave. Auth, schema and payments all stay behind. Payments run through <em>their</em> merchant account. Cannot bring your own database.</td></tr>
+          <tr><td class="k">Bubble</td><td><span class="tag no">Avoid</span></td><td>No code export. Ever. Data comes out as CSVs with the relationships stripped. Leaving means rebuilding from zero, and the bill grows with your clients' usage.</td></tr>
+          <tr><td class="k">Firebase Studio</td><td><span class="tag no">Dead</span></td><td>Google closed it to new users in June 2026; full shutdown March 2027. Not an option.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 6 · COSTS ============ -->
+  <section role="tabpanel" id="p-costs" aria-labelledby="t-costs" hidden>
+    <p class="eyebrow">Chapter six &middot; What it actually costs</p>
+    <h1 class="ch">Move the sliders.</h1>
+    <p class="lede">Build phase and running phase, both routes, plus what the payment provider takes out of your monthly recurring revenue. Everything in pounds.</p>
+
+    <div class="calc">
+      <div class="controls">
+        <div class="ctl">
+          <label for="c-weeks">Build weeks <b id="v-weeks">6</b></label>
+          <input type="range" id="c-weeks" min="2" max="16" value="6" step="1">
+        </div>
+        <div class="ctl">
+          <label for="c-clients">Clients <b id="v-clients">10</b></label>
+          <input type="range" id="c-clients" min="1" max="60" value="10" step="1">
+        </div>
+        <div class="ctl">
+          <label for="c-fee">Avg monthly fee <b id="v-fee">£150</b></label>
+          <input type="range" id="c-fee" min="50" max="400" value="150" step="10">
+        </div>
+        <div class="ctl">
+          <label for="seg-tier">Lovable tier, if you took that route</label>
+          <div class="seg" id="seg-tier" role="group" aria-label="Lovable tier">
+            <button type="button" data-usd="25" aria-pressed="true">$25 &middot; 100cr</button>
+            <button type="button" data-usd="50" aria-pressed="false">$50 &middot; 200cr</button>
+            <button type="button" data-usd="100" aria-pressed="false">$100 &middot; 400cr</button>
+          </div>
+        </div>
+        <p class="calc-note" style="margin:0">Converted at roughly $1.27 to the pound. Storage assumes 25 receipts per client per month, compressed to about 300&nbsp;KB each.</p>
+      </div>
+
+      <div class="readout" id="readout"></div>
+    </div>
+
+    <h2>The line items</h2>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Item</th><th class="num">Build phase</th><th class="num">Running</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Claude Code</td><td class="num">£0*</td><td class="num">£0*</td><td>*Already paid for. No per-build metering.</td></tr>
+          <tr><td class="k">Lovable Pro (alternative)</td><td class="num">£20&ndash;80</td><td class="num">£20</td><td>Keep a seat after launch only if you want the visual editor.</td></tr>
+          <tr><td class="k">Supabase</td><td class="num">£0</td><td class="num">£20</td><td>Free until ~1&nbsp;GB of receipts. Pro from month 2&ndash;3, permanently.</td></tr>
+          <tr><td class="k">Cloudflare Pages (portal)</td><td class="num">£0</td><td class="num">£0</td><td>Free tier covers this comfortably at 50 clients.</td></tr>
+          <tr><td class="k">Cloudflare (klyara.com)</td><td class="num">£0</td><td class="num">£0</td><td>Already live on the free plan. The build manual&rsquo;s £5&ndash;10 Fasthosts line is obsolete.</td></tr>
+          <tr><td class="k">Brevo</td><td class="num">£0</td><td class="num">£0&ndash;15</td><td>Free tier is fine until volume picks up.</td></tr>
+          <tr><td class="k">Domain + SSL</td><td class="num">£0</td><td class="num">£0</td><td>Subdomain of one you own; Cloudflare issues the certificate.</td></tr>
+          <tr><td class="k">GoCardless / Stripe</td><td class="num">£0</td><td class="num">per txn</td><td>No monthly fee on either. See the calculator above.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Two costs the plan doesn't have a line for yet</h3>
+    <ul class="measure">
+      <li><strong>Custom Direct Debit branding &mdash; £50/month, both providers.</strong> Without it, your clients' bank statements and mandate emails say GOCARDLESS or STRIPE, not Klyara. For a bookkeeping firm that generates support calls and, occasionally, mistaken Direct Debit Guarantee claims. Skip it at launch; add it once you're past about ten clients.</li>
+      <li><strong>Storage grows and never shrinks.</strong> At 30 clients you're adding roughly 4.5&nbsp;GB of receipt images a year. Compress on the phone before upload, and consider pruning Klyara's copies once a receipt is confirmed in the client's accounting platform &mdash; that platform keeps the record, and your AML retention obligations sit against your client files, not against duplicate images.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 7 · PAYMENTS ============ -->
+  <section role="tabpanel" id="p-pay" aria-labelledby="t-pay" hidden>
+    <p class="eyebrow">Chapter seven &middot; Getting paid</p>
+    <h1 class="ch">Direct Debit for retainers. Cards for extras.</h1>
+    <p class="lede">Two systems, two jobs. Getting this wrong is the difference between about £600 and about £2,000 a year in fees at thirty clients.</p>
+
+    <h2>Why Direct Debit, not cards</h2>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Route</th><th class="num">Fee</th><th class="num">On £150</th><th class="num">30 clients / yr</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td class="k">GoCardless Standard</td><td class="num">1% + 20p, cap £4</td><td class="num">£1.70</td><td class="num">£612</td><td><span class="tag yes">Use this for retainers</span></td></tr>
+          <tr><td class="k">Stripe Bacs Direct Debit</td><td class="num">1%, cap £4</td><td class="num">£1.50</td><td class="num">£540</td><td><span class="tag mid">+0.7% if you use Stripe Billing</span></td></tr>
+          <tr><td class="k">Stripe Bacs + Billing</td><td class="num">1% + 0.7%</td><td class="num">£2.55</td><td class="num">£918</td><td><span class="tag mid">Fine, one integration</span></td></tr>
+          <tr><td class="k">Stripe UK business card</td><td class="num">2.8% + 20p</td><td class="num">£4.40</td><td class="num">£1,584</td><td><span class="tag no">Fallback only</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="measure">Note the card row is the <em>commercial</em> card rate, not the 1.5% consumer rate everyone quotes. Your clients are businesses, so that's the rate you'll actually pay on most transactions.</p>
+
+    <p class="measure">Cost isn't even the main argument. The real ones: you <em>pull</em> the money on the due date instead of chasing an invoice; business cards expire, get reissued and hit limits while a bank mandate just keeps working; and GoCardless integrates natively with Xero, QuickBooks, FreeAgent and Sage, so the collection reconciles itself against the invoice. For a bookkeeper, that reconciliation saving is worth more than the fee difference.</p>
+
+    <div class="flag good">
+      <p class="panel-title">The version you should ship first: no payment code at all</p>
+      <p>At ten to fifty clients, raise the invoice in QuickBooks and let its built-in GoCardless integration collect it. Zero lines of code. The portal's job is then just to <em>display</em> payment status. Build in-portal checkout only when the add-on store actually needs it &mdash; which is the manual's week 6&ndash;12 anyway.</p>
+    </div>
+
+    <h2>When you do wire it in</h2>
+    <ol class="steps">
+      <li><b>Never let card or bank details touch your code</b><p>Redirect to Stripe Checkout or the GoCardless hosted page. They render the Direct Debit Guarantee wording and validate the bank details. You handle none of it, and your compliance surface stays tiny.</p></li>
+      <li><b>Three Edge Functions, that's the whole integration</b><p>One creates a checkout session, one returns a customer-portal link so clients change their own bank details, one receives webhooks. About two to four days including testing.</p></li>
+      <li><b>The webhook function is the one that needs care</b><p>Verify the signature. Store every event ID with a unique constraint so a retried webhook can't double-apply. Compare timestamps before overwriting status, because events arrive out of order. Write with the service-role key, and give it no Supabase JWT check &mdash; the payment provider doesn't have one.</p></li>
+      <li><b>The payment provider is the source of truth; your database holds a copy</b><p>A <code>subscriptions</code> table mirroring status and period end, an <code>invoices</code> table, and a <code>processed_events</code> table. Gate portal access on the mirrored status, never on a flag you set optimistically when someone finished checkout.</p></li>
+      <li><b>Design for the Bacs delay</b><p>First collection takes four to seven working days to confirm. Don't gate a new client's access on a successful payment &mdash; gate it on an <em>active mandate</em>, and suspend later if collections fail.</p></li>
+    </ol>
+
+    <h2>The compliance bits, briefly</h2>
+    <ul class="measure">
+      <li><strong>No FCA authorisation needed</strong> to collect Direct Debits through GoCardless or Stripe &mdash; they're the regulated institution, you're a merchant. This changes completely if the portal ever holds or moves money on a client's behalf. Don't build that without advice.</li>
+      <li><strong>AML supervision is separate and is already your critical path.</strong> Providing bookkeeping services is regulated under the Money Laundering Regulations &mdash; Craig's ICB/AAT route, or HMRC registration at £300 to apply plus £400 per premises a year. Nothing to do with payments; everything to do with whether you can take a client at all.</li>
+      <li><strong>The portal becomes where ID documents live.</strong> That's UK GDPR: ICO registration, Supabase's data processing agreement signed, London region, and a retention and deletion schedule built in from day one rather than bolted on.</li>
+      <li><strong>You must give advance notice</strong> of the amount and date before each collection. Both providers send these automatically &mdash; but confirm the notice period your provider operates under before you promise a client a collection date.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 8 · STORES ============ -->
+  <section role="tabpanel" id="p-stores" aria-labelledby="t-stores" hidden>
+    <p class="eyebrow">Chapter eight &middot; The native question</p>
+    <h1 class="ch">Three rungs, and you only need the first.</h1>
+    <p class="lede">You were right that this is a web app first. Here's exactly what the other two rungs cost, and the honest reason to climb each one.</p>
+
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Rung</th><th>Cost</th><th>Effort</th><th>Risk</th><th>When</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="k">1 &middot; Installable web app</td><td class="num">£0</td><td>1&ndash;3 days</td><td><span class="tag yes">None</span></td>
+            <td>Now. Reaches 100% of clients today, on both platforms.</td>
+          </tr>
+          <tr>
+            <td class="k">2 &middot; Google Play</td><td class="num">$25 once</td><td>~1 day + listing</td><td><span class="tag yes">Low</span></td>
+            <td>When "we're on the Play Store" is worth something in a sales conversation. It's cheap.</td>
+          </tr>
+          <tr>
+            <td class="k">3 &middot; Apple App Store</td><td class="num">$99/yr + a Mac</td><td>1&ndash;3 weeks, then forever</td><td><span class="tag no">Real rejection risk</span></td>
+            <td>Only if an iPhone client's push notifications are demonstrably losing you business.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Rung 1 &mdash; what you get for free</h2>
+    <div class="grid2">
+      <div class="panel">
+        <p class="panel-title">Android &mdash; effectively a native app</p>
+        <ul style="margin-bottom:0">
+          <li>You can show your own <strong>"Install Klyara"</strong> button; Chrome builds a real Android package behind it.</li>
+          <li><strong>Push notifications work without installing</strong> &mdash; straight from the browser tab.</li>
+          <li>Background sync: a receipt taken with no signal genuinely uploads later.</li>
+          <li>Camera, file access, share-to-Klyara from the gallery. All of it.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="panel-title">iPhone &mdash; three real limits</p>
+        <ul style="margin-bottom:0">
+          <li><strong>Install is manual.</strong> Share sheet &rarr; Add to Home Screen. No prompt you can trigger. Build the coaching screen &mdash; a screenshot with an arrow.</li>
+          <li><strong>Push only after installing.</strong> No home-screen icon, no notifications. With ten to fifty clients you walk each one through it during onboarding.</li>
+          <li><strong>No background upload.</strong> Queued receipts flush when the app is next open, so say so in the interface rather than pretending.</li>
+          <li>Use <code>&lt;input capture&gt;</code>, not a live camera stream &mdash; live video is unreliable in installed iPhone web apps and re-asks permission every launch.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Rung 2 &mdash; Google Play, via a Trusted Web Activity</h2>
+    <p class="measure">Google's own sanctioned route: your existing site, wrapped, shipped to Play. It shares Chrome's storage, so the login session carries over. PWABuilder or Bubblewrap generates the package.</p>
+    <ul class="measure">
+      <li>You host one file at <code>/.well-known/assetlinks.json</code> proving you own the domain. <strong>The fingerprint in it must be Google's Play signing certificate, not your local upload key</strong> &mdash; this is the step everyone gets wrong, and the failure mode is a visible browser address bar inside your app.</li>
+      <li><strong>Register as an organisation, not a person.</strong> Personal accounts created since late 2023 must run a closed test with twelve testers for fourteen straight days before they can publish. Organisation accounts skip that entirely &mdash; but need a D&amp;B D-U-N-S number, which is free and takes days to weeks. Start that early if you want this.</li>
+      <li>Google raises the required Android version every year, so budget half a day annually to rebuild and resubmit.</li>
+    </ul>
+
+    <h2>Rung 3 &mdash; Apple, and why I'd defer it</h2>
+    <p class="measure">Apple's guideline 4.2 rejects apps that are "a repackaged website". A wrapper whose only job is to load app.klyara.com is the textbook case, and 4.2 is one of the most common rejection reasons there is.</p>
+    <p class="measure">To pass, a Capacitor build has to earn its place: bundle the web assets <em>inside</em> the app rather than pointing at your live URL, add a native tab bar rather than reusing the web menu, add real Apple push notifications, use the native camera plugin for receipts, add Face ID app lock, and ship a proper offline screen. Realistically <strong>one to three weeks the first time</strong> &mdash; most of it Apple push and rebuilding Supabase login for deep links &mdash; plus a review cycle on every future fix.</p>
+    <p class="measure">Two smaller traps: keep all pricing and payment out of the iOS app entirely, and supply App Review with working demo credentials or you get auto-rejected at the login screen before anyone reads your submission.</p>
+
+    <div class="flag good">
+      <p class="panel-title">The upside of deferring</p>
+      <p>If you eventually build the Capacitor version, it produces the Android app from the same codebase &mdash; so the Play Store wrapper you'd retire was never wasted work, and none of this requires rewriting the portal. The web app you build in week one is the app in all three cases.</p>
+    </div>
+  </section>
+
+  <!-- ============ 9 · NEXT ============ -->
+  <section role="tabpanel" id="p-next" aria-labelledby="t-next" hidden>
+    <p class="eyebrow">Chapter nine &middot; Before you start</p>
+    <h1 class="ch">The order to do things in.</h1>
+    <p class="lede">Everything above collapses into this. Tick as you go &mdash; it remembers.</p>
+
+    <p class="progress" id="prog">0 of 12 done</p>
+    <div class="check" id="checklist">
+      <label><input type="checkbox" data-i="1"><span class="txt">Create the Supabase project in the <strong>EU (London)</strong> region<small>Cannot be changed later. If one already exists in a US region, delete and recreate it now, before there is any data in it.</small></span></label>
+      <label><input type="checkbox" data-i="2"><span class="txt">Create a private GitHub repo for the portal<small>This is the thing you actually own. Everything else is replaceable.</small></span></label>
+      <label><input type="checkbox" data-i="3"><span class="txt">Decide the route &mdash; and if it's Lovable, connect your own Supabase before the first back-end prompt<small>Otherwise Lovable Cloud enables itself and you inherit a migration you don't want.</small></span></label>
+      <label><input type="checkbox" data-i="4"><span class="txt">Scaffold Vite + React + TypeScript + Tailwind + shadcn and push the first commit<small>One command block. Chapter 5, step 2.</small></span></label>
+      <label><input type="checkbox" data-i="5"><span class="txt">Build M0 &mdash; auth, profiles table, RLS, app shell, PWA manifest<small>Prompt 1 is already written and ready to paste.</small></span></label>
+      <label><input type="checkbox" data-i="6"><span class="txt">Connect Cloudflare Pages to the repo and add <code>app.klyara.com</code><small>The record does not exist yet &mdash; Cloudflare creates it when you attach the custom domain, because it already runs the DNS for klyara.com. Do it early so the link works from day one.</small></span></label>
+      <label><input type="checkbox" data-i="7"><span class="txt">Repoint the "Client login" link in the klyara.com header<small>It currently goes to <code>login.html</code>, the internal control-panel gate. It must point at <code>app.klyara.com</code> before any client sees it. That is the entire website-to-app integration.</small></span></label>
+      <label><input type="checkbox" data-i="8"><span class="txt">Build M1&ndash;M3 &mdash; signup wizard, receipt capture, admin review queue, email routing<small>Days 1&ndash;5. This is launch.</small></span></label>
+      <label><input type="checkbox" data-i="9"><span class="txt">Run the security test with two fake clients<small>Client A must not be able to read client B's receipts. Check the built bundle for <code>service_role</code>. Do this before a single real client.</small></span></label>
+      <label><input type="checkbox" data-i="10"><span class="txt">Test the full receipt round trip on all three accounting platforms<small>Real crumpled diesel receipt, real Xero / FreeAgent / QuickBooks test accounts.</small></span></label>
+      <label><input type="checkbox" data-i="11"><span class="txt">Install it on three real phones as an icon<small>At least one iPhone. Watch someone who isn't you do the Add to Home Screen step, then write the coaching screen from what they got stuck on.</small></span></label>
+      <label><input type="checkbox" data-i="12"><span class="txt">Set up GoCardless and collect the first retainer<small>Invoice from QuickBooks, collect via its GoCardless integration. No portal code needed yet.</small></span></label>
+    </div>
+
+    <h2>What to hold in your head</h2>
+    <div class="grid3">
+      <div class="stat"><div class="k">The trap</div><div class="v">Cloud</div><div class="s">Lovable Cloud switches itself on the first time you ask for a login. Your own Supabase, first, always.</div></div>
+      <div class="stat"><div class="k">The security model</div><div class="v">RLS</div><div class="s">Row-level security is the only thing between client A and client B's data. Read every policy.</div></div>
+      <div class="stat"><div class="k">Running cost</div><div class="v">~£20</div><div class="s">Per month, all in, at ten to fifty clients. Supabase Pro is the only real line.</div></div>
+    </div>
+
+    <hr class="rule">
+    <p class="measure" style="color:var(--mute);font-size:14.5px">Figures checked against vendor pricing pages, documentation and terms in August 2026. Lovable credit-burn figures come from practitioner reports rather than Lovable, so treat them as directional. Apple and Google fees are quoted in their published currency. Nothing here is legal, financial or tax advice &mdash; the AML and Direct Debit points in particular are pointers to check with Craig's supervisory body, not conclusions.</p>
+  </section>
+
+  <div class="footer">
+    <span>Klyara &mdash; client portal, v1</span>
+    <span>Decision: own repo, own Supabase, London</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var CHAPTERS = [
+    {id:"verdict", n:"01", label:"Verdict"},
+    {id:"stack",   n:"02", label:"The stack"},
+    {id:"wiring",  n:"03", label:"How it connects"},
+    {id:"lovable", n:"04", label:"Lovable explained"},
+    {id:"route",   n:"05", label:"The route I'd take"},
+    {id:"costs",   n:"06", label:"Costs"},
+    {id:"pay",     n:"07", label:"Getting paid"},
+    {id:"stores",  n:"08", label:"App stores"},
+    {id:"next",    n:"09", label:"Do this next"}
+  ];
+
+  /* ---------- chapter tabs ---------- */
+  var rail = document.getElementById("rail");
+  CHAPTERS.forEach(function(c, i){
+    var b = document.createElement("button");
+    b.className = "chip";
+    b.type = "button";
+    b.id = "t-" + c.id;
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-controls", "p-" + c.id);
+    b.setAttribute("aria-selected", i === 0 ? "true" : "false");
+    b.innerHTML = '<span class="n">' + c.n + '</span>' + c.label;
+    b.addEventListener("click", function(){ show(c.id); });
+    rail.appendChild(b);
+  });
+
+  function show(id){
+    CHAPTERS.forEach(function(c){
+      var tab = document.getElementById("t-" + c.id);
+      var panel = document.getElementById("p-" + c.id);
+      var on = c.id === id;
+      tab.setAttribute("aria-selected", on ? "true" : "false");
+      panel.hidden = !on;
+    });
+    var t = document.getElementById("t-" + id);
+    if (t && t.scrollIntoView) t.scrollIntoView({block:"nearest", inline:"nearest"});
+    window.scrollTo({top:0, behavior:"instant"});
+  }
+
+  rail.addEventListener("keydown", function(e){
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    var tabs = Array.prototype.slice.call(rail.querySelectorAll(".chip"));
+    var i = tabs.indexOf(document.activeElement);
+    if (i < 0) return;
+    e.preventDefault();
+    var j = e.key === "ArrowRight" ? Math.min(i + 1, tabs.length - 1) : Math.max(i - 1, 0);
+    tabs[j].focus();
+    show(CHAPTERS[j].id);
+  });
+
+  /* ---------- diagram detail ---------- */
+  var INFO = {
+    client: {
+      title:"The client", role:"Person &middot; the reason this exists",
+      body:"A builder or CIS subcontractor, standing next to a van, holding a receipt. This person will not read instructions, will not use a desktop, and will abandon anything that takes more than three taps. The receipt screen is the entire product to them.",
+      facts:[["Device","Phone, portrait, one thumb"],["Install","Home screen icon, no app store"],["Job","Photograph a receipt, see it land"]]
+    },
+    craig: {
+      title:"Craig", role:"Person &middot; admin",
+      body:"Sees a review queue of everything uploaded since yesterday. Approves or rejects with a reason. Target is under two minutes per client per day &mdash; if it takes longer, the design is wrong, not Craig.",
+      facts:[["Access","Role-guarded admin routes"],["Job","Approve, publish documents, manage clients"],["Not their job","Touching the code"]]
+    },
+    wp: {
+      title:"klyara.com", role:"Static site on Cloudflare &middot; already live",
+      body:"The public site: services, pricing, the MTD and CIS pages, the twelve calculators, the blog and the hidden control panel. Plain HTML served by a Cloudflare Worker straight out of the <code>keypascal/klyara-web</code> repo &mdash; push to main and it deploys. It stays exactly as it is. Its only connection to the portal is a link in the header.",
+      facts:[["Cost","£0 &mdash; Cloudflare free plan"],["Deploys","<code>npx wrangler deploy</code> on push"],["Changes needed","Repoint the Client login link"]]
+    },
+    app: {
+      title:"app.klyara.com", role:"React PWA on Cloudflare Pages &middot; the thing you're building",
+      body:"Vite + React + TypeScript + Tailwind + shadcn/ui. A single-page app served as static files from Cloudflare's network, installable to a phone home screen. It holds no secrets and no data of its own &mdash; it is a face over Supabase. <strong>The hostname does not exist yet</strong> &mdash; nothing answers on app.klyara.com today.",
+      facts:[["Hosting","£0 &mdash; Cloudflare Pages free tier"],["DNS","Created when you attach the custom domain"],["Replaceable with","Netlify, Vercel, any static host"]]
+    },
+    auth: {
+      title:"Supabase Auth", role:"Back end &middot; who someone is",
+      body:"Email and password, verification emails, password resets. Issues a signed token that lasts an hour and refreshes silently. Your code never sees a password. Magic links and social logins are a toggle away if you want them later.",
+      facts:[["Included","50,000 monthly users on free"],["Config","Supabase dashboard, not code"],["Standard","Ordinary JWTs &mdash; nothing proprietary"]]
+    },
+    db: {
+      title:"Postgres + row-level security", role:"Back end &middot; the actual database",
+      body:"A real Postgres database in London. Six tables: profiles, clients, receipts, documents, add-on enquiries, and later subscriptions. Row-level security policies decide, per row, who may read it. That enforcement happens inside Postgres, which is why it cannot be bypassed from a browser.",
+      facts:[["Region","EU West (London) &mdash; fixed at creation"],["Free tier","500&nbsp;MB &mdash; plenty for rows"],["Portability","Standard Postgres. <code>pg_dump</code> and go."]]
+    },
+    storage: {
+      title:"Supabase Storage", role:"Back end &middot; files",
+      body:"Two private buckets: receipts and documents, each scoped by folder to one client. Nothing is publicly readable; the app requests short-lived signed URLs. This is the line item that eventually costs you money, because photographs are big.",
+      facts:[["Free tier","1&nbsp;GB &mdash; about two months at 30 clients"],["Then","Supabase Pro, 100&nbsp;GB, ~£20/mo"],["Do this","Compress to ~300&nbsp;KB in the browser"]]
+    },
+    edge: {
+      title:"Edge Functions", role:"Back end &middot; the only trusted code",
+      body:"Small server-side functions in Deno. This is the only place secrets are allowed to exist: the Brevo credentials, the Stripe key, the service-role key. Three of them run the whole system &mdash; route an approved receipt, create a payment session, receive payment webhooks.",
+      facts:[["Language","TypeScript on Deno"],["Secrets","<code>supabase secrets set</code>, never git"],["Deploy","<code>supabase functions deploy</code>"]]
+    },
+    gc: {
+      title:"GoCardless", role:"Outside &middot; monthly retainers",
+      body:"Collects the monthly fee by Direct Debit. You pull on the due date rather than chasing an invoice. Roughly 1% plus 20p, capped at £4, with no monthly plan fee. It's what UK bookkeeping practices use, and it reconciles natively against QuickBooks, Xero and FreeAgent invoices.",
+      facts:[["Fee on £150","£1.70"],["Monthly cost","£0"],["First collection","4&ndash;7 working days"]]
+    },
+    stripe: {
+      title:"Stripe", role:"Outside &middot; one-off add-ons",
+      body:"For the add-on store at week 6+: a client buys a website build or a receptionist package with a card. Hosted Checkout, so card details never touch your code. Not for retainers &mdash; a UK business card costs 2.8% plus 20p, nearly three times Direct Debit.",
+      facts:[["Business card","2.8% + 20p"],["Integration","3 Edge Functions, 2&ndash;4 days"],["Bacs option","1%, cap £4, if you want one provider"]]
+    },
+    brevo: {
+      title:"Brevo SMTP", role:"Outside &middot; outbound email",
+      body:"Sends everything the system emails: receipt-approved notices, document-published alerts, and the receipt hand-off into the client's accounting platform. Already in the build manual, and already the reason you need SPF and DKIM set up on the domain.",
+      facts:[["Cost","Free tier, then ~£15/mo"],["Requires","SPF + DKIM on klyara.com"],["Swap for","Postmark, Resend, SES &mdash; an hour"]]
+    },
+    books: {
+      title:"Xero &middot; FreeAgent &middot; QuickBooks", role:"Outside &middot; where receipts actually end up",
+      body:"Each one accepts receipts by email at a dedicated address, then runs its own extraction. Every client record carries two fields &mdash; which platform, and that inbox address. Craig sets it once during onboarding, in five minutes, inside the platform's own settings.",
+      facts:[["Integration code","None, in version one"],["Switching a client","Change one email address"],["Later","OAuth, QuickBooks first, month 3+"]]
+    }
+  };
+
+  var detail = document.getElementById("detail");
+  var nodes = Array.prototype.slice.call(document.querySelectorAll(".node"));
+
+  function render(key){
+    var d = INFO[key];
+    if (!d) return;
+    nodes.forEach(function(n){ n.classList.toggle("on", n.getAttribute("data-key") === key); });
+    var dl = d.facts.map(function(f){ return "<dt>" + f[0] + "</dt><dd>" + f[1] + "</dd>"; }).join("");
+    detail.innerHTML =
+      '<h4>' + d.title + '</h4>' +
+      '<p class="role">' + d.role + '</p>' +
+      '<p>' + d.body + '</p>' +
+      '<dl>' + dl + '</dl>';
+  }
+  nodes.forEach(function(n){
+    var key = n.getAttribute("data-key");
+    n.addEventListener("click", function(){ render(key); });
+    n.addEventListener("keydown", function(e){
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); render(key); }
+    });
+  });
+  render("app");
+
+  /* ---------- cost calculator ---------- */
+  var USD = 0.787; // approx GBP per USD, Aug 2026
+  var els = {
+    weeks: document.getElementById("c-weeks"),
+    clients: document.getElementById("c-clients"),
+    fee: document.getElementById("c-fee"),
+    vWeeks: document.getElementById("v-weeks"),
+    vClients: document.getElementById("v-clients"),
+    vFee: document.getElementById("v-fee"),
+    out: document.getElementById("readout")
+  };
+  var lovableUsd = 25;
+
+  var seg = document.getElementById("seg-tier");
+  Array.prototype.slice.call(seg.querySelectorAll("button")).forEach(function(b){
+    b.addEventListener("click", function(){
+      Array.prototype.slice.call(seg.querySelectorAll("button")).forEach(function(x){
+        x.setAttribute("aria-pressed", x === b ? "true" : "false");
+      });
+      lovableUsd = parseInt(b.getAttribute("data-usd"), 10);
+      calc();
+    });
+  });
+
+  function gbp(n){
+    return "£" + n.toLocaleString("en-GB", {minimumFractionDigits:0, maximumFractionDigits:0});
+  }
+  function gbp2(n){
+    return "£" + n.toLocaleString("en-GB", {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  function row(cls, label, sub, amount){
+    return '<div class="row ' + cls + '"><span class="lbl">' + label +
+           '<small>' + sub + '</small></span><span class="amt">' + amount + '</span></div>';
+  }
+
+  function calc(){
+    var weeks = +els.weeks.value;
+    var clients = +els.clients.value;
+    var fee = +els.fee.value;
+
+    els.vWeeks.textContent = weeks;
+    els.vClients.textContent = clients;
+    els.vFee.textContent = "£" + fee;
+
+    var months = Math.max(1, Math.ceil(weeks / 4.33));
+    var mrr = clients * fee;
+
+    // storage: 25 receipts/client/month at 0.3 MB, over 12 months
+    var gbYear = clients * 25 * 0.3 * 12 / 1024;
+    var supabase = gbYear > 0.8 ? 20 : 0;
+
+    // build phase totals
+    var lovableBuild = Math.round(lovableUsd * USD) * months;
+    var claudeBuild = 0;
+
+    // payment fees per month
+    var perCollection = Math.min(4, fee * 0.01 + 0.20);
+    var gcMonth = perCollection * clients;
+    var cardMonth = (fee * 0.028 + 0.20) * clients;
+    var saving = (cardMonth - gcMonth) * 12;
+
+    var running = supabase; // Supabase only — Cloudflare hosting is free
+    var pct = mrr > 0 ? (gcMonth / mrr * 100) : 0;
+
+    els.out.innerHTML =
+      row("hi", "Build cost &mdash; this route",
+          "Claude Code + Supabase + Netlify, over " + months + " month" + (months > 1 ? "s" : ""),
+          gbp(claudeBuild)) +
+      row("", "Build cost &mdash; Lovable route",
+          "$" + lovableUsd + "/mo &times; " + months + " month" + (months > 1 ? "s" : "") + ", before overage",
+          gbp(lovableBuild)) +
+      row("", "Running cost, per month",
+          "Supabase only &mdash; Cloudflare hosting for both the site and the portal is free",
+          gbp(running)) +
+      row("", "Receipt storage, year one",
+          clients + " clients &times; 25 receipts &times; 300&nbsp;KB",
+          gbYear.toFixed(1) + " GB") +
+      row("hi", "Direct Debit fees, per month",
+          "GoCardless at " + gbp2(perCollection) + " per collection &mdash; " + pct.toFixed(1) + "% of revenue",
+          gbp(gcMonth)) +
+      row("lo", "If you billed cards instead",
+          "UK business card rate, 2.8% + 20p",
+          gbp(cardMonth)) +
+      row("", "Cost of choosing cards over Direct Debit",
+          "Per year, at " + clients + " clients",
+          gbp(saving)) +
+      row("", "Monthly recurring revenue",
+          clients + " clients at £" + fee,
+          gbp(mrr));
+  }
+
+  [els.weeks, els.clients, els.fee].forEach(function(el){
+    el.addEventListener("input", calc);
+  });
+  calc();
+
+  /* ---------- checklist ---------- */
+  var KEY = "klyara-portal-checklist-v1";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("#checklist input"));
+  var prog = document.getElementById("prog");
+
+  function load(){
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      if (!raw) return {};
+      return JSON.parse(raw) || {};
+    } catch (e) { return {}; }
+  }
+  function save(state){
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  function updateProg(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    prog.textContent = done + " of " + boxes.length + " done";
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    var i = b.getAttribute("data-i");
+    if (state[i]) b.checked = true;
+    b.addEventListener("change", function(){
+      var s = load();
+      s[i] = b.checked;
+      save(s);
+      updateProg();
+    });
+  });
+  updateProg();
+})();
+</script>
+
+</body>
+</html>

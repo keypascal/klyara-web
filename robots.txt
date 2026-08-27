@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+
+# Internal pages. Not access control — see README.md.
+Disallow: /uni/
+Disallow: /admin.html
+Disallow: /login.html
+
 Sitemap: https://klyara.com/sitemap.xml

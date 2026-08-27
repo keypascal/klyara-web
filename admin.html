@@ -56,6 +56,9 @@
       <button class="atab" role="tab" data-view="launch" aria-selected="false" aria-controls="v-launch" id="t-launch">
         <svg viewBox="0 0 24 24"><path d="M12 2.5c3.5 2.4 5.5 6.2 5.5 10.4L12 18l-5.5-5.1C6.5 8.7 8.5 4.9 12 2.5z"/><circle cx="12" cy="10.5" r="2"/><path d="M8.5 17 6 21l4-1.2M15.5 17 18 21l-4-1.2"/></svg>
         <span>Launch control</span><span class="n">06</span></button>
+      <button class="atab" role="tab" data-view="uni" aria-selected="false" aria-controls="v-uni" id="t-uni">
+        <svg viewBox="0 0 24 24"><path d="M12 4 2.5 8.5 12 13l9.5-4.5z"/><path d="M6.5 10.8v4.4c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-4.4"/><path d="M21.5 8.5v5"/></svg>
+        <span>Uni</span><span class="n" id="n-uni">2</span></button>
     </div>
     <p class="arail-foot">Read-only. Nothing on this panel edits, uploads or saves.<br><span id="a-gen"></span></p>
   </div>
@@ -327,6 +330,73 @@
           brand-token compliance, and whether every asset referenced in the documents actually exists. It should print <b>TOTAL PROBLEMS: 0</b>. It currently does.</p>
       </div>
     </div>
+  </section>
+
+  <!-- (g) uni ─────────────────────────────────────────────────────────── -->
+  <section class="aview" id="v-uni" role="tabpanel" aria-labelledby="t-uni">
+    <div class="ahead">
+      <span class="kicker">The handbook</span>
+      <h1 class="h1">Klyara Uni.</h1>
+      <p class="lede">How things work here, written down once so nobody has to be asked twice.
+        Written for Key, Craig, and whoever joins next. Guides open in a new tab.</p>
+    </div>
+
+    <div class="ablock" style="margin-top:6px">
+      <h2 class="h2">Build and technology</h2>
+      <p class="small">How the software is put together, what it costs, and why it was chosen that way.</p>
+      <div class="qgrid" data-stagger>
+        <a class="qlink" href="uni/portal-build-playbook.html" target="_blank" rel="noopener">
+          <span class="qi">01</span>
+          <span><b>Portal Build Playbook</b><span>The client portal at app.klyara.com &mdash; the whole stack, how the site and the app connect, Lovable versus building it ourselves, running costs, Direct Debit versus cards, and the route into the app stores. Nine chapters, interactive.</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink" href="uni/portal-platform-decision.md" target="_blank" rel="noopener">
+          <span class="qi">02</span>
+          <span><b>Portal Platform Decision</b><span>The short written record of what we chose and why, and the corrections it makes to the build manual.</span></span>
+          <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Coming next</h2>
+      <p class="small">The gaps worth filling first. Each becomes a page in here when it is written.</p>
+      <div class="qgrid" data-stagger>
+        <a class="qlink ph" href="#" aria-disabled="true" onclick="return false">
+          <span class="qi">&mdash;</span>
+          <span><b>Onboarding a new client</b><span>Signed to live in five days: AML checks, engagement letter, agent authorisation, accounting platform, Direct Debit, first receipt.</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink ph" href="#" aria-disabled="true" onclick="return false">
+          <span class="qi">&mdash;</span>
+          <span><b>The receipt round trip</b><span>What happens between a photo on site and a line in the client's books, and what to do when it goes wrong.</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink ph" href="#" aria-disabled="true" onclick="return false">
+          <span class="qi">&mdash;</span>
+          <span><b>Editing this website</b><span>Where the files live, how a change reaches klyara.com, and the one rule about what must never be committed.</span></span>
+          <span class="ar">&rarr;</span></a>
+        <a class="qlink ph" href="#" aria-disabled="true" onclick="return false">
+          <span class="qi">&mdash;</span>
+          <span><b>Tone of voice</b><span>How Klyara writes to a client: plain, short, no jargon, no apology. With before-and-after examples.</span></span>
+          <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Where it lives, and how to add to it</h2>
+      <div class="acard" style="padding:clamp(18px,2.4vw,26px)">
+        <p class="small" style="margin:0 0 10px">Two copies, same files:</p>
+        <ul class="small" style="margin:0 0 12px;padding-left:1.1em;line-height:1.75">
+          <li><b>OneDrive</b> &mdash; <code>...\Companies\klyara.com\Klyara\Uni\</code>. The copy you edit. Double-click a guide and it opens; nothing needs to be running.</li>
+          <li><b>The website</b> &mdash; <code>05_Website\uni\</code>, published at <code>klyara.com/uni</code>, which is what these links open.</li>
+        </ul>
+        <p class="small" style="margin:0 0 10px">Add the file to the OneDrive <code>Uni</code> folder, add a card to <code>index.html</code> in both places,
+          run <code>sync-to-website.cmd</code>, then commit and push. Live in about a minute.</p>
+        <p class="small" style="margin:0">Self-contained HTML is the format &mdash; one file, no build step, opens anywhere, still readable in ten years.</p>
+      </div>
+    </div>
+
+    <p class="gate"><b>Nothing sensitive goes in the Uni.</b> Every file in the website repository is served publicly &mdash;
+      <code>klyara.com/uni/&lt;filename&gt;</code> works for anyone who guesses it. These pages are <code>noindex</code> and
+      excluded in <code>robots.txt</code>, so search engines leave them alone, but that is obscurity, not access control.
+      No passwords, no client data, no identity documents, no bank details.</p>
   </section>
 
   </div>

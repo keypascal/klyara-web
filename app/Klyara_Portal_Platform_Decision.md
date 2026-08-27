@@ -1,13 +1,13 @@
 # Klyara Portal — Platform Decision Record
 
-*Companion to Klyara_App_Build_Plan.md. Researched and written 26 August 2026.*
+*Companion to Klyara_App_Build_Plan.md. Researched and written 26 August 2026; hosting corrected 27 August 2026.*
 *Interactive version: https://claude.ai/code/artifact/f9447eaa-1281-482c-89da-a9fa13d172ef*
 
 ---
 
 ## Decision
 
-**Build the portal in Claude Code against our own Supabase project, hosted on Netlify. Do not use Lovable.**
+**Build the portal in Claude Code against our own Supabase project, hosted on Cloudflare Pages. Do not use Lovable.**
 
 Same stack, same output, same five-day M0–M3 timeline as the existing build plan. The only line that changes is who writes the code, and that line goes from $25–100/month to £0 because the subscription already exists.
 
@@ -51,6 +51,16 @@ Migrating off Lovable Cloud after the fact loses every user password, changes ev
 **4. Add a security acceptance test to M3.** Two test client accounts; client A must not be able to read client B's receipts by ID; grep the built bundle for `service_role`. Row-level security is the entire security model and is the single most common failure in AI-built apps. This gates the first real client, not the first release.
 
 **5. Compress receipt images in the browser** to ~300 KB before upload. Materially affects both mobile experience and the storage bill.
+
+**6. The build manual's hosting section is out of date.** klyara.com is not WordPress on Fasthosts — it is a static site served by a Cloudflare Worker out of `keypascal/klyara-web`, deployed with `npx wrangler deploy` on every push to `main`. Delete the £5–10/mo Fasthosts line from the financial model; it is £0. Host the portal on **Cloudflare Pages** rather than Netlify — same account, same DNS, one dashboard. Netlify is an equivalent alternative with no reason to prefer it here.
+
+---
+
+## Live-site findings, checked 27 August 2026
+
+- **`app.klyara.com` does not exist.** `klyara.com` and `www.klyara.com` both resolve to Cloudflare and serve the Worker. There is no DNS record of any kind on `app`. Nothing is broken — it has simply never been created. Attaching the custom domain to the portal's Cloudflare Pages project creates both the record and the certificate, because Cloudflare already runs the zone.
+- **The "Client login" link in the site header points at `login.html`** — the hidden control-panel gate, which is for Key and Craig, not for clients. Anyone clicking it today lands on an internal login. Repoint it at `app.klyara.com` when the portal goes live; until then point it at the contact page or hide it.
+- **Everything in the `klyara-web` repo is publicly served.** `assets.directory` is the repo root, so any file added is readable at `klyara.com/<path>` unless `.assetsignore` excludes it. That includes the new `uni/` handbook — it is `noindex` and excluded in `robots.txt`, which is not access control. Nothing sensitive goes in the repo.
 
 ---
 

@@ -46,9 +46,28 @@ Source. Access control is a known outstanding task, not an oversight.
 | `build/` | Build Manual & Business Plan |
 | `app/` | Portal platform decision, app build plan, Lovable prompt |
 | `misc/` | Content generator, Craig intake notes |
+| `uni/` | **Klyara Uni** — the internal handbook. See below. |
 | `archive/` | Superseded revisions — see `archive/README.md` |
 | `DOCS-INDEX.md` | Document-by-document index of the above |
 | `worker/` | Cloudflare Worker code — to be added |
+
+## Klyara Uni
+
+`uni/` is the internal handbook — how things work here, written for Key, Craig and whoever
+joins next. Reached from the control panel (`admin.html` → **Uni** tab) and directly at
+`klyara.com/uni`.
+
+The editable copy lives beside this folder in OneDrive at `...\Klyara\Uni\`. Add a guide
+there, add a card to `index.html` in both places, run `Uni\sync-to-website.cmd` to copy it
+across, then commit and push.
+
+Guides are self-contained single HTML files: no build step, they open by double-click from
+OneDrive, and they still work in ten years.
+
+**Uni pages are public like everything else here.** They carry `noindex` and are excluded in
+`robots.txt`, which stops search engines but is not access control —
+`klyara.com/uni/<filename>` works for anyone who guesses it. No passwords, no client data, no
+identity documents, no bank details.
 
 ## Deploying
 

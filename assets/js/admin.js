@@ -43,7 +43,7 @@ function countUp(el) {
 function armCounts(root) { $$('[data-acount]', root).forEach(countUp); }
 
 /* ── router ────────────────────────────────────────────────────────────── */
-var VIEWS = ['plan', 'bplan', 'library', 'compliance', 'links', 'launch'];
+var VIEWS = ['plan', 'bplan', 'library', 'compliance', 'links', 'launch', 'uni'];
 var built = {};
 function show(view, push) {
   if (VIEWS.indexOf(view) < 0) view = 'plan';

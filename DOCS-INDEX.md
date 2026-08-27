@@ -13,6 +13,7 @@ week. This repo holds the things the site repo does not.
 | `build/` | Klyara Build Manual & Business Plan |
 | `app/` | Client portal decision, app build plan, Lovable prompt |
 | `misc/` | Content generator script, Craig intake notes |
+| `uni/` | Klyara Uni — the internal handbook, live at `klyara.com/uni` |
 
 ---
 
@@ -65,6 +66,17 @@ week. This repo holds the things the site repo does not.
 - `Klyara_Portal_Platform_Decision.md` — client portal platform decision
 - `Klyara_App_Build_Plan.md` — app build plan
 - `Lovable_Prompt_1.md` — Lovable build prompt
+
+## uni/
+
+Klyara Uni — the internal handbook. Editable copy in OneDrive at `...\Klyara\Uni\`.
+
+- `index.html` — the front door: what is in the Uni, what is coming, how to add a guide
+- `portal-build-playbook.html` — guide 01. The client portal at app.klyara.com: the whole stack,
+  how the site and the app connect, Lovable versus building it ourselves, running costs, Direct
+  Debit versus cards, and the route into the app stores. Nine chapters, interactive
+- `portal-platform-decision.md` — guide 02. The written decision record (same file as
+  `app/Klyara_Portal_Platform_Decision.md`)
 
 ## misc/
 
