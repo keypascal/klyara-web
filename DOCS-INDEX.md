@@ -69,7 +69,7 @@ week. This repo holds the things the site repo does not.
 
 ## uni/
 
-Klyara Uni — the internal handbook. Editable copy in OneDrive at `...\Klyara\Uni\`.
+Klyara Uni — the internal handbook. This folder is the only copy. Behind Cloudflare Access since 27 August 2026.
 
 - `index.html` — the front door: what is in the Uni, what is coming, how to add a guide
 - `portal-build-playbook.html` — guide 01. The client portal at app.klyara.com: the whole stack,
@@ -77,6 +77,10 @@ Klyara Uni — the internal handbook. Editable copy in OneDrive at `...\Klyara\U
   Debit versus cards, and the route into the app stores. Nine chapters, interactive
 - `portal-platform-decision.md` — guide 02. The written decision record (same file as
   `app/Klyara_Portal_Platform_Decision.md`)
+- `portal-user-guide.html` — guide 03. For clients: getting in, installing it on a phone,
+  sending a receipt, what the status labels mean, what to do when something goes wrong
+- `portal-admin-guide.html` — guide 04. For Craig: the morning routine, onboarding a client,
+  the receipt inbox address per platform, publishing, troubleshooting, and the rules
 
 ## misc/
 

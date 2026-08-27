@@ -57,17 +57,22 @@ Source. Access control is a known outstanding task, not an oversight.
 joins next. Reached from the control panel (`admin.html` → **Uni** tab) and directly at
 `klyara.com/uni`.
 
-The editable copy lives beside this folder in OneDrive at `...\Klyara\Uni\`. Add a guide
-there, add a card to `index.html` in both places, run `Uni\sync-to-website.cmd` to copy it
-across, then commit and push.
+**This folder is the only copy.** Add a guide here, add a card to `index.html`, then
+commit and push. There used to be a second copy at `...\Klyara\11_Uni\` kept in step by a
+`sync-to-website.cmd` script; it was removed on 27 August 2026 because that script copied
+`index.html` across too, overwriting this folder's site-integrated version. See
+`uni/README.txt`.
 
 Guides are self-contained single HTML files: no build step, they open by double-click from
 OneDrive, and they still work in ten years.
 
-**Uni pages are public like everything else here.** They carry `noindex` and are excluded in
-`robots.txt`, which stops search engines but is not access control —
-`klyara.com/uni/<filename>` works for anyone who guesses it. No passwords, no client data, no
-identity documents, no bank details.
+**Uni pages now require a sign-in.** Since 27 August 2026 `klyara.com/uni/` is behind
+Cloudflare Access on the `Klyara admins` policy — the same policy as `admin.html` and the
+document library. Before that date they were readable by anyone who guessed the filename,
+so treat anything written earlier as having been public.
+
+Access protects the `/uni/` path, not the repository: everything else here is still
+published by default. No passwords, no client data, no identity documents, no bank details.
 
 ## Deploying
 

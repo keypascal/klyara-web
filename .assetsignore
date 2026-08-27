@@ -29,3 +29,6 @@ README-admin.txt
 
 # quarantined files - must never be served
 _to_delete/
+
+# internal authoring note, not site content
+uni/README.txt

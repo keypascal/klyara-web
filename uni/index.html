@@ -59,6 +59,14 @@
         <span class="qi">02</span>
         <span><b>Portal Platform Decision</b><span>The short written record of what we chose and why, with the corrections it makes to the build manual. Markdown &mdash; opens as text.</span></span>
         <span class="ar">&rarr;</span></a>
+      <a class="qlink" href="portal-user-guide.html">
+        <span class="qi">03</span>
+        <span><b>Using your Klyara portal</b><span>The client's guide. Getting in, putting it on a phone, sending a receipt, what the labels mean, and what to do when something goes wrong. Send this to clients rather than explaining it down the phone.</span></span>
+        <span class="ar">&rarr;</span></a>
+      <a class="qlink" href="portal-admin-guide.html">
+        <span class="qi">04</span>
+        <span><b>Running the portal</b><span>Craig's guide. The two-minute morning routine, taking on a new client, the receipt inbox address, publishing documents, what to do when something breaks, and the rules that do not bend.</span></span>
+        <span class="ar">&rarr;</span></a>
     </div>
   </div>
 
@@ -66,14 +74,6 @@
     <h2 class="h2">Coming next</h2>
     <p class="small">The gaps worth filling first. Each one is a page in here when it is written.</p>
     <div class="qgrid">
-      <a class="qlink soon" href="#" aria-disabled="true" onclick="return false">
-        <span class="qi">&mdash;</span>
-        <span><b>Onboarding a new client</b><span>Signed to live in five days: AML checks, engagement letter, agent authorisation, accounting platform, Direct Debit, first receipt.</span></span>
-        <span class="ar">&rarr;</span></a>
-      <a class="qlink soon" href="#" aria-disabled="true" onclick="return false">
-        <span class="qi">&mdash;</span>
-        <span><b>The receipt round trip</b><span>What happens between a photo on site and a line in the client's books, and what to do when it goes wrong.</span></span>
-        <span class="ar">&rarr;</span></a>
       <a class="qlink soon" href="#" aria-disabled="true" onclick="return false">
         <span class="qi">&mdash;</span>
         <span><b>Editing this website</b><span>Where the files live, how a change reaches klyara.com, and the one rule about what must never be committed.</span></span>
@@ -88,14 +88,14 @@
   <div class="ablock">
     <h2 class="h2">Adding a guide</h2>
     <div class="acard" style="padding:clamp(18px,2.4vw,26px)">
-      <p class="small" style="margin:0 0 10px">The Uni lives in two places and they hold the same files:</p>
+      <p class="small" style="margin:0 0 10px">The Uni lives in one place:</p>
       <ul class="small" style="margin:0 0 12px;padding-left:1.1em;line-height:1.75">
-        <li><b>OneDrive</b> &mdash; <code>...\Companies\klyara.com\Klyara\Uni\</code>. This is the one you edit. Double-click any guide and it opens; nothing needs to be running.</li>
-        <li><b>The website</b> &mdash; this folder, <code>05_Website\uni\</code>, published at <code>klyara.com/uni</code>.</li>
+        <li><b>This folder</b> &mdash; <code>05_Website\uni\</code>, published at <code>klyara.com/uni</code>. Double-click any guide there and it opens; nothing needs to be running.</li>
       </ul>
-      <p class="small" style="margin:0 0 10px">To add or change a guide: put the file in the OneDrive <code>Uni</code> folder, add a card to
-        <code>index.html</code> in both places, then run <code>sync-to-website.cmd</code> from the OneDrive
-        <code>Uni</code> folder to copy it across. Commit and push, and it is live in about a minute.</p>
+      <p class="small" style="margin:0 0 10px">To add or change a guide: put the file in this folder, add a card to
+        <code>index.html</code>, then commit and push. It is live in about a minute. There was a second copy in
+        <code>11_Uni</code> with a <code>sync-to-website.cmd</code> script; it was removed on 27 August 2026 because
+        the script overwrote this folder's <code>index.html</code>.</p>
       <p class="small" style="margin:0">Self-contained HTML is the format &mdash; one file, no build step, opens anywhere, still readable in ten years.</p>
     </div>
   </div>
