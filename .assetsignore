@@ -26,3 +26,6 @@ package-lock.json
 # build tooling
 build-admin.py
 README-admin.txt
+
+# quarantined files - must never be served
+_to_delete/

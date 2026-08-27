@@ -189,25 +189,5 @@
     <span style="color:rgba(244,239,228,.5);font-size:.8rem">Prices ex VAT &middot; general guidance, not tax advice</span>
   </div>
   <div class="foot-mark" aria-hidden="true">KLYARA</div>
-</footer><script src="assets/js/main.js"></script><script>
-/* Admin gate. NOT authentication: this is a static site, the credential is in the source,
-   and the panel behind it holds nothing that would matter if it leaked. */
-(function(){
-  var u=document.getElementById('l-user'),p=document.getElementById('l-pass'),
-      b=document.getElementById('l-go'),m=document.getElementById('l-msg');
-  if(!u||!p||!b) return;
-  var KEEP=m.innerHTML;
-  function go(){
-    if(u.value.trim()==='klyara-admin' && p.value==='*P0k31t1029!'){
-      m.textContent='Signing in\u2026';
-      var jump=function(){location.href='admin.html'};
-      if(window.__veilSweep) window.__veilSweep(jump); else jump();
-      return;
-    }
-    m.innerHTML=KEEP;                 /* everything else behaves exactly as it did */
-  }
-  b.addEventListener('click',go);
-  [u,p].forEach(function(el){el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go()}})});
-})();
-</script>
+</footer><script src="assets/js/main.js"></script>
 </body></html>

@@ -26,3 +26,6 @@ desktop.ini
 # logs
 *.log
 npm-debug.log*
+
+# quarantined: contains the retired admin credential, pending manual deletion
+_to_delete/
