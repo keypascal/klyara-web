@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap">
 <style>
   :root{
-    --paper:#F4EFE4;--card:#FBF8F0;--sunk:#EDE6D6;--ink:#14231C;--mute:#57685C;--dim:#87947F;
-    --pine:#16352A;--emerald:#196A48;--brass:#C08A2E;--terra:#A6592E;
+    --paper:#F4EFE4;--card:#FBF8F0;--sunk:#EDE6D6;--ink:#14231C;--mute:#57685C;--dim:#656F5F;
+    --pine:#16352A;--emerald:#196A48;--brass:#C08A2E;--brass-ink:#866020;--terra:#A6592E;--terra-ink:#8F4A26;
     --rule:rgba(20,35,28,.14);--rule-strong:rgba(20,35,28,.26);
     --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
     --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
@@ -21,13 +21,13 @@
   @media (prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
       --paper:#0E1A15;--card:#16241E;--sunk:#12201A;--ink:#EDE8DC;--mute:#9CAB9F;--dim:#79876F;
-      --pine:#0A1410;--emerald:#46A87A;--brass:#DCA84E;--terra:#CB7C4D;
+      --pine:#0A1410;--emerald:#46A87A;--brass:#DCA84E;--brass-ink:#DCA84E;--terra:#CB7C4D;--terra-ink:#CB7C4D;
       --rule:rgba(237,232,220,.14);--rule-strong:rgba(237,232,220,.26);
     }
   }
   :root[data-theme="dark"]{
     --paper:#0E1A15;--card:#16241E;--sunk:#12201A;--ink:#EDE8DC;--mute:#9CAB9F;--dim:#79876F;
-    --pine:#0A1410;--emerald:#46A87A;--brass:#DCA84E;--terra:#CB7C4D;
+    --pine:#0A1410;--emerald:#46A87A;--brass:#DCA84E;--brass-ink:#DCA84E;--terra:#CB7C4D;--terra-ink:#CB7C4D;
     --rule:rgba(237,232,220,.14);--rule-strong:rgba(237,232,220,.26);
   }
   *{box-sizing:border-box}
@@ -41,7 +41,7 @@
   .masthead{display:flex;align-items:center;gap:13px;padding:26px 0 20px;border-bottom:1px solid var(--rule-strong)}
   .wordmark{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em;line-height:1}
   .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--dim);margin-top:4px}
-  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:var(--brass);margin:42px 0 10px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:var(--brass-ink);margin:42px 0 10px}
   h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.04;
     font-size:clamp(31px,5.2vw,46px);margin:0 0 14px;text-wrap:balance}
   h2{font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(21px,2.8vw,27px);
@@ -78,7 +78,7 @@
     padding:18px 22px;margin:26px 0}
   .flag.good{border-left-color:var(--emerald)}
   .flag .t{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
-    color:var(--terra);margin:0 0 9px}
+    color:var(--terra-ink);margin:0 0 9px}
   .flag.good .t{color:var(--emerald)}
   .flag p:last-child{margin:0}
   .twrap{overflow-x:auto;margin:22px 0;border:1px solid var(--rule);border-radius:14px;background:var(--card)}
@@ -91,9 +91,9 @@
   .chip{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
     text-transform:uppercase;padding:3px 9px;border-radius:20px;border:1px solid;white-space:nowrap}
   .chip.a{color:var(--mute);border-color:var(--rule-strong)}
-  .chip.b{color:var(--brass);border-color:var(--brass)}
+  .chip.b{color:var(--brass-ink);border-color:var(--brass)}
   .chip.c{color:var(--emerald);border-color:var(--emerald)}
-  .chip.d{color:var(--terra);border-color:var(--terra)}
+  .chip.d{color:var(--terra-ink);border-color:var(--terra)}
   .foot{margin-top:60px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--mono);
     font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -143,7 +143,7 @@
   <p>Do this once and the portal behaves like any other app on your phone: its own icon,
   full screen, and the camera is one tap away instead of four.</p>
 
-  <div class="twrap"><table>
+  <div class="twrap" tabindex="0"><table>
     <thead><tr><th>Phone</th><th>What to do</th></tr></thead>
     <tbody>
       <tr><td class="k">iPhone</td><td>Open app.klyara.com in Safari. Tap the <strong>Share</strong> button at
@@ -187,7 +187,7 @@
   </div>
 
   <h3>What the labels mean</h3>
-  <div class="twrap"><table>
+  <div class="twrap" tabindex="0"><table>
     <thead><tr><th>Label</th><th>What has happened</th></tr></thead>
     <tbody>
       <tr><td><span class="chip a">Received</span></td><td>We have it. Nothing for you to do. We look at
@@ -226,7 +226,7 @@
   </div>
 
   <h2>7 &middot; When something goes wrong</h2>
-  <div class="twrap"><table>
+  <div class="twrap" tabindex="0"><table>
     <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
     <tbody>
       <tr><td class="k">Forgotten password</td><td>Tap <strong>Forgotten your password?</strong> on the sign-in

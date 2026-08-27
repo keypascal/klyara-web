@@ -60,7 +60,7 @@ Migrating off Lovable Cloud after the fact loses every user password, changes ev
 
 - **`app.klyara.com` does not exist.** `klyara.com` and `www.klyara.com` both resolve to Cloudflare and serve the Worker. There is no DNS record of any kind on `app`. Nothing is broken — it has simply never been created. Attaching the custom domain to the portal's Cloudflare Pages project creates both the record and the certificate, because Cloudflare already runs the zone.
 - **The "Client login" link in the site header points at `login.html`** — the hidden control-panel gate, which is for Key and Craig, not for clients. Anyone clicking it today lands on an internal login. Repoint it at `app.klyara.com` when the portal goes live; until then point it at the contact page or hide it.
-- **Everything in the `klyara-web` repo is publicly served.** `assets.directory` is the repo root, so any file added is readable at `klyara.com/<path>` unless `.assetsignore` excludes it. That includes the new `uni/` handbook — it is `noindex` and excluded in `robots.txt`, which is not access control. Nothing sensitive goes in the repo.
+- **Everything in the `klyara-web` repo is publicly served.** `assets.directory` is the repo root, so any file added is readable at `klyara.com/<path>` unless `.assetsignore` excludes it. That includes the `uni/` handbook. Since 27 August 2026 `klyara.com/uni/` and `klyara.com/admin.html` sit behind Cloudflare Access, so an unauthenticated request is bounced to a login before the page is served — `noindex` and `robots.txt` are now a second line, not the only one. Everything else in the repo is still public, and an Access policy can be switched off by accident, so nothing sensitive goes in the repo either way.
 
 ---
 

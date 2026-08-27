@@ -20,13 +20,13 @@
     --sunk:#EDE6D6;
     --ink:#14231C;
     --mute:#57685C;
-    --dim:#87947F;
+    --dim:#656F5F;
     --pine:#16352A;
     --pine2:#1D4534;
     --on-pine:#F4EFE4;
     --emerald:#196A48;
-    --brass:#C08A2E;
-    --terra:#A6592E;
+    --brass:#C08A2E;--brass-ink:#866020;--brass-on-pine:#CCA157;
+    --terra:#A6592E;--terra-ink:#8F4A26;
     --rule:rgba(20,35,28,.14);
     --rule-strong:rgba(20,35,28,.26);
     --rule-pine:rgba(244,239,228,.18);
@@ -49,8 +49,8 @@
       --pine2:#1D4534;
       --on-pine:#EDE8DC;
       --emerald:#46A87A;
-      --brass:#DCA84E;
-      --terra:#CB7C4D;
+      --brass:#DCA84E;--brass-ink:#DCA84E;--brass-on-pine:#DCA84E;
+      --terra:#CB7C4D;--terra-ink:#CB7C4D;
       --rule:rgba(237,232,220,.14);
       --rule-strong:rgba(237,232,220,.26);
       --rule-pine:rgba(237,232,220,.16);
@@ -69,8 +69,8 @@
     --pine2:#1D4534;
     --on-pine:#EDE8DC;
     --emerald:#46A87A;
-    --brass:#DCA84E;
-    --terra:#CB7C4D;
+    --brass:#DCA84E;--brass-ink:#DCA84E;--brass-on-pine:#DCA84E;
+    --terra:#CB7C4D;--terra-ink:#CB7C4D;
     --rule:rgba(237,232,220,.14);
     --rule-strong:rgba(237,232,220,.26);
     --rule-pine:rgba(237,232,220,.16);
@@ -137,14 +137,14 @@
   .chip .n{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.06em}
   .chip:hover{background:var(--sunk);color:var(--ink)}
   .chip[aria-selected="true"]{background:var(--pine);color:var(--on-pine);border-color:var(--pine)}
-  .chip[aria-selected="true"] .n{color:var(--brass)}
+  .chip[aria-selected="true"] .n{color:var(--brass-on-pine)}
   .chip:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 
   /* ---------- typography ---------- */
   .measure{max-width:70ch}
   .eyebrow{
     font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
-    color:var(--brass);margin:0 0 10px;
+    color:var(--brass-ink);margin:0 0 10px;
   }
   h1.ch{
     font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.03;
@@ -565,7 +565,7 @@
     </div>
 
     <h2>The full component list</h2>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead>
           <tr><th>Layer</th><th>Technology</th><th>Its job</th><th class="num">£/mo</th><th>Swap cost</th></tr>
@@ -599,7 +599,7 @@
 
     <h2>1 &middot; The website and the app are two separate things</h2>
     <p class="measure">klyara.com stays exactly as it is: a static site served by a Cloudflare Worker out of the <code>keypascal/klyara-web</code> repo. The portal is a completely separate application on a subdomain, in the same Cloudflare account. They are not integrated, and they don't need to be.</p>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Name</th><th>DNS record</th><th>Points at</th><th>What lives there</th></tr></thead>
         <tbody>
@@ -635,7 +635,7 @@
     </div>
 
     <h3>The two keys, and the rule about them</h3>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Key</th><th>Where it lives</th><th>Power</th></tr></thead>
         <tbody>
@@ -699,7 +699,7 @@
 
     <h2>What connecting your own Supabase costs you</h2>
     <p class="measure">It's the right trade, but it isn't free &mdash; several Lovable features only work on Lovable Cloud:</p>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Feature</th><th>On your own Supabase</th><th>What you do instead</th></tr></thead>
         <tbody>
@@ -792,7 +792,7 @@ gh repo create klyara-portal --private --source=. --push</pre></li>
     </div>
 
     <h2>The others, briefly, and why not</h2>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Platform</th><th>Verdict</th><th>Why</th></tr></thead>
         <tbody>
@@ -842,7 +842,7 @@ gh repo create klyara-portal --private --source=. --push</pre></li>
     </div>
 
     <h2>The line items</h2>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Item</th><th class="num">Build phase</th><th class="num">Running</th><th>Notes</th></tr></thead>
         <tbody>
@@ -872,7 +872,7 @@ gh repo create klyara-portal --private --source=. --push</pre></li>
     <p class="lede">Two systems, two jobs. Getting this wrong is the difference between about £600 and about £2,000 a year in fees at thirty clients.</p>
 
     <h2>Why Direct Debit, not cards</h2>
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Route</th><th class="num">Fee</th><th class="num">On £150</th><th class="num">30 clients / yr</th><th>Verdict</th></tr></thead>
         <tbody>
@@ -916,7 +916,7 @@ gh repo create klyara-portal --private --source=. --push</pre></li>
     <h1 class="ch">Three rungs, and you only need the first.</h1>
     <p class="lede">You were right that this is a web app first. Here's exactly what the other two rungs cost, and the honest reason to climb each one.</p>
 
-    <div class="twrap">
+    <div class="twrap" tabindex="0">
       <table>
         <thead><tr><th>Rung</th><th>Cost</th><th>Effort</th><th>Risk</th><th>When</th></tr></thead>
         <tbody>

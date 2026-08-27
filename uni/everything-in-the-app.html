@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every screen, every button | Klyara Uni</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Complete reference for every screen in the Klyara portal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#F4EFE4;--card:#FBF8F0;--sunk:#EDE6D6;--ink:#14231C;--mute:#57685C;--dim:#656F5F;
+    --pine:#16352A;--emerald:#196A48;--brass:#C08A2E;--brass-ink:#866020;--terra:#A6592E;--terra-ink:#8F4A26;
+    --rule:rgba(20,35,28,.14);--rule-strong:rgba(20,35,28,.26);
+    --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+    --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+    --mono:"Spline Sans Mono",ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1A15;--card:#16241E;--sunk:#12201A;--ink:#EDE8DC;--mute:#9CAB9F;--dim:#79876F;
+      --pine:#0A1410;--emerald:#46A87A;--brass:#DCA84E;--brass-ink:#DCA84E;--terra:#CB7C4D;--terra-ink:#CB7C4D;
+      --rule:rgba(237,232,220,.14);--rule-strong:rgba(237,232,220,.26);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1A15;--card:#16241E;--sunk:#12201A;--ink:#EDE8DC;--mute:#9CAB9F;--dim:#79876F;
+    --pine:#0A1410;--emerald:#46A87A;--brass:#DCA84E;--brass-ink:#DCA84E;--terra:#CB7C4D;--terra-ink:#CB7C4D;
+    --rule:rgba(237,232,220,.14);--rule-strong:rgba(237,232,220,.26);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .shell{max-width:760px;margin:0 auto;padding:0 22px 90px}
+  .unibar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0 0;
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .unibar a{color:var(--mute);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .unibar a:hover{color:var(--ink);border-bottom-color:var(--brass)}
+  .masthead{display:flex;align-items:center;gap:13px;padding:26px 0 20px;border-bottom:1px solid var(--rule-strong)}
+  .wordmark{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em;line-height:1}
+  .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--dim);margin-top:4px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:var(--brass-ink);margin:42px 0 10px}
+  h1{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.04;
+    font-size:clamp(31px,5.2vw,46px);margin:0 0 14px;text-wrap:balance}
+  h2{font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(21px,2.8vw,27px);
+    margin:52px 0 12px;text-wrap:balance}
+  h3{font-family:var(--display);font-weight:700;font-size:18.5px;margin:30px 0 8px}
+  .lede{font-size:19.5px;color:var(--mute);line-height:1.55;margin:0 0 6px;max-width:58ch}
+  p{margin:0 0 15px;max-width:66ch}
+  ul,ol{margin:0 0 16px;padding-left:1.2em;max-width:66ch}
+  li{margin-bottom:8px}
+  li::marker{color:var(--dim)}
+  strong{font-weight:600}
+  a{color:var(--emerald);text-underline-offset:3px}
+  code{font-family:var(--mono);font-size:.85em;background:var(--sunk);padding:.12em .38em;
+    border-radius:5px;border:1px solid var(--rule)}
+  hr{border:0;border-top:1px solid var(--rule);margin:44px 0}
+  figure{margin:24px 0}
+  figure img{display:block;width:100%;max-width:100%;border-radius:14px;border:1px solid var(--rule)}
+  figure.phone img{max-width:300px;margin-inline:auto}
+  figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--dim);margin-top:10px;text-align:center}
+  ol.steps{list-style:none;padding:0;margin:22px 0;counter-reset:s}
+  ol.steps>li{counter-increment:s;position:relative;padding:0 0 20px 50px;margin:0;border-left:1px solid var(--rule)}
+  ol.steps>li:last-child{border-left-color:transparent;padding-bottom:0}
+  ol.steps>li::before{content:counter(s,decimal-leading-zero);position:absolute;left:-16px;top:-2px;
+    width:32px;height:32px;border-radius:50%;background:var(--pine);color:var(--brass);
+    font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center}
+  ol.steps>li b{display:block;font-family:var(--display);font-size:17.5px;font-weight:700;margin-bottom:4px}
+  ol.steps>li p{margin:0 0 8px;color:var(--mute)}
+  ol.steps>li p:last-child{margin:0}
+  .panel{background:var(--card);border:1px solid var(--rule);border-radius:15px;padding:20px 22px;margin:22px 0}
+  .panel p:last-child,.panel ul:last-child{margin-bottom:0}
+  .flag{border-left:4px solid var(--terra);background:var(--card);border-radius:14px;
+    border-top:1px solid var(--rule);border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    padding:18px 22px;margin:26px 0}
+  .flag.good{border-left-color:var(--emerald)}
+  .flag .t{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--terra-ink);margin:0 0 9px}
+  .flag.good .t{color:var(--emerald)}
+  .flag p:last-child{margin:0}
+  .twrap{overflow-x:auto;margin:22px 0;border:1px solid var(--rule);border-radius:14px;background:var(--card)}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
+  th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--rule);vertical-align:top}
+  thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:#F4EFE4;background:var(--pine);border-bottom:none;font-weight:500}
+  tbody tr:last-child td{border-bottom:none}
+  td.k{font-weight:600;white-space:nowrap}
+  .chip{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;padding:3px 9px;border-radius:20px;border:1px solid;white-space:nowrap}
+  .chip.a{color:var(--mute);border-color:var(--rule-strong)}
+  .chip.b{color:var(--brass-ink);border-color:var(--brass)}
+  .chip.c{color:var(--emerald);border-color:var(--emerald)}
+  .chip.d{color:var(--terra-ink);border-color:var(--terra)}
+  .foot{margin-top:60px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--mono);
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="unibar"><a href="index.html">&larr; Klyara Uni</a><span>Guide 05 &middot; Reference</span></div>
+  <header class="masthead">
+    <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
+      <circle cx="20" cy="20" r="20" fill="var(--brass)"></circle>
+      <polygon points="13,9 18,9 18,17.5 26,9 32,9 22.5,19 32,31 26,31 18,21.5 18,31 13,31" fill="var(--pine)"></polygon>
+    </svg>
+    <div><div class="wordmark">Klyara</div><div class="sub">Uni &middot; the handbook</div></div>
+  </header>
+
+  <p class="eyebrow">Guide 05 &middot; Reference</p>
+  <h1>Every screen, every button.</h1>
+  <p class="lede">The complete reference for app.klyara.com — what each screen is for, what every
+  control does, what the software works out for you, and what it will not let you do.
+  Guides 03 and 04 teach; this one answers.</p>
+
+  <div class="panel">
+    <p><strong>Who this is for.</strong> Anyone answering a question about the app: Key, Craig, a new
+    starter in their first week, or a client on the phone. Find the screen, read the row.</p>
+    <p><strong>How it is laid out.</strong> Part 1 is the client app, screen by screen. Part 2 is the
+    admin side. Part 3 is what the database refuses to do regardless of what anybody clicks.
+    Part 4 is every rate and threshold the app uses, with the source. Part 5 is what to do when
+    something looks wrong.</p>
+  </div>
+
+  <h2>How the app is arranged</h2>
+  <p>One web app, two faces. A client sees their own business and nothing else. An admin sees
+  every client. Which one you get is decided by your role in the database, not by the address
+  you type — there is no separate admin login to leak.</p>
+
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Where</th><th>What you get</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Phone</td><td>Five tabs along the bottom — Home, Jobs, Receipts, Invoices, More. Everything else lives behind <b>More</b>. The camera button on Receipts is deliberately the biggest target on the screen.</td></tr>
+      <tr><td class="k">Tablet and desktop</td><td>A full sidebar with every screen listed. Same app, same data, more room.</td></tr>
+      <tr><td class="k">Installed</td><td>Add to Home Screen turns it into an app icon with no browser chrome. It is the same web app — nothing to update, nothing from an app store.</td></tr>
+      <tr><td class="k">Offline</td><td>Screens you have already opened still load. Anything that needs the server will wait and tell you, rather than silently failing.</td></tr>
+    </tbody>
+  </table></div>
+
+  <hr>
+  <p class="eyebrow">Part 1</p>
+  <h2>The client app</h2>
+
+  <h3>Home</h3>
+  <p>The answer to “what do I need to know this morning”, and nothing else.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>On screen</th><th>What it is</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Next date</td><td>The single closest deadline that applies to <em>this</em> business — worked out from VAT registration, CIS status, whether it is a limited company, MTD and payroll. Not a generic calendar.</td></tr>
+      <tr><td class="k">Owed to you</td><td>Total of invoices sent and not yet marked paid. Overdue ones are counted separately and shown in terracotta.</td></tr>
+      <tr><td class="k">On site now</td><td>Jobs with the status <span class="chip c">Active</span>.</td></tr>
+      <tr><td class="k">Receipts waiting</td><td>Photographed but not yet filed by us. A number here is our work, not yours.</td></tr>
+      <tr><td class="k">Anything new</td><td>Documents we have published and messages we have sent since you last looked.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Jobs</h3>
+  <p>The spine of the whole app. Receipts, mileage, expenses, quotes and invoices all point at a
+  job, which is how the app can answer the one question accounting software cannot: <em>did this
+  job make money?</em></p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Control</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td class="k">New job</td><td>Name, your own reference, site address, who is paying, and the quoted total if you have one. Only the name is required.</td></tr>
+      <tr><td class="k">Status</td><td><span class="chip a">Quoting</span> <span class="chip b">Won</span> <span class="chip c">Active</span> <span class="chip a">Done</span> <span class="chip d">Lost</span>. Setting a job to Active stamps the start date; Done stamps the finish date. Both can be corrected.</td></tr>
+      <tr><td class="k">Job detail</td><td>Money in, money out and margin for that job alone, then every receipt, trip, expense and invoice attached to it.</td></tr>
+      <tr><td class="k">Margin</td><td>Invoiced less costs. Costs are receipts plus expenses plus the mileage claim. It is a working figure, not a set of accounts.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag good"><p class="t">Why job_id is optional everywhere</p>
+    <p>A receipt photographed at a petrol station does not always belong to a job, and forcing a
+    choice at that moment would kill the one-tap flow that makes the product work. Tag it later
+    from the receipt, or never.</p></div>
+
+  <h3>Receipts</h3>
+  <p>The screen that <em>is</em> the product. Photograph, done.</p>
+  <ol class="steps">
+    <li><b>Tap the camera</b><p>It opens the phone camera straight away. No menu, no form first.</p></li>
+    <li><b>Take the picture</b><p>The image is compressed in the browser before it leaves the phone — usually to about 300&nbsp;KB — so it works on a bad signal in a van.</p></li>
+    <li><b>Add what you know, or nothing</b><p>Amount, supplier, a note, a job. All optional. An untagged photo is still worth more than a lost one.</p></li>
+  </ol>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td class="k"><span class="chip a">New</span></td><td>With us. Nothing for you to do.</td></tr>
+      <tr><td class="k"><span class="chip c">Approved</span></td><td>Checked and accepted, about to go into your books.</td></tr>
+      <tr><td class="k"><span class="chip c">Sent</span></td><td>Filed into QuickBooks, Xero or FreeAgent. Finished.</td></tr>
+      <tr><td class="k"><span class="chip d">Rejected</span></td><td>We could not use it — the reason is on the receipt. Usually blurred, cut off, or a duplicate. Photograph it again.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag"><p class="t">The one rule</p>
+    <p>A client can never move their own receipt through the workflow. Only an admin can approve,
+    send or reject. This is enforced in the database, not in the screen — see Part 3.</p></div>
+
+  <h3>Invoices and quotes</h3>
+  <p>Same shape, one table, told apart by a <code>kind</code>. Accepting a quote copies it into a new
+  invoice rather than changing it, because what was quoted has to stay provable afterwards.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Control</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Number</td><td>Filled in for you — <code>INV0001</code>, <code>Q0001</code> — sequential per business. Gaps are allowed (a deleted draft leaves one). Numbers are never reused, which is the part HMRC cares about.</td></tr>
+      <tr><td class="k">Line kind</td><td>Labour, Materials, Plant, Other. This is not decoration: CIS is deducted from labour only, so the split decides the money.</td></tr>
+      <tr><td class="k">Quantity &times; unit price</td><td>A negative unit price is allowed, for a credit line or a retention deduction. The quantity must be positive.</td></tr>
+      <tr><td class="k">VAT treatment</td><td>Standard 20%, Reduced 5%, Zero, Reverse charge, or Not registered. Defaults from what we already know about the business.</td></tr>
+      <tr><td class="k">Reverse charge rate</td><td>Appears only when reverse charge is chosen. The customer accounts for this rate themselves; it is shown on the invoice because HMRC requires it, and it is never added to the total.</td></tr>
+      <tr><td class="k">CIS deduction</td><td>None, 20% registered, or 30% not verified. Applied to the labour lines and to the net figure, never to the VAT.</td></tr>
+      <tr><td class="k">State</td><td><span class="chip a">Draft</span> <span class="chip b">Sent</span> <span class="chip c">Paid</span> <span class="chip a">Accepted</span> <span class="chip d">Void</span>. Only a draft can be edited. Void rather than delete.</td></tr>
+      <tr><td class="k">Print or save as PDF</td><td>The invoice is styled for print — the navigation and buttons disappear. Save as PDF and email it.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag"><p class="t">Reverse charge is not automatic</p>
+    <p>The app suggests it when the business is in the CIS chain, but it does <b>not</b> apply where
+    the customer has told you in writing that they are an end user or an intermediary — a landlord,
+    a developer selling the finished building, or a householder. No written statement, no reverse
+    charge: charge VAT and ask them for one.</p></div>
+
+  <h3>Mileage</h3>
+  <p>Money most builders throw away. Thirty miles to a merchant and back is £16.50 off the tax bill
+  at the 2026/27 rate, and logging it takes ten seconds.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>On screen</th><th>What it is</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Miles this year</td><td>Business miles in the current tax year, 6 April to 5 April.</td></tr>
+      <tr><td class="k">Worth</td><td>What those miles take off taxable profit.</td></tr>
+      <tr><td class="k">Rate now</td><td>The rate the next mile earns, and how many are left before the step down.</td></tr>
+      <tr><td class="k">Log a trip</td><td>Date, from, to, miles, job, what for. The value is worked out from the <em>date travelled</em>, not today.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag good"><p class="t">Two things this gets right that most apps do not</p>
+    <p><b>The rate follows the date.</b> HMRC raised the first-10,000 rate from 45p to 55p on
+    6 April 2026. A trip logged for last March is still valued at 45p, because that is what it was
+    worth.</p>
+    <p><b>The step is applied inside the trip.</b> With 9,990 business miles already logged, a
+    500-mile trip is 10 miles at 55p and 490 at 25p — £128.00, not £275.00. The database works this
+    out, so it is right regardless of what the phone sends.</p></div>
+
+  <h3>Expenses</h3>
+  <p>For money spent without a receipt to photograph — a direct debit, a subscription, an insurance
+  premium. Category, amount, VAT if you know it, and a job if it belongs to one.</p>
+
+  <h3>Your dates</h3>
+  <p>Every deadline that applies to this business, soonest first, with the one you should actually
+  work to. Nothing here is hardcoded to a year — the screen is still right in 2031.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Deadline</th><th>Rule</th><th>Shown when</th></tr></thead>
+    <tbody>
+      <tr><td class="k">CIS return</td><td>19th of the month, for the tax month ending the 5th. A nil return still has to go in.</td><td>Contractor, or both</td></tr>
+      <tr><td class="k">CIS payment</td><td>22nd electronically, 19th by post.</td><td>Contractor, or both</td></tr>
+      <tr><td class="k">VAT return and payment</td><td>One calendar month and seven days after the quarter ends. Stagger 1 ends Mar/Jun/Sep/Dec, 2 ends Apr/Jul/Oct/Jan, 3 ends May/Aug/Nov/Feb.</td><td>VAT registered</td></tr>
+      <tr><td class="k">MTD quarterly update</td><td>Quarters to 5 Jul, 5 Oct, 5 Jan, 5 Apr; due the 7th of the month after next.</td><td>MTD for Income Tax</td></tr>
+      <tr><td class="k">Self Assessment</td><td>31 January to file and pay; 31 July for the second payment on account.</td><td>Not a limited company</td></tr>
+      <tr><td class="k">Corporation Tax payment</td><td>Nine months and one day after the year end.</td><td>Limited company</td></tr>
+      <tr><td class="k">Companies House accounts</td><td>Nine months after the year end. The late filing penalty is automatic.</td><td>Limited company</td></tr>
+      <tr><td class="k">CT600</td><td>Twelve months after the year end.</td><td>Limited company</td></tr>
+      <tr><td class="k">PAYE and NIC</td><td>22nd electronically, 19th by post.</td><td>Has payroll</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag good"><p class="t">Weekends and bank holidays</p>
+    <p>HMRC does not accept a payment late because the due date fell on a Sunday. Every date is
+    pulled <em>back</em> to the last working day before it, and English and Welsh bank holidays are
+    computed — including Easter and the substitute days when Christmas lands on a weekend — rather
+    than typed into a list that expires.</p></div>
+
+  <h3>Tools</h3>
+  <p>Eight calculators, each opening with this business's own figures already in it. A blank
+  calculator is a chore; one that knows your turnover and your CIS status answers the question
+  before you have typed anything.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Tool</th><th>Answers</th><th>The part people get wrong</th></tr></thead>
+    <tbody>
+      <tr><td class="k">CIS deduction</td><td>What comes off, in both directions.</td><td>The deduction never touches materials, plant you hired in, or the VAT. It <em>does</em> touch plant you own, because HMRC treats that as part of what you are charging (CISR15090).</td></tr>
+      <tr><td class="k">VAT and reverse charge</td><td>Add it, take it out, or work out whether you charge it at all.</td><td>Net, VAT and gross always add up exactly — rounding each separately loses a penny, and that is what gets a return queried.</td></tr>
+      <tr><td class="k">VAT threshold</td><td>How close you are to having to register.</td><td>HMRC tests a <em>rolling</em> twelve months, not a tax year. Register within 30 days of the end of the month you go over.</td></tr>
+      <tr><td class="k">Day rate builder</td><td>What you actually need to charge.</td><td>220 working days, not 260. Pricing on 260 assumes you never take a day off and it never rains.</td></tr>
+      <tr><td class="k">Late payment interest</td><td>What the law entitles you to on an overdue commercial debt.</td><td>Base rate plus 8%, and the base rate is the one in force on the 31 December or 30 June <em>before</em> the debt fell due — fixed for that whole six months. Plus fixed compensation of £40, £70 or £100.</td></tr>
+      <tr><td class="k">Subbie take-home</td><td>Day rate to money in your pocket.</td><td>Above £100,000 the personal allowance is withdrawn £1 for every £2, so that slice is effectively taxed at 60%. Above £125,140 the rate is 45%.</td></tr>
+      <tr><td class="k">True cost of an employee</td><td>What someone really costs against a subbie day rate.</td><td>The pension minimum is 3% of <em>qualifying earnings</em> — the slice between £6,240 and £50,270 — not 3% of the salary. And the £10,500 Employment Allowance offsets employer NIC for most employers, though not a sole director with no other staff.</td></tr>
+      <tr><td class="k">Flat rate or standard</td><td>Which VAT scheme wins.</td><td>Two things it cannot know: whether you are a limited cost business (which forces 16.5% and usually kills it), and whether most of your work is reverse charge (which almost always kills it).</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag"><p class="t">What these are not</p>
+    <p>They give a good answer fast. They are not tax advice for one specific situation. If a number
+    here changes what someone is about to do, they should ask us first — and the screen says so.</p></div>
+
+  <h3>Where you are</h3>
+  <p>Money in, money out and profit by month, then which jobs actually paid. Exports to a
+  spreadsheet with a UTF-8 byte order mark so Excel opens it correctly, and with any cell that
+  starts with <code>=</code>, <code>+</code>, <code>-</code> or <code>@</code> made inert so a supplier
+  name can never execute as a formula.</p>
+
+  <h3>Documents</h3>
+  <p>Everything we publish: accounts, VAT returns, CIS statements, letters. Read-only — a client
+  cannot publish a document to themselves, which is what makes the folder trustworthy.
+  Files are held in a private bucket and reached by a signed link that expires.</p>
+
+  <h3>Messages</h3>
+  <p>One thread per business, both sides in one place, so this stops living on WhatsApp and
+  survives a lost phone. Anything from us is marked as read as soon as it is on screen.
+  A client cannot send a message that looks like it came from Klyara.</p>
+
+  <h3>Add-ons</h3>
+  <p>Things we can take off their hands. Asking raises an enquiry; we come back with a price.
+  There is no checkout and nothing is charged from this screen.</p>
+
+  <h3>Your account</h3>
+  <p>Name, phone, email, password, and the business details a client is allowed to correct
+  themselves: company name, VAT registration, CIS status, VAT stagger, year end, MTD and payroll.
+  Tier, platform, status, the receipt inbox address and the onboarding checklist are all admin-only.</p>
+
+  <hr>
+  <p class="eyebrow">Part 2</p>
+  <h2>The admin side</h2>
+
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Screen</th><th>What it is for</th></tr></thead>
+    <tbody>
+      <tr><td class="k">This morning</td><td>The two-minute routine. Receipts waiting, clients with a deadline inside a fortnight, unread messages, new enquiries, monthly revenue.</td></tr>
+      <tr><td class="k">Review queue</td><td>Every receipt waiting, oldest first, with the image large enough to read. Approve, send or reject with a reason. Rejecting without a reason is not possible.</td></tr>
+      <tr><td class="k">Clients</td><td>Every business, its tier, platform, status and onboarding progress.</td></tr>
+      <tr><td class="k">Client detail</td><td>One business in full: the onboarding checklist, the receipt inbox address, tax profile, jobs, invoices, receipts and documents.</td></tr>
+      <tr><td class="k">Publish</td><td>Upload a document to a client's folder. They are notified.</td></tr>
+      <tr><td class="k">Enquiries</td><td>Add-on enquiries, oldest first. New, contacted, won, dismissed.</td></tr>
+      <tr><td class="k">Messages</td><td>Every thread, unread first.</td></tr>
+      <tr><td class="k">Control panel</td><td>The website's own admin, ported into the app so there is one place to log in.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="flag"><p class="t">Rules that do not bend</p>
+    <p>A receipt is never approved without being read. A rejection always carries a reason the
+    client can act on. The inbox address is set once, from the platform, and checked before the
+    first receipt is routed. Nothing identifying a client goes anywhere outside the portal.</p></div>
+
+  <hr>
+  <p class="eyebrow">Part 3</p>
+  <h2>What the software refuses to do</h2>
+  <p>The browser talks to the database directly, so the browser is not trusted. Every rule below
+  lives in Postgres and holds no matter what anyone types into a console.</p>
+
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Attempt</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td class="k">See another business's anything</td><td>Blocked. Row-level security on every table, and both reporting views run as the caller rather than as their owner.</td></tr>
+      <tr><td class="k">Make yourself an admin</td><td>Blocked. The role column is pinned on update.</td></tr>
+      <tr><td class="k">Give yourself a better tier, or mark yourself active</td><td>Blocked on update <em>and</em> on insert. Signup writes a row; it does not get to decide what that row is worth.</td></tr>
+      <tr><td class="k">Tick your own AML identity check</td><td>Blocked. The onboarding checklist is forced to all-false at signup and admin-only afterwards.</td></tr>
+      <tr><td class="k">Redirect your receipt inbox</td><td>Blocked. That address is admin-only, and is where approved receipts are emailed.</td></tr>
+      <tr><td class="k">Approve your own receipt</td><td>Blocked. Only an admin can move the status.</td></tr>
+      <tr><td class="k">Point a receipt at someone else's folder</td><td>Blocked. The stored path must sit inside the client's own folder; <code>..</code> and absolute paths are rejected outright.</td></tr>
+      <tr><td class="k">Publish a document to yourself</td><td>Blocked. Publishing is admin-only.</td></tr>
+      <tr><td class="k">Send a message that looks like it came from Klyara</td><td>Blocked.</td></tr>
+      <tr><td class="k">Zero out an invoice total, or invent one</td><td>Blocked. Every money column is computed from the lines by the database and pinned against direct writes.</td></tr>
+      <tr><td class="k">Invent a mileage rate</td><td>Blocked. The database prices the trip from the date travelled and ignores what the browser sent.</td></tr>
+      <tr><td class="k">File an add-on enquiry already marked won</td><td>Blocked. It always arrives as new.</td></tr>
+    </tbody>
+  </table></div>
+  <p>All of the above are tested against the live database by <code>scripts/rls-test.mjs</code>, which
+  creates throwaway users, tries every one of them, and deletes everything it made. Every line must
+  read PASS before a real client is added.</p>
+
+  <hr>
+  <p class="eyebrow">Part 4</p>
+  <h2>The numbers, 2026/27</h2>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Figure</th><th>Value</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Mileage, first 10,000 miles</td><td>55p</td><td>Raised from 45p on 6 April 2026. 45p still applies to earlier trips.</td></tr>
+      <tr><td class="k">Mileage, above 10,000</td><td>25p</td><td>Per tax year, not per job.</td></tr>
+      <tr><td class="k">CIS deduction</td><td>20% / 30%</td><td>Registered / not verified. 0% with gross status.</td></tr>
+      <tr><td class="k">VAT registration threshold</td><td>£90,000</td><td>Rolling twelve months.</td></tr>
+      <tr><td class="k">VAT deregistration threshold</td><td>£88,000</td><td></td></tr>
+      <tr><td class="k">Personal allowance</td><td>£12,570</td><td>Withdrawn £1 in £2 above £100,000; gone at £125,140.</td></tr>
+      <tr><td class="k">Basic rate band</td><td>£37,700 at 20%</td><td>Of taxable income, after the allowance.</td></tr>
+      <tr><td class="k">Higher rate</td><td>40% to £125,140</td><td></td></tr>
+      <tr><td class="k">Additional rate</td><td>45% above £125,140</td><td></td></tr>
+      <tr><td class="k">Class 4 NIC</td><td>6% / 2%</td><td>£12,570–£50,270, then 2% above.</td></tr>
+      <tr><td class="k">Employer NIC</td><td>15% above £5,000</td><td></td></tr>
+      <tr><td class="k">Employment Allowance</td><td>£10,500</td><td>Per employer per year. Not for a sole director with no other staff.</td></tr>
+      <tr><td class="k">Pension qualifying earnings</td><td>£6,240–£50,270</td><td>Employer minimum 3% of that slice only.</td></tr>
+      <tr><td class="k">Late payment interest</td><td>Base + 8%</td><td>Base rate fixed at the previous 31 Dec or 30 Jun.</td></tr>
+      <tr><td class="k">Late payment compensation</td><td>£40 / £70 / £100</td><td>Under £1,000 / under £10,000 / above.</td></tr>
+    </tbody>
+  </table></div>
+  <p>These live in one place in the code — <code>src/lib/tax.ts</code> — so a rate change is one edit
+  and the unit tests catch anything that drifts. When HMRC moves a rate, add a band with the date it
+  changed rather than editing the old one, or every historic figure in the app silently changes.</p>
+
+  <hr>
+  <p class="eyebrow">Part 5</p>
+  <h2>When something looks wrong</h2>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Symptom</th><th>Almost always</th></tr></thead>
+    <tbody>
+      <tr><td class="k">A screen says “We cannot find that one”</td><td>The record was deleted or the link is old. It is not a crash — go back to the list.</td></tr>
+      <tr><td class="k">A screen shows a setup message instead of the app</td><td>The build went out without its environment variables. Rebuild; the build now refuses rather than shipping an empty bundle.</td></tr>
+      <tr><td class="k">A client says they cannot see a document</td><td>Check it was published to <em>their</em> client record. Publishing is per business.</td></tr>
+      <tr><td class="k">An invoice total looks wrong</td><td>Check the line kinds. CIS comes off labour only, so a labour line typed as materials changes the money.</td></tr>
+      <tr><td class="k">A deadline looks a day early</td><td>That is deliberate. Dates are pulled back off weekends and bank holidays to the last working day.</td></tr>
+      <tr><td class="k">A mileage claim looks low</td><td>Check the total for the tax year. Past 10,000 miles the rate drops to 25p, and a trip that crosses the line is split.</td></tr>
+      <tr><td class="k">Nothing loads at all</td><td>Check <code>app.klyara.com</code> in a browser and then the Supabase project. The app is two things: static files on Cloudflare, and a database. One of them is down.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="panel">
+    <p><strong>The tests that prove all of this.</strong> Run from the portal folder:</p>
+    <ul>
+      <li><code>node scripts/test-tax.ts</code> — every rate and date rule, 61 assertions.</li>
+      <li><code>node scripts/verify-db.mjs</code> — the live schema: tables, policies, triggers, grants, views.</li>
+      <li><code>node scripts/rls-test.mjs</code> — 37 real attacks against the live database.</li>
+      <li><code>node scripts/smoke-live.mjs https://app.klyara.com</code> — the deployed site, signed in as a client and as an admin.</li>
+      <li><code>node uitest2.mjs</code>, <code>node a11y.mjs</code>, <code>node cspall.mjs</code> — the screens themselves, against a local build.</li>
+    </ul>
+  </div>
+
+  <p class="foot">Klyara Uni &middot; Guide 05 &middot; Written 27 August 2026 &middot; Update it when the app changes, not later</p>
+</div>
+
+<script>
+// Nothing here needs JavaScript. This only restores the reader s theme choice
+// if they made one on another page.
+try{var t=localStorage.getItem("klyara-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}
+</script>
+</body>
+</html>

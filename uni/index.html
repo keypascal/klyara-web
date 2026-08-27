@@ -67,6 +67,10 @@
         <span class="qi">04</span>
         <span><b>Running the portal</b><span>Craig's guide. The two-minute morning routine, taking on a new client, the receipt inbox address, publishing documents, what to do when something breaks, and the rules that do not bend.</span></span>
         <span class="ar">&rarr;</span></a>
+      <a class="qlink" href="everything-in-the-app.html">
+        <span class="qi">05</span>
+        <span><b>Every screen, every button</b><span>The reference. What each screen in the portal is for, what every control does, the rules the database enforces no matter what anyone clicks, and every rate and threshold the app uses with the source. Look things up here rather than guessing.</span></span>
+        <span class="ar">&rarr;</span></a>
     </div>
   </div>
 
@@ -101,10 +105,15 @@
   </div>
 
   <p class="gate" style="margin-top:clamp(28px,4vw,44px)"><b>Read this before you put anything in here.</b>
-    Every file in this repository is served publicly &mdash; <code>klyara.com/uni/&lt;filename&gt;</code> works for
-    anyone who guesses it. These pages are marked <code>noindex</code> and excluded in <code>robots.txt</code>,
-    so search engines leave them alone, but that is not access control. No passwords, no client data, no
-    identity documents, no bank details. If it would be a problem in a competitor's hands, it does not go in the Uni.</p>
+    The Uni and the control panel now sit behind <b>Cloudflare Access</b>: <code>klyara.com/uni/</code>
+    and <code>klyara.com/admin.html</code> bounce anyone who is not signed in to an approved email
+    address, before a single byte of the page is served. That is real access control, and it is what
+    changed on 27 August 2026 &mdash; the earlier note in here said these pages were only
+    <code>noindex</code>, which was true then and is out of date now.
+    It is still not a safe deposit box. Everything else in this repository is served publicly, an
+    Access policy is one misconfiguration away from being off, and the files sit in OneDrive and on
+    GitHub as well. So: no passwords, no client data, no identity documents, no bank details. If it
+    would be a problem in a competitor's hands, it does not go in the Uni.</p>
 
 </main>
 
