@@ -8,7 +8,8 @@ var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll
 var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
   return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
 
-var DATA = { plan: window.KLY_PLAN, library: window.KLY_LIBRARY, bplan: window.KLY_BPLAN };
+var DATA = { plan: window.KLY_PLAN, library: window.KLY_LIBRARY, bplan: window.KLY_BPLAN,
+             plan90: window.KLY_PLAN90 };
 var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 var DAYMS = 864e5;
 
@@ -43,7 +44,7 @@ function countUp(el) {
 function armCounts(root) { $$('[data-acount]', root).forEach(countUp); }
 
 /* ── router ────────────────────────────────────────────────────────────── */
-var VIEWS = ['plan', 'bplan', 'library', 'compliance', 'links', 'launch', 'uni'];
+var VIEWS = ['plan', 'track', 'bplan', 'library', 'compliance', 'links', 'launch', 'uni'];
 var built = {};
 function show(view, push) {
   if (VIEWS.indexOf(view) < 0) view = 'plan';
@@ -52,6 +53,11 @@ function show(view, push) {
   if (push && location.hash !== '#/' + view) history.replaceState(null, '', '#/' + view);
   var el = $('#v-' + view);
   if (BUILD[view] && !built[view]) { built[view] = 1; try { BUILD[view](el); } catch (e) { console.error('view ' + view, e); } }
+  if ((view === 'launch' || view === 'compliance') && window.KLYTRACK && DATA.plan90) {
+    try { window.KLYTRACK.bindChecklists(); } catch (e) { console.error('checklists', e); }
+  }
+  if (view === 'launch') { setTimeout(function () {
+    $$('.lcart', el).forEach(function (x) { x.classList.add('in'); }); }, 60); }
   // main.js reveals on intersection; a view that was display:none may not have fired.
   setTimeout(function () {
     $$('[data-reveal],[data-stagger]', el).forEach(function (x) { x.classList.add('in'); });
@@ -272,6 +278,62 @@ function bpGo(n) {
   setTimeout(function () { $$('#bp-body [data-reveal]').forEach(function (x) { x.classList.add('in'); }); }, 30);
 }
 
+/* ══ OneDrive folder paths ════════════════════════════════════
+   A static page cannot browse OneDrive and this does not pretend to. It prints
+   the exact folder each document sits in on the machine that holds the pack,
+   and copies it to the clipboard so it can be pasted into Explorer's address
+   bar. Verified against the folders on disk on 28 August 2026: every one of the
+   108 staged files resolves. */
+var OD_ROOT = 'C:\\Users\\key\\Clouds\\onedrive\\kieranpascal\\OneDrive\\Projects\\WLDFIN\\Companies\\klyara.com\\Klyara';
+var OD_FOLDER = {
+  '01_Start_Here': '01_Start_Here', '02_Business_Plan': '02_Business_Plan',
+  '03_Financials': '03_Financials', '04_Brand': '04_Brand',
+  '05_Operations': '08_Marketing_and_Ops', '06_Stationery': '06_Stationery',
+  '07_Forms_and_Contracts': '07_Forms_and_Contracts',
+  '08_Marketing': '08_Marketing_and_Ops', '09_Assets': '09_Assets'
+};
+function odPath(folder) {
+  var f = OD_FOLDER[folder];
+  return f ? OD_ROOT + '\\' + f : null;
+}
+var OD_ICON = '<svg class="odi" viewBox="0 0 24 24" aria-hidden="true">' +
+  '<path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H9l2 2.5h7.5A2.5 2.5 0 0 1 21 10v7.5A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5z"/></svg>';
+var OD_COPY = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/>' +
+  '<path d="M5 15V5.5A1.5 1.5 0 0 1 6.5 4H15"/></svg>';
+function odRow(folder) {
+  var p = odPath(folder);
+  if (!p) return '';
+  return '<span class="odrow" title="The folder this document sits in, on the machine that holds the pack">' +
+    OD_ICON + '<code>' + esc(p) + '</code>' +
+    '<button type="button" class="odcopy" data-od="' + esc(p) + '">' + OD_COPY + 'Copy path</button></span>';
+}
+/* The full path is longer than a card. Park each one scrolled to its right-hand
+   end, so the folder name — the half that identifies it — is what you see, and
+   the root scrolls back into view. The button always copies the whole thing. */
+function odPark(root) {
+  $$('.odrow code', root).forEach(function (c) { c.scrollLeft = c.scrollWidth; });
+}
+function odCopy(btn) {
+  var txt = btn.dataset.od;
+  function done(ok) {
+    var was = btn.innerHTML;
+    btn.classList.toggle('done', ok);
+    btn.innerHTML = OD_COPY + (ok ? 'Copied' : 'Select it');
+    setTimeout(function () { btn.innerHTML = was; btn.classList.remove('done'); }, 1800);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(txt).then(function () { done(true); }, function () { done(false); });
+    return;
+  }
+  var ta = document.createElement('textarea');
+  ta.value = txt; ta.setAttribute('readonly', '');
+  ta.style.cssText = 'position:fixed;top:-1000px';
+  document.body.appendChild(ta); ta.select();
+  var ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+  ta.remove(); done(ok);
+}
+
 /* ══ (c) library ═══════════════════════════════════════════════════════ */
 var ICON = {
   eye: '<svg viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>',
@@ -281,7 +343,9 @@ function kb(n) { return n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.m
 function buildLibrary() {
   var L = DATA.library; if (!L) return;
   $('#lib-lede').innerHTML = 'Everything in the delivery, in the same nine folders as the ZIP. <b>' +
-    L.totals.documents + ' documents</b>, ' + L.totals.files + ' files, ' + L.totals.megabytes + ' MB. View it here or download the file.';
+    L.totals.documents + ' documents</b>, ' + L.totals.files + ' files, ' + L.totals.megabytes + ' MB. View it here or download the file. ' +
+    'Each card also carries the folder it sits in inside the OneDrive pack \u2014 a web page cannot open OneDrive, ' +
+    'so the path copies to the clipboard for File Explorer.';
   $('#lib-f').innerHTML = '<button type="button" data-f="all" aria-pressed="true">All<span class="c">' + L.totals.documents + '</span></button>' +
     L.folders.map(function (f) {
       return '<button type="button" data-f="' + f.key + '" aria-pressed="false">' + esc(f.title) +
@@ -303,6 +367,7 @@ function buildLibrary() {
         items.map(card).join('') + '</div></section>';
     }).join('');
     $('#lib-out').innerHTML = out || '<p class="libempty">Nothing matches that search.</p>';
+    odPark($('#lib-out'));
   }
   function card(i) {
     var thumb = i.preview
@@ -317,7 +382,7 @@ function buildLibrary() {
         ICON.eye + 'Preview</button>' +
         i.formats.map(function (f) {
           return '<a href="' + esc(f.path) + '" download title="' + kb(f.bytes) + '">' + ICON.dl + f.ext + '</a>'; }).join('') +
-      '</span></div></article>';
+      '</span>' + odRow(i.folder) + '</div></article>';
   }
   $('#lib-f').addEventListener('click', function (e) {
     var b = e.target.closest('button[data-f]'); if (!b) return;
@@ -327,6 +392,8 @@ function buildLibrary() {
   });
   $('#lib-q').addEventListener('input', function () { q = this.value.trim().toLowerCase(); draw(); });
   $('#lib-out').addEventListener('click', function (e) {
+    var od = e.target.closest('button[data-od]');
+    if (od) { odCopy(od); return; }
     var b = e.target.closest('button[data-pv]'); if (!b) return;
     var i = L.items.filter(function (x) { return x.stem === b.dataset.pv && x.folder === b.dataset.folder; })[0];
     if (i) preview(i);
@@ -354,8 +421,10 @@ function preview(i) {
     i.formats.map(function (f, n) {
       return '<a class="btn btn-sm ' + (n === 0 ? 'btn-solid' : 'btn-line') + '" href="' + esc(f.path) + '" download>' +
         '<span>Download ' + f.ext + '</span></a>'; }).join('') +
-    (i.kind === 'pdf' ? '<a class="btn btn-sm btn-line" href="' + esc(i.view) + '" target="_blank" rel="noopener"><span>Open in a new tab</span></a>' : '');
+    (i.kind === 'pdf' ? '<a class="btn btn-sm btn-line" href="' + esc(i.view) + '" target="_blank" rel="noopener"><span>Open in a new tab</span></a>' : '') +
+    odRow(i.folder);
   $('#pvw').hidden = false;
+  odPark($('#pvw'));
   document.body.style.overflow = 'hidden';
   $('#pvw-x').focus();
 }
@@ -487,7 +556,15 @@ function buildLaunch() {
       '<span><b>' + x[0] + '</b><span>' + x[1] + '</span></span><span class="st">' + x[2] + '</span></div>'; }).join('');
 }
 
-var BUILD = { plan: buildPlan, bplan: buildBplan, library: buildLibrary, compliance: buildCompliance, launch: buildLaunch };
+/* ══ (a2) tracker — assets/js/track.js owns the rendering ══════════════════ */
+function buildTrack(root) {
+  if (!window.KLYTRACK) { console.error('track.js did not load'); return; }
+  window.KLYTRACK.build(root, DATA.plan90);
+  window.KLYTRACK.bindChecklists();
+}
+
+var BUILD = { plan: buildPlan, track: buildTrack, bplan: buildBplan, library: buildLibrary,
+              compliance: buildCompliance, launch: buildLaunch };
 
 /* ══ boot ══════════════════════════════════════════════════════════════ */
 function boot() {
@@ -495,6 +572,13 @@ function boot() {
   if (P) $('#n-plan').textContent = '90';
   if (B) $('#n-bplan').textContent = B.sections.length;
   if (L) $('#n-library').textContent = L.totals.documents;
+  if (DATA.plan90) {
+    var n90 = 0;
+    DATA.plan90.days.forEach(function (dy) {
+      dy.tasks.forEach(function (tk) { n90 += 1 + tk.subtasks.length; });
+    });
+    $('#n-track').textContent = n90;
+  }
   $('#a-gen').textContent = L ? 'Built from the pack on ' + L.generated : '';
   var t = today();
   $('#a-clock').textContent = fmtLong(t);
@@ -504,7 +588,10 @@ function boot() {
   });
   addEventListener('hashchange', function () { show((location.hash || '').replace('#/', ''), false); });
   $('#pvw-x').addEventListener('click', closePreview);
-  $('#pvw').addEventListener('click', function (e) { if (e.target === this) closePreview(); });
+  $('#pvw').addEventListener('click', function (e) {
+    var od = e.target.closest && e.target.closest('button[data-od]');
+    if (od) { odCopy(od); return; }
+    if (e.target === this) closePreview(); });
   addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('#pvw').hidden) closePreview(); });
   $('#q-onedrive').addEventListener('click', function (e) {
     e.preventDefault();
@@ -514,8 +601,9 @@ function boot() {
   show((location.hash || '').replace('#/', '') || 'plan', true);
 }
 
-var pending = 3;
+var pending = 4;
 function ready() { if (--pending === 0) boot(); }
+load('plan90', 'plan90', ready);
 load('plan', 'plan', ready);
 load('library', 'library', ready);
 load('bplan', 'bplan', ready);

@@ -25,6 +25,8 @@ package-lock.json
 
 # build tooling
 build-admin.py
+build-plan90.py
+_patch/
 README-admin.txt
 
 # quarantined files - must never be served

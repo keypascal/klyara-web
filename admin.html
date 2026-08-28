@@ -25,7 +25,7 @@
     <span class="ahdr-r">
       <span class="clock" id="a-clock"></span>
       <span class="badge">Control</span>
-      <a class="btn btn-line btn-sm" href="login.html"><span>Sign out</span></a>
+      <a class="btn btn-line btn-sm" href="/cdn-cgi/access/logout"><span>Sign out</span></a>
     </span>
   </div>
 </header>
@@ -41,6 +41,9 @@
       <button class="atab" role="tab" data-view="plan" aria-selected="false" aria-controls="v-plan" id="t-plan">
         <svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></svg>
         <span>90-day plan</span><span class="n" id="n-plan"></span></button>
+      <button class="atab" role="tab" data-view="track" aria-selected="false" aria-controls="v-track" id="t-track">
+        <svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="17" rx="3"/><path d="m8 12.5 2.6 2.6L16.5 9"/></svg>
+        <span>Tracker</span><span class="n" id="n-track"></span></button>
       <button class="atab" role="tab" data-view="bplan" aria-selected="false" aria-controls="v-bplan" id="t-bplan">
         <svg viewBox="0 0 24 24"><path d="M4 4.5h7a3 3 0 0 1 3 3V21a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4.5h-3.5a2.5 2.5 0 0 0-2.5 2.5V21a2.5 2.5 0 0 1 2.5-2.5H20z"/></svg>
         <span>Business plan</span><span class="n" id="n-bplan"></span></button>
@@ -60,7 +63,7 @@
         <svg viewBox="0 0 24 24"><path d="M12 4 2.5 8.5 12 13l9.5-4.5z"/><path d="M6.5 10.8v4.4c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-4.4"/><path d="M21.5 8.5v5"/></svg>
         <span>Uni</span><span class="n" id="n-uni">4</span></button>
     </div>
-    <p class="arail-foot">Read-only. Nothing on this panel edits, uploads or saves.<br><span id="a-gen"></span></p>
+    <p class="arail-foot">Documents are view and download only — nothing here edits or uploads a file.<br><b>Your ticks are saved in this browser only.</b> Not on a server, not shared. Export them from the Tracker.<br><span id="a-gen"></span></p>
   </div>
 
   <!-- ── views ─────────────────────────────────────────────────────────── -->
@@ -76,6 +79,14 @@
     </div>
 
     <div id="p-now"></div>
+
+    <div class="acard" style="padding:clamp(14px,2vw,20px);margin-bottom:clamp(18px,2.6vw,26px)">
+      <p class="small" style="margin:0"><b>This view renders the day-by-day document as it was delivered.</b>
+        Its dates are right, but some of the prose inside the entries was written against a launch a week earlier and
+        still names deadlines on the wrong day. The corrected, task-level version — with owners, minutes,
+        dependencies, tips, failure modes and fixes, and every correction listed — is in
+        <a class="a-line" href="#/track">the Tracker</a>.</p>
+    </div>
 
     <div class="ablock">
       <h2 class="h2">The whole window</h2>
@@ -99,8 +110,94 @@
 
     <div class="ablock">
       <h2 class="h2">Hard dates inside the ninety days</h2>
-      <p class="small">Everything marked as a hard deadline in the plan. Where a deadline falls on a weekend, work to the last working day before it.</p>
+      <p class="small">Everything marked as a hard deadline in the plan. Where a CIS deadline falls on a weekend or a bank
+        holiday it moves <b>back</b> to the last working day before it, never forward. Day numbers here were seven too high
+        in the delivered document and have been recomputed against Day 1 = Monday 14 September 2026.</p>
       <div class="acard"><div class="ascroll"><table class="atable" id="p-hard"></table></div></div>
+    </div>
+  </section>
+
+  <!-- (a2) tracker ─────────────────────────────────────── -->
+  <section class="aview" id="v-track" role="tabpanel" aria-labelledby="t-track">
+    <div class="ahead">
+      <span class="kicker">Project management</span>
+      <h1 class="h1">Open it, tick it off, watch the counts move.</h1>
+      <p class="lede">Every task and subtask across the setup fortnight and the ninety days, with why it matters,
+        the tips, what usually goes wrong and the fix. Owners, minutes and dependencies on every line.
+        Tick as you go; the counts update as you tick.</p>
+    </div>
+
+    <div id="tk-head"></div>
+
+    <div class="ablock">
+      <h2 class="h2">This week</h2>
+      <p class="small">The week you are in, day by day. Ticked against total.</p>
+      <div id="tk-week"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Where the ticks are</h2>
+      <p class="small">By section, then by week. Every bar counts tasks and subtasks together.</p>
+      <div class="acard"><div class="bars tkbars" id="tk-sections"></div></div>
+      <div class="acard" style="margin-top:12px"><div class="bars tkbars" id="tk-weeks"></div></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Every day</h2>
+      <p class="small">Tap a day to open its tasks. Tap the chevron on a task for why it matters, the tips,
+        what usually goes wrong and the fix.</p>
+      <div class="tkfilters" id="tk-filters" role="group" aria-label="Filter the days">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="today" aria-pressed="false">Today</button>
+        <button type="button" data-f="week" aria-pressed="false">This week</button>
+        <button type="button" data-f="open" aria-pressed="false">Not done</button>
+        <button type="button" data-f="deadline" aria-pressed="false">Hard deadlines</button>
+        <button type="button" data-f="K" aria-pressed="false">Kieran</button>
+        <button type="button" data-f="C" aria-pressed="false">Craig</button>
+        <button type="button" data-f="B" aria-pressed="false">Both</button>
+      </div>
+      <div class="tkdays" id="tk-days"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">The fixed dates</h2>
+      <p class="small">Recomputed against Day 1 = Monday 14 September 2026. A CIS deadline falling on a weekend
+        or a bank holiday moves <b>back</b> to the last working day before it, never forward.</p>
+      <div class="acard"><div class="ascroll"><table class="atable" id="tk-fixed"></table></div></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Corrections made to the source plan</h2>
+      <p class="small">The day-by-day source had its dates re-anchored a week later than they were first written,
+        but the prose inside the entries was not moved with them — so deadline copy sat seven days after the
+        deadline it described. Every one of these was fixed while this data was written.</p>
+      <div class="tkcorrs" id="tk-corr"></div>
+    </div>
+
+    <div class="ablock">
+      <h2 class="h2">Move your ticks</h2>
+      <p class="small">The state lives in this browser. Export it to move it to another machine, or to send it
+        to Craig by hand until the app is server-backed.</p>
+      <div class="acard tkio" id="tk-io">
+        <p class="small" style="margin:0"><b id="tk-iocount">0 ticks</b> in this browser right now.</p>
+        <div class="tkio-btns">
+          <button type="button" class="btn btn-solid btn-sm" data-io="export"><span>Download JSON</span><span class="ar">&darr;</span></button>
+          <button type="button" class="btn btn-line btn-sm" data-io="copy"><span>Copy to clipboard</span></button>
+          <button type="button" class="btn btn-line btn-sm" data-io="merge"><span>Import &amp; merge</span></button>
+          <button type="button" class="btn btn-line btn-sm" data-io="replace"><span>Import &amp; replace</span></button>
+          <button type="button" class="btn btn-line btn-sm" data-io="clear"><span>Clear all ticks</span></button>
+        </div>
+        <label class="tkio-file">Or choose an exported file: <input type="file" id="tk-file" accept="application/json,.json"></label>
+        <label for="tk-paste" class="small">Paste an export here, then press Import.</label>
+        <textarea id="tk-paste" spellcheck="false" placeholder='{"app":"klyara-control","kind":"ticks", ... }'></textarea>
+        <p class="tk-iomsg" id="tk-iomsg"></p>
+        <p class="tk-honest" style="margin:0"><b>Said plainly:</b> these ticks are in this browser&rsquo;s local storage.
+          They are not on a server, they are not shared between the two of you, they do not follow you to your phone,
+          and clearing site data deletes them. The export is the only way to move them. When the portal takes this
+          over, the same JSON is what gets loaded in.</p>
+        <p class="tk-storewarn" hidden style="margin:0"><b>This browser will not save.</b> Private browsing, or site
+          data is blocked. Ticks will work until you reload and then they are gone.</p>
+      </div>
     </div>
   </section>
 
@@ -248,6 +345,10 @@
         and the habit of asking every client for a review.</p>
     </div>
 
+    <figure class="lcart lcband" data-art>
+      <img src="assets/img/lc/lc-band-first-light.png" width="1600" height="800" loading="lazy" decoding="async"
+        alt="First light on a site: a figure at the hoarding, scaffold behind, and the Klyara van.">
+    </figure>
     <div class="counts" id="lc-counts">
       <div><b data-acount="27">0</b><span>Documents</span></div>
       <div><b data-acount="108" data-suffix="k">0</b><span>Words</span></div>
@@ -286,6 +387,12 @@
       </ol>
     </div>
 
+    <figure class="lcart" data-art>
+      <img src="assets/img/lc/lc-waiting-clocks.png" width="1400" height="812" loading="lazy" decoding="async"
+        alt="Three clocks, all started on the first morning: ICB practice licence 28 days, email warm-up ramp 21 days, Google Business Profile 14 days.">
+      <figcaption>Three clocks, all started on the first morning &middot; drawn from the ICB stated processing time and Google&rsquo;s published verification window</figcaption>
+    </figure>
+
     <div class="ablock">
       <h2 class="h2">02 &middot; Thirty decisions only you can make</h2>
       <p class="small">Seven blocks, about 105 minutes in one sitting. Craig is needed for two of them.</p>
@@ -296,6 +403,16 @@
       <h2 class="h2">03 &middot; The ninety days</h2>
       <p class="small">Drawn from the same plan file this panel's tracker uses, so the dates cannot drift apart.</p>
       <div class="acard"><div class="ptl" id="lc-phases"></div></div>
+      <figure class="lcart" data-art style="margin-top:16px">
+        <img src="assets/img/lc/lc-weekly-rhythm.png" width="1400" height="1117" loading="lazy" decoding="async"
+          alt="The weekly rhythm as seven dials: Monday 30 minutes, Tuesday 20, Wednesday 45, Thursday 120, Friday 90, Saturday 15, Sunday 20.">
+        <figcaption>The weekly rhythm &middot; it repeats every week, forever &middot; never drop the Wednesday community slot two weeks running</figcaption>
+      </figure>
+      <figure class="lcart" data-art style="margin-top:16px">
+        <img src="assets/img/lc/lc-day90-scorecard.png" width="1400" height="685" loading="lazy" decoding="async"
+          alt="What good looks like at day 90: 10 booked calls a month, 5 reviews, 4 clients, 20 accountants contacted.">
+        <figcaption>What good looks like at day 90 &middot; these are targets, not results &mdash; Klyara has no trading history</figcaption>
+      </figure>
     </div>
 
     <div class="ablock">
@@ -422,7 +539,9 @@
 <script src="assets/data/plan.js"></script>
 <script src="assets/data/library.js"></script>
 <script src="assets/data/bplan.js"></script>
+<script src="assets/data/plan90.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/track.js"></script>
 <script src="assets/js/admin.js"></script>
 </body>
 </html>

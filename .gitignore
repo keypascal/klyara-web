@@ -29,3 +29,6 @@ npm-debug.log*
 
 # quarantined: contains the retired admin credential, pending manual deletion
 _to_delete/
+
+# one-off patch scripts, applied and finished with
+_patch/
