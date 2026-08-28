@@ -572,12 +572,8 @@ function boot() {
   if (P) $('#n-plan').textContent = '90';
   if (B) $('#n-bplan').textContent = B.sections.length;
   if (L) $('#n-library').textContent = L.totals.documents;
-  if (DATA.plan90) {
-    var n90 = 0;
-    DATA.plan90.days.forEach(function (dy) {
-      dy.tasks.forEach(function (tk) { n90 += 1 + tk.subtasks.length; });
-    });
-    $('#n-track').textContent = n90;
+  if (DATA.plan90 && window.KLYTRACK) {
+    $('#n-track').textContent = window.KLYTRACK.total(DATA.plan90);
   }
   $('#a-gen').textContent = L ? 'Built from the pack on ' + L.generated : '';
   var t = today();

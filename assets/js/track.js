@@ -681,6 +681,9 @@ function mk(html) {
 }
 
 window.KLYTRACK = {
+  /* One number, computed once: every tickable thing in the panel. The rail
+     badge and the overall counter must never disagree. */
+  total: function (P) { if (!IX && P) buildIndex(P); return IX ? IX.all.length : 0; },
   build: build,
   bindChecklists: bindChecklists,
   index: function () { return IX; },
