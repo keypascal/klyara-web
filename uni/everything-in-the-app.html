@@ -135,7 +135,7 @@
     <tbody>
       <tr><td class="k">Phone</td><td>Five tabs along the bottom — Home, Jobs, Receipts, Invoices, More. Everything else lives behind <b>More</b>. The camera button on Receipts is deliberately the biggest target on the screen.</td></tr>
       <tr><td class="k">Tablet and desktop</td><td>A full sidebar with every screen listed. Same app, same data, more room.</td></tr>
-      <tr><td class="k">Finding things</td><td>One search box over jobs, invoices, quotes, receipts, expenses and documents. <b>Ctrl-K</b> (or ⌘K) on a keyboard, the magnifier in the header on a phone. It matches a customer's name, a street, a supplier, an amount — several words, in any order, all of which have to match.</td></tr>
+      <tr><td class="k">Finding things</td><td>One search box over jobs, invoices, quotes, receipts, expenses, documents and customers. <b>Ctrl-K</b> (or ⌘K) on a keyboard, the magnifier in the header on a phone. It matches a customer's name, a street, a supplier, an amount — several words, in any order, all of which have to match.</td></tr>
       <tr><td class="k">Installed</td><td>Add to Home Screen turns it into an app icon with no browser chrome. It is the same web app — nothing to update, nothing from an app store.</td></tr>
       <tr><td class="k">Offline</td><td>Screens you have already opened still load, with the right typefaces — nothing is fetched from anyone else's server. A receipt photographed with no signal is kept on the phone and sent later. Anything else that needs the server says so rather than silently failing.</td></tr>
     </tbody>
@@ -175,6 +175,28 @@
     <p>A receipt photographed at a petrol station does not always belong to a job, and forcing a
     choice at that moment would kill the one-tap flow that makes the product work. Tag it later
     from the receipt, or never.</p></div>
+
+  <h3>Customers</h3>
+  <p>Who you actually invoice, kept as a record instead of retyped every time. Add one once and
+  every invoice or job for them can pick it from a list.</p>
+  <div class="twrap" tabindex="0"><table>
+    <thead><tr><th>Field</th><th>What it is for</th></tr></thead>
+    <tbody>
+      <tr><td class="k">End user</td><td>Tick this for a homeowner, a landlord keeping the building, or anyone else who is the final occupier rather than another VAT-registered business in the chain. It is the reverse-charge exception — see the flag below.</td></tr>
+      <tr><td class="k">VAT registered</td><td>Informational, and used by the invoice screen to steer the default VAT treatment when you pick this customer.</td></tr>
+      <tr><td class="k">Payment terms</td><td>Days from the invoice date. Picking this customer on a new invoice sets the due date from this instead of the flat 30-day default.</td></tr>
+      <tr><td class="k">Statement</td><td>Every invoice raised against them, what has been paid, what is outstanding, and what is overdue — one screen, exportable as a spreadsheet.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="flag"><p class="t">Picking a customer on an invoice does more than fill in a name</p>
+    <p>Their email, address, VAT treatment and due date all come with them. An end-user customer
+    takes the invoice out of the reverse charge automatically, with an explanation on screen — the
+    same rule as the flag under Invoices and quotes below, just applied from the customer record
+    instead of typed fresh each time.</p></div>
+  <div class="flag good"><p class="t">The database, not just the screen, enforces whose customer is whose</p>
+    <p>A customer belongs to one business. Pointing an invoice or a job at another business's
+    customer — even by calling the API directly rather than clicking anything — is rejected. See
+    Part 3.</p></div>
 
   <h3>Receipts</h3>
   <p>The screen that <em>is</em> the product. Photograph, done.</p>
@@ -388,6 +410,7 @@
       <tr><td class="k">Zero out an invoice total, or invent one</td><td>Blocked. Every money column is computed from the lines by the database and pinned against direct writes.</td></tr>
       <tr><td class="k">Invent a mileage rate</td><td>Blocked. The database prices the trip from the date travelled and ignores what the browser sent.</td></tr>
       <tr><td class="k">File an add-on enquiry already marked won</td><td>Blocked. It always arrives as new.</td></tr>
+      <tr><td class="k">Bill through, or move, another business's customer</td><td>Blocked. An invoice or job can only reference a customer that belongs to the same business; a customer record can only be moved between clients if you own both ends — which, as another business, you never do.</td></tr>
     </tbody>
   </table></div>
   <p>All of the above are tested against the live database by <code>scripts/rls-test.mjs</code>, which
