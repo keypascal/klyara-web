@@ -1,8 +1,16 @@
 # Klyara — Client Onboarding Pack
 ### Signed to live in five working days. The runbook, the emails, the first 90 days.
 
+*Revised 28 August 2026.*
+
 *Build Manual §6.5 calls for an onboarding runbook "before client 1". This is it, plus the client-facing
 emails that go with each step.*
+
+**Before you run this on anyone.** Klyara cannot carry on bookkeeping by way of business until AML
+supervision is in place. The ICB practice licence is applied for on Tuesday 1 September 2026 and
+takes 28 days, so expect supervision around Tuesday 29 September. Until then you can talk to people,
+quote, and take founding-client registrations. Day 0 of this runbook is the day you sign them, and
+you do not sign anyone before the licence is granted.
 
 **Why this matters more than it looks:** onboarding is the only part of the service the client
 experiences before they have anything to judge you on. A firm that goes from "yes" to "live" in five
@@ -11,21 +19,21 @@ for the same document twice has also already proved something.
 
 ---
 
-# PART 1 — The five-day runbook
+## PART 1 — The five-day runbook
 
 Every step has an owner, a trigger and a client-facing artefact. Nothing waits on Craig remembering.
 
-## Day 0 — They say yes
+### Day 0 — They say yes
 
 | ☐ | Step | Notes |
 |---|---|---|
 | ☐ | Log the deal | Name, tier, monthly, onboarding fee, source, town |
-| ☐ | Send **Email 1 — Welcome & what happens next** | Within one hour. Speed is the whole impression. |
+| ☐ | Send **Email 1 — Welcome and what happens next** | Within one hour. Speed is the whole impression. |
 | ☐ | Send engagement letter for e-signature | Klyara-branded, scope, price-review clause, late-records surcharge, 30-day notice |
 | ☐ | Send GoCardless direct debit link | In the same email. Not later. |
 | ☐ | Create the client folder and portal record | |
 
-## Day 1 — Compliance chain starts
+### Day 1 — Compliance chain starts
 
 | ☐ | Step | Notes |
 |---|---|---|
@@ -33,20 +41,20 @@ Every step has an owner, a trigger and a client-facing artefact. Nothing waits o
 | ☐ | Client risk assessment recorded | Written, per client, per your firm-wide AML policy |
 | ☐ | PEP and sanctions check | Part of the same tool |
 | ☐ | Engagement letter signature chased if not back | One message. Polite. |
-| ☐ | **Agent authorisation submitted** — VAT, CIS, ITSA as applicable | ⚠️ This is the long pole. HMRC's post takes about a week. Submit today. |
+| ☐ | **Agent authorisation submitted** — VAT, CIS, ITSA as applicable | This is the long pole. HMRC's post takes about a week. Submit today. |
 | ☐ | Send **Email 2 — ID check and HMRC authorisation** | Sets the expectation about HMRC's post *before* it becomes a delay |
 
-## Day 2 — Software and data
+### Day 2 — Software and data
 
 | ☐ | Step | Notes |
 |---|---|---|
-| ☐ | QBO subscription added under bill-my-firm (or Xero if inbound) | Time it to an Intuit promo where one is running |
+| ☐ | QBO subscription set up **in the client's name**, billed to Klyara under bill-my-firm (or Xero if inbound) | The file and the licence are theirs. We pay for it and recharge it. Say this out loud at Day 4, because it is the answer to "what happens if I leave". Time it to an Intuit promo where one is running |
 | ☐ | Chart of accounts set to the construction template | CIS control, retentions held, retentions receivable, materials, subsistence, plant hire |
 | ☐ | **Bank feeds connected** | Every business account and card. This is the single highest-value step. |
 | ☐ | Opening balances agreed with the previous bookkeeper or accountant | If none exist, say so now rather than discovering it in month three |
 | ☐ | Prior year figures obtained | |
 
-## Day 3 — Construction setup
+### Day 3 — Construction setup
 
 | ☐ | Step | Notes |
 |---|---|---|
@@ -57,7 +65,7 @@ Every step has an owner, a trigger and a client-facing artefact. Nothing waits o
 | ☐ | **Retention register built** — job, amount, release date | Almost always finds money. See the 90-day review. |
 | ☐ | Payroll data loaded if applicable | |
 
-## Day 4 — Client-side setup
+### Day 4 — Client-side setup
 
 | ☐ | Step | Notes |
 |---|---|---|
@@ -67,18 +75,18 @@ Every step has an owner, a trigger and a client-facing artefact. Nothing waits o
 | ☐ | The monthly rhythm explained: records by the 10th, CIS by the 19th, reports by month end | |
 | ☐ | Send **Email 3 — You're live** | |
 
-## Day 5 — Catch-up and close
+### Day 5 — Catch-up and close
 
 | ☐ | Step | Notes |
 |---|---|---|
 | ☐ | Catch-up work scoped and scheduled | |
-| ☐ | Onboarding fee invoiced | |
+| ☐ | Onboarding fee invoiced | Per the engagement letter, ex VAT. £149 Solo, £250 Start, from £350 Trade, from £500 Pro |
 | ☐ | First month's work started | |
 | ☐ | **Diarise the 90-day review** | The single most commonly skipped step, and where add-on revenue lives |
 | ☐ | Diarise the annual price review | Per the engagement letter |
 | ☐ | Ask: "Is there anyone else you'd want us to talk to?" | Only if the week went well. Ask once. |
 
-## Blocked-by-HMRC protocol
+### Blocked-by-HMRC protocol
 
 The agent authorisation is the only step you cannot compress. **Tell the client on day 1, not day 6.**
 
@@ -90,10 +98,10 @@ A delay you predicted is competence. The same delay unannounced is incompetence.
 
 ---
 
-# PART 2 — The client onboarding emails
+## PART 2 — The client onboarding emails
 
-## Email 1 — Welcome (within one hour of yes)
-**Subject:** `Welcome to Klyara — here's exactly what happens next`
+### Email 1 — Welcome (within one hour of yes)
+**Subject:** `Welcome to Klyara – here's exactly what happens next`
 
 ```
 Hi {{FIRSTNAME}},
@@ -128,7 +136,7 @@ Craig
 Klyara
 ```
 
-## Email 2 — ID check and HMRC (Day 1)
+### Email 2 — ID check and HMRC (Day 1)
 **Subject:** `Two minutes: ID check`
 
 ```
@@ -151,7 +159,7 @@ bin it.
 Craig
 ```
 
-## Email 3 — You're live (Day 4)
+### Email 3 — You're live (Day 4)
 **Subject:** `You're live`
 
 ```
@@ -183,7 +191,7 @@ Anything at all, ring me. 020 8058 1496.
 Craig
 ```
 
-## Email 4 — First month's reports (end of month 1)
+### Email 4 — First month's reports (end of month 1)
 **Subject:** `Your first month`
 
 ```
@@ -200,20 +208,20 @@ THE HEADLINES
 
 {{ONE OBSERVATION — the single most useful thing in the numbers, in one sentence.}}
 
-Nothing needed from you. If you want to talk it through, ring me — twenty minutes and you'll
-know your numbers better than most people who've been in business twenty years.
+Nothing needed from you. If you want to talk it through, ring me. Twenty minutes and you'll
+know what these numbers are telling you.
 
 Craig
 ```
 
-## Email 5 — The 90-day review invite (day 85)
+### Email 5 — The 90-day review invite (day 85)
 **Subject:** `Ninety days — worth twenty minutes?`
 
 ```
 Hi {{FIRSTNAME}},
 
-Ninety days in, and we've now got three clean months, which is the first point where the
-figures actually tell you something.
+Ninety days is nearly up, and we've got three clean months behind us, which is the first
+point where the figures actually tell you something.
 
 Worth twenty minutes on the phone? Three things:
 1. What your numbers actually say now there's a trend
@@ -227,15 +235,15 @@ Craig
 
 ---
 
-# PART 3 — What to look for in the first month
+## PART 3 — What to look for in the first month
 
-Every new client has at least one of these. Find it in week one and say so — it is the cheapest
+These are the places to look first. Find something in week one and say so. It is the cheapest
 trust you will ever buy.
 
 | Look at | What you usually find |
 |---|---|
 | **Last ten sales invoices** | Reverse charge coded wrong in one direction or the other |
-| **Retentions** | £4,000–£15,000 nobody has asked for. Build the register on day 3. |
+| **Retentions** | Money nobody has asked for, often several jobs' worth. Build the register on day 3. |
 | **CIS deduction statements** | Missing ones. Every unevidenced pound is tax paid twice. |
 | **Subcontractor verifications** | At least one they cannot evidence — a 30% exposure sitting with the contractor |
 | **Aged debtors** | An invoice already paid but never matched, which they were about to chase |
@@ -246,10 +254,11 @@ trust you will ever buy.
 
 ---
 
-# PART 4 — The client rhythm, after onboarding
+## PART 4 — The client rhythm, after onboarding
 
 ```
-By the 10th   Records in. Late-records surcharge applies after this. It only works if you apply it.
+By the 10th   Records in. Records in by the 10th are guaranteed into that cycle.
+              After the 10th, a £25 surcharge. It only works if you apply it.
 By the 19th   CIS filed. Statements to subbies inside 14 days of the tax month end.
 Month end     P&L, balance sheet, aged debtors, retentions, cash position in the portal.
 Quarterly     VAT return. MTD update for Solo clients.
@@ -257,16 +266,16 @@ Day 90        The review. Then every six months.
 Annually      Price review per the engagement letter. Not a surprise, it's in the letter.
 ```
 
-**The late-records surcharge.** £25 after the 10th. Everyone hates charging it and everyone who
+**The late-records surcharge.** £25 ex VAT, after the 10th. Everyone hates charging it and everyone who
 doesn't charge it ends up doing three clients' books in the last four days of the month, forever.
 Charge it once, kindly, with a warning first. It almost never needs charging twice.
 
 ---
 
-# PART 5 — Offboarding, because you should decide this now
+## PART 5 — Offboarding, because you should decide this now
 
-A firm that offboards gracefully gets referrals from clients who left. A firm that holds data hostage
-gets a review that costs it ten clients.
+A firm that offboards gracefully gets referrals from clients who left. A firm that holds data
+hostage gets the review that follows it around.
 
 ```
 ☐ 30 days' notice, either way, no argument and no retention attempt beyond one honest conversation
@@ -282,7 +291,7 @@ one story about a bookkeeper who made it difficult reaches every builder within 
 
 ---
 
-# PART 6 — The onboarding checklist as a one-pager
+## PART 6 — The onboarding checklist as a one-pager
 
 Print this. One per client, in the folder.
 

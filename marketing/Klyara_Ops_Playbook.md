@@ -1,5 +1,6 @@
 # Klyara — Marketing Ops Playbook
 ### Tools, rhythm, measurement, and the things nobody put on the list
+*Prepared 28 August 2026 · launch Monday 14 September 2026*
 
 ---
 
@@ -7,8 +8,8 @@
 
 ## Month 1: post manually. Buy nothing.
 
-You have thirty days of content and roughly two posts a day. That's fifteen minutes of manual
-posting, and doing it by hand for a month teaches you things a scheduler hides: which platform
+You have thirty days of content and roughly two posts a day. That is about fifteen minutes a day of
+manual posting, and doing it by hand for a month teaches you things a scheduler hides: which platform
 mangles line breaks, where hashtags actually go, what time your audience is awake, and which channels
 are worth the effort at all.
 
@@ -27,13 +28,13 @@ channel as a permanent manual chore, which is exactly the chore that stops happe
 
 Everything else is secondary to that.
 
-**The catch, stated plainly:** on Metricool, X/Twitter is a paid add-on on top of the plan, and the
+**The catch, stated plainly:** on Metricool, X/Twitter is a paid add-on above the plan price, and the
 free tier excludes LinkedIn and X entirely. So budget the Starter plan plus, if you want it, the X
-add-on. Expect roughly **£20–28/month** all in. Against the Build Manual's ~£180–245 fixed monthly
-cost, that's proportionate for the channel that drives local search.
+add-on. Expect roughly **£20–£28/month** all in. Against the Build Manual's £180–£245 fixed monthly
+cost, that is proportionate for the channel that drives local search.
 
 **Cheaper alternative if that's over budget:** schedule the eight channels Metricool's plan covers,
-and post X manually. X is ten seconds a day and you're only posting once. Saves the add-on entirely.
+and post X manually. X is ten seconds a day and you post once. That saves the add-on entirely.
 
 **Verify pricing at signup.** These figures come from a Buffer-published comparison — a competitor's
 numbers about a competitor — and every tool in this category repriced in the last two years.
@@ -45,13 +46,21 @@ workflows and team seats you have no use for.
 
 # 2. The weekly operating rhythm
 
-Two hours a week, on the same two slots, forever. If it isn't diarised it won't happen.
+Two hours a week, in three fixed slots, forever. If it isn't diarised it won't happen.
+
+**This is the steady state, not the launch month.** Days 1–30 run at 9–11 hours a week and days 31–90
+taper to 6–8; the full seven-day version is in `docs/16`. The three slots below are what survives a
+bad week and what you keep after day 90.
 
 ## Monday, 07:30–08:00 — Post & prime (30 min)
 - Publish the week's anchor post to LinkedIn (Craig), Company Page, X, Facebook
 - Publish the weekly GBP post
 - Reply to every comment from the weekend
 - Check the calendar for this week's dates and adjust if a deadline moved
+
+*This slot is 07:30 and stays 07:30 — the post is written and scheduled the previous Friday, so it
+holds the slot. The cold-call block in `docs/23 §PART 7` runs **08:00–08:30 Monday and Wednesday**,
+straight after this one, so the two do not collide in the diary.*
 
 ## Wednesday, 17:30–18:00 — Community (30 min)
 - One genuine contribution to a forum or subreddit. **No link.**
@@ -65,19 +74,22 @@ Two hours a week, on the same two slots, forever. If it isn't diarised it won't 
 - Schedule everything for the coming week
 - Log the four numbers (below)
 
-**Total: 2 hours a week.** Not 2 hours a day. If it grows beyond that, either it's working and you
-hire, or you're overproducing for channels that aren't returning.
+**Total: 30 + 30 + 60 = 120 minutes, two hours a week.** Not two hours a day. Add roughly one hour a
+month for the monthly review in section 3, so about **nine hours a month**. If the steady state grows
+beyond that, either it's working and you hire, or you're overproducing for channels that aren't
+returning.
 
 ---
 
-# 3. Measurement — four numbers, monthly
+# 3. Measurement — four numbers, logged weekly, reviewed monthly
 
-Ignore followers. Followers are not a business metric and this audience is small by definition.
+Log them every Friday in the KPI workbook, two minutes. Review the trend at each month end —
+Tue 13 October, Thu 12 November, Sat 12 December. Ignore followers. Followers are not a business metric and this audience is small by definition.
 
 | Number | Where | Target by month 3 |
 |---|---|---|
 | **Discovery calls booked** | Cal.com | 8–12/month |
-| **Cost per booked call** | Ads spend ÷ calls | Under £40. Kill ads above it. |
+| **Cost per booked call** | Ad spend ÷ booked calls | Under £40. Kill ads above it. |
 | **Guide downloads** | Brevo list growth | 60–100/month |
 | **GBP: calls + direction requests + website clicks** | GBP Insights | Growing month on month |
 
@@ -109,14 +121,15 @@ keep doing the thing that isn't.
 
 ---
 
-# 4. Google Ads — built and paused ⛔
+# 4. Google Ads — built and paused ⛔ HOLD
 
 Per the Build Manual: £500 credit, but these are **match offers** — you spend ~£400 to receive £500.
 Budget for the spend, not the credit.
 
-**⛔ Do not switch these on until AML supervision is confirmed.** You cannot advertise for
-bookkeeping clients you're not yet permitted to service. Build the campaigns, load the copy, leave
-them paused.
+**⛔ HOLD — do not switch these on until AML supervision is granted.** Applied Tue 1 September,
+28 days, expected around Tue 29 September; the switch is the day the licence number is in hand, not
+the expected date. Marker defined once in `docs/00 §⛔ HOLD`. You cannot advertise for bookkeeping
+clients you are not yet permitted to serve. Build the campaigns, load the copy, leave them paused.
 
 ## Structure
 Search only. No Display, no Performance Max, no Search Partners. 10–15 mile radius. Exact and phrase
@@ -129,9 +142,9 @@ Keywords: [mtd accountant] [making tax digital sole trader] [mtd for income tax 
 
 H1: MTD Quarterly Filing Sorted
 H2: For Builders & Subcontractors
-H3: Fixed Fee From £59/Month
+H3: Fixed Fee From £59 + VAT
 D1: HMRC wants an update every 3 months. We keep the records and file them. Construction specialists.
-D2: Free 20-minute call. We'll tell you if you're even in scope. No jargon, no hourly billing.
+D2: Free 15-minute call. We'll tell you if you're even in scope. No jargon, no hourly billing.
 → klyara.com/making-tax-digital.html
 ```
 
@@ -144,7 +157,7 @@ H1: CIS Returns Filed By The 19th
 H2: Every Month, Fixed Fee
 H3: Construction Specialists Only
 D1: Verification, 20/30% deductions, materials splits, monthly returns. Never miss the 19th again.
-D2: From £199/month + VAT. Free discovery call. No hourly billing, no surprise invoices.
+D2: From £199/month + VAT. Free 15-minute call. No hourly billing, no surprise invoices.
 → klyara.com/services/
 ```
 
@@ -157,7 +170,7 @@ H1: Bookkeeping For Building Firms
 H2: CIS, VAT & Payroll Handled
 H3: Run The Jobs. We Run The Rest.
 D1: Receipts snapped on your phone. Monthly P&L you can actually read. CIS filed on time.
-D2: Fixed monthly pricing from £59 + VAT. Free 20-minute discovery call.
+D2: Fixed monthly pricing from £59 + VAT. Free 15-minute discovery call.
 → klyara.com
 ```
 
@@ -172,20 +185,20 @@ organically for £0. Don't pay for it too.)*
 
 ## Kill rule
 Review at £150 spent. **Above £40 per booked call, pause and go back to organic.** The Build Manual
-sets £15–40 as acceptable; stick to it. Outbound, GBP and referrals cost nothing.
+sets £15–£40 as acceptable; stick to it. Outbound, GBP and referrals cost nothing.
 
 ---
 
-# 5. Local press release — send when AML lands ⛔
+# 5. Local press release — ⛔ HOLD, send the day AML lands (expected around Tue 29 September)
 
 Local business editors will run this for free. It's a real story with a date on it.
 
 ```
 FOR IMMEDIATE RELEASE
 
-New [TOWN] firm targets the tax change catching out local builders
+New Guildford firm targets the tax change catching out local builders
 
-[TOWN], [DATE] — Thousands of self-employed builders and subcontractors across [COUNTY] are now
+GUILDFORD, [DATE] — Thousands of self-employed builders and subcontractors across Surrey are now
 required to report to HMRC four times a year instead of once, under Making Tax Digital for Income
 Tax — and many do not yet realise it applies to them.
 
@@ -193,14 +206,14 @@ The rules took effect in April 2026 for sole traders and landlords with qualifyi
 £50,000. The threshold falls to £30,000 in April 2027 and £20,000 in April 2028, bringing the
 majority of working subcontractors into scope.
 
-A new [TOWN]-based firm, Klyara, has been set up specifically to handle the change for construction
-businesses.
+A new Guildford-based firm, Klyara, has been set up specifically to handle the change for
+construction businesses.
 
 "The part that catches people out is that HMRC measures your gross invoices, not what lands in your
 bank," said Craig [SURNAME], founder of Klyara. "If you're a subcontractor with twenty per cent taken
 off at source, your bank balance is telling you you're under the threshold when your invoices say
-you're over it. We've had a dozen conversations this month with people who assumed they were out and
-weren't."
+you're over it. Most subcontractors we speak to assume they are out of scope, and a lot of them are
+not."
 
 Klyara provides bookkeeping, CIS returns, VAT reverse charge coding, payroll and quarterly MTD filing
 for construction firms on a fixed monthly fee, starting at £59 plus VAT.
@@ -215,22 +228,24 @@ worked out where they stand for free than paid someone to be told they were fine
 ENDS
 
 Notes to editors:
-Klyara provides back-office services to construction businesses across [COUNTY].
-Contact: [NAME], [EMAIL], 020 8058 1496
+Klyara provides back-office services to construction businesses across Surrey.
+Contact: Craig [SURNAME], hello@klyara.com, 020 8058 1496
 High-resolution logo and images available on request.
 ```
 
 **Send to:** the local paper's business desk, the county business magazine, the local chamber
 newsletter, regional BBC/ITV business email, and any local business podcast. Email the editor
-directly by name, subject line `Story: tax change hitting [county] builders from April`.
+directly by name, subject line `Story: tax change hitting Surrey builders from April`.
+
+*Fill `[DATE]` with the send date and `[SURNAME]` with Craig's surname before this goes anywhere
+(`docs/18 §4`). If Klyara trades from a town other than Guildford, swap the town and county throughout.*
 
 ---
 
-# 6. Podcast pitch — 40 words, sent 20 times
+# 6. Podcast pitch — under 100 words, sent 20 times
 
-UK construction and trades podcasts need guests constantly. Craig's angle is genuinely
-differentiated. This template gets replies because it leads with the guest's audience, not with
-Klyara.
+UK construction and trades podcasts need guests constantly. Craig's angle is differentiated. This
+template gets replies because it leads with the host's audience, not with Klyara.
 
 ```
 Subject: Guest idea — the tax change most of your listeners don't know applies to them
@@ -272,8 +287,8 @@ If you've got building clients whose monthly bookkeeping is more trouble than it
 CIS returns, the reverse charge coding, the receipts that arrive in February — I'd take them on and
 hand you clean books at year end.
 
-Two-way referral, 10–15%, and I'd be glad to discuss a mutual continuity arrangement, which I gather
-we both need on file.
+Two-way referral, 10% of the monthly fee for as long as the client stays, and I'd be glad to discuss
+a mutual continuity arrangement, which I gather we both need on file.
 
 Worth twenty minutes?
 
@@ -281,17 +296,21 @@ Craig
 klyara.com | 020 8058 1496
 ```
 
+**The commission is 10% ongoing, not a one-off finder's fee** — the terms are in `docs/23` and the
+rationale in `docs/18 §29`. On a Trade client that is £19.90 a month, £239 a year, for as long as
+they stay.
+
 **Why this works:** it opens by removing the threat. Accountants ignore firms that look like
 competitors and engage with firms that make their difficult clients easier. "I stop where you start"
 is the whole pitch.
 
 ---
 
-# 8. Merchant trade counter campaign — £40, highest local ROI on this list
+# 8. Merchant trade counter campaign — about £40, highest local ROI on this list
 
 The A5 card is rendered at 300dpi in `assets/print/merchant-card-A5-300dpi.png`.
 
-**Run:** 250 cards, roughly £30–45 online. Add a QR code to the file pointing at the UTM'd URL before
+**Run:** 250 cards, roughly £30–£45 online. Add a QR code to the file pointing at the UTM'd URL before
 printing.
 
 **Placement:** Travis Perkins, Jewson, Selco, MKM, Buildbase, Howdens, and every independent merchant
@@ -314,8 +333,9 @@ deliberately, from client one.
   landed.
 - **Text the link, on the spot.** An ask without a link is homework.
 - **Google first, always.** Trustpilot second. Nothing else.
-- **Target: 2/month, forever.** Ten reviews is credible, twenty-five is established, and recency
-  beats volume after that.
+- **Target: two a month, forever, aiming at twenty-plus.** BrightLocal has 47% of consumers refusing
+  to use a business with fewer than twenty reviews (`docs/17 §3`), so twenty is the number that
+  matters, not ten. Recency beats volume after that.
 - **Never** offer anything in return, write them yourself, or buy them. For a firm holding clients'
   financial data, a faked review is not a small problem.
 - **Reply to every one**, including any bad one, within 24 hours. Prospects read the replies more
@@ -332,21 +352,22 @@ such), and Craig's certifications. Use those until real reviews exist.
 
 Ordered by what they'd cost you to keep missing.
 
-1. **A crisis line in every piece of content.** You're publishing tax guidance publicly as an
-   unsupervised firm. Every post, video and email needs the "general information, not advice for your
+1. **A disclaimer line in every piece of content.** You're publishing tax guidance publicly as a
+   firm whose AML supervision has not landed yet. Every post, video and email needs the "general information, not advice for your
    circumstances, rules change" line. It's in the templates — don't strip it out because it's ugly.
 
 2. **A written content approval step.** One person writes, the other reads before it goes out. A
    wrong CIS rate published under a bookkeeper's name is a professional problem, not a typo.
 
-3. **The `tryklyara.com` outreach domain isn't bought yet** (Manual Part 0 #9). Buy it this week —
-   cold outreach starts before you'll remember.
+3. **The `tryklyara.com` outreach domain isn't bought yet** (Manual Part 0 #9). Buy it on
+   Wednesday 2 September, about £10. Cold outreach starts before you will remember.
 
-4. **You have no lead magnet for contractors, only subcontractors.** The MTD guide and Launch Kit both
-   speak to solo operators. Your highest-value client — the 5–15-person firm — has no magnet aimed at
-   them. Build one: *"The Contractor's CIS Compliance Pack"* — verification checklist, deduction
-   statement template, monthly return calendar, gross status application checklist. That's a
-   half-day's work and it targets the £199–£329 tier instead of the £59 one.
+4. **The contractor lead magnet is now built — publish it.** The MTD guide and the Digital Launch Kit
+   both speak to solo operators. The 5–15-person firm on Trade or Pro at £199–£329/mo ex VAT had no
+   magnet aimed at it, so *"The Contractor's CIS Compliance Pack"* was written:
+   `assets/lead-magnets/Klyara-Contractors-CIS-Compliance-Pack.pdf`. Put it behind a form on
+   `/cis-pack.html` and point the CIS ad group at that page instead of the services page. It targets
+   the tier that pays five times what Solo does.
 
 5. **No case study format.** Your first three clients are worth more as written case studies than as
    revenue. Agree it at onboarding: "In three months, can I write up what we found?" Structure:
@@ -354,13 +375,14 @@ Ordered by what they'd cost you to keep missing.
 
 6. **Nobody owns social.** Two founders means it's nobody's job by default. Name one owner for the
    two-hour weekly rhythm and put it in the founders' heads of terms alongside everything else.
+   The plan assumes Craig; confirm it (`docs/18 §20`).
 
 7. **No brand safety plan for a bad comment.** At some point someone will post that HMRC disagrees
    with something you wrote, or that an accountant did them wrong. Decide now: correct factual errors
    publicly and promptly, take specific complaints to DM, never argue, never delete unless it's abuse.
 
 8. **The calculators aren't being marketed as the asset they are.** Twelve free calculators is a
-   genuinely strong SEO and link-building asset and you're treating it as a footnote. Each one should
+   strong SEO and link-building asset and you're treating it as a footnote. Each one should
    be its own indexed page with its own title tag ("CIS Deduction Calculator — Klyara"), and each is
    independently linkable from forums and Reddit, where a *tool* is welcome in places a *service*
    would be removed. This is the single best organic-link opportunity you have.
@@ -378,6 +400,6 @@ Ordered by what they'd cost you to keep missing.
     content should be written in, rather than in the language I've guessed at here.
 
 12. **No plan for what happens when it works.** The Manual puts Craig's ceiling at 20–25 full-service
-    clients and the hire trigger at 15. Marketing that works will hit that faster than the hiring
-    will. Decide the waitlist policy *before* you need it — it is much better to have a founding-rate
-    waitlist than to take on client 26 badly.
+    clients and the hire trigger at 15; the KPI model crosses 15 around April 2027. Decide the
+    waitlist policy *before* you need it — it is better to hold a founding-rate waitlist than to take
+    on client 26 badly and lose client 4.

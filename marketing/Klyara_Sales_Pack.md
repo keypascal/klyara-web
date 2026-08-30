@@ -4,8 +4,8 @@
 *The Build Manual lists the discovery script, proposal template and outbound copy as deliverables.
 They hadn't been produced. This is them.*
 
-**Everything in this pack converts marketing into revenue. It is the highest-value document here —
-the other eight get people to the call; this one is the call.**
+**Everything in this pack converts marketing into revenue. The rest of the pack gets people to the
+call. This one is the call.**
 
 ---
 
@@ -37,35 +37,35 @@ builders get sold to constantly — by merchants, by lead-gen sites, by energy b
 a phone. They have excellent defences against a pitch and almost none against someone who just tells
 them how CIS works and then says "you probably don't need me."
 
-**So: if they don't need you, say so.** You will lose about one in eight deals doing this and win
-considerably more than that back in referrals, because the person you told the truth to tells
-everyone.
+**So: if they don't need you, say so.** You will lose deals doing it and win more back in
+referrals, because the person you told the truth to tells everyone.
 
 ---
 
 # PART 2 — The discovery call script
 
-**Twenty minutes. Five parts. Do not exceed twenty minutes** — this audience prices its own time and
-a call that overruns reads as a firm that doesn't respect it.
+**Fifteen minutes. Five parts. Do not exceed fifteen minutes** — the site promises fifteen, this
+audience prices its own time, and a call that overruns reads as a firm that doesn't respect it.
 
 ---
 
-## ① OPEN — 1 minute
+## 1. OPEN — 1 minute
 
-> "Craig from Klyara — thanks for booking in. Have you got twenty minutes or are you on site?
+> "Craig from Klyara — thanks for booking in. Have you got fifteen minutes, or are you on site?
 >
-> Right. So this'll take about fifteen. What I want to do is understand how you're set up at the
-> moment, tell you honestly what I think you actually need, and if that's us, I'll price it on the
-> call so you're not waiting on a quote. And if it's not us I'll tell you that too.
+> Right. What I want to do is understand how you're set up, tell you honestly what I think you
+> actually need, and if that's us I'll price it on the call, so you're not waiting on a quote. If
+> it's not us, I'll tell you that too.
 >
 > Sound alright?"
 
 **Why this works:** you've set the length, the agenda, and — crucially — the possibility of "no".
-That last clause does more for the close rate than anything else in the script.
+That last clause does more for the close rate than anything else in the script. Fifteen minutes is
+what the site promises. Say fifteen and finish in fifteen.
 
 ---
 
-## ② DIAGNOSE — 8 minutes
+## 2. DIAGNOSE — 6 minutes
 
 Ask these in order. **Shut up and let them answer.** The instinct is to fill silence with features.
 Resist it — the diagnosis is the product.
@@ -98,9 +98,9 @@ they don't.
 Determines complexity and tier. "Both" means Trade minimum.
 
 **6. "VAT registered? And how are you handling the reverse charge?"**
-Ask the second half even if you're confident. Roughly half will give an answer that reveals they're
-doing it wrong, and that's your highest-value moment on the call — not because you catch them out,
-but because you can fix it.
+Ask the second half even if you're confident. Plenty of them will give an answer that reveals
+they're doing it wrong, and that is your highest-value moment on the call — not because you catch
+them out, but because you can fix it.
 
 **7. "What's the bit that annoys you most?"**
 The closing diagnostic. Whatever they say here is what you sell against for the rest of the call.
@@ -115,12 +115,12 @@ now.
 
 ---
 
-## ③ REFLECT — 2 minutes
+## 3. REFLECT — 2 minutes
 
 Say what you heard, back to them, in their words. This is the highest-leverage thirty seconds of the
 whole call and almost nobody does it.
 
-> "So — twelve on site, limited company, VAT registered, CIS both ways, and your wife's doing the
+> "So — sole trader, four on the books, VAT registered, CIS both ways, and your wife's doing the
 > books on a Sunday afternoon. The bit that's actually getting to you is chasing Hendersons for money
 > you earned in June.
 >
@@ -134,15 +134,15 @@ it back accurately.
 
 ---
 
-## ④ PRESCRIBE — 5 minutes
+## 4. PRESCRIBE — 4 minutes
 
 Now — and only now — you tell them what they need. Structure it in three parts, in this order:
 
 ### a) What's urgent
 > "Right. Two things are urgent and one isn't.
 >
-> Urgent one: you're at £340,000 gross with CIS deducted, so you were in MTD from April. Your first
-> quarterly update was due on 7 August. Did that go in?"
+> Urgent one: you're a sole trader turning over £340,000 gross before CIS, so you were in MTD for
+> Income Tax from April. Your first quarterly update was due on 7 August. Did that go in?"
 
 Lead with the thing that has a date on it. Not the thing with the biggest fee.
 
@@ -165,19 +165,20 @@ do, and it makes everything else you said believable.
 
 ---
 
-## ⑤ PRICE — 3 minutes
+## 5. PRICE — 2 minutes
 
 Price on the call. Every day between the call and the number is a day the deal cools.
 
-> "So that's Trade — £199 a month plus VAT. That's the bookkeeping, the VAT returns including sorting
-> the reverse charge coding, CIS both ways filed by the 19th, payroll for the twelve, invoice chasing
-> running automatically, and a monthly P&L.
+> "So that's Trade — £199 a month plus VAT. That's the bookkeeping, the VAT returns including
+> sorting the reverse charge coding, CIS both ways filed by the 19th, payroll for the four, invoice
+> chasing running automatically, and a set of figures every month.
 >
-> There's a one-off onboarding fee of £350. That's for cleaning up the catch-up — you've got four
-> months of records to bring in and a reverse charge issue to unwind. I'd rather charge that once than
-> pretend it's free and rush it.
+> There's a one-off onboarding fee of £350 plus VAT. That's the catch-up — four months of records to
+> bring in and a reverse charge issue to unwind, the software set up, and us authorised with HMRC.
+> I'd rather charge that once than pretend it's free and rush it.
 >
-> Thirty days' notice, no contract. If it's not working you tell me and we stop.
+> Thirty days' notice, no contract. If you pay the year by direct debit it's eleven months for
+> twelve.
 >
 > How does that sit?"
 
@@ -198,8 +199,11 @@ Everything below is a real objection this audience raises. Never argue. Acknowle
 
 ### "That's more than my accountant charges"
 > "It probably is, and it should be — he does one job a year, we do twelve. His job is the year-end
-> return. Ours is that your books are right every month, the CIS goes in on the 19th, and you know by
-> the 10th what last month made.
+> return. Ours is that your books are right every month, the CIS goes in by the 19th, and you get
+> figures at the end of every month instead of finding out in January.
+>
+> If you want that done monthly by a high-street practice you're looking at about £395 a month. We're
+> £199.
 >
 > Genuinely though — if all you need is the annual return, keep him and don't pay us. That's a real
 > answer, not a negotiating position."
@@ -211,8 +215,8 @@ Everything below is a real objection this audience raises. Never argue. Acknowle
 > next April, so it'll catch more of what you do. If that turns her Sunday afternoon into a bad
 > Sunday afternoon, come back to me. Happy to just answer questions in the meantime, no charge."
 
-*This one you often lose, and you should. You'll get the referral, and about a third come back within
-a year.*
+*This one you often lose, and you should. You get the referral, and a good number come back when
+MTD makes the Sunday afternoon longer.*
 
 ### "I'll think about it"
 > "Course. What's the bit you want to think about — is it the money, or whether it's the right time?"
@@ -245,22 +249,28 @@ answers it is being the person who asked and actually listened. Afterwards:
 > I'll put you on QuickBooks because that's what I'll set up fastest and cheapest."
 
 ### "Are you actually qualified?"
-> "[Current honest answer — membership, supervision, certifications, and Craig's years in the trade.]"
+> "I'm [ICB member / applying for the ICB practice licence — say exactly where you are]. That's the
+> supervision that lets me act as your agent. Insured, and I've been round this trade for [x] years.
+> I'll send you the membership number with the engagement letter."
 
-**Say only what's true today.** If the practice licence hasn't landed, say when it's expected and what
-you can and can't do until it does. Getting caught out on this is unrecoverable in a small local
-market.
+**Say only what's true on the day you say it.** Fill those brackets in before the first call and
+change them the day the licence lands. If it hasn't landed, say so and say when — the application
+goes in on 1 September and it is a 28-day process. Getting caught out on this is unrecoverable in a
+small local market.
 
 ### "I'll wait until the new tax year"
-> "You can. Two things to weigh: your quarterly updates keep falling due in the meantime, and the
-> catch-up gets bigger the longer we leave it — which means the onboarding fee gets bigger too.
-> Starting now means the year-end is clean rather than a reconstruction."
+> "You can. Two things to weigh. Your quarterly updates keep falling due in the meantime, and the
+> catch-up gets bigger the longer we leave it — the onboarding fee is priced on the backlog, so
+> waiting costs you money. Starting now means the year-end is clean rather than a reconstruction."
 
-### ⛔ "Can I start today?" — pre-AML answer
+### "Can I start today?" — the pre-licence answer
+
+**Do not use this once the licence has landed. Check before you say it.**
+
 > "Almost. We're finishing our supervision registration, which is the bit that lets us file as your
-> agent — that lands [timeframe]. What I can do now is put you on the founding list, hold the rate
-> for as long as you stay with us, and get the setup done so we're filing from day one rather than
-> starting from scratch.
+> agent — that's a 28-day process and it lands at the end of September. What I can do now is put you
+> on the founding list, hold that rate for twelve months from the day you start, and get the setup
+> done so we're filing from day one rather than starting from scratch.
 >
 > No payment until we're live. If it drags on you walk away and you've lost nothing."
 
@@ -311,14 +321,17 @@ WHAT YOU NEED
 • MTD quarterly filing — you're in scope now, next update due 7 November
 • VAT reverse charge on the Hendersons work fixed, and a switch to monthly returns
 • CIS both directions, filed by the 19th
-• Payroll for the twelve
+• Payroll for the four
 • Invoice chasing running automatically
-• Monthly P&L by the 10th
+• A monthly management summary — records in by the 10th, CIS by the 19th, figures by month end
 
 WHAT IT COSTS
 Klyara Trade — £199/month + VAT
-One-off onboarding — £350 + VAT (four months of catch-up and unwinding the reverse charge)
+One-off onboarding — £350 + VAT (four months of catch-up, the software set up, HMRC agent
+authorisation, and unwinding the reverse charge)
+Pay the year by direct debit and it's eleven months for twelve.
 30 days' notice. No contract. Your data stays yours.
+This quote holds for 30 days.
 
 WHAT YOU DON'T NEED
 The AI receptionist. You've got someone answering. Don't buy it.
@@ -368,7 +381,7 @@ Craig
 ```
 
 Giving them the deadline for free, while withdrawing the pressure, is the highest-converting
-follow-up message in this whole pack. About one in five come back off it.
+follow-up message in this whole pack.
 
 ---
 
@@ -390,8 +403,8 @@ whether you're actually diagnosing or just describing the tiers. It is almost al
 
 # PART 7 — The 90-day review (where the add-on revenue is)
 
-Diarise this at onboarding for every client. It's twenty minutes and it's where the £199 client
-becomes the £366 client from the Build Manual's worked example.
+Diarise this at onboarding for every client. It is twenty minutes — it is not the discovery call —
+and it is where the £199 client becomes the £366 client in the Build Manual's worked example.
 
 > "Right — ninety days in. Three things.
 >
@@ -401,7 +414,7 @@ becomes the £366 client from the Build Manual's worked example.
 > Two, is anything not working? Genuinely, tell me now.
 >
 > Three, you mentioned on our first call that you're missing calls when you're on site. Still
-> happening? Because that's a fixable thing and it's £79 a month."
+> happening? Because that's a fixable thing and it starts at £79 a month."
 
 You earned the right to sell the add-on by delivering three months first. This is the only place in
 the whole system where you push, and it works precisely because it's the only place.

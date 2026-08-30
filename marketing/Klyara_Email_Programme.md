@@ -14,7 +14,7 @@ You asked for a decision, so: **Brevo**, and don't spend another hour comparing.
 1. **It's already in the Build Manual's stack.** One less vendor relationship, one less subscription
    to reconcile, and the architecture in Part 2 already assumes it.
 2. **Pricing model fits the shape of this list.** Brevo charges by *emails sent*, not by contacts
-   held. Klyara's list will be thousands of subscribers receiving two emails a month — a
+   held. Klyara's list will be thousands of subscribers receiving one email a fortnight — a
    contact-priced provider (Mailchimp, Kit) charges you for every subscriber every month whether you
    email them or not. On a fortnightly newsletter, send-based pricing is materially cheaper, and the
    gap widens as the list grows.
@@ -46,7 +46,7 @@ You asked for a decision, so: **Brevo**, and don't spend another hour comparing.
 
 **The self-hosted answer, since I know you'll ask:** **Listmonk + Amazon SES.** Listmonk is
 MIT-licensed, single Go binary, runs on the VPS you already have, and SES sends at roughly $0.10 per
-thousand emails. At 10,000 subscribers getting two emails a month it costs pennies against tens of
+thousand emails. At 10,000 subscribers getting one email a fortnight it costs pennies against tens of
 pounds for Brevo, and you own the data outright.
 
 **Don't do it yet.** Not because it's wrong — because at launch you have no list, no sending
@@ -57,7 +57,7 @@ written trigger the same way the Manual sets the Dext trigger at 10–15 clients
 straightforward: export CSV, import to Listmonk, re-point DNS.
 
 **Cost expectation:** free while you're under 300 emails/day (that's a 4,000-person list on a
-fortnightly send, comfortably). First paid tier lands somewhere around £7–9/month. Confirm current
+fortnightly send, comfortably). First paid tier lands somewhere around £7–£9/month. Confirm current
 pricing at signup — every provider in this space repriced at least once in the last two years.
 
 ---
@@ -208,16 +208,14 @@ is, and for a service business the replies *are* the leads.
 
 ## A1 — Immediate
 **Subject:** `You're in. Here's what to expect.`
-**Preview text:** `Two emails a month. Every deadline before it bites.`
+**Preview text:** `One email a fortnight. Every deadline before it bites.`
 
 ```
 Hi {{FIRSTNAME}},
 
-Thanks for signing up.
+Here's exactly what you've agreed to.
 
-Here's the deal, so you know exactly what you've agreed to:
-
-Two emails a month. That's it. Not two a week, not one every time I have a thought.
+One email a fortnight. That's it. Not two a week, not one every time I have a thought.
 
 Each one has the deadlines coming up, one thing worth knowing about CIS, VAT, MTD or getting paid,
 and nothing else. No filler, no "10 productivity hacks", no motivational quotes.
@@ -227,14 +225,14 @@ eleven emails a year that you read than twenty-four you delete.
 
 Three things you can have right now, free, no forms:
 
-📘 The MTD guide — 15 pages, plain English, whether you're in scope and what to do
-   klyara.com/guide.html
+• The MTD guide — 15 pages, plain English, whether you're in scope and what to do
+  klyara.com/guide.html
 
-🧮 Twelve calculators — job margin, CIS deduction, VAT, day rate, deadline checker
-   klyara.com/tools.html
+• Twelve calculators — job margin, CIS deduction, VAT, day rate, deadline checker
+  klyara.com/tools.html
 
-🧰 The Digital Launch Kit — 16 pages on winning work online, for firms that rely on word of mouth
-   klyara.com/launch-kit.html
+• The Digital Launch Kit — 16 pages on winning work online, for firms that rely on word of mouth
+  klyara.com/launch-kit.html
 
 One more thing: hit reply and tell me what you do — builder, sparks, plumber, groundworks,
 whatever it is. It takes you five seconds and it means I stop sending you things that don't apply to
@@ -256,7 +254,7 @@ pressure. It'll be here when you want it.
 ```
 Hi {{FIRSTNAME}},
 
-One thing, because it's caught out more people than anything else I've written about this year.
+One thing, because it catches out more people than anything else I write about.
 
 Making Tax Digital for Income Tax started in April 2026 for anyone with qualifying income over
 £50,000. Most people know that bit.
@@ -294,8 +292,8 @@ Craig
 ---
 
 ## A3 — Day 6
-**Subject:** `Quick question — what do you actually do?`
-**Preview text:** `One click. It stops me emailing you irrelevant things.`
+**Subject:** `What do you actually do?`
+**Preview text:** `One click and I stop sending you things that don't apply.`
 
 ```
 Hi {{FIRSTNAME}},
@@ -370,8 +368,8 @@ myself and there's no pitch on the end of it.
 ---
 
 ## B2 — Day 2
-**Subject:** `Are you actually in scope? One question.`
-**Preview text:** `It's not the number in your bank.`
+**Subject:** `Are you in scope? One question.`
+**Preview text:** `The answer isn't the number in your bank.`
 
 ```
 Hi {{FIRSTNAME}},
@@ -380,9 +378,9 @@ Let's settle it.
 
 Add up your GROSS self-employment income for the 2024/25 tax year. Gross means:
 
-  ✓ Before any expenses
-  ✓ Before CIS deductions
-  ✓ Before anything at all
+  • Before any expenses
+  • Before CIS deductions
+  • Before anything at all
 
 Add any gross rental income to it.
 
@@ -428,11 +426,11 @@ software. Totals. That's the whole thing.
 
 WHAT IT ISN'T
 
-  ✗ Not a tax return
-  ✗ Not a tax calculation
-  ✗ Nothing to pay
-  ✗ Not final — you can correct it later
-  ✗ No reliefs or adjustments needed at this stage
+  • Not a tax return
+  • Not a tax calculation
+  • Nothing to pay
+  • Not final — you can correct it later
+  • No reliefs or adjustments needed at this stage
 
 All the actual tax work still happens once a year, at the final declaration on 31 January. That
 hasn't changed.
@@ -450,8 +448,7 @@ If your books are already up to date monthly, MTD is about twenty minutes a quar
 If your books are a carrier bag in the van, MTD isn't four times the work — it's four times the
 panic. And that's the real reason to fix it.
 
-Next email: what "digital records" actually means, because it's more specific than people assume and
-a spreadsheet may or may not be enough.
+Next email: what "digital records" actually means, and whether a spreadsheet is enough.
 
 Craig
 ```
@@ -479,13 +476,13 @@ things to go wrong, and more cost than just using proper software from the start
 
 WHAT DIGITAL RECORDS ACTUALLY REQUIRE
 
-  ✓ Each sale recorded digitally — date, amount, category
-  ✓ Each purchase recorded digitally — date, amount, category
-  ✓ Records kept as you go, not reconstructed later
-  ✓ Data flowing digitally from record to submission, no re-typing
+  • Each sale recorded digitally — date, amount, category
+  • Each purchase recorded digitally — date, amount, category
+  • Records kept as you go, not reconstructed later
+  • Data flowing digitally from record to submission, no re-typing
 
-  ✗ You do NOT have to photograph every receipt — but you do have to keep them, and photographing
-    them is far easier than keeping paper in a van
+  You do NOT have to photograph every receipt. You do have to keep them, and photographing them is
+  far easier than keeping paper in a van.
 
 THE ONE THING THAT MAKES ALL OF THIS EASY
 
@@ -537,19 +534,19 @@ each time.
 
 The full checklist is on the site as one page, free: klyara.com
 
-⛔ HOLD-UNTIL-AML CTA:
+⛔ HOLD CTA — use this until AML supervision is granted:
 If you'd rather not do it at all — that's what Klyara is. Bookkeeping, CIS, reverse charge coding,
-payroll and the MTD filing, handled monthly for a fixed fee from £59 + VAT. We open for clients
+payroll and the MTD filing, handled monthly for a fixed fee from £59 a month ex VAT. We open for clients
 shortly and I'm holding a founding rate for the first ten firms on the list. Reply "LIST" and I'll
 add you. No payment, no commitment.
 
-✅ POST-AML CTA:
+POST-AML CTA:
 If you'd rather not do it at all — that's what Klyara is. Bookkeeping, CIS, reverse charge coding,
-payroll and MTD filing, handled monthly for a fixed fee from £59 + VAT.
-Book a free 20-minute call: [BOOK A CALL →]
+payroll and MTD filing, handled monthly for a fixed fee from £59 a month ex VAT.
+Book a free fifteen-minute call: [BOOK A CALL →]
 I'll tell you what your situation actually needs, and if that's nothing, I'll tell you that too.
 
-Either way, you're on the fortnightly list now. Two emails a month, every deadline before it bites.
+Either way, you're on the fortnightly list now. One email a fortnight, every deadline before it bites.
 
 Craig
 ```
@@ -620,8 +617,8 @@ loft conversions in [town], [town] and [town]." That's both the SEO and the reas
 
 4. NO PRICES, NOT EVEN A RANGE
 You don't have to quote. But "most of our extensions run between £X and £Y" filters out the people
-who were never going to proceed and massively increases the quality of the ones who call. Every firm
-resists this and every firm that does it gets better enquiries.
+who were never going to proceed and lifts the quality of the ones who do call. Every firm resists
+this, and every firm that does it gets better enquiries.
 
 5. NO REVIEWS ON THE PAGE
 Not a link to reviews. The actual words, on the page, with names. It's the single highest-converting
@@ -638,8 +635,8 @@ Craig
 ---
 
 ## C3 — Day 6
-**Subject:** `Asking for reviews without feeling like a pest`
-**Preview text:** `The timing matters more than the wording.`
+**Subject:** `Reviews, without feeling like a pest`
+**Preview text:** `The timing matters more than the wording. It's a 48-hour window.`
 
 ```
 Hi {{FIRSTNAME}},
@@ -683,7 +680,7 @@ NEVER
 Don't offer anything in exchange. Don't write them yourself. Don't buy them. For a firm that
 eventually wants a bookkeeper handling its money, being caught faking reviews is not a small thing.
 
-Last one on Friday — the quoting problem.
+Last one in a few days — the quoting problem.
 
 Craig
 ```
@@ -733,7 +730,7 @@ Half will tell you. And if the answer is consistently timing rather than price, 
 that you don't have a pricing problem, you have a scheduling problem — and you've been dropping your
 prices to fix the wrong thing.
 
-That's the series done. You're on the fortnightly list now — two emails a month, deadlines and one
+That's the series done. You're on the fortnightly list now — one email a fortnight, deadlines and one
 useful thing.
 
 Craig
@@ -764,29 +761,31 @@ they've packed up. 07:00 puts you at the top of the inbox when the phone comes o
 
 | # | Date | Theme |
 |---|---|---|
-| 1 | Thu 10 Sep 2026 | The gross income trap |
-| 2 | Thu 24 Sep 2026 | Quarter end is coming |
-| 3 | Thu 8 Oct 2026 | Quarter closed — the 33-day window |
-| 4 | Thu 22 Oct 2026 | Gross payment status |
-| 5 | Thu 5 Nov 2026 | ⚠️ Two days to the MTD deadline |
-| 6 | Thu 19 Nov 2026 | Pricing: what a job actually costs you |
-| 7 | Thu 3 Dec 2026 | The January hole |
+| 1 | Thu 17 Sep 2026 | The gross income trap |
+| 2 | Thu 1 Oct 2026 | Four days to quarter end |
+| 3 | Thu 15 Oct 2026 | Quarter closed — the 23-day window |
+| 4 | Thu 29 Oct 2026 | Gross payment status |
+| 5 | Thu 12 Nov 2026 | The MTD update you missed |
+| 6 | Thu 26 Nov 2026 | Pricing: what a job actually costs you |
+| 7 | Thu 10 Dec 2026 | The January hole |
 | 8 | Thu 17 Dec 2026 | Shutdown checklist |
-| 9 | Thu 7 Jan 2027 | 31 January, and payments on account |
-| 10 | Thu 21 Jan 2027 | ⚠️ Ten days |
-| 11 | Thu 4 Feb 2027 | Capital allowances before 5 April |
-| 12 | Thu 18 Feb 2027 | The £30,000 threshold is coming |
+| 9 | Thu 14 Jan 2027 | 31 January, and payments on account |
+| 10 | Thu 28 Jan 2027 | Three days to 31 January |
+| 11 | Thu 11 Feb 2027 | Capital allowances before 5 April |
+| 12 | Thu 25 Feb 2027 | The £30,000 threshold is coming |
+
+*Note: №7 and №8 are one week apart, not a fortnight. The shutdown issue is pulled forward a week off Christmas Eve so it lands while the sites are still open; fortnightly resumes 14 January.*
 
 ---
 
-## №1 — Thursday 10 September 2026
+## №1 — Thursday 17 September 2026
 **Subject:** `19 Sep, and the MTD trap`
 **Preview:** `Your bank balance is telling you the wrong number.`
 
 ```
-📅 DATES
+DATES
 
-Sat 19 Sep — CIS return + payment, month to 5 Sep (22nd if paying electronically)
+Sat 19 Sep — CIS return + payment, month to 5 Sep — 2 days (22nd if paying electronically)
 Mon 5 Oct  — MTD quarter ends (6 Jul – 5 Oct)
 Sat 7 Nov  — that quarter's update due to HMRC
 
@@ -818,11 +817,11 @@ April 2028.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: CIS deduction calculator
+THE TOOL: CIS deduction calculator
 Work out gross-to-net either way round, including the materials split.
 → klyara.com/tools.html
 
-📄 FROM THE SITE: the 15-page MTD guide. Free, no form.
+FROM THE SITE: the 15-page MTD guide. Free, no form.
 → klyara.com/guide.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -836,14 +835,14 @@ Reply to this if you want me to tell you whether MTD has caught you. No pitch on
 
 ---
 
-## №2 — Thursday 24 September 2026
-**Subject:** `11 days to quarter end`
+## №2 — Thursday 1 October 2026
+**Subject:** `Four days to quarter end`
 **Preview:** `A weekend now, or a crisis in November.`
 
 ```
-📅 DATES
+DATES
 
-Mon 5 Oct  — MTD quarter ends (6 Jul – 5 Oct) — 11 days
+Mon 5 Oct  — MTD quarter ends (6 Jul – 5 Oct) — 4 days
 Mon 19 Oct — CIS return + payment, month to 5 Oct
 Sat 7 Nov  — MTD quarterly update due
 
@@ -851,11 +850,11 @@ Sat 7 Nov  — MTD quarterly update due
 
 ONE THING: the seven-job quarter end
 
-If you're in MTD, everything from 6 July to 5 October needs to be in digital records by a week on
+If you're in MTD, everything from 6 July to 5 October has to be in your digital records. That's
 Monday. If July and August are currently photos on a phone and a bag in the van, that's fixable this
-week. It is not fixable on 6 November.
+weekend. It is not fixable on 6 November.
 
-One job a day. Each under twenty minutes.
+Seven jobs. Two a day, each under twenty minutes.
 
 1. BANK FEED — connect every business account. Connected and feeding, not exported and typed. Ten
    minutes, and it does about 80% of the work on its own.
@@ -877,14 +876,14 @@ One job a day. Each under twenty minutes.
 
 7. THE NUMBER — margin by job, what you're owed by age, retentions outstanding, bank vs 30 days out.
 
-Do one a day and you're closed off by next Thursday, six weeks ahead of the deadline.
+Do two a day and you're closed off by next Thursday, a month ahead of the deadline.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: deadline checker — put your dates in, get reminders
+THE TOOL: deadline checker — put your dates in, get reminders
 → klyara.com/tools.html
 
-📄 FROM THE SITE: the quarter-end checklist as one printable page
+FROM THE SITE: the quarter-end checklist as one printable page
 → klyara.com
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -894,23 +893,23 @@ Craig
 
 ---
 
-## №3 — Thursday 8 October 2026
-**Subject:** `Quarter closed. 30 days.`
+## №3 — Thursday 15 October 2026
+**Subject:** `Quarter closed. 23 days.`
 **Preview:** `Plus: the retention money you've written off.`
 
 ```
-📅 DATES
+DATES
 
-Mon 19 Oct — CIS return + payment, month to 5 Oct
-Sat 7 Nov  — MTD quarterly update due — 30 days
+Mon 19 Oct — CIS return + payment, month to 5 Oct — 4 days
+Sat 7 Nov  — MTD quarterly update due — 23 days
 Tue 5 Jan  — next MTD quarter ends
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 ONE THING: go and count your retentions
 
-The quarter's closed and the update isn't due for a month, so here's something more profitable to do
-with the next twenty minutes.
+The quarter's closed and the update isn't due for three weeks, so here's something more profitable to
+do with the next twenty minutes.
 
 Count your retentions. Not "roughly". Actually count them.
 
@@ -937,10 +936,10 @@ in the long run and it's the reason good subbies pick up your calls first.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: retention tracker template. Free, no email.
+THE TOOL: retention tracker template. Free, no email.
 → klyara.com/tools.html
 
-📄 FROM THE SITE: "Why your building firm is always skint" — the four things that drain cash while the
+FROM THE SITE: "Why your building firm is always skint" — the four things that drain cash while the
 P&L says you're fine.
 → klyara.com
 
@@ -951,15 +950,15 @@ Craig
 
 ---
 
-## №4 — Thursday 22 October 2026
+## №4 — Thursday 29 October 2026
 **Subject:** `Are you lending HMRC £24,000?`
 **Preview:** `Gross payment status, and the three tests.`
 
 ```
-📅 DATES
+DATES
 
+Sat 7 Nov  — MTD quarterly update due (6 Jul – 5 Oct) — 9 days
 Thu 19 Nov — CIS return + payment, month to 5 Nov
-Sat 7 Nov  — MTD quarterly update due — 16 days
 Tue 5 Jan  — next MTD quarter ends
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -999,11 +998,11 @@ WORTH KNOWING: HMRC reviews gross status annually. Miss deadlines and it can be 
 losing it midway through a year is considerably worse than never having had it, because your cash
 flow has already adjusted.
 
-Which is the real argument for having someone file on time every month, but I would say that.
+Which is the real argument for having someone file on time every month. I would say that.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: CIS calculator — see what 20% is actually costing you across a year
+THE TOOL: CIS calculator — see what 20% is actually costing you across a year
 → klyara.com/tools.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1013,29 +1012,32 @@ Craig
 
 ---
 
-## №5 — Thursday 5 November 2026 ⚠️
-**Subject:** `MTD update due Saturday`
-**Preview:** `Two days. Here's the 40-minute version.`
+## №5 — Thursday 12 November 2026
+**Subject:** `Missed the 7 November update?`
+**Preview:** `Five days late is a point, not a penalty. File it today.`
 
 ```
-📅 DATES
+DATES
 
-⚠️ Sat 7 Nov — MTD quarterly update DUE (6 Jul – 5 Oct) — 2 DAYS
-Thu 19 Nov — CIS return + payment, month to 5 Nov
-Tue 5 Jan  — next MTD quarter ends
+Thu 19 Nov — CIS return + payment, month to 5 Nov — 1 week
+Sat 19 Dec — CIS return + payment, month to 5 Dec (22nd if paying electronically)
+Tue 5 Jan  — MTD quarter ends (6 Oct – 5 Jan)
+Sun 7 Feb  — that quarter's update due to HMRC
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-ONE THING: if it isn't done, here's the fastest legitimate route
+ONE THING: the update was due Saturday. Here's what to do now.
 
-Your quarterly update for 6 July to 5 October is due Saturday.
+If yours went in, ignore this one and I'll see you in a fortnight.
 
-If you've been keeping records as you go, this is a ten-minute job — check the categories, submit.
+If it didn't, five days late is not the disaster it feels like. HMRC's late-submission regime for
+these works on points rather than an instant fine, and the penalty only arrives once you reach the
+threshold — not on the first miss. So the job today is to file it, not to agonise about it.
 
-If you haven't, here is the order that gets you there fastest:
+THE FASTEST LEGITIMATE ROUTE
 
-1. Connect the bank feed. If you do nothing else, do this. It pulls three months of transactions in
-   automatically and it's most of the job.
+1. Connect the bank feed. If you do nothing else, do this. It pulls the whole quarter's
+   transactions in automatically and it's most of the job.
 
 2. Categorise in bulk. Don't do it transaction by transaction. Sort by description, select all the
    fuel, categorise in one go. Then all the merchants. Then all the subbies. Twenty minutes.
@@ -1047,52 +1049,50 @@ If you haven't, here is the order that gets you there fastest:
 
 REMEMBER WHAT THIS SUBMISSION IS
 
-It's a summary of totals. It isn't final, there's nothing to pay, and you can correct it later. The
-actual tax work happens at the final declaration on 31 January.
+A summary of totals. It isn't final, there's nothing to pay, and you can correct it later. The
+actual tax work happens at the final declaration on 31 January. Submitting something reasonable
+today beats submitting something perfect in December.
 
-So: submitting something reasonable on time beats submitting something perfect late. Get it in, then
-tidy it up.
+THEN DON'T DO IT TWICE
 
-IF YOU GENUINELY CAN'T
+The next quarter ends 5 January and its update is due 7 February — the week after the tax deadline,
+which is exactly why people miss that one as well.
 
-Submit what you have. HMRC's late-submission penalties work on points — one late update is not a
-disaster, but a habit of them is. And the correction mechanism exists precisely because HMRC expects
-figures to be refined later.
-
-Then spend December setting it up properly so January's quarter isn't the same weekend.
+Spend an hour in the next fortnight getting the bank feed connected and the receipts flowing, and
+February is a ten-minute job rather than a weekend.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-📄 FROM THE SITE: the full quarter-end checklist, one page
+FROM THE SITE: the full quarter-end checklist, one page
 → klyara.com
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 Craig
 
-Reply if you're stuck. I'd rather answer a question on a Thursday than hear about a penalty in
+Reply if you're stuck. I'd rather answer a question in November than hear about a penalty in
 January.
 ```
 
 ---
 
-## №6 — Thursday 19 November 2026
+## №6 — Thursday 26 November 2026
 **Subject:** `What that job actually cost you`
 **Preview:** `The three costs nobody puts in the quote.`
 
 ```
-📅 DATES
+DATES
 
-Thu 19 Nov — CIS return + payment, month to 5 Nov — TODAY
-Mon 21 Dec — CIS return + payment, month to 5 Dec (19th is a Saturday)
-Tue 5 Jan  — MTD quarter ends
+Sat 19 Dec — CIS return + payment, month to 5 Dec (22nd if paying electronically)
+Tue 5 Jan  — MTD quarter ends (6 Oct – 5 Jan)
+Sun 31 Jan — Final declaration + tax payment + payment on account
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 ONE THING: the three costs that never make it into the quote
 
 Most building firms price labour and materials, add a percentage, and call it a quote. Then wonder
-why a busy year produced no money.
+why a busy year made no money.
 
 Three things are missing.
 
@@ -1129,7 +1129,7 @@ Take the last job you finished. Everything in, including the above. What did it 
 Most people find the answer is 8–12% below what they thought, and that the difference is entirely in
 these three.
 
-🧮 THE TOOL: job margin calculator — put the last one through it
+THE TOOL: job margin calculator — put the last one through it
 → klyara.com/tools.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1139,14 +1139,14 @@ Craig
 
 ---
 
-## №7 — Thursday 3 December 2026
+## №7 — Thursday 10 December 2026
 **Subject:** `The January hole`
 **Preview:** `It arrives every year and it surprises everyone every year.`
 
 ```
-📅 DATES
+DATES
 
-Mon 21 Dec — CIS return + payment, month to 5 Dec (19th falls on a Saturday)
+Sat 19 Dec — CIS return + payment, month to 5 Dec (22nd if paying electronically)
 Tue 5 Jan  — MTD quarter ends (6 Oct – 5 Jan)
 Sun 31 Jan — Final declaration + tax payment + payment on account
 Sun 7 Feb  — MTD quarterly update due
@@ -1191,10 +1191,13 @@ WHAT TO DO, THIS MONTH
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: cash position forecaster
+THE TOOL: cash position forecaster
 → klyara.com/tools.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━
+
+Next one is a week today, not a fortnight — the shutdown checklist, while the sites are still open
+and there is still time to do something about it.
 
 Craig
 ```
@@ -1202,68 +1205,81 @@ Craig
 ---
 
 ## №8 — Thursday 17 December 2026
-**Subject:** `Before you shut down`
-**Preview:** `Nine things, one hour, and January is 40% easier.`
+**Subject:** `One hour, and January is easier`
+**Preview:** `Nine things to do before you finish for Christmas.`
 
 ```
-📅 DATES
+DATES
 
-Mon 21 Dec — CIS return + payment, month to 5 Dec
-Tue 5 Jan  — MTD quarter ends (6 Oct – 5 Jan)
+Sat 19 Dec — CIS return + payment, month to 5 Dec — 2 days (22nd if paying electronically)
+Tue 5 Jan  — MTD quarter ends (6 Oct – 5 Jan) — 19 days
+Tue 19 Jan — CIS return + payment, month to 5 Jan
 Sun 31 Jan — Final declaration + tax payment + payment on account
-Sun 7 Feb  — MTD quarterly update due
+Sun 7 Feb  — MTD quarterly update due (6 Oct – 5 Jan)
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 ONE THING: the shutdown checklist
 
-One hour before you finish. It makes January materially easier.
+Nine things. They take an hour between now and the day you finish, and they make January materially
+easier. Do them before the sites shut rather than in the first week back — most of them stop working
+once everyone else has gone home.
 
-☐ 1. Every invoice out. Everything you've done that isn't invoiced, invoice today. Anything after
-     tomorrow sits until the second week of January anyway.
+1. Every invoice out. Anything you've done and not invoiced, raise it before you finish. Get it in
+   before the accounts departments go off — anything raised after about the 18th sits until the
+   second week of January, and an unraised December invoice is one you'll be arguing about in
+   February.
 
-☐ 2. Chase everything outstanding. "Just tidying up before the break" — the most acceptable chasing
-     line of the year, and it works.
+2. Chase everything outstanding. "Just tidying up before the break" — the most acceptable chasing
+   line of the year, and there are still a few working days left in which someone can actually pay
+   you. It works right up to New Year's Eve, but it works far better this week.
 
-☐ 3. CIS return for the month to 5 December — due Monday 21st. Don't leave it in the pile.
+3. CIS return for the month to 5 December. It is due Saturday — this Saturday, the 19th. File it
+   before you finish rather than from the sofa on Boxing Day; late-filing penalties start the day
+   after the deadline, not in January. If you pay electronically you have until the 22nd, but the
+   return itself is still the 19th.
 
-☐ 4. Receipts in. Three months of them, one sitting. You'll thank yourself in the first week of
-     January when the quarter closes on the 5th.
+4. Receipts in. Three months of them, one sitting. You'll thank yourself on 5 January when the
+   quarter closes.
 
-☐ 5. Chase missing CIS deduction statements. Contractors are shutting down too — after Christmas
-     they'll have forgotten which job you mean.
+5. Chase missing CIS deduction statements. Ask now, while their office is still open — once they
+   shut down and come back in January they'll have forgotten which job you mean.
 
-☐ 6. Know your 31 January number. If you don't know it, find out this week. There is no version of
-     January where that number is better news than it is now.
+6. Know your 31 January number. If you don't know it, find it out before you start again. There is
+   no version of January where that number is better news than it is now.
 
-☐ 7. Diary the January dates: quarter ends 5th, tax due 31st, quarterly update due 7 February.
+7. Diary the January dates: quarter ends the 5th, tax due the 31st, quarterly update due 7 February.
 
-☐ 8. Tell your customers when you're back. One text. It stops the "are you around?" messages on
-     Boxing Day and it gets you first in the queue for January starts.
+8. Tell your customers when you're finishing and when you're back. One text, sent before you go.
+   It stops the "are you around?" messages on Boxing Day and it puts you first in the queue for
+   January starts.
 
-☐ 9. Book the first week of January lighter than you think. It always goes slower than planned and
-     an over-booked first week is how the whole month gets behind.
+9. Book the first week of January lighter than you think. It always goes slower than planned, and
+   an over-booked first week is how the whole month gets behind.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-Have a proper break. The paperwork will still be there and it will not have got worse.
+That is the last one before the break — a week after the last rather than a fortnight, deliberately,
+so it reaches you while the sites are still open and there is time to act on it.
 
-Back on 7 January.
+Have a proper Christmas. The paperwork will still be there and it will not have got worse.
+
+Back on 14 January, and fortnightly from there.
 
 Craig
 ```
 
 ---
 
-## №9 — Thursday 7 January 2027
+## №9 — Thursday 14 January 2027
 **Subject:** `31 January: two payments, not one`
 **Preview:** `The payment on account catches people out every year.`
 
 ```
-📅 DATES
+DATES
 
-Tue 19 Jan — CIS return + payment, month to 5 Jan
-Sun 31 Jan — Final declaration + balancing payment + payment on account
+Tue 19 Jan — CIS return + payment, month to 5 Jan — 5 days
+Sun 31 Jan — Final declaration + balancing payment + payment on account — 17 days
 Sun 7 Feb  — MTD quarterly update due (6 Oct – 5 Jan)
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1311,7 +1327,7 @@ penalties.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: CIS calculator + deadline checker
+THE TOOL: CIS calculator + deadline checker
 → klyara.com/tools.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1321,41 +1337,42 @@ Craig
 
 ---
 
-## №10 — Thursday 21 January 2027 ⚠️
-**Subject:** `Ten days`
-**Preview:** `31 January. And what to do if the number's wrong.`
+## №10 — Thursday 28 January 2027
+**Subject:** `Three days, and the 31st is a Sunday`
+**Preview:** `File even if you can't pay. They are two separate penalties.`
 
 ```
-📅 DATES
+DATES
 
-⚠️ Sun 31 Jan — Final declaration + balancing payment + payment on account — 10 DAYS
+Sun 31 Jan — Final declaration + balancing payment + payment on account — 3 DAYS
 Sun 7 Feb  — MTD quarterly update due (6 Oct – 5 Jan)
 Fri 19 Feb — CIS return + payment, month to 5 Feb
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-ONE THING: ten days, in order
+ONE THING: three days, in order
 
-☐ TODAY — file it if it isn't filed. Even if you can't pay. The late FILING penalty and the late
+• TODAY — file it if it isn't filed. Even if you can't pay. The late FILING penalty and the late
   PAYMENT penalty are separate things. Filing on time and paying late costs you far less than doing
   neither, and it takes the worst penalty off the table entirely.
 
-☐ TODAY — if you can't pay, set up Time to Pay. It's online for smaller balances. Do it before the
+• TODAY — if you can't pay, set up Time to Pay. It's online for smaller balances. Do it before the
   31st.
 
-☐ THIS WEEK — chase every missing CIS deduction statement. Unevidenced deductions are tax you pay
-  twice. This is the last useful week to chase them.
+• TODAY — chase every missing CIS deduction statement. Unevidenced deductions are tax you pay
+  twice, and today is the last day chasing one can still change the return.
 
-☐ THIS WEEK — check whether your payment on account should be reduced. Only on evidence. Reduce it
+• TOMORROW — check whether your payment on account should be reduced. Only on evidence. Reduce it
   on optimism and HMRC charges interest on the difference.
 
-☐ BEFORE THE 31st — check the figures actually look right. The commonest errors I see: CIS
+• BEFORE THE 31st — check the figures actually look right. The commonest errors I see: CIS
   deductions entered as income, materials included in the CIS deduction calculation, and the
   payment on account forgotten entirely.
 
-☐ THE 31st — pay. Allow for clearing time if you're not paying by card or faster payment.
+• THE 31st — pay. It falls on a Sunday, so Bacs won't move: use a debit card or faster payment,
+  or send it on the Friday.
 
-☐ 1 FEBRUARY — put 7 February in the diary. Your MTD quarterly update for 6 Oct to 5 Jan is due a
+• 1 FEBRUARY — put 7 February in the diary. Your MTD quarterly update for 6 Oct to 5 Jan is due a
   week later, and every year people file on the 31st, exhale, and miss it.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1380,23 +1397,23 @@ about it in June.
 
 ---
 
-## №11 — Thursday 4 February 2027
-**Subject:** `Buying a van before April?`
-**Preview:** `The timing is worth more than the haggling.`
+## №11 — Thursday 11 February 2027
+**Subject:** `The invoice date decides the tax year`
+**Preview:** `Under eight weeks left to put it in this one.`
 
 ```
-📅 DATES
+DATES
 
-Sun 7 Feb  — MTD quarterly update due (6 Oct – 5 Jan) — 3 days
-Fri 19 Feb — CIS return + payment, month to 5 Feb
-Mon 5 Apr  — Tax year ends · MTD quarter ends
+Fri 19 Feb — CIS return + payment, month to 5 Feb — 8 days
+Mon 5 Apr  — Tax year ends · MTD quarter ends (6 Jan – 5 Apr)
 Apr 2027   — MTD threshold drops to £30,000
+Fri 7 May  — MTD quarterly update due
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 ONE THING: capital allowances, and why the date on the invoice matters
 
-Two months left in the tax year. If you're planning to buy anything substantial — van, plant,
+Under eight weeks left in the tax year. If you're planning to buy anything substantial — van, plant,
 machinery, a decent run of tools — the date it goes on the invoice decides which tax year it lands
 in.
 
@@ -1447,16 +1464,16 @@ Craig
 
 ---
 
-## №12 — Thursday 18 February 2027
+## №12 — Thursday 25 February 2027
 **Subject:** `£30,000 from April. That's most subbies.`
-**Preview:** `Six weeks. And this wave is much bigger than the first.`
+**Preview:** `Five weeks. And this wave is much bigger than the first.`
 
 ```
-📅 DATES
+DATES
 
-Fri 19 Feb — CIS return + payment, month to 5 Feb
-Mon 5 Apr  — Tax year ends · MTD quarter ends (6 Jan – 5 Apr)
-Apr 2027   — ⚠️ MTD threshold drops to £30,000
+Fri 19 Mar — CIS return + payment, month to 5 Mar
+Mon 5 Apr  — Tax year ends · MTD quarter ends (6 Jan – 5 Apr) — 5 weeks
+Apr 2027   — MTD threshold drops to £30,000
 Fri 7 May  — MTD quarterly update due
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1477,7 +1494,7 @@ And qualifying income is still measured GROSS — before expenses, before CIS. S
 If you're a subbie who assumed this didn't apply to you, check the number you invoiced, not the
 number you banked.
 
-WHAT TO DO IN THE NEXT SIX WEEKS
+WHAT TO DO IN THE NEXT FIVE WEEKS
 
 1. WORK OUT IF YOU'RE IN. Gross self-employment income plus gross property income for 2025/26. Over
    £30,000, you're in from April 2027.
@@ -1501,10 +1518,10 @@ and April rather than to fix the deadline in August.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: MTD scope checker + deadline reminders
+THE TOOL: MTD scope checker + deadline reminders
 → klyara.com/tools.html
 
-📄 FROM THE SITE: the 15-page MTD guide, updated for the £30,000 threshold
+FROM THE SITE: the 15-page MTD guide, updated for the £30,000 threshold
 → klyara.com/guide.html
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -1513,7 +1530,7 @@ That's six months of these. Thank you for reading them.
 
 If the answer to all of this is "I need someone to just handle it" — that's what Klyara is.
 Bookkeeping, CIS, reverse charge, payroll and the quarterly filing, for a fixed monthly fee from
-£59 + VAT. Twenty-minute call, no pitch: klyara.com
+£59 a month ex VAT. Fifteen-minute call, no pitch: klyara.com
 
 Craig
 ```
@@ -1530,7 +1547,7 @@ Hi {{FIRSTNAME}},
 
 You're booked in for {{DATE}} at {{TIME}}. I'll call you on {{PHONE}}.
 
-It'll take about twenty minutes. Nothing to prepare, but if you can have these to hand it makes it
+It takes fifteen minutes. Nothing to prepare, but if you can have these to hand it makes it
 more useful:
 
   • Roughly what you invoiced last year, gross
@@ -1539,7 +1556,7 @@ more useful:
   • What you currently use for the books, if anything
 
 I'll tell you what your situation actually needs. If that's nothing, or if it's something we don't
-do, I'll tell you that — it's a twenty-minute call, not a sales process.
+do, I'll tell you that — it's a fifteen-minute call, not a sales process.
 
 Need to move it? Reschedule here: {{RESCHEDULE_LINK}}
 
@@ -1580,10 +1597,11 @@ Hi {{FIRSTNAME}},
 
 You're on the founding list.
 
-What that means: when we open for clients, you get first call and the founding rate held for as long
-as you stay with us. No payment now, nothing to sign, and you can tell me to get lost at any point.
+What that means: when we open for clients, you get first call, and the founding rate is held for
+twelve months from the day you start. No payment now, nothing to sign, and you can tell me to get
+lost at any point.
 
-I'll email you when we open — realistically {{TIMEFRAME}}. In the meantime you'll get the fortnightly
+I will email you the day we open, which we expect to be the end of September. In the meantime you'll get the fortnightly
 newsletter: every deadline before it bites, and one useful thing.
 
 If anything urgent comes up before then, ring me. 020 8058 1496.
@@ -1818,32 +1836,34 @@ a late email. Automate the trigger and the template; type the numbers.
 *Issues 1–12 cover September 2026 to February 2027. These carry it through to August 2027, so the
 programme runs a full year without you writing anything.*
 
+*Issues 1–12, for reference: fortnightly Thursdays from Thu 17 Sep 2026, with one exception — №8 sends Thu 17 Dec 2026, a week after №7 (shutdown issue pulled forward a week off Christmas Eve); fortnightly resumes with №9 on Thu 14 Jan 2027. Every issue from №13 is a clean fortnight.*
+
 | # | Date | Theme |
 |---|---|---|
-| 13 | Thu 4 Mar 2027 | Five weeks to year end |
-| 14 | Thu 18 Mar 2027 | Buying before 5 April |
-| 15 | Thu 1 Apr 2027 | ⚠️ The £30,000 wave lands Monday |
-| 16 | Thu 15 Apr 2027 | Your first quarter under MTD |
-| 17 | Thu 29 Apr 2027 | The receipt habit |
-| 18 | Thu 13 May 2027 | Verification, and the 30% trap |
-| 19 | Thu 27 May 2027 | Why busy firms are skint |
-| 20 | Thu 10 Jun 2027 | Quoting and winning work |
-| 21 | Thu 24 Jun 2027 | Quarter end, 5 July |
-| 22 | Thu 8 Jul 2027 | 31 July payment on account |
-| 23 | Thu 22 Jul 2027 | Mid-year: gross payment status |
-| 24 | Thu 5 Aug 2027 | ⚠️ MTD update due Saturday |
+| 13 | Thu 11 Mar 2027 | 25 days to year end |
+| 14 | Thu 25 Mar 2027 | Buying before 5 April |
+| 15 | Thu 8 Apr 2027 | The £30,000 wave has landed |
+| 16 | Thu 22 Apr 2027 | Your first quarter under MTD |
+| 17 | Thu 6 May 2027 | The receipt habit |
+| 18 | Thu 20 May 2027 | Verification, and the 30% trap |
+| 19 | Thu 3 Jun 2027 | Why busy firms are skint |
+| 20 | Thu 17 Jun 2027 | Quoting and winning work |
+| 21 | Thu 1 Jul 2027 | Quarter end, 5 July |
+| 22 | Thu 15 Jul 2027 | 31 July payment on account |
+| 23 | Thu 29 Jul 2027 | Mid-year: gross payment status |
+| 24 | Thu 12 Aug 2027 | The MTD update you missed |
 
 ---
 
-## №13 — Thu 4 March 2027
-**Subject:** `Five weeks to year end`
-**Preview:** `Five things worth doing before 5 April.`
+## №13 — Thu 11 March 2027
+**Subject:** `25 days to 5 April`
+**Preview:** `Five things worth doing while they are still easy.`
 
 ```
-📅 DATES
+DATES
 
-Fri 19 Mar — CIS return, month to 5 Mar
-Mon 5 Apr  — Tax year ends. MTD quarter ends. £30,000 threshold begins.
+Fri 19 Mar — CIS return, month to 5 Mar — 8 days
+Mon 5 Apr  — Tax year ends. MTD quarter ends. The £30,000 threshold follows on 6 April.
 Mon 19 Apr — CIS return, month to 5 Apr
 Fri 7 May  — MTD quarterly update due
 
@@ -1871,27 +1891,27 @@ Nothing here is dramatic. All of it is harder in June.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 THE TOOL: CIS calculator and deadline checker → klyara.com/tools.html
+THE TOOL: CIS calculator and deadline checker → klyara.com/tools.html
 
 Craig
 ```
 
 ---
 
-## №14 — Thu 18 March 2027
+## №14 — Thu 25 March 2027
 **Subject:** `Buying a van before April?`
 **Preview:** `The date on the invoice is worth more than the haggling.`
 
 ```
-📅 DATES
+DATES
 
-Fri 19 Mar — CIS return, month to 5 Mar — tomorrow
-Mon 5 Apr  — Tax year ends · MTD £30,000 threshold begins
-Fri 7 May  — MTD quarterly update due
+Mon 5 Apr  — Tax year ends · MTD quarter ends — 11 days
+Mon 19 Apr — CIS return, month to 5 Apr
+Fri 7 May  — MTD quarterly update due (6 Jan – 5 Apr)
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-ONE THING: capital allowances, and the two-week decision
+ONE THING: capital allowances, and the eleven-day decision
 
 If you are buying a van, plant, or a serious run of tools, the date on the invoice decides
 which tax year the deduction falls in.
@@ -1933,23 +1953,23 @@ Craig
 
 ---
 
-## №15 — Thu 1 April 2027 ⚠️
-**Subject:** `£30,000 from Monday`
+## №15 — Thu 8 April 2027
+**Subject:** `£30,000: it started on Tuesday`
 **Preview:** `Measured on what you invoiced, not what you banked.`
 
 ```
-📅 DATES
+DATES
 
-⚠️ Mon 5 Apr — Tax year ends. MTD applies at £30,000 qualifying income.
-Mon 19 Apr — CIS return, month to 5 Apr
+Mon 19 Apr — CIS return, month to 5 Apr — 11 days
 Fri 7 May  — MTD quarterly update due (6 Jan – 5 Apr)
+Mon 5 Jul  — First quarter of the new regime ends
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 ONE THING: the wave that catches most of the trade
 
-From Monday, Making Tax Digital for Income Tax applies to anyone with qualifying income over
-£30,000.
+The tax year turned over on Tuesday. From it, Making Tax Digital for Income Tax applies to anyone
+with qualifying income over £30,000.
 
 HMRC's wording is "the amount before expenses (also known as turnover), based on the tax
 return you submitted in the previous tax year".
@@ -1979,22 +1999,22 @@ the 7th of the following month.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-📘 Free 15-page MTD guide, no email needed → klyara.com/guide.html
+Free 15-page MTD guide, no email needed → klyara.com/guide.html
 
 Craig
 ```
 
 ---
 
-## №16 — Thu 15 April 2027
-**Subject:** `Your first quarter`
-**Preview:** `Less than the panic suggests.`
+## №16 — Thu 22 April 2027
+**Subject:** `Your first quarterly update`
+**Preview:** `Less than the panic suggests. Twenty minutes, done properly.`
 
 ```
-📅 DATES
+DATES
 
-Mon 19 Apr — CIS return, month to 5 Apr
-Fri 7 May  — MTD quarterly update due (6 Jan – 5 Apr)
+Fri 7 May  — MTD quarterly update due (6 Jan – 5 Apr) — 15 days
+Wed 19 May — CIS return, month to 5 May
 Mon 5 Jul  — Next MTD quarter ends
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -2030,14 +2050,14 @@ Craig
 
 ---
 
-## №17 — Thu 29 April 2027
+## №17 — Thu 6 May 2027
 **Subject:** `Ten seconds at the counter`
 **Preview:** `The habit that makes everything else easy.`
 
 ```
-📅 DATES
+DATES
 
-Fri 7 May  — MTD quarterly update due
+Fri 7 May  — MTD quarterly update due — TOMORROW
 Wed 19 May — CIS return, month to 5 May
 Mon 5 Jul  — MTD quarter ends
 
@@ -2077,16 +2097,16 @@ Craig
 
 ---
 
-## №18 — Thu 13 May 2027
-**Subject:** `20% or 30%? It is not a choice`
-**Preview:** `And if you get it wrong, HMRC comes to you.`
+## №18 — Thu 20 May 2027
+**Subject:** `20% or 30%? Verify first.`
+**Preview:** `Get it wrong and HMRC recovers it from you, not the subbie.`
 
 ```
-📅 DATES
+DATES
 
-Wed 19 May — CIS return, month to 5 May
-Mon 21 Jun — CIS return, month to 5 Jun (the 19th is a Saturday)
-Mon 5 Jul  — MTD quarter ends
+Sat 19 Jun — CIS return, month to 5 Jun (22nd if paying electronically)
+Mon 5 Jul  — MTD quarter ends (6 Apr – 5 Jul)
+Sat 7 Aug  — MTD quarterly update due
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -2121,21 +2141,21 @@ sitting with HMRC.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-🧮 Free CIS calculator → klyara.com/tools.html
+THE TOOL: free CIS calculator → klyara.com/tools.html
 
 Craig
 ```
 
 ---
 
-## №19 — Thu 27 May 2027
+## №19 — Thu 3 June 2027
 **Subject:** `Busy, and no money in the bank`
 **Preview:** `Four things that drain cash while the P&L looks fine.`
 
 ```
-📅 DATES
+DATES
 
-Mon 21 Jun — CIS return, month to 5 Jun
+Sat 19 Jun — CIS return, month to 5 Jun (22nd if paying electronically)
 Mon 5 Jul  — MTD quarter ends
 Sat 7 Aug  — MTD quarterly update due
 
@@ -2177,14 +2197,14 @@ Craig
 
 ---
 
-## №20 — Thu 10 June 2027
+## №20 — Thu 17 June 2027
 **Subject:** `The quote that loses the job`
 **Preview:** `Usually the fourth day, not the price.`
 
 ```
-📅 DATES
+DATES
 
-Mon 21 Jun — CIS return, month to 5 Jun
+Sat 19 Jun — CIS return, month to 5 Jun — 2 days
 Mon 5 Jul  — MTD quarter ends
 Sat 7 Aug  — MTD quarterly update due
 
@@ -2231,14 +2251,14 @@ Craig
 
 ---
 
-## №21 — Thu 24 June 2027
+## №21 — Thu 1 July 2027
 **Subject:** `Quarter ends 5 July`
-**Preview:** `Seven jobs, one a day, and you are done by Sunday.`
+**Preview:** `Seven jobs, two a day, and you are closed before it ends.`
 
 ```
-📅 DATES
+DATES
 
-⚠️ Mon 5 Jul — MTD quarter ends (6 Apr – 5 Jul)
+Mon 5 Jul  — MTD quarter ends (6 Apr – 5 Jul) — 4 days
 Mon 19 Jul — CIS return, month to 5 Jul
 Sat 31 Jul — Second payment on account
 Sat 7 Aug  — MTD quarterly update due
@@ -2247,7 +2267,7 @@ Sat 7 Aug  — MTD quarterly update due
 
 ONE THING: the seven-job quarter end
 
-Eleven days. One job a day, each under twenty minutes, and the order matters because each
+Four days. Two jobs a day, each under twenty minutes, and the order matters because each
 makes the next easier.
 
 1. BANK FEED — every business account connected and feeding, not exported and typed. Ten
@@ -2268,27 +2288,27 @@ makes the next easier.
 
 7. THE NUMBER — margin by job, owed by age, retentions outstanding, bank against thirty days.
 
-Do one a day and you are closed off before the quarter even ends, five weeks ahead of the
+Do two a day and you are closed off as the quarter closes, five weeks ahead of the
 deadline.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-📄 Full checklist, free → klyara.com
+FROM THE SITE: the full quarter-end checklist, free → klyara.com
 
 Craig
 ```
 
 ---
 
-## №22 — Thu 8 July 2027
+## №22 — Thu 15 July 2027
 **Subject:** `31 July, and the payment people forget`
 **Preview:** `It lands in the quietest cash month of the year.`
 
 ```
-📅 DATES
+DATES
 
-Mon 19 Jul — CIS return, month to 5 Jul
-⚠️ Sat 31 Jul — Second payment on account
+Mon 19 Jul — CIS return, month to 5 Jul — 4 days
+Sat 31 Jul — Second payment on account — 16 days
 Sat 7 Aug  — MTD quarterly update due (6 Apr – 5 Jul)
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -2327,15 +2347,15 @@ Craig
 
 ---
 
-## №23 — Thu 22 July 2027
+## №23 — Thu 29 July 2027
 **Subject:** `Would you pass the compliance test?`
 **Preview:** `Mid-year is the right moment to check.`
 
 ```
-📅 DATES
+DATES
 
-Sat 31 Jul — Second payment on account
-Sat 7 Aug  — MTD quarterly update due
+Sat 31 Jul — Second payment on account — 2 days
+Sat 7 Aug  — MTD quarterly update due (6 Apr – 5 Jul)
 Thu 19 Aug — CIS return, month to 5 Aug
 
 ━━━━━━━━━━━━━━━━━━━━━━━
@@ -2380,27 +2400,28 @@ Craig
 
 ---
 
-## №24 — Thu 5 August 2027 ⚠️
-**Subject:** `MTD update due Saturday`
-**Preview:** `Ten minutes if your records are current.`
+## №24 — Thu 12 August 2027
+**Subject:** `Late on the 7 August update?`
+**Preview:** `Five days over. Here's the fastest way to clear it.`
 
 ```
-📅 DATES
+DATES
 
-⚠️ Sat 7 Aug — MTD quarterly update due (6 Apr – 5 Jul)
-Thu 19 Aug — CIS return, month to 5 Aug
-Tue 5 Oct  — Next MTD quarter ends
+Thu 19 Aug — CIS return, month to 5 Aug — 1 week
+Tue 5 Oct  — Next MTD quarter ends (6 Jul – 5 Oct)
+Sun 7 Nov  — That quarter's update due
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
-ONE THING: two days
+ONE THING: it was due on Saturday
 
-Your quarterly update for 6 April to 5 July is due Saturday.
+Your quarterly update for 6 April to 5 July was due last Saturday.
 
-If you have been keeping records as you go, this is a ten-minute job: check the categories,
-submit.
+If it went in, ignore this one. If it did not, file it today — five days late is a point on the
+record, not a bill, and it only becomes a bill if it becomes a habit.
 
-If you have not, here is the fastest legitimate route:
+If your records are current this is a ten-minute job: check the categories, submit. If they are
+not, here is the fastest legitimate route:
 
 1. Connect the bank feed. It pulls three months of transactions in automatically and that is
    most of the job.
@@ -2413,13 +2434,13 @@ If you have not, here is the fastest legitimate route:
 REMEMBER WHAT THIS IS
 
 A summary of totals. Not a return, nothing to pay, correctable later. Submitting something
-reasonable on time beats submitting something perfect late.
+reasonable today beats submitting something perfect next month.
 
 IF YOU GENUINELY CANNOT
 
 Submit what you have. The late-submission system works on points, so one late update is not a
-disaster — a habit of them is. Then spend August setting it up properly so October is not the
-same weekend.
+disaster — a habit of them is. Then spend the rest of August setting it up properly, so the
+5 October quarter end is not this same weekend again.
 
 ━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -2427,7 +2448,7 @@ That is a year of these. Thank you for reading them.
 
 If the answer to all of this is "I need someone to just handle it" — that is what Klyara is.
 Bookkeeping, CIS, reverse charge, payroll and the quarterly filing, for a fixed monthly fee
-from £59 + VAT. Twenty-minute call, no pitch: klyara.com
+from £59 a month ex VAT. Fifteen-minute call, no pitch: klyara.com
 
 Craig
 ```

@@ -21,9 +21,28 @@ Benchmarking against real market prices is in **docs/22**. This document is abou
 # PART 1 — The four tiers, precisely
 
 Prices are per month, **excluding VAT**, on a founding client rate held for twelve months from the
-client's start date. Billed monthly in advance by Direct Debit or standing order.
+client's start date. Billed monthly in advance by Direct Debit or standing order. Pay a year up
+front by Direct Debit and it is eleven months' fee for twelve.
 
-## Solo — £59
+**Every tier also carries a one-off onboarding fee.** It is published on the pricing page, it is
+quoted exactly before the client commits, and it is not a deposit against the monthly. It covers the
+same five things at every level: the backlog entered and reconciled to the bank, the software
+configured in the client's own name, HMRC agent authorisation obtained, the portal issued, and the
+receipt app demonstrated. It is sized to the backlog, so a client who arrives four months behind
+pays more than one who arrives clean. **Live within five working days of signing**, bar HMRC's post.
+
+| Tier | Monthly | Onboarding, one-off |
+|---|---|---|
+| Solo | £59 | £149 |
+| Start | £99 | £250 |
+| Trade | £199 | from £350 |
+| Pro | £329 | from £500 |
+
+All ex VAT. Quote the onboarding figure in the same breath as the monthly, always with its reason.
+An unexplained onboarding fee is the most objected-to number in the whole price list; an explained
+one is barely questioned.
+
+## Solo — £59 a month, £149 onboarding
 
 **Who it is for.** A sole-trader subcontractor. CIS suffered, not deducted. No employees. Under
 the VAT threshold, or newly over it and not yet registered. Typically 20–60 transactions a month.
@@ -40,6 +59,11 @@ the VAT threshold, or newly over it and not yet registered. Typically 20–60 tr
 - Monthly one-page summary: what you invoiced, what you were paid, what CIS was taken
 - Email and WhatsApp support, answered within one working day
 
+**Onboarding — £149 one-off.** Fixed, not "from". The current tax year to date entered and
+reconciled, software set up in your name, HMRC agent authorisation, portal login, receipt app
+demonstrated. Prior years are out of scope at this tier — they are catch-up at £45 an hour, quoted
+after a look and capped at the quote.
+
 **Out of scope** — VAT registration or returns · payroll of any kind · limited company accounts or
 CT600 · acting as a contractor and filing monthly returns · management accounts · mortgage
 references beyond issuing the SA302 · catch-up of prior years
@@ -49,7 +73,7 @@ Both move them to Start at minimum.
 
 ---
 
-## Start — £99
+## Start — £99 a month, £250 onboarding
 
 **Who it is for.** A sole trader or single-director limited company, VAT registered, still working
 alone or with one hand. Typically 60–150 transactions a month.
@@ -64,6 +88,10 @@ alone or with one hand. Typically 60–150 transactions a month.
 - Confirmation statement filed
 - Quarterly fifteen-minute call, if you want it
 
+**Onboarding — £250 one-off.** Fixed, not "from". Everything in Solo's onboarding, plus the VAT
+registration details checked and the reverse charge position set up correctly from day one, and the
+payroll scheme picked up if there is one.
+
 **Out of scope** — filing monthly CIS returns as a contractor · payroll beyond the director ·
 CIS verification of subcontractors · management accounts · budgeting and forecasting · catch-up of
 prior years
@@ -73,7 +101,7 @@ not next month, not at the year end.
 
 ---
 
-## Trade — £199
+## Trade — £199 a month, onboarding from £350
 
 **Who it is for.** The core client. A contractor paying subcontractors, VAT registered, one to
 five people. This is the tier the whole business is built around and it should be roughly 60% of
@@ -82,7 +110,7 @@ the book. Typically 150–350 transactions a month.
 **In scope — everything in Start, plus**
 
 - Subcontractor verification with HMRC — **unlimited**
-- Monthly CIS returns prepared and **filed on the 12th**, every month, including nil returns
+- Monthly CIS returns prepared and **filed by the 19th**, every month, including nil returns
 - Subcontractor payment and deduction statements issued by the 19th, up to **10 subcontractors**
 - Materials and labour split checked on every subcontractor invoice
 - Payroll for up to **5 employees**, RTI, and the pension submission
@@ -94,16 +122,22 @@ the book. Typically 150–350 transactions a month.
 - Monthly management summary: turnover, gross margin, CIS position, retentions outstanding, cash
 - Monthly fifteen-minute call
 
+**Onboarding — from £350 one-off.** Quoted exactly before you commit, sized on the backlog:
+everything in Start's onboarding, plus subcontractors loaded and verified with HMRC, the CIS
+position reconciled to the statements you hold, and any retention schedule opened. £350 assumes up
+to **6 months** of the current year's backlog and up to **10 subcontractors**; beyond either, it is
+quoted on the count. Prior years are catch-up at £45 an hour, quoted separately.
+
 **Out of scope** — CITB levy returns · construction contract review · job costing beyond the
 monthly split · more than 5 employees · more than 10 subcontractors · catch-up of prior years ·
-tax planning beyond the obvious · anything requiring a site visit
+tax planning beyond the year-end return · anything requiring a site visit
 
 **The natural upgrade trigger.** Six employees, eleven subcontractors, or the first month they ask
 for a job-by-job profit figure.
 
 ---
 
-## Pro — £329
+## Pro — £329 a month, onboarding from £500
 
 **Who it is for.** An established firm, £500k–£2m turnover, running multiple jobs at once and
 needing to know which ones make money. Typically 350–700 transactions a month.
@@ -112,7 +146,7 @@ needing to know which ones make money. Typically 350–700 transactions a month.
 
 - Payroll for up to **15 employees**
 - Up to **25 subcontractors** verified, deducted, and statemented
-- Sales invoices raised, **unlimited within reason**
+- Sales invoices raised, up to **150 per month**, then £1.50 each on the rate card
 - Purchase items, up to **700 per month**
 - **Job costing** — cost and margin tracked per job, reported monthly
 - Applications for payment and valuations recorded against the retention schedule
@@ -120,7 +154,11 @@ needing to know which ones make money. Typically 350–700 transactions a month.
 - Management accounts with a short written commentary each month
 - Cash flow forecast, rolled forward quarterly
 - Monthly thirty-minute call
-- Same-day response on anything urgent, in working hours
+- Same-day response on anything urgent, in working hours (Monday to Friday, 8am to 6pm)
+
+**Onboarding — from £500 one-off.** Quoted exactly before you commit. Everything in Trade's
+onboarding, plus the job list built and opened, opening balances agreed with the outgoing
+accountant, and the first month run in parallel to prove the figures.
 
 **Out of scope** — CITB levy returns · audit · corporate finance · contract or legal review ·
 site attendance · anything a chartered accountant is properly required for
@@ -152,6 +190,11 @@ Publish this. Firms that hide it end up doing the work for free.
 | HMRC enquiry support | £65/hour |
 | Software migration from another package | £195 |
 | Out-of-scope work, general | £45/hour, billed in 15-minute units |
+| Records in after the 10th but still wanted in that cycle | £25 surcharge |
+
+All ex VAT. **Records in by the 10th are guaranteed into that month's cycle.** Later than the 10th
+and the work rolls to the next cycle, or stays in this one with the £25 surcharge. Say which at the
+time, in writing.
 
 **Two rules about this card.**
 
@@ -191,7 +234,7 @@ guess. Transactions per month is the single best predictor of your time.
 | Retentions on more than 5 live jobs | +10% |
 | Two or more trading entities | +60% of the smaller entity's tier |
 | Books currently in a carrier bag | Catch-up quoted separately, not folded in |
-| Client is chronically disorganised (be honest) | +15%, or decline |
+| Records arrive after the 10th in two of any three months | +15%, or decline |
 | More than one bank account or a credit card | +5% each |
 
 **Step 4 — Sanity check against your own time.** Divide the fee by the hours you think it will
@@ -322,10 +365,10 @@ Send by email, 60 days before the effective date. Change the bracketed parts and
 >
 > Nothing about the service changes. Same work, same deadlines, same person.
 >
-> Two things worth saying plainly. First, this is the first increase since you joined — the
-> founding rate did what it was meant to do and it held for the full year. Second, [279] is still
-> below what this work costs bought separately; the CIS returns alone run from £95 a month on the
-> open market and light bookkeeping from £125.
+> Two things worth saying plainly. First, this is the first increase since you joined — the founding
+> rate did what it was meant to do and it held for the full year. Second, £[279] is still well under
+> what this work costs any other way: a high-street practice doing it monthly is about £395, and
+> doing it yourself in the evenings at your own day rate is about £640.
 >
 > If the shape of your business has changed and the tier is no longer right, tell me and we will
 > look at it properly rather than have you pay for something you do not need.

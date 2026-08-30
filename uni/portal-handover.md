@@ -19,7 +19,7 @@ signal at all.
 | Client portal | `app.klyara.com` | React 19 + Vite 8 + Tailwind v4, served as static files by Cloudflare Pages, project `klyara-portal` |
 | Website | `klyara.com` | A Cloudflare Worker serving the repo root as assets. **Not** WordPress. |
 | Database and auth | Supabase project `pfxlcxofbkexrqhplyul` | Region eu-west-2 (London) |
-| Portal source | `github.com/keypascal/klyara-portal`, and `C:\Users\key\klyara-portal` | |
+| Portal source | `github.com/keypascal/klyara-portal`, and `12_App/klyara-portal` inside the main Klyara project | |
 | Website source | `github.com/keypascal/klyara-web`, and the OneDrive `05_Website` folder | The OneDrive folder **is** the repo working copy |
 | Handbook | `klyara.com/uni/`, behind Cloudflare Access | Five guides |
 
@@ -110,7 +110,7 @@ querying columns that did not exist. Applied.
 
 ## The tests, and how to run them
 
-From `C:\Users\key\klyara-portal`:
+From `Klyara/12_App/klyara-portal`:
 
 ```
 node scripts/test-tax.ts             61 assertions — rates, dates, bank holidays

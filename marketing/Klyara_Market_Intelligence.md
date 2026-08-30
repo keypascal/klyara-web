@@ -1,8 +1,11 @@
 # Klyara — Market, Compliance & Competitor Intelligence
 ### Real data, with sources. Researched 26 August 2026.
 
-*Nothing in this document is estimated or assumed. Every figure has a link. Where I could not verify
-something, it says so.*
+*Every figure here is either linked to a source, or marked as unsourced. The compliance facts in
+section 1 were checked at source on 26 August 2026. The market figures in section 2 came via
+secondary write-ups that name their originators without linking them — those rows are flagged, and
+none of them should be published until the primary source has been found. Where something could not
+be verified, it says so.*
 
 ---
 
@@ -11,7 +14,7 @@ something, it says so.*
 These underpin every piece of content in the pack. I checked them at source rather than trusting the
 earlier drafts.
 
-## Making Tax Digital for Income Tax — ✅ verified
+## Making Tax Digital for Income Tax — verified at source
 
 | Threshold | Assessed on | Applies from |
 |---|---|---|
@@ -29,7 +32,7 @@ self-employment = **£52,000 qualifying income**, so in scope.
 
 *Source: [Work out your qualifying income for MTD for Income Tax — GOV.UK](https://www.gov.uk/guidance/work-out-your-qualifying-income-for-making-tax-digital-for-income-tax) and [Find out if and when you need to use MTD for Income Tax — GOV.UK](https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax)*
 
-### ⚠️ One precision fix to make across the pack
+### One precision fix to make across the pack
 
 The pack repeatedly says qualifying income is measured "before CIS deductions". **HMRC's guidance
 does not say that in terms** — it says "before expenses (turnover)". The conclusion is still right,
@@ -43,14 +46,14 @@ but the reasoning needs stating properly, because a builder who checks will not 
 don't reduce that box — they go in a different one, as tax you've already paid."* That is accurate,
 checkable, and it survives someone pushing back on it.
 
-## AML supervision — ✅ verified, and there is a much better route
+## AML supervision — verified at source, and there is a much better route
 
 **This is the most financially useful finding in this document.**
 
 | Route | Up front | Annual | Processing | AML included |
 |---|---|---|---|---|
-| **ICB Practice Licence** | £94 application | **£206** + membership (£167–£200) | **28 days** | ✅ Yes, at no extra cost |
-| HMRC direct registration | £300 application | **£400 per premises** | **up to 45 days** | ✅ (it is the supervision) |
+| **ICB Practice Licence** | £94 application | **£206** + membership (£167–£200) | **28 days** | Yes, at no extra cost |
+| HMRC direct registration | £300 application | **£400 per premises** | **up to 45 days** | Yes — it is the supervision |
 
 HMRC also charges **£40 per person** for approval checks on beneficial owners, officers and managers
 in the accountancy sector, and £400 per premises again at annual declaration. There is a small
@@ -69,9 +72,9 @@ statutory supervisor and the same logic applies.
 **Note the ICB licence also requires Professional Indemnity Insurance and annual renewal**, and
 changes must be notified within 30 days.
 
-## Bank of England base rate — ✅ verified
+## Bank of England base rate — verified at source
 
-**3.75%**, held on **30 July 2026**. Next decision **17 September 2026**.
+**3.75%**, held on **30 July 2026**. Next decision **Thursday 17 September 2026** — three days after launch.
 
 So statutory late payment interest — 8% over base — is currently **11.75%**.
 
@@ -81,7 +84,7 @@ evergreen content and only state 11.75% in dated posts.
 
 *Source: [Bank of England base rate — money.co.uk](https://www.money.co.uk/mortgages/bank-of-england-base-rate)*
 
-## CIS — ⚠️ partially verified
+## CIS — partially verified
 
 The gov.uk overview page does not carry the operational detail (rates, penalty amounts, statement
 deadlines). The figures used throughout the pack — 0/20/30%, the 19th, £100/£200/£300-or-5%, 14 days
@@ -109,6 +112,16 @@ credibility on its own specialism.
 | **~900,000** people work in trades; **~90% self-employed** | Checkatrade |
 | **£185bn** construction output, **6.7% of UK GDP**, **2.4m** workers | ONS |
 
+**These three counts do not agree, and you should know why before you quote one.** 885,000 counts
+SMEs including the unregistered self-employed; 385,000 counts only VAT or PAYE registered
+businesses; ~343,000 is the BEIS enterprise count on a third basis. They measure different things.
+**Quote one figure with its source attached, or quote none.** The safest for Klyara's purposes is
+the ~252,000 sole traders and one-person companies, because it is the population Solo is aimed at.
+
+**None of the rows in this table carries a direct link** — they come from the two secondary
+write-ups cited below, which name ONS, BEIS, DBT and Checkatrade without linking them. Before any
+of these numbers goes on the website, pull it from the primary publication.
+
 **What this means for Klyara:** roughly a quarter of a million sole traders and one-person companies
 is the Solo tier addressable market, and the April 2027 £30,000 threshold catches a very large share
 of them. That is the single biggest demand event in the plan.
@@ -117,12 +130,16 @@ of them. That is the single biggest demand event in the plan.
 
 | Figure | Source |
 |---|---|
-| **43 days** average payment time from invoice | Industry data |
-| **62%** of SMEs report cash flow difficulties from slow payments | Industry data |
-| **~4,300** construction insolvencies in 2025 | Insolvency Service |
-| Construction is **~17% of all UK business failures** — consistently the highest of any sector | Insolvency Service |
-| **206,000** extra workers needed 2026–2030 | CITB |
-| **72%** of firms report skills shortages affecting projects | FMB |
+| **43 days** average payment time from invoice | **No source recorded — do not publish until sourced** |
+| **62%** of SMEs report cash flow difficulties from slow payments | **No source recorded — do not publish until sourced** |
+| **~4,300** construction insolvencies in 2025 | Insolvency Service, via secondary write-up — no direct link |
+| Construction is **~17% of all UK business failures** — consistently the highest of any sector | Insolvency Service, via secondary write-up — no direct link |
+| **206,000** extra workers needed 2026–2030 | CITB, via secondary write-up — no direct link |
+| **72%** of firms report skills shortages affecting projects | FMB, via secondary write-up — no direct link |
+
+**Two of the rows above have no source at all and the rest are second-hand.** The 43 days and the
+62% are the two most quotable numbers in this document and they are the two you cannot currently
+stand behind. Find them or drop them.
 
 **Use the insolvency figure carefully.** "Construction has the highest insolvency rate of any sector"
 is true, relevant and motivating. It is also frightening, and a bookkeeping firm leaning on it too
@@ -140,7 +157,7 @@ This is the most operationally useful data in the document.
 |---|---|---|
 | **75% decide within 30 minutes. 28% within 5 minutes.** | BrightLocal | The speed-of-response advice in `docs/09` is not a nicety. A quote sent in 24 hours vs 4 days is most of the decision. |
 | **72% evaluate three or fewer businesses** | BrightLocal | You do not need to be the best in Surrey. You need to be in the first three found. That is a GBP and local-page problem, not a quality problem. |
-| **6 reviews read before booking a tradesperson** | Checkatrade | Ten reviews is not "some social proof", it is the working minimum. |
+| **6 reviews read before booking a tradesperson** | Checkatrade, via secondary write-up | People read six. So six is what has to be recent and good — not what has to exist. You need a stock well above six for that. |
 | **47% won't use a business with fewer than 20 reviews** | BrightLocal (US) | The review target in `docs/06 §9` should be 20+, not 10. **Raising it.** |
 | **31% require a 4.5-star minimum**, up from 17% a year earlier | BrightLocal (US) | One bad review early is disproportionately damaging. Reply to every one within 24 hours. |
 | **65% cite review-related reasons for rejecting a business** | BrightLocal | Reviews are a rejection filter more than a selection filter. |
@@ -148,6 +165,10 @@ This is the most operationally useful data in the document.
 | **52% use Google Search first; 71% use it somewhere in the journey** | BrightLocal (US) | GBP and local pages remain the priority. Nothing has displaced search. |
 | **Facebook/Messenger reaches 93% of UK adults** (45.9m) | Ofcom | Facebook groups deserve the weight `docs/01` gives them. |
 | **TikTok reaches 56% of UK adults** (27.3m) | Ofcom | Bigger than its reputation with this demographic. Keep it. |
+
+**Every row in this table is second-hand**, from one write-up citing BrightLocal, Checkatrade and
+Ofcom. The direction of travel is almost certainly right and the operational conclusions hold.
+The specific percentages should not appear in published Klyara content without the primary source.
 
 **Two changes I am making to the pack off the back of this:**
 
@@ -170,8 +191,9 @@ This is the most operationally useful data in the document.
 | **AI appears in 23% of local search journeys** | BrightLocal (US) |
 | **88% verify AI recommendations** by checking the underlying sources | BrightLocal |
 
-A 6% → 45% shift in twelve months is the fastest change in local discovery since mobile. It is US
-data and the UK usually trails, but not by much and not for long.
+A 6% to 45% shift in twelve months is the fastest change in local discovery since mobile. It is US
+data, second-hand, and the UK usually trails — treat the direction as reliable and the numbers as
+indicative. Do not put them on the website.
 
 ## What actually makes an AI recommend a local business
 
@@ -193,14 +215,14 @@ structured data, topical depth, and reviews.
 
 | What AI assistants reward | What the pack already does |
 |---|---|
-| Detailed individual service pages | ✅ Service pages exist; `docs/08 §9` adds ten more |
-| Explicit geographic service areas | ✅ Five local pages with named towns and `areaServed` schema |
-| FAQ content answering real questions | ✅ 16 FAQs on the MTD page, 6 per local page, all schema-marked |
-| Structured data | ✅ `docs/08` — five schema types |
-| Consistent NAP across sources | ✅ Canonical NAP string, 12+ citations in `docs/02` |
-| Topical depth on a narrow subject | ✅ Construction-only, 55,000 words of CIS/MTD/VAT content |
-| Professional credentials visible | ⏳ Once the ICB licence lands |
-| Reviews | ❌ **The gap** |
+| Detailed individual service pages | Done — service pages exist; `docs/08 §9` adds ten more |
+| Explicit geographic service areas | Done — five local pages with named towns and `areaServed` schema |
+| FAQ content answering real questions | Done — 16 FAQs on the MTD page, 6 per local page, all schema-marked |
+| Structured data | Done — `docs/08`, five schema types |
+| Consistent NAP across sources | Done — canonical NAP string, 12+ citations in `docs/02` |
+| Topical depth on a narrow subject | Done — construction-only, and the twelve free calculators |
+| Professional credentials visible | Waiting — the day the ICB licence lands |
+| Reviews | **The gap. Nothing yet.** |
 
 **Klyara is unusually well positioned to be the answer when someone asks an AI "who does CIS
 bookkeeping near Guildford".** Narrow specialism plus deep content plus explicit geography is exactly
@@ -233,15 +255,19 @@ the shape these systems reward, and almost no local bookkeeper has it.
 | **Guildford Accounting** | General practice with a CIS service page | Targets "busy contractors". Claims "rapport with HMRC" and fast subbie refunds. **No pricing shown.** CTA: "Book A Consultation" / "arrange a friendly meeting". |
 | **David Howard** | Construction, trades & property division | Established multi-office practice. |
 | **Sherwin Currid, Butt Miller, Treetops** | General Guildford/Surrey accountants | Not construction-specialist. |
+| **Castle Accounts** | "Accountants For Builders Guildford — Low Cost Fixed Fees" | Competes explicitly on low fixed fees. Page blocked automated access on 26 Aug 2026 — check it manually. |
+| **LOYALS** | London construction and CIS specialists | Not local. The only firm publishing a full price list, and the price benchmark in docs/22. |
 | **dns accountants** | National, low-cost, volume | Different game — price-led and remote. |
 
 *Sources: [Accountant for Construction — Guildford](https://accountantforconstruction.co.uk/near-me/surrey-guildford/) · [Guildford Accounting — CIS Accountants](https://guildfordaccounting.com/services/cis-accountants/) · [David Howard — Construction, Trades & Property](https://www.davidhoward.co.uk/construction-trades-property) · [Sherwin Currid](https://www.sherwincurrid.com/where-we-are/surrey-accountants/) · [Butt Miller](https://buttmiller.co.uk/surrey/accountants-guildford/) · [Treetops](https://ttca.co.uk/surrey/accountants-guildford/)*
 
 ## The four gaps
 
-**1. Nobody publishes prices.** Both construction-specialist competitors use "get a quote" or "book a
-consultation". Klyara publishing £59/£99/£199/£329 openly is a genuine, defensible differentiator in
-*this specific market* — and it filters out the people who were never going to proceed.
+**1. No local firm publishes prices.** Both construction-specialist competitors in Guildford use
+"get a quote" or "book a consultation"; of the nine firms listed in docs/22, one published a full
+price list and it was the London one. Klyara publishing £59/£99/£199/£329 a month openly is a
+genuine, defensible differentiator in *this specific market* — and it filters out the people who
+were never going to proceed.
 
 **Do not let anyone talk you into hiding the pricing.** It is your sharpest edge here.
 
@@ -251,6 +277,11 @@ first call* — is materially different and it is what the sales script in `docs
 
 **3. Nobody gives anything away ungated.** Twelve working calculators with no email wall is unmatched
 locally and it is what makes the community strategy in `docs/01` possible at all.
+
+**Publishing the price is the same move.** Solo £59, Start £99, Trade £199, Pro £329 a month plus
+VAT, with the one-off onboarding fee of £149, £250, from £350 and from £500 stated next to them.
+Publishing the monthly and hiding the onboarding is worse than publishing neither, because the
+prospect finds it on the call and re-reads everything else you said.
 
 **4. Nobody is construction-*only*.** Even the specialists have construction as a division. "That is
 all we do" is a claim none of them can make.
@@ -289,5 +320,9 @@ Being explicit so nothing here is taken on trust.
 4. **Current MTD-compatible software list** — HMRC maintains it and it changes.
 5. **Whether the £5,000 small business reduction could ever apply** — almost certainly not, but worth
    thirty seconds before paying the £300 HMRC fee (if you go that route at all, which you shouldn't).
-6. **Guildford competitor pricing** — neither publishes. A mystery-shop enquiry would tell you where
-   your £199 sits, and it is legitimate market research. Worth doing once.
+6. **Guildford competitor pricing** — no local firm publishes. A mystery-shop enquiry would tell you
+   where your £199 sits, and it is legitimate market research. Worth doing once.
+7. **The 43-day payment figure and the 62% cash flow figure** — no source is recorded for either.
+   Find one or cut them from the pack.
+8. **The three market-size counts** — 885,000, 385,000 and ~343,000 are on different bases. Pick the
+   one you will quote, find its primary publication, and use only that.

@@ -1,5 +1,5 @@
 # Klyara — Guildford & Surrey Local Pack
-### The town page, the GBP setup, the keywords, the merchants, the partners
+### The town page, the GBP setup, the keywords, the merchants, the partners.
 
 *Local search intent is the only channel on this list where someone is actively looking to hire you
 today. Everything else builds awareness. This builds pipeline.*
@@ -32,8 +32,8 @@ this market, which is exactly why it works.
 **Slyfield is the trade centre of gravity.** Selco is on Slyfield Industrial Estate, and Slyfield is
 where the vans go. That concentrates your entire offline campaign into a couple of square miles.
 
-**One caution, stated once:** Surrey is expensive, and £59–£329/month is going to read as cheap
-rather than as a bargain to some of this market. Do not apologise for the price or discount it. The
+**One caution, stated once:** Surrey is expensive, and £59–£329 a month ex VAT is going to read as
+cheap rather than as a bargain to some of this market. Do not apologise for the price or discount it. The
 value story is the specialism, not the saving.
 
 ---
@@ -62,8 +62,8 @@ everywhere covers nowhere, and Google's local algorithm punishes over-broad serv
 # 3. The local landing page — full copy, ready to publish
 
 **URL:** `klyara.com/construction-bookkeeping-guildford.html`
-**Title tag (58 chars):** `Construction Bookkeeper Guildford | CIS & MTD | Klyara`
-**Meta description (152 chars):** `Bookkeeping, CIS returns and Making Tax Digital for building firms in Guildford, Woking, Godalming and Farnham. Construction only. From £59/mo + VAT.`
+**Title tag (54 chars):** `Construction Bookkeeper Guildford | CIS & MTD | Klyara`
+**Meta description (149 chars):** `Bookkeeping, CIS returns and Making Tax Digital for building firms in Guildford, Woking, Godalming and Farnham. Construction only. From £59/mo + VAT.`
 
 ---
 
@@ -73,10 +73,10 @@ The back office for Guildford building firms.
 
 [LEDE]
 Bookkeeping, CIS returns, VAT reverse charge coding, payroll and Making Tax Digital
-quarterly filing — for building firms across Guildford, Woking, Godalming and Farnham.
-Construction only. Fixed monthly fee from £59 + VAT.
+quarterly filing, for building firms across Guildford, Woking, Godalming and Farnham.
+Construction only. Fixed monthly fee from £59 plus VAT.
 
-[PRIMARY CTA]  Book a free 20-minute call
+[PRIMARY CTA]  Book a free 15-minute call
 [SECONDARY]    Check your MTD date in ten seconds
 
 ──────────────────────────────────────────────
@@ -88,8 +88,8 @@ letting agents, a marketing consultancy and you. CIS is the awkward bit at the e
 their month.
 
 Here it's the whole job. Gross payment status, 20% and 30% deductions, subcontractor
-verification, materials splits, retentions, the domestic reverse charge and the monthly
-19th — that's the everyday work, not the exception.
+verification, materials splits, retentions, the domestic reverse charge, the monthly
+19th. That's the everyday work, not the exception.
 
 That difference shows up in specific places:
 
@@ -103,16 +103,15 @@ That difference shows up in specific places:
 
 [H2] The reverse charge question Surrey firms get wrong both ways.
 
-A lot of Guildford work is high-value domestic — extensions, lofts, basements, full
+A lot of Guildford work is high-value domestic: extensions, lofts, basements, full
 refurbishments on period property. A homeowner is an end user, so the reverse charge does
 not apply and you charge VAT as normal.
 
 Then the same firm picks up a job for a main contractor who'll invoice the work onward.
 That one is reverse charged, and no VAT should be on the invoice.
 
-Firms that do both — which in this area is most of them — get it wrong in both directions,
-and only find out at the VAT return. It's twenty minutes to fix and it's the first thing
-we look at.
+Most firms round here do both, and get it wrong in both directions. They find out at the
+VAT return. It takes twenty minutes to fix and it's the first thing we look at.
 
 [TOOL CTA]  Free VAT reverse charge checker →
 
@@ -123,7 +122,7 @@ we look at.
 MTD for Income Tax started in April 2026 for anyone with qualifying income over £50,000.
 It drops to £30,000 in April 2027 and £20,000 in April 2028.
 
-Qualifying income is measured GROSS — before expenses and before CIS deductions. Invoice
+Qualifying income is measured GROSS, before expenses and before CIS deductions. Invoice
 £55,000, lose £11,000 to CIS, bank £44,000, and HMRC still counts the £55,000.
 
 Day rates in Surrey being what they are, a full-time subcontractor around here clears the
@@ -137,7 +136,7 @@ know it yet.
 [H2] Where we work.
 
 Guildford, Woking, Godalming, Farnham, Cranleigh, Ash, Normandy, Worplesdon, Merrow,
-Burpham, Shalford, Bramley, Wonersh, Chilworth, Send and Ripley — plus Camberley,
+Burpham, Shalford, Bramley, Wonersh, Chilworth, Send and Ripley. Plus Camberley,
 Farnborough, Aldershot, Haslemere, Dorking, Leatherhead and the Horsleys.
 
 Everything runs through the portal and your phone, so we don't need to be in your office.
@@ -147,31 +146,32 @@ But we're local, and if you'd rather do the first meeting face to face, we will.
 
 [H2] What it costs.
 
-[PRICING TABLE — Solo £59 / Start £99 / Trade £199 / Pro £329, ex VAT]
+[PRICING TABLE: Solo £59 / Start £99 / Trade £199 / Pro £329 a month, ex VAT]
 
-One-off onboarding fee applies — we clean up the past so the monthly fee only covers the
-future. 30 days' notice. No contract. Your data stays yours.
+A one-off onboarding fee applies, from £149. That's the clean-up of the past, so your
+monthly fee only covers the future. Rolling monthly, 30 days' notice. Your data stays
+yours.
 
 ──────────────────────────────────────────────
 
-[H2] Straight answers.  [FAQ — mark this up with FAQPage schema, see docs/08]
+[H2] Straight answers.  [FAQ: mark this up with FAQPage schema, see docs/08]
 
 Q. Do you actually come to Guildford, or is it all remote?
-A. Both. The work is done through the portal and your phone — receipts get snapped on site,
+A. Both. The work is done through the portal and your phone. Receipts get snapped on site,
    not delivered in a carrier bag. But we're local, and for the first meeting, or when
    something needs a proper conversation, we'll come to you.
 
 Q. I've already got an accountant in Guildford. Do I have to leave them?
-A. No, and we'd rather you didn't. We do the monthly work — bookkeeping, CIS, VAT, payroll,
+A. No, and we'd rather you didn't. We do the monthly work: bookkeeping, CIS, VAT, payroll,
    MTD. They do the year end. We hand them clean books in April instead of a shoebox, which
    usually makes you cheaper to them, not more expensive.
 
 Q. I'm a sole trader subbie, not a firm. Am I too small?
-A. No. That's Solo, £59 a month, and it exists specifically for CIS subcontractors caught by
-   MTD. It's the fastest-growing part of what we do.
+A. No. That's Solo, £59 a month plus VAT, and it exists specifically for CIS subcontractors
+   caught by MTD. It is the tier most subbies start on.
 
 Q. How quickly can you start?
-A. Five working days from signing, bar HMRC's post — the agent authorisation has to go
+A. Five working days from signing, bar HMRC's post. The agent authorisation has to go
    through them and that takes about a week. We start the clock the day you say yes.
 
 Q. What if I've not done my books for eight months?
@@ -185,11 +185,11 @@ A. If you're on Xero we'll work in Xero. On QuickBooks, fine. On nothing, we'll 
 ──────────────────────────────────────────────
 
 [FINAL CTA BLOCK]
-Twenty minutes, on the phone, no pitch.
-We'll tell you what your situation actually needs — and if that's nothing, we'll tell you
-that too.
+Fifteen minutes, on the phone, no pitch.
+We'll tell you what your setup actually needs and what it would cost. If that's nothing,
+we'll tell you that too.
 
-[Book a free call →]     020 8058 1496
+[Book a free call]     020 8058 1496
 ```
 
 **Internal links to add on this page:** Making Tax Digital page · Bookkeeping & CIS service page ·
@@ -216,7 +216,8 @@ Shalford · Bramley · Wonersh · Merrow · Worplesdon · Normandy
 **Primary category:** `Bookkeeping service`
 **Secondary:** `Accountant` · `Tax preparation service` · `Payroll service`
 
-**Description — 748 chars, Guildford-specific, ready to paste:**
+**Description — 749 chars, Guildford-specific, ready to paste. GBP caps this at 750, so if you
+edit it, count again:**
 ```
 Klyara is the back office for building firms across Guildford, Woking, Godalming and Farnham.
 
@@ -224,16 +225,16 @@ We handle bookkeeping, CIS returns, VAT reverse charge coding, payroll and Makin
 quarterly filing for one fixed monthly fee, so builders can get on with the work.
 
 Construction only. CIS deductions, gross payment status, subcontractor verification, retentions and
-the domestic reverse charge are the everyday job here, not the awkward bit at the end of the month.
+the domestic reverse charge are the everyday job here, not the awkward bit at month end.
 
-Making Tax Digital for Income Tax began in April 2026 for gross income over £50,000 and drops to
-£30,000 in April 2027. Qualifying income is measured before CIS comes off, so it catches more Surrey
-subcontractors than expected.
+MTD for Income Tax began in April 2026 for gross income over £50,000 and drops to £30,000 in April
+2027. Qualifying income is counted before CIS comes off, so it catches more Surrey subbies than
+expected.
 
-Plans from £59 + VAT. Free MTD guide and 12 calculators at klyara.com.
+Plans from £59 a month plus VAT. Free MTD guide and 12 calculators at klyara.com.
 ```
 
-**Products:** add all four tiers with prices.
+**Products:** add all four tiers with prices, ex VAT, and say so in each description.
 **Services:** Bookkeeping · CIS returns · Making Tax Digital filing · VAT returns · Payroll ·
 Self assessment · Management reports · Invoice chasing.
 **Photos:** real ones. Craig, a Guildford site, a phone photographing a receipt on a van dash,
@@ -342,16 +343,16 @@ Slyfield concentrates the trade. A single morning covers most of your target mar
 **What to leave:** the A5 card in `assets/print/`, with a QR code added before printing pointing at
 `klyara.com/construction-bookkeeping-guildford.html?utm_source=merchant&utm_medium=qr&utm_campaign=slyfield`
 
-250 cards is roughly £30–45. Without the UTM you will never know whether it worked, so add it.
+250 cards is roughly £30–£45. Without the UTM you will never know whether it worked, so add it.
 
 **The better move while you're there:** ask the counter manager which local firms are growing. They
 see the account volumes and they know. That conversation is worth more than the cards, and it costs
 a coffee.
 
 ## Van livery
-If either founder drives, the mark is designed to be legible at distance. Guildford traffic being
-what it is, a liveried van parked at Slyfield or on the A3 is permanent free local advertising to
-exactly the right audience.
+The mark is designed to be legible at distance. Guildford traffic being what it is, Craig's vehicle
+carrying it, parked at Slyfield or sitting on the A3, is permanent free local advertising to exactly
+the right audience.
 
 ## Local networking
 ```
@@ -366,11 +367,12 @@ BNI Guildford chapters — one seat, if the fit is right, can outperform every d
 
 # 8. Local partnerships — the fastest route to clients 1–5
 
-**Target: twenty Guildford and Surrey accountancy firms.** Use the outreach email in `docs/06 §7`,
-with this local opener swapped in:
+**Target: twenty Guildford and Surrey accountancy firms.** Use the outreach email in `docs/06 §7`
+and the sequence in `docs/23 §3`, with this local opener swapped in. Subject line is 35 characters,
+which fits a phone screen:
 
 ```
-Subject: Monthly bookkeeping for your Guildford construction clients
+Subject: Your Guildford construction clients
 
 Hi [NAME],
 
@@ -384,8 +386,11 @@ If you've got building clients whose monthly bookkeeping is more trouble than it
 the CIS returns, the reverse charge coding on domestic versus main-contractor work, the
 receipts that arrive in February — I'd take them on and hand you clean books at year end.
 
-Two-way referral, 10–15%, and I'd be glad to discuss a mutual continuity arrangement, which
-I gather we both need on file.
+You'd get 10% of their monthly fee back, every month, for as long as they stay with me.
+On our mid tier that's £19.90 a month, £238.80 a year per client, for work you didn't want. Year end,
+CT600 and the relationship stay with you, and that's in the agreement, not a promise.
+
+Happy to talk about a mutual continuity arrangement too, which I gather we both need on file.
 
 Worth twenty minutes? I'm in Guildford.
 
@@ -443,7 +448,7 @@ H1: CIS Accountant In Guildford
 H2: Construction Firms Only
 H3: Fixed Fee From £59/Month
 D1: CIS returns filed by the 19th, VAT reverse charge coded right, MTD quarterly filing handled.
-D2: Guildford, Woking, Godalming, Farnham. Free 20-minute call. No hourly billing.
+D2: Guildford, Woking, Godalming, Farnham. Free 15-minute call. No hourly billing. Prices ex VAT.
 → klyara.com/construction-bookkeeping-guildford.html
 ```
 
@@ -458,9 +463,12 @@ cathedral, spectrum, castle, tourist
 
 # 11. First 30 days in Guildford — the local sequence
 
+Week 1 is launch week, Monday 14 September 2026. Google Business Profile verification takes 5 to 14
+days, so start it in the setup phase (Tuesday 1 September) rather than waiting for week 1.
+
 | Week | Do |
 |---|---|
-| **1** | GBP created and verification requested. Local landing page live with schema. Tier 1 citations. |
+| **1** | GBP verification chased to completion. Local landing page live with schema. Tier 1 citations. |
 | **2** | Slyfield merchant round — Selco, Travis Perkins, Jewson, Howdens. Cards out, counter managers asked who's growing. 20 accountant emails sent. |
 | **3** | Woking / Godalming / Farnham town pages live. Surrey Chambers enquiry. Second merchant lap. |
 | **4** | Follow up every accountant who didn't reply, once. First Surrey-specific content published. Press release drafted and held. |
@@ -485,11 +493,11 @@ to signal "we are actually here."
 ## G1 — Google Business Profile, launch post
 
 ```
-Klyara is open — the back office for building firms across Guildford, Woking, Godalming and
+Klyara is open. The back office for building firms across Guildford, Woking, Godalming and
 Farnham.
 
 Bookkeeping, CIS returns, VAT reverse charge coding, payroll and Making Tax Digital quarterly
-filing, for one fixed monthly fee from £59 + VAT.
+filing, for one fixed monthly fee from £59 plus VAT.
 
 Construction only. Not general accountants who happen to have a few building clients.
 
@@ -504,40 +512,38 @@ Free MTD guide and twelve calculators at klyara.com.
 ```
 I've started something in Guildford.
 
-Eleven years doing the books for building firms, and the thing I kept running into was this:
-almost every builder I met had an accountant, and almost none of them had someone who
-actually knew construction.
+Almost every builder I've met has an accountant. Almost none of them has someone who knows
+construction.
 
-That sounds like a small distinction. It isn't.
+That sounds like a small distinction. It isn't. Here is what it looks like in practice.
 
-Here's what it looks like in practice, and these are all real conversations from the last
-month:
+Charging VAT on work for a main contractor who invoices it onward. That should be reverse
+charged, and firms run it for years before anyone notices.
 
-A firm in Godalming charging VAT on work for a main contractor who'd invoice it onward. That
-should have been reverse charged. Two years of it.
+Never applying for gross payment status while comfortably passing all three tests, so the
+money sits with HMRC instead of in the bank.
 
-A subbie near Cranleigh who'd never applied for gross payment status, was comfortably passing
-all three tests, and had roughly twenty-four grand sitting with HMRC that could have been in
-his account.
+Retentions on jobs that finished two years ago. Defects period long over, nobody has asked
+for it back, because nobody keeps the list.
 
-A roofing firm in Guildford with £11,000 of retentions on jobs that finished in 2024. Defects
-period long over. Nobody had ever asked for it back, because nobody had the list.
+None of that is exotic. It's what happens when construction is the awkward ten per cent of
+someone's client book rather than the whole thing.
 
-None of that is exotic. It's just what happens when construction is the awkward ten per cent
-of someone's client book rather than the whole thing.
-
-So — Klyara. Bookkeeping, CIS, VAT reverse charge, payroll and the new MTD quarterly filing,
+So: Klyara. Bookkeeping, CIS, VAT reverse charge, payroll and the new MTD quarterly filing,
 for building firms across Guildford, Woking, Godalming and Farnham. Fixed monthly fee. You run
 the jobs, we run the rest.
 
 Over the next month I'm going to post everything I know about CIS, the reverse charge and MTD.
 Free, no gate, no email capture. If it's useful, follow along.
 
-And if you're a Surrey builder wondering whether MTD has caught you — message me. Two minutes,
+And if you're a Surrey builder wondering whether MTD has caught you, message me. Two minutes,
 I'll tell you straight, and there's no pitch on the end of it.
 
 #Construction #CIS #Guildford #Surrey #MakingTaxDigital
 ```
+
+*Written as general patterns on purpose. Once Craig has real Surrey examples he can name the
+town and the number, but not before. Nothing in this pack invents a client.*
 
 ---
 
@@ -587,7 +593,7 @@ The ones people actually use:
 • CIS deduction — 20% or 30%, both directions, with the materials split taken out properly
 • VAT reverse charge — whether it applies to this job, and what goes on the invoice
 • Job margin — put price, costs and days in, get your real day rate out
-• Retention tracker — the one that finds people money
+• Retention tracker: every held retention on one list, with its release date
 
 klyara.com/tools.html
 
@@ -658,8 +664,8 @@ invoice the day the work's done, invoice a named person rather than "accounts", 
 payment run date in week one rather than week nine, and chase on a schedule instead of when
 you remember.
 
-If you want the retention tracker we use — the one that finds people four to fifteen grand
-they'd written off — it's free on the site. klyara.com/tools.html
+If you want the retention tracker we use, the one that puts every held retention on a list
+with its release date, it's free on the site. klyara.com/tools.html
 
 #Guildford #Surrey #Construction
 ```

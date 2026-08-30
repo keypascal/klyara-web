@@ -6,8 +6,10 @@
 ## How to use this
 
 Every block below goes in the `<head>` of the named page, inside `<script type="application/ld+json">`
-tags. Replace anything in `[SQUARE BRACKETS]` with your real values before publishing — **especially
-the address and the founding date.** Schema with invented data is worse than no schema.
+tags. Replace anything in `[SQUARE BRACKETS]` with your real values before publishing. Four things are
+still bracketed: the street address, the postcode, the five social handles and the FAQ answers.
+Everything else — phone, town, county, opening hours, all four plan prices — is filled in and matches
+the pricing page. Schema with invented data is worse than no schema.
 
 **Upload these two images to your site first**, from the pack — the schema references them:
 `assets/logo/klyara-mark-disc-512.png` → `/assets/klyara-mark-disc-512.png`, and any 1200×630 crop of
@@ -44,25 +46,26 @@ Put it site-wide in the template head.
     "height": 512
   },
   "image": "https://klyara.com/assets/og/klyara-og.png",
-  "telephone": "+442080581496",
+  "telephone": "+44 20 8058 1496",
   "email": "hello@klyara.com",
-  "foundingDate": "[YYYY-MM-DD]",
+  "foundingDate": "2026",
   "priceRange": "££",
   "currenciesAccepted": "GBP",
   "paymentAccepted": "Direct Debit, Bank Transfer",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "[STREET]",
-    "addressLocality": "[TOWN]",
-    "addressRegion": "[COUNTY]",
+    "addressLocality": "Guildford",
+    "addressRegion": "Surrey",
     "postalCode": "[POSTCODE]",
     "addressCountry": "GB"
   },
   "areaServed": [
     { "@type": "Country", "name": "United Kingdom" },
-    { "@type": "City", "name": "[TOWN 1]" },
-    { "@type": "City", "name": "[TOWN 2]" },
-    { "@type": "City", "name": "[TOWN 3]" }
+    { "@type": "City", "name": "Guildford" },
+    { "@type": "City", "name": "Woking" },
+    { "@type": "City", "name": "Godalming" },
+    { "@type": "City", "name": "Farnham" }
   ],
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
@@ -91,20 +94,33 @@ Put it site-wide in the template head.
     "@type": "OfferCatalog",
     "name": "Klyara plans",
     "itemListElement": [
-      { "@type": "Offer", "name": "Klyara Solo",  "price": "59",  "priceCurrency": "GBP",
-        "description": "MTD quarterly filing, receipt app, CIS tracking for sole-trader subcontractors",
-        "eligibleCustomerType": "Business" },
-      { "@type": "Offer", "name": "Klyara Start", "price": "99",  "priceCurrency": "GBP",
-        "description": "Monthly bookkeeping and P&L for micro limited companies" },
+      { "@type": "Offer", "name": "Klyara Solo", "price": "59", "priceCurrency": "GBP",
+        "description": "MTD quarterly filing, receipt app and CIS tracking for sole-trader subcontractors. £59 per month ex VAT.",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "59", "priceCurrency": "GBP",
+          "unitCode": "MON", "valueAddedTaxIncluded": false } },
+      { "@type": "Offer", "name": "Klyara Start", "price": "99", "priceCurrency": "GBP",
+        "description": "Monthly bookkeeping and P&L for micro limited companies. £99 per month ex VAT.",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "99", "priceCurrency": "GBP",
+          "unitCode": "MON", "valueAddedTaxIncluded": false } },
       { "@type": "Offer", "name": "Klyara Trade", "price": "199", "priceCurrency": "GBP",
-        "description": "Bookkeeping, VAT, CIS, payroll and invoice chasing for 5-15 person firms" },
-      { "@type": "Offer", "name": "Klyara Pro",   "price": "329", "priceCurrency": "GBP",
-        "description": "Full management pack, self assessment, CT600 and business phone" }
+        "description": "Bookkeeping, VAT, CIS, payroll and invoice chasing for 5–15 person firms. £199 per month ex VAT.",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "199", "priceCurrency": "GBP",
+          "unitCode": "MON", "valueAddedTaxIncluded": false } },
+      { "@type": "Offer", "name": "Klyara Pro", "price": "329", "priceCurrency": "GBP",
+        "description": "Full management pack, self assessment, CT600 and business phone. £329 per month ex VAT.",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "329", "priceCurrency": "GBP",
+          "unitCode": "MON", "valueAddedTaxIncluded": false } }
     ]
   }
 }
 </script>
 ```
+
+**Two things to settle before this goes live.** `[STREET]` and `[POSTCODE]` are the only placeholders
+left. If Google Business Profile is set up as a service-area business because Craig works from home,
+do not publish the home address here either — delete the `streetAddress` and `postalCode` lines and
+leave `addressLocality`, `addressRegion` and `addressCountry`. That is valid schema and it keeps the
+address off the open web. All four plan prices are per month, ex VAT, and match the pricing page.
 
 **Note on `AccountingService`:** it's a subtype of `LocalBusiness` and `ProfessionalService`, so you
 inherit all the local-business properties. It's more specific than `LocalBusiness` and more accurate
@@ -112,7 +128,7 @@ than `FinancialService`, which implies regulated activity you deliberately don't
 
 ---
 
-# 2. WebSite + Sitelinks Search — homepage only
+# 2. WebSite — homepage only
 
 ```html
 <script type="application/ld+json">
@@ -128,13 +144,21 @@ than `FinancialService`, which implies regulated activity you deliberately don't
 </script>
 ```
 
+There is no `potentialAction` / `SearchAction` in this block on purpose. Google retired the sitelinks
+search box in November 2024, so the markup no longer does anything, and Klyara has no site search to
+point it at. Leave it out.
+
 ---
 
-# 3. FAQPage — the MTD page ⭐ biggest single win
+# 3. FAQPage — the MTD page
 
-Your MTD page has sixteen questions and no markup. This block makes them eligible for expanded
-results. Answers must match the on-page text — Google checks, and mismatched answers get the markup
-ignored.
+Your MTD page has sixteen questions and no markup. Add it, but know what it buys you. Google stopped
+showing FAQ rich results for ordinary commercial sites in 2023 — they now run for government and
+health sites only. So this will not put an expanded result in the search listing.
+
+It is still worth ten minutes. The markup is how the page states, in machine-readable form, that
+these are questions and these are the answers, and that is what AI search and assistant answers read.
+Answers must match the on-page text — mismatched answers get the whole block ignored.
 
 I've written the first six out in full using your actual questions. Replicate the pattern for the
 remaining ten, pasting your real on-page answers in.
@@ -242,6 +266,10 @@ Websites, Local Search.
 </script>
 ```
 
+`unitCode: "MON"` is the UN/CEFACT code for one month, and `valueAddedTaxIncluded: false` is what
+makes £199 read as £199 ex VAT rather than inclusive. Change the price on every duplicate of this
+block to the plan the page actually sells: Solo £59, Start £99, Trade £199, Pro £329, all ex VAT.
+
 ---
 
 # 5. BreadcrumbList — every page below the homepage
@@ -263,7 +291,7 @@ Websites, Local Search.
 
 ---
 
-# 6. SoftwareApplication — every calculator ⭐ the sleeper win
+# 6. SoftwareApplication — every calculator
 
 **This is the most under-exploited asset you own.** Twelve working, ungated calculators on their own
 URLs. Marked up properly, each becomes independently discoverable, independently linkable, and
@@ -294,20 +322,26 @@ Paste one of these on each calculator page:
 
 Each calculator needs its own. These are written to the query, not to the brand.
 
-| Calculator | Title tag | Meta description |
-|---|---|---|
-| CIS deduction | `CIS Deduction Calculator — 20% and 30% \| Klyara` | Work out CIS deductions both ways, with materials excluded. Free, no signup, no email wall. Built for UK builders and subcontractors. |
-| VAT + reverse charge | `VAT Reverse Charge Calculator for Construction \| Klyara` | Add or extract VAT, and check whether the domestic reverse charge applies to your job. Free tool for UK construction. |
-| Job margin | `Job Margin Calculator for Builders \| Klyara` | Put price, costs and days in — get your true margin and real day rate. Free, no email required. |
-| Day rate builder | `Day Rate Calculator — What Should You Charge? \| Klyara` | Work out what you actually need to charge per day once overheads, downtime and unpaid admin are in. Free. |
-| Late payment interest | `Late Payment Interest Calculator — UK B2B \| Klyara` | Calculate statutory interest at 8% over base plus the fixed compensation sum you're legally owed on overdue invoices. |
-| Retention tracker | `Construction Retention Tracker — Free Template \| Klyara` | Track every retention with its release date, both halves. Most firms find £4,000–£15,000 they'd written off. |
-| VAT threshold tracker | `VAT Registration Threshold Tracker \| Klyara` | See how close your rolling turnover is to the VAT registration threshold, before it catches you. |
-| Flat rate vs standard | `Flat Rate vs Standard VAT Calculator \| Klyara` | Compare the flat rate scheme against standard VAT for your figures and see which one actually wins. |
-| Deadline calendar | `UK Tax Deadline Calendar — CIS, VAT, MTD \| Klyara` | Every CIS, VAT, MTD and self assessment date, counted down. Free, no signup. |
-| Subbie take-home | `Subcontractor Take-Home Calculator — After CIS \| Klyara` | Turn your day rate into real money after CIS, tax and expenses. Built for UK subcontractors. |
-| True employee cost | `True Cost of an Employee Calculator — UK \| Klyara` | Salary isn't the cost. Add NI, pension, holiday, sick and downtime to see what a hire really costs. |
-| Name + domain finder | `Construction Business Name and Domain Generator \| Klyara` | Find a name for your building firm and check the domain in one go. Free. |
+**Every title below is finished with ` | Klyara`** — a space, a pipe, a space, then the brand. The
+suffix is left off the table cells on purpose: a pipe inside a Markdown table cell splits the row and
+breaks the table. The "Chars" column counts the finished title *including* the suffix, so paste the
+cell, add ` | Klyara`, and you are on the number shown. Everything is inside Google's ~60-character
+title and 150–160-character description windows.
+
+| Calculator | Title tag, brand suffix not shown | Chars | Meta description |
+|---|---|---|---|
+| CIS deduction | CIS Deduction Calculator — 20% and 30% | 47 | Work out CIS deductions both ways at 20% or 30%, with the materials split taken out first. Free, no signup, no email wall. For UK builders and subcontractors. |
+| VAT + reverse charge | VAT Reverse Charge Calculator for Construction | 55 | Add or extract VAT, then run the five tests to see whether the domestic reverse charge applies to the job. Free, no signup. Built for UK construction firms. |
+| Job margin | Job Margin Calculator for Builders | 43 | Put the price, the costs and the days in and get your true margin and your real day rate back out. Free, no email required. Built for UK building firms. |
+| Day rate builder | Day Rate Calculator — What Should You Charge? | 54 | Work out what you need to charge a day once overheads, downtime, holiday and unpaid admin are counted. Most trades undercharge. Free, no signup needed. |
+| Late payment interest | Late Payment Interest Calculator — UK B2B | 50 | Work out statutory interest at 8% over the Bank of England base rate, plus the fixed compensation sum you are owed on every late invoice. Free, no signup. |
+| Retention tracker | Construction Retention Tracker — Free Template | 55 | Track every retention on every job, both halves, with the release date beside it. Ask on the day it falls due, not months later. Free, no signup needed. |
+| VAT threshold tracker | VAT Registration Threshold Tracker | 43 | See how close your rolling twelve-month turnover is to the VAT registration threshold, month by month, before it catches you out. Free, no signup, no email. |
+| Flat rate vs standard | Flat Rate vs Standard VAT Calculator | 45 | Compare the VAT flat rate scheme against standard VAT on your own figures and see which one actually leaves you better off. Free, no signup, no email wall. |
+| Deadline calendar | UK Tax Deadline Calendar — CIS, VAT, MTD | 49 | Every CIS, VAT, MTD, PAYE and self assessment date for UK builders, counted down from today so nothing lands as a surprise. Free, no signup, no email wall. |
+| Subbie take-home | Subcontractor Take-Home Calculator — After CIS | 55 | Turn your day rate into the money that actually reaches the bank once CIS, tax, National Insurance and expenses are out. Free, no signup, for UK subcontractors. |
+| True employee cost | True Cost of an Employee Calculator — UK | 49 | Salary is not the cost. Add employer NI, pension, holiday, sick pay and unbilled downtime to see what your first hire really costs. Free, no email wall. |
+| Name + domain finder | Construction Business Name and Domain Generator | 56 | Find a name for your building firm and check whether the .co.uk domain is still free, in one go. Free, no signup, no email wall. For UK trades starting out. |
 
 **Why this matters more than it looks:** a *tool* is welcome in places a *service* gets removed.
 You can post "here's a free CIS calculator, no signup" in a subreddit or a trade forum where "here's
@@ -319,6 +353,10 @@ and the calculators are what makes it work.
 
 # 7. HowTo — for the quarter-end and verification guides
 
+Same caveat as the FAQ block: Google removed HowTo rich results in 2023, so this will not draw a
+carousel. It is still the cleanest way to tell a machine what the seven steps are, and AI answers
+read it. Add it, do not expect a listing change.
+
 When you publish the quarter-end checklist as a page:
 
 ```html
@@ -327,8 +365,8 @@ When you publish the quarter-end checklist as a page:
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "Quarter-end checklist for builders under Making Tax Digital",
-  "description": "Seven jobs, each under twenty minutes, to close an MTD quarter properly.",
-  "totalTime": "PT1H",
+  "description": "Seven jobs, none of them longer than twenty minutes, to close an MTD quarter properly.",
+  "totalTime": "PT2H",
   "step": [
     { "@type": "HowToStep", "position": 1, "name": "Connect the bank feed",
       "text": "Connect every business bank account to your software so transactions feed automatically rather than being exported and typed in." },
@@ -390,11 +428,12 @@ how to chase unpaid invoices builder · construction retention release
 
 ## Cluster 5 — Local *(the money cluster)*
 ```
-bookkeeper for builders [town] · cis accountant [town] · construction accountant [town]
-bookkeeper near me construction · accountant for subcontractors [town]
+bookkeeper for builders guildford · cis accountant guildford · construction accountant surrey
+bookkeeper near me construction · accountant for subcontractors woking · cis accountant farnham
+construction bookkeeper godalming
 ```
-**Gap:** you currently rank for none of these because there's no town on the site. This is where the
-£199–£329 clients come from. One local page plus the Google Business Profile does most of it.
+**Gap:** you rank for none of these because there is no town on the site. This is where the £199 and
+£329 clients come from. One Guildford page plus the Google Business Profile does most of it.
 
 ## Cluster 6 — Running the firm
 ```
@@ -408,7 +447,7 @@ first employee builder · construction cash flow
 
 | # | Page | Cluster | Why |
 |---|---|---|---|
-| 1 | Construction bookkeeping in [town] | Local | The only cluster with buying intent. Nothing else beats it. |
+| 1 | Construction bookkeeping in Guildford | Local | The only cluster with buying intent. Nothing else beats it. |
 | 2 | MTD for CIS subcontractors | MTD | Highest-intent long tail; the gross-income trap |
 | 3 | Gross payment status: the three tests | CIS | Content already written in the CIS pack |
 | 4 | End user declaration — free template | VAT | Template pages earn links passively |
@@ -428,18 +467,18 @@ not a writing job.
 # 10. The technical basics, in one list
 
 ```
-☐ Google Search Console — verify domain, submit sitemap
-☐ Google Analytics 4 — install, set "book a call" and "download guide" as conversions
-☐ Bing Webmaster Tools — import from GSC, two minutes
-☐ Meta Pixel — install now, zero spend
-☐ LinkedIn Insight Tag — install now
-☐ robots.txt — confirm nothing important is blocked
-☐ XML sitemap — confirm every calculator URL is in it
-☐ Canonical tags on every page
-☐ Per-page og:image (use assets/posts/*.png)
-☐ Every image has alt text — currently unchecked
-☐ Core Web Vitals — run PageSpeed Insights on homepage, MTD page and one calculator
-☐ Mobile check — most of this audience is on a phone, on site, in daylight
-☐ HTTPS + HSTS
-☐ 404 page that routes to the tools and the guide rather than dead-ending
+[ ] Google Search Console — verify domain, submit sitemap
+[ ] Google Analytics 4 — install, set "book a call" and "download guide" as conversions
+[ ] Bing Webmaster Tools — import from GSC, two minutes
+[ ] Meta Pixel — install now, zero spend
+[ ] LinkedIn Insight Tag — install now
+[ ] robots.txt — confirm nothing important is blocked
+[ ] XML sitemap — confirm every calculator URL is in it
+[ ] Canonical tags on every page
+[ ] Per-page og:image (use assets/posts/*.png)
+[ ] Every image has alt text — currently unchecked
+[ ] Core Web Vitals — run PageSpeed Insights on homepage, MTD page and one calculator
+[ ] Mobile check — most of this audience is on a phone, on site, in daylight
+[ ] HTTPS + HSTS
+[ ] 404 page that routes to the tools and the guide rather than dead-ending
 ```

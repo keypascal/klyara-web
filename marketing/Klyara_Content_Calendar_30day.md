@@ -5,20 +5,36 @@
 
 ## The launch date decision
 
-**Start Monday 7 September 2026. Not 31 August.**
+**Day 1 is Monday 14 September 2026.**
 
-31 August 2026 is the Summer Bank Holiday. Half your audience is off, B2B engagement on a bank
-holiday Monday is the worst of the year, and you'd spend your single best post — the launch — on a
-dead day. The week of 1–4 September is also the school-return week, which is noisy.
+Setup runs Tuesday 1 – Sunday 13 September. Nothing client-facing goes out before 1 September, and
+the first post of the campaign is the launch post on the 14th.
 
-7 September also lines the campaign up with something better: **the MTD quarter ending 5 October**,
-with its filing deadline of **7 November**. That gives the whole 30 days a real countdown to build
-towards instead of a manufactured one.
+Two reasons that date is the right one. The week of 1–4 September is school-return week and it is
+noisy. And 14 September puts the whole campaign on top of the statutory calendar rather than beside
+it: the CIS deadline lands inside launch week, the MTD quarter closes on day 22, and the campaign
+signs off pointing at the 19 October return and the 7 November update.
 
-Day 1 = Mon 7 Sep 2026. Day 30 = Tue 6 Oct 2026.
+Day 1 = Mon 14 Sep 2026. Day 30 = Tue 13 Oct 2026.
 
-If you insist on launching 31 August, shift every date in this document back by seven days. Nothing
-else changes.
+**Day N here is the campaign day, and it is the same Day N as in `docs/16`, the day-by-day 90-day
+plan — one shared numbering, one shared date. Day 1 is Monday 14 September in both, Day 30 is
+Tuesday 13 October in both, and there is no offset anywhere between them.** A `docs/03 Day N`
+citation in `docs/16` therefore points at the identically numbered and identically dated day here.
+Where `docs/16` cites a different day number from the one it sits on, that is deliberate and it says
+so in the line: it is pointing back or forward at a post whose home is another day. Do not treat any
+such citation as evidence of a numbering offset. The superseded `Klyara_Day_By_Day_90_Day_Plan.md`
+draft in the source folder carries its own drifted day numbers — do not use them.
+
+Statutory dates do not move. If the launch date ever moves again, re-anchor the days to the dates
+below rather than shifting everything by a week.
+
+| Statutory date | Falls on | Campaign day |
+|---|---|---|
+| CIS return and payment, month to 5 Sep | Sat 19 September (work to Fri the 18th) | Day 5 / Day 6 |
+| MTD quarter 6 Jul – 5 Oct closes | Mon 5 October | Day 22 |
+| CIS return and payment, month to 5 Oct | Mon 19 October | six days after Day 30 |
+| MTD quarterly update due | Sat 7 November (work to Fri the 6th) | month two |
 
 ---
 
@@ -26,11 +42,11 @@ else changes.
 
 | Week | Dates | Theme | Emotional job |
 |---|---|---|---|
-| **1** | Mon 7 – Sun 13 Sep | **"We exist, and here's why"** | Introduce Craig. Establish the specialism. Make MTD real. |
-| **2** | Mon 14 – Sun 20 Sep | **"CIS and the reverse charge"** | Demonstrate depth. Be the one who explains it properly. |
-| **3** | Mon 21 – Sun 27 Sep | **"Getting paid"** | Hit the pain that isn't tax. Widen the audience. |
-| **4** | Mon 28 Sep – Sun 4 Oct | **"Quarter end"** | Urgency. The 5 October quarter close, the 7 November deadline. |
-| **5** | Mon 5 – Tue 6 Oct | **"Quarter closed. Now what."** | Convert the attention into waitlist and calls. |
+| **1** | Mon 14 – Sun 20 Sep | **"We exist, and here's why"** | Introduce Craig. Establish the specialism. Make MTD real. The CIS deadline lands on day 5. |
+| **2** | Mon 21 – Sun 27 Sep | **"CIS and the reverse charge"** | Demonstrate depth. Friday's MTD dates post is the bridge into quarter end. |
+| **3** | Mon 28 Sep – Sun 4 Oct | **"Quarter end"** | Urgency. A seven-day countdown to the 5 October close. |
+| **4** | Mon 5 – Sun 11 Oct | **"Quarter closed. Now get paid."** | Convert the attention, then widen the audience past tax. |
+| **5** | Mon 12 – Tue 13 Oct | **"The next deadline."** | Hand the audience to month two. The 19th, then 7 November. |
 
 ## Weekly rhythm (repeat every week)
 
@@ -45,6 +61,9 @@ else changes.
 | **Sun** | Week-ahead deadlines post | LinkedIn + X + GBP |
 | **Weekly** | 1 forum/Reddit contribution (no link) | Rotating |
 | **Fortnightly** | Newsletter | Email |
+
+Week 4 is the one exception. Monday 5 October belongs to the quarter close, so the "getting paid"
+anchor runs on Tuesday the 6th and the rest of that week shifts with it.
 
 ## Hashtag sets — use these, don't improvise
 
@@ -70,18 +89,21 @@ X (1–2 max):
 ```
 Example: `https://klyara.com/guide.html?utm_source=linkedin&utm_medium=social&utm_campaign=launch30&utm_content=day01`
 
-**⛔ HOLD markers:** posts marked ⛔ contain a direct "hire us" CTA and should not go out until AML
-supervision is confirmed. Swap the CTA for the waitlist version given underneath each one.
+**⛔ HOLD markers:** posts marked `⛔ HOLD` contain a direct "hire us" CTA and must not go out until
+AML supervision is granted — the ICB practice licence, applied Tue 1 Sep, 28 days, expected around
+Tue 29 Sep 2026. Everything carrying the marker switches on the day the licence number is in hand,
+together. Until then, swap the CTA for the waitlist version written underneath each one. **The marker
+is defined once, in full, in `docs/00-start-here.md §⛔ HOLD`** — this note does not redefine it.
 
 ---
 ---
 
 # WEEK 1 — "We exist, and here's why"
-### Mon 7 – Sun 13 September
+### Mon 14 – Sun 20 September
 
 ---
 
-## DAY 1 — Monday 7 September · LAUNCH
+## DAY 1 — Monday 14 September · LAUNCH
 
 ### 🔷 LinkedIn — Craig's personal profile *(the most important post of the month — pin it)*
 
@@ -134,7 +156,7 @@ Klyara is live.
 The back office for small construction firms — bookkeeping, CIS returns, VAT reverse charge coding,
 payroll and Making Tax Digital quarterly filing, for one fixed monthly fee.
 
-Construction only. Plans from £59 + VAT a month.
+Construction only. Plans from £59 ex VAT a month.
 
 Over the next 30 days we're publishing everything we know about CIS, the reverse charge and MTD.
 Free, no email required.
@@ -185,7 +207,7 @@ Free MTD guide and 12 free calculators (job margin, CIS, VAT, day rate, deadline
 Klyara is now open — the back office for small construction firms.
 
 Bookkeeping, CIS returns, VAT reverse charge coding, payroll and Making Tax Digital quarterly filing,
-for one fixed monthly fee from £59 + VAT.
+for one fixed monthly fee from £59 ex VAT.
 
 Construction specialists, not general accountants.
 
@@ -199,11 +221,7 @@ Klyara is open. 🧱
 
 The back office for small building firms.
 
-Bookkeeping ✅
-CIS returns ✅
-VAT reverse charge ✅
-Payroll ✅
-Making Tax Digital quarterly filing ✅
+Bookkeeping. CIS returns. VAT reverse charge. Payroll. Making Tax Digital quarterly filing.
 
 One fixed monthly fee. Construction only.
 
@@ -212,7 +230,7 @@ You run the jobs. We run the rest.
 Over the next 30 days we're posting everything we know about CIS, reverse charge and MTD — free, no
 email needed.
 
-Free guide + 12 calculators — link in bio 🔗
+Free guide and 12 calculators — link in bio.
 
 #ukbuilders #tradesmenuk #cis #constructionuk #selfemployeduk #bookkeeping #makingtaxdigital
 #buildersuk #subcontractor #ukbusiness
@@ -220,14 +238,14 @@ Free guide + 12 calculators — link in bio 🔗
 
 ---
 
-## DAY 2 — Tuesday 8 September · SHORT VIDEO
+## DAY 2 — Tuesday 15 September · SHORT VIDEO
 
 **Video:** `01-mtd-caught-you.mp4` (34s, vertical) — script and rendered file in the video pack.
 
 ### 🔷 TikTok / Reels / Shorts caption
 ```
-If you're self-employed and you invoiced more than £50,000 last year, HMRC now wants an update every
-three months. Not once a year. Four times.
+Invoiced more than £50,000 last year? HMRC now wants an update every three months. Not once a year.
+Four times.
 
 And it's measured on your GROSS invoices — before CIS comes off.
 
@@ -253,7 +271,7 @@ You're over the £50k threshold and in MTD. Your bank statement says otherwise.
 
 ---
 
-## DAY 3 — Wednesday 9 September · CAROUSEL
+## DAY 3 — Wednesday 16 September · CAROUSEL
 
 **Asset:** `carousel-mtd-6slides/` — 6 slides, rendered.
 
@@ -268,7 +286,8 @@ Slide 4: What a "quarterly update" actually is
 Slide 5: The four dates you need
 Slide 6: What happens if you ignore it
 
-Save this one — the next deadline is 7 November and it comes round faster than you'd think.
+Save it. The quarter closes on 5 October and the update is due 7 November. Both arrive faster than
+you'd like.
 
 Free 15-page MTD guide, no email needed — link in bio.
 
@@ -290,7 +309,7 @@ Free 15-page guide if you want the long version: klyara.com
 
 ---
 
-## DAY 4 — Thursday 10 September · LONG VIDEO
+## DAY 4 — Thursday 17 September · LONG VIDEO
 
 **YouTube:** *"Making Tax Digital for Builders: Are You In? (2026 rules, explained in 7 minutes)"*
 Full script in the video pack.
@@ -343,7 +362,7 @@ and BEFORE CIS deductions.
 That last part is what catches subcontractors. Your gross invoices are the number HMRC uses, not what
 landed in the bank.
 
-Link in the comments.
+Seven-minute video in the first comment. If you'd rather just ask me, ask me.
 
 #MakingTaxDigital #CIS #Construction
 ```
@@ -351,113 +370,107 @@ Link in the comments.
 
 ---
 
-## DAY 5 — Friday 11 September · PRACTICAL
+## DAY 5 — Friday 18 September · PRACTICAL ⚠️ CIS DEADLINE TOMORROW
 
-### 🔷 X thread
+### 🔷 X
 ```
-1/ Every MTD date a self-employed builder needs, in one post. Screenshot it.
+Reminder: CIS returns for the month to 5 September are due TOMORROW, 19 September.
 
-2/ Quarterly update periods (standard):
-6 Apr – 5 Jul
-6 Jul – 5 Oct
-6 Oct – 5 Jan
-6 Jan – 5 Apr
+£100 the moment you're late. Not at the end of the month — the moment.
 
-3/ Deadlines for those updates:
-7 August
-7 November
-7 February
-7 May
+If you're a contractor and you paid a single subbie in that window, you file. Even if it's nil, you
+file a nil return.
 
-One month and two days after each quarter ends. Every time.
-
-4/ Final declaration — the one that replaces your Self Assessment return:
-31 January after the tax year ends.
-
-Same date you already know. That bit hasn't changed.
-
-5/ You can elect to use calendar quarters instead (30 Jun / 30 Sep / 31 Dec / 31 Mar).
-The deadlines stay the same. It just makes the bookkeeping tidier if your records run to month end.
-
-6/ The next one that matters: the quarter ending 5 October 2026, due 7 November 2026.
-
-That's eight weeks away.
-
-7/ If you haven't got digital records running yet, that's the deadline to work back from — not
-January.
+Twenty minutes now beats £100 and the letter.
 ```
 
-### 🔷 Facebook
+### 🔷 Facebook + GBP
 ```
-Every MTD date a self-employed builder needs, on one graphic. Save it to your phone. 📅
+⚠️ CIS returns due TOMORROW — Saturday 19 September — for the month to 5 September.
 
-Quarters end: 5 Jul · 5 Oct · 5 Jan · 5 Apr
-Updates due: 7 Aug · 7 Nov · 7 Feb · 7 May
-Final declaration: 31 Jan
+Paid a subcontractor in that window? You file.
+Paid nobody? You still file a nil return.
 
-Next one up: quarter ends 5 October, due 7 November. Eight weeks.
+£100 penalty the day you're late.
 
-We built 12 free calculators for exactly this stuff — CIS deductions, VAT, job margin, day rate and a
-deadline checker. No email needed: klyara.com
+If you've got a nil month and you're not sure whether to bother — bother. Nil returns are two minutes
+and skipping them is the single most common £100 anyone in construction pays.
+
+Not sure what you should have deducted? Free CIS calculator, no email: klyara.com/tools.html
 ```
 
----
-
-## DAY 6 — Saturday 12 September · HUMAN
-
-### 🔷 Instagram Stories (3 frames) + Facebook
+### 🔷 LinkedIn (Craig)
 ```
-Saturday. Which for a lot of you means the paperwork you didn't do on Tuesday.
+CIS returns due tomorrow, 19 September, for the month to 5 September.
 
-Here's the honest test of whether your system is working:
+Two things people get wrong at this exact point in the month:
 
-Can you tell me, right now, without opening anything — what your gross profit was on the last job you
-finished?
+1. NIL RETURNS STILL HAVE TO BE FILED.
+If you're registered as a contractor and you paid no subcontractors that month, you file a nil
+return. Not filing it is a £100 penalty for the sake of two minutes. It's the most common penalty in
+the scheme.
 
-If the answer's "roughly" or "I'd have to check", that's not a you problem. That's a system problem.
-Most builders find out whether a job made money about four months after it finished, which is about
-three months too late to do anything about it.
+2. If you've genuinely stopped using subcontractors, tell HMRC to make the scheme inactive.
+Otherwise you're filing nil returns forever, and eventually you'll forget one.
 
-That's fixable. It's mostly just getting the receipts in as they happen instead of in a carrier bag
-in February.
+Go and do it now if it isn't done. It's Friday, and tomorrow is a Saturday, and we both know how that
+ends.
 
-Free job margin calculator if you want to check the last one: klyara.com
+#CIS #Construction
 ```
 
 ---
 
-## DAY 7 — Sunday 13 September · WEEK AHEAD
+## DAY 6 — Saturday 19 September · LIGHT ⚠️ CIS DEADLINE TODAY
+
+### 🔷 Instagram Stories + Facebook
+```
+A genuine question, and I'd like actual answers.
+
+What's the single worst bit of admin in your week?
+
+Not the biggest. The worst. The one you'd pay to never do again.
+
+I'll go first: for most of the firms I work with it isn't the tax. It's chasing invoices. Ringing a
+main contractor for the fourth time about money you earned nine weeks ago, and being made to feel
+like you're the problem.
+
+I'm giving that a whole week in October.
+
+What's yours? 👇
+
+(And if you're a contractor: CIS returns for the month to 5 September are due today. Twenty minutes.)
+```
+
+---
+
+## DAY 7 — Sunday 20 September · WEEK AHEAD
 
 ### 🔷 LinkedIn + X + GBP
 ```
-Week ahead for anyone running a building firm — Monday 14 September.
+Week ahead — Monday 21 September.
 
-📌 Saturday 19 September — CIS return deadline for the month to 5 September. It falls on a
-weekend, so work to Friday the 18th. Late filing is £100 from
-day one, and it goes up.
+📌 CIS returns for the month to 5 September were due yesterday, Saturday the 19th. If you missed it,
+file today. The penalty is fixed at £100 until two months, so filing late still beats filing later.
 
-📌 Also 19 September — CIS and PAYE payment due if you pay by post. Tuesday the 22nd if you pay
-electronically.
+📌 Tuesday 22 September — electronic payment deadline for CIS and PAYE for the month to 5 September.
 
-📌 22 working days until the MTD quarter ends on 5 October.
+📌 15 days until the MTD quarter ends on 5 October.
 
-Nothing else urgent this week. Use it.
-
-Next week I'm doing CIS properly — verification, the 20/30/0 rates, what counts as materials, and the
+This week: CIS properly. Verification, the 20/30/0 rates, what counts as materials, and the
 retentions question I get asked more than any other.
 
 #CIS #Construction #UKConstruction
 ```
 
 ---
----
 
 # WEEK 2 — "CIS and the reverse charge"
-### Mon 14 – Sun 20 September
+### Mon 21 – Sun 27 September
 
 ---
 
-## DAY 8 — Monday 14 September · ANCHOR
+## DAY 8 — Monday 21 September · ANCHOR
 
 ### 🔷 LinkedIn (Craig)
 ```
@@ -534,7 +547,7 @@ free, for up to a year.
 We're doing CIS properly all week. Ask anything in the comments — genuinely, ask. I'd rather answer
 it here than have you pay £100 to find out.
 
-Free CIS calculator: klyara.com
+Free CIS calculator: klyara.com/tools.html
 ```
 
 ### 🔷 GBP post
@@ -543,14 +556,14 @@ CIS returns are due by the 19th of every month. Late filing starts at £100 and 
 of your deductions by six months.
 
 Klyara files CIS returns for construction firms every month, on time, as part of a fixed monthly fee
-from £199 + VAT.
+from £199 ex VAT.
 
 Free CIS deduction calculator at klyara.com.
 ```
 
 ---
 
-## DAY 9 — Tuesday 15 September · SHORT VIDEO
+## DAY 9 — Tuesday 22 September · SHORT VIDEO
 
 **Video:** `02-cis-20-vs-30.mp4` (28s)
 
@@ -567,12 +580,14 @@ money. Not to him. You've already paid him.
 
 Verify before the first payment. Every time. Takes two minutes.
 
+Free CIS calculator in the bio if you want to check what you should have deducted.
+
 #ukbuilders #cis #tradesmen #tax #construction
 ```
 
 ---
 
-## DAY 10 — Wednesday 16 September · CAROUSEL
+## DAY 10 — Wednesday 23 September · CAROUSEL
 
 **Asset:** `carousel-cis-7slides/`
 
@@ -598,7 +613,7 @@ Save it. Send it to whoever does your invoices.
 
 ---
 
-## DAY 11 — Thursday 17 September · LONG VIDEO
+## DAY 11 — Thursday 24 September · LONG VIDEO
 
 **YouTube:** *"The VAT Domestic Reverse Charge for Construction, Explained Once and Properly"*
 
@@ -676,104 +691,520 @@ Free checker in the comments.
 
 ---
 
-## DAY 12 — Friday 18 September · PRACTICAL ⚠️ CIS DEADLINE TOMORROW
+## DAY 12 — Friday 25 September · PRACTICAL
+
+### 🔷 X thread
+```
+1/ Every MTD date a self-employed builder needs, in one post. Screenshot it.
+
+2/ Quarterly update periods (standard):
+6 Apr – 5 Jul
+6 Jul – 5 Oct
+6 Oct – 5 Jan
+6 Jan – 5 Apr
+
+3/ Deadlines for those updates:
+7 August
+7 November
+7 February
+7 May
+
+One month and two days after each quarter ends. Every time.
+
+4/ Final declaration — the one that replaces your Self Assessment return:
+31 January after the tax year ends.
+
+Same date you already know. That bit hasn't changed.
+
+5/ You can elect to use calendar quarters instead (30 Jun / 30 Sep / 31 Dec / 31 Mar).
+The deadlines stay the same. It just makes the bookkeeping tidier if your records run to month end.
+
+6/ The next one that matters: the quarter ending 5 October 2026, due 7 November 2026.
+
+That's ten days away.
+
+7/ If you haven't got digital records running yet, that's the deadline to work back from — not
+January.
+```
+
+### 🔷 Facebook
+```
+Every MTD date a self-employed builder needs, on one graphic. Save it to your phone. 📅
+
+Quarters end: 5 Jul · 5 Oct · 5 Jan · 5 Apr
+Updates due: 7 Aug · 7 Nov · 7 Feb · 7 May
+Final declaration: 31 Jan
+
+Next one up: quarter ends 5 October, due 7 November. Ten days.
+
+We built 12 free calculators for exactly this stuff — CIS deductions, VAT, job margin, day rate and a
+deadline checker. No email needed: klyara.com/tools.html
+```
+
+---
+
+## DAY 13 — Saturday 26 September · HUMAN
+
+### 🔷 Instagram Stories (3 frames) + Facebook
+```
+Saturday. Which for a lot of you means the paperwork you didn't do on Tuesday.
+
+Here's the honest test of whether your system is working:
+
+Can you tell me, right now, without opening anything — what your gross profit was on the last job you
+finished?
+
+If the answer's "roughly" or "I'd have to check", that's not a you problem. That's a system problem.
+Most builders find out whether a job made money about four months after it finished, which is about
+three months too late to do anything about it.
+
+That's fixable. It's mostly just getting the receipts in as they happen instead of in a carrier bag
+in February.
+
+Free job margin calculator if you want to check the last one: klyara.com/tools.html
+```
+
+---
+
+## DAY 14 — Sunday 27 September · WEEK AHEAD ⚠️ QUARTER END WEEK NEXT
+
+### 🔷 LinkedIn + X + GBP
+```
+Week ahead — Monday 28 September. This one matters.
+
+📌 Monday 5 October — the MTD quarterly period ENDS. If you're in MTD for Income Tax, everything from
+6 July to 5 October has to be in digital records.
+
+📌 Saturday 7 November — that quarter's update is due to HMRC.
+
+📌 Monday 19 October — CIS returns for the month to 5 October.
+
+If your records for July, August and September are currently a bag in the van, this is the week to
+deal with it. Not November.
+
+All week I'm posting a quarter-end checklist — one thing a day, each takes under twenty minutes.
+
+#MakingTaxDigital #CIS #Construction
+```
+
+---
+
+# WEEK 3 — "Quarter end"
+### Mon 28 September – Sun 4 October
+
+*This is the conversion week. Everything before it earned the right to ask.*
+
+---
+
+## DAY 15 — Monday 28 September · ANCHOR — COUNTDOWN STARTS
+
+### 🔷 LinkedIn (Craig)
+```
+Seven days until the MTD quarter closes on 5 October.
+
+If you're in Making Tax Digital for Income Tax — sole trader or landlord, qualifying income over
+£50,000 — then everything from 6 July to 5 October needs to be in digital records, and the update
+goes to HMRC by 7 November.
+
+Here's the honest position most people are in right now: July and August are a folder of photos on a
+phone, and September is still in the van.
+
+That's recoverable in a week. It is not recoverable on 6 November.
+
+So, one job a day for the next seven days. Each under twenty minutes.
+
+Day 1 (today): BANK
+Get every business bank account connected to your software. Not exported — connected, so it feeds
+automatically. If you're still typing statements in by hand, this single change saves you more time
+than everything else on this list put together.
+
+I'll post one a day. By Sunday you'll be closed off and ahead of the deadline instead of six weeks
+behind it.
+
+If you don't know whether you're even in MTD — qualifying income is your GROSS self-employment and
+property income added together, before expenses and before CIS deductions. Not what landed in the
+bank. If that number was over £50,000 for 2024/25, you're in.
+
+Ask me in the comments. I'll tell you straight.
+
+#MakingTaxDigital #CIS #Construction #UKConstruction
+```
 
 ### 🔷 X
 ```
-Reminder: CIS returns for the month to 5 September are due TOMORROW, 19 September.
+7 days until the MTD quarter closes (5 October). Update due 7 November.
 
-£100 the moment you're late. Not at the end of the month — the moment.
+If July and August are currently a bag in the van, that's fixable this week and not fixable in
+November.
 
-If you're a contractor and you paid a single subbie in that window, you file. Even if it's nil, you
-file a nil return.
+One job a day, each under 20 minutes. Starting today: connect your bank feed.
 
-Twenty minutes now beats £100 and the letter.
+I'll post the rest daily.
 ```
 
 ### 🔷 Facebook + GBP
 ```
-⚠️ CIS returns due TOMORROW — Saturday 19 September — for the month to 5 September.
+⏳ Seven days until the MTD quarter ends — Monday 5 October.
 
-Paid a subcontractor in that window? You file.
-Paid nobody? You still file a nil return.
+Everything from 6 July to 5 October has to be in digital records, and the update is due to HMRC by
+7 November.
 
-£100 penalty the day you're late.
+We're posting one quarter-end job a day this week. Each takes under twenty minutes.
 
-If you've got a nil month and you're not sure whether to bother — bother. Nil returns are two minutes
-and skipping them is the single most common £100 anyone in construction pays.
+TODAY: connect your bank feed. Properly connected, not exported and typed in. It's the single biggest
+time-saver there is and most people still haven't done it.
+
+Follow along and you'll be closed off by Sunday.
+```
+
+---
+
+## DAY 16 — Tuesday 29 September · CHECKLIST DAY 2 + SHORT VIDEO
+
+**Video:** `04-quarter-end-countdown.mp4` (29s)
+
+### 🔷 All channels
+```
+Quarter-end job 2 of 7: RECEIPTS.
+
+Every photo on your phone, every crumpled thing in the van, every "I'll remember what that was for" —
+in, today.
+
+Do it as one job while the kettle's on. Twenty minutes for three months of receipts, because you're
+only entering the ones that aren't already on the bank feed.
+
+The ones you'll lose money on if you skip: fuel, parking, tools under £100, materials paid cash,
+trade counter purchases on a personal card, phone, van insurance, PPE, and anything bought on a
+Sunday because a job needed it.
+
+Missed receipts aren't a compliance problem. They're just tax you didn't need to pay.
+
+Job 3 tomorrow.
+```
+
+### 🔷 TikTok / Reels / Shorts caption
+```
+Every receipt photo sat in your camera roll is money you're about to hand HMRC for no reason.
+
+Fuel. Parking. Tools under £100. Trade counter stuff on the personal card. PPE. The Sunday emergency
+Screwfix run.
+
+Twenty minutes with the kettle on and it's done.
+
+Quarter ends 5 October.
+
+#ukbuilders #tradesmen #tax #selfemployed #cis
+```
+
+---
+
+## DAY 17 — Wednesday 30 September · CHECKLIST DAY 3 + CAROUSEL
+
+**Asset:** `carousel-quarterend-8slides/`
+
+### 🔷 All channels
+```
+Quarter-end job 3 of 7: THE MIXED-USE STUFF.
+
+The things you pay for personally that are partly business, and that most builders either claim
+wrongly or don't claim at all.
+
+VAN — if it's a genuine commercial vehicle and private use is incidental, it's a business cost. Keep
+it that way. Don't start school runs in it.
+
+PHONE — split it. If it's 70% business, claim 70%. Pick a defensible number and be consistent.
+
+HOME OFFICE — if you do the paperwork at the kitchen table, HMRC's simplified flat rate is the
+easiest defensible claim there is. Not huge, but it's yours and it takes no records.
+
+TOOLS — most are an allowable cost. Larger items may need capital allowances rather than a
+straight deduction. If it's over about £1,000 and it'll last years, flag it rather than guessing.
+
+CLOTHING — protective gear and branded workwear: yes. Ordinary jeans and boots you also wear down the
+pub: no, however muddy they get.
+
+TRAINING — keeping an existing qualification current: usually fine. A brand new qualification that
+takes you into new work: usually not.
+
+The rule that keeps you out of trouble: claim what's genuinely business, be consistent, and write down
+why you picked the split. HMRC has never once objected to a defensible number that was applied
+consistently.
+
+Job 4 tomorrow.
+```
+
+### 🔷 Instagram carousel caption
+```
+Quarter-end: the 8-slide checklist. 👉
+
+1. Connect the bank feed
+2. Receipts in
+3. Mixed-use costs — van, phone, home, tools
+4. Reconcile every account
+5. Match CIS deductions to statements
+6. Check the reverse charge coding
+7. Chase what's owed before quarter end
+8. Look at the number
+
+Quarter ends Monday 5 October. Update due 7 November.
+
+Save this and work through it. One a day, under 20 minutes each.
+
+#makingtaxdigital #cis #ukbuilders #constructionuk #selfemployeduk #tradesmenuk #tax #bookkeeping
+#subcontractor #ukbusiness
+```
+
+---
+
+## DAY 18 — Thursday 1 October · CHECKLIST DAY 4 + LONG VIDEO
+
+**YouTube:** *"Quarter-End in Under an Hour: The MTD Checklist for Builders"*
+
+### 🔷 All channels
+```
+Quarter-end job 4 of 7: RECONCILE.
+
+Every business account, every card, matched to the bank feed. Zero unmatched transactions.
+
+This is the boring one and it's the one that matters, because an unreconciled account means your
+figures are wrong and you don't yet know which direction.
+
+What you're looking for:
+- Transactions on the feed with nothing matched to them
+- Payments in you can't identify (that's usually a customer who paid and you never marked the invoice)
+- Duplicates from a manual entry AND a bank feed for the same thing
+- Anything personal that's gone through the business account
+
+That last one — just recategorise it as drawings and move on. Everyone does it. It only becomes a
+problem when it's left as an unexplained business cost.
+
+If you find a payment in that you can't identify, don't leave it. Nine times out of ten it's an
+invoice you'd have chased next week for money you already had.
+
+Job 5 tomorrow: CIS statements.
+```
+
+### 🔷 YouTube description
+```
+The full quarter-end routine for a small building firm, done in under an hour. Seven jobs, in order,
+with the specific things to look for at each step.
+
+Written for MTD for Income Tax quarterly updates, but it's the same routine whether you're filing
+quarterly or annually.
+
+00:00 Why quarter-end is now a real event
+00:50 1. Bank feeds — connect, don't export
+02:00 2. Receipts — the ones people lose money on
+03:30 3. Mixed-use costs — van, phone, home, tools, clothing
+05:15 4. Reconciling — zero unmatched, and what to look for
+06:50 5. CIS deductions vs subcontractor statements
+08:20 6. Reverse charge coding — the check that takes 2 minutes
+09:30 7. Chasing before quarter end
+10:20 The one number to look at when you're done
+
+🧮 Free calculators: klyara.com/tools.html
+📘 Free MTD guide: klyara.com/guide.html
+
+#MakingTaxDigital #CIS #Construction
+```
+
+---
+
+## DAY 19 — Friday 2 October · CHECKLIST DAY 5
+
+### 🔷 All channels
+```
+Quarter-end job 5 of 7: CIS RECONCILIATION.
+
+This is the one that quietly costs subcontractors thousands, so read it properly.
+
+IF YOU'RE A SUBCONTRACTOR:
+Every contractor who deducted CIS from you must give you a payment and deduction statement, within 14
+days of the end of the tax month.
+
+Get them all out. Add up the deductions. Now compare that total to what your own records say was
+taken.
+
+They will not match. They never do. Common causes: a contractor deducted 30% because they never
+verified you, a contractor deducted on materials they shouldn't have, or a statement was never sent
+at all.
+
+Every pound of CIS deducted is a pound already paid toward your tax bill. If you can't evidence it,
+you can't claim it, and you'll pay it twice.
+
+Chase the missing statements NOW, while the contractor still remembers the job. In February they
+won't.
+
+IF YOU'RE A CONTRACTOR:
+Check you issued a statement to every subbie you deducted from. It's a legal obligation, not a
+courtesy, and it's a penalty if you don't.
+
+Also check your verification records. Anyone you deducted 20% from — can you show you verified them?
+If not, HMRC's position is you should have deducted 30%, and they will come to you for the
+difference.
+
+Free CIS calculator: klyara.com/tools.html
+
+Job 6 tomorrow.
+```
+
+---
+
+## DAY 20 — Saturday 3 October · CHECKLIST DAY 6
+
+### 🔷 All channels
+```
+Quarter-end job 6 of 7: THE REVERSE CHARGE CHECK. Two minutes.
+
+Open your last ten sales invoices. For each one, answer:
+
+Was this construction work under CIS? Yes/No
+Is the customer VAT registered? Yes/No
+Is the customer CIS registered? Yes/No
+Did the customer confirm IN WRITING they're an end user? Yes/No
+
+If the first three are yes and the fourth is no → reverse charge applies. You should NOT have charged
+VAT.
+
+If you charged VAT when you shouldn't have, you've collected money that isn't yours and you'll owe it
+to HMRC anyway. Fix it with a credit note and reissue.
+
+If you DIDN'T charge VAT when you should have — because your customer is actually an end user and
+told you so — you owe HMRC that VAT out of your own pocket unless you can go back and charge it.
+
+Now do the same on your last ten purchase invoices. Did a subbie charge you VAT on a reverse-charge
+supply? If so, you can't reclaim it. Send it back.
+
+Two minutes, ten invoices. It's the single highest-value two minutes in this whole checklist.
+
+Free reverse charge checker: klyara.com/tools.html
+
+Last job tomorrow.
+```
+
+---
+
+## DAY 21 — Sunday 4 October · CHECKLIST DAY 7 — THE ASK
+
+### 🔷 LinkedIn (Craig) — the conversion post ⛔ HOLD variant below
+```
+Quarter-end job 7 of 7: LOOK AT THE NUMBER.
+
+Not the turnover. Everyone knows their turnover. It's the number people quote in the pub and it tells
+you almost nothing.
+
+Look at these four instead:
+
+1. GROSS MARGIN BY JOB. Which jobs actually made money. Not which felt busy.
+2. WHAT YOU'RE OWED, by age. Under 30 days, 30–60, 60–90, over 90. The over-90 column is the one.
+3. RETENTIONS OUTSTANDING, with release dates.
+4. WHAT'S IN THE BANK versus what's due out in the next 30 days.
+
+That's the whole dashboard. Four numbers. If you know those four on the first of every month, you're
+running a business. If you don't, you're doing a job that happens to have your name on the van.
+
+The quarter closes tomorrow — 5 October. The update is due 7 November.
+
+That's the end of the checklist. Thank you for following it — the response to this week has been
+well beyond what I expected for a firm that's three weeks old.
+
+One last thing, and then I'll go back to just posting useful stuff.
+
+I've spent this month explaining what the back office of a building firm should look like. Klyara is
+me doing it for you: bookkeeping, CIS returns, reverse charge coding, payroll and MTD quarterly
+filing, for a fixed monthly fee from £59 ex VAT.
+
+⛔ HOLD VERSION — use this until AML supervision is granted:
+"We open for clients shortly, and I'm keeping the founding rate for the first ten firms who join the
+list. No payment, no commitment — you go on a list and I call you when we open. If you'd rather just
+keep reading the free stuff, that's genuinely fine too. klyara.com"
+
+✅ POST-AML VERSION — swap to this once supervised:
+"If you want that off your plate, book a free discovery call. Fifteen minutes, I'll tell you what your
+situation actually needs, and if that's nothing, I'll tell you that too. klyara.com"
+
+#MakingTaxDigital #CIS #Construction #SmallBusinessUK
+```
+
+### 🔷 X + Facebook + Instagram + GBP
+```
+Quarter-end job 7 of 7: look at the number.
+
+Not turnover. These four:
+
+→ Gross margin by job
+→ What you're owed, by age
+→ Retentions outstanding, with release dates
+→ Bank balance vs what's due out in 30 days
+
+Know those four on the 1st of every month and you're running a business.
+
+Quarter closes tomorrow. Update due 7 November.
+
+That's the checklist done. If you want it as one page, it's on the site — free, no email.
+klyara.com
+```
+
+---
+
+# WEEK 4 — "Quarter closed. Now get paid."
+### Mon 5 – Sun 11 October
+
+---
+
+## DAY 22 — Monday 5 October · QUARTER END DAY
+
+### 🔷 All channels
+```
+The MTD quarter closes today.
+
+6 July to 5 October is now a closed period. Nothing else goes in it.
+
+What happens next:
+📌 The quarterly update is due by 7 November. That's 33 days.
+📌 The next quarter runs 6 October to 5 January, due 7 February.
+📌 The final declaration for the year is 31 January, same as always.
+
+If you worked through last week's checklist, you're done. Genuinely done, five weeks before the
+deadline, with nothing left to do in November.
+
+If you didn't: you've got 33 days, and it's a weekend's work rather than a crisis. Start with the
+bank feed. Everything else follows from it.
+
+The full seven-step checklist is on the site as one page. Free, no email, no signup.
+klyara.com
 ```
 
 ### 🔷 LinkedIn (Craig)
 ```
-CIS returns due tomorrow, 19 September, for the month to 5 September.
+Quarter closed.
 
-Two things people get wrong at this exact point in the month:
+Three weeks ago I started posting because I couldn't find a single explanation of MTD, CIS or the
+reverse charge written for the person who actually has to deal with it rather than for other
+accountants.
 
-1. NIL RETURNS STILL HAVE TO BE FILED.
-If you're registered as a contractor and you paid no subcontractors that month, you file a nil
-return. Not filing it is a £100 penalty for the sake of two minutes. It's the most common penalty in
-the scheme.
+Since then:
+— A lot of people found out they were in MTD and hadn't realised, because qualifying income is
+  measured gross and their bank balance told them a different story
+— Contractors who had never filed a nil return worked out what that habit had been costing them
+— Several found reverse charge coded wrong on live invoices
 
-2. If you've genuinely stopped using subcontractors, tell HMRC to make the scheme inactive.
-Otherwise you're filing nil returns forever, and eventually you'll forget one.
+None of that needed an accountant. It needed someone to say it out loud in plain English.
 
-Go and do it now if it isn't done. It's Friday, and tomorrow is a Saturday, and we both know how that
-ends.
+I'll keep doing that. Next up: getting paid. Retentions, statutory interest, and the four boring
+things that actually shorten your payment terms.
 
-#CIS #Construction
+The seven-step quarter-end checklist is on the site as a single page. Free, no email capture, take
+it and use it whether you ever speak to me or not.
+
+klyara.com
+
+#MakingTaxDigital #CIS #Construction
 ```
 
 ---
 
-## DAY 13 — Saturday 19 September · LIGHT
-
-### 🔷 Instagram Stories + Facebook
-```
-A genuine question, and I'd like actual answers.
-
-What's the single worst bit of admin in your week?
-
-Not the biggest. The worst. The one you'd pay to never do again.
-
-I'll go first: for most of the firms I work with it isn't the tax. It's chasing invoices. Ringing a
-main contractor for the fourth time about money you earned nine weeks ago, and being made to feel
-like you're the problem.
-
-That's next week's subject.
-
-What's yours? 👇
-```
-
----
-
-## DAY 14 — Sunday 20 September · WEEK AHEAD
-
-### 🔷 LinkedIn + X + GBP
-```
-Week ahead — Monday 21 September.
-
-📌 CIS returns for the month to 5 September were due Friday. If you missed it, file today. The
-penalty is fixed at £100 until two months, so filing late still beats filing later.
-
-📌 Tuesday 22 September — electronic payment deadline for CIS/PAYE for the month to 5 September.
-
-📌 15 days until the MTD quarter ends, 5 October.
-
-This week: getting paid. Late payment, retentions, what your contract actually entitles you to, and
-the statutory interest almost nobody claims.
-
-#Construction #CIS #CashFlow
-```
-
----
----
-
-# WEEK 3 — "Getting paid"
-### Mon 21 – Sun 27 September
-
----
-
-## DAY 15 — Monday 21 September · ANCHOR
+## DAY 23 — Tuesday 6 October · ANCHOR — GETTING PAID
 
 ### 🔷 LinkedIn (Craig)
 ```
@@ -878,7 +1309,7 @@ That's it. That's the whole trick. But almost nobody has the list.
 Comment "RETENTION" and I'll send you the tracker template we use. Free, no email needed.
 ```
 
-### 🔷 GBP post
+### 🔷 GBP post ⛔ HOLD variant below
 ```
 Owed money you've stopped chasing?
 
@@ -888,12 +1319,14 @@ retentions from jobs that finished over a year ago.
 Klyara's Trade and Pro plans include automated invoice chasing and a retention tracker as standard —
 so the asking happens whether or not you have time to do it.
 
-Free discovery call at klyara.com.
+Free fifteen-minute discovery call at klyara.com.
 ```
+*⛔ HOLD version of the last line, until AML supervision is granted: "Free retention tracker and 12 calculators at
+klyara.com/tools.html."*
 
 ---
 
-## DAY 16 — Tuesday 22 September · SHORT VIDEO
+## DAY 24 — Wednesday 7 October · SHORT VIDEO
 
 **Video:** `03-retentions.mp4` (31s)
 
@@ -916,7 +1349,7 @@ Nobody has the list. Be the one who has the list.
 
 ---
 
-## DAY 17 — Wednesday 23 September · CAROUSEL
+## DAY 25 — Thursday 8 October · CAROUSEL
 
 **Asset:** `carousel-getpaid-6slides/`
 
@@ -941,7 +1374,7 @@ Which one are you missing? 👇
 
 ---
 
-## DAY 18 — Thursday 24 September · LONG VIDEO
+## DAY 26 — Friday 9 October · LONG VIDEO
 
 **YouTube:** *"Why Your Building Firm Is Always Skint (And It Isn't Your Prices)"*
 
@@ -1010,7 +1443,7 @@ That's the whole job, really.
 
 ---
 
-## DAY 19 — Friday 25 September · PRACTICAL
+## DAY 27 — Saturday 10 October · PRACTICAL
 
 ### 🔷 X + Facebook + LinkedIn
 ```
@@ -1030,13 +1463,13 @@ klyara.com/tools.html
 
 ---
 
-## DAY 20 — Saturday 26 September · HUMAN
+## DAY 28 — Sunday 11 October · HUMAN + WEEK AHEAD
 
 ### 🔷 Instagram + Facebook
 ```
-Something I've noticed after eleven years of this.
-
 The building firms that end up doing well are almost never the best builders.
+
+Eleven years of looking at their books and it's the one thing that holds every time.
 
 They're the ones who know their numbers. Who can tell you what a job made within a week of finishing
 it. Who know which customer pays in 30 days and which one takes 70, and price accordingly.
@@ -1052,448 +1485,107 @@ It's learnable, though. It's about six numbers.
 Free job margin calculator — put your last job through it and see: klyara.com/tools.html
 ```
 
----
-
-## DAY 21 — Sunday 27 September · WEEK AHEAD ⚠️ QUARTER END WEEK NEXT
-
-### 🔷 LinkedIn + X + GBP
+### 🔷 LinkedIn + X + GBP — week ahead
 ```
-Week ahead — Monday 28 September. This one matters.
+Week ahead — Monday 12 October.
 
-📌 Monday 5 October — the MTD quarterly period ENDS. If you're in MTD for Income Tax, everything from
-6 July to 5 October has to be in digital records.
+📌 Monday 19 October — CIS returns and payment for the month to 5 October. It's a Monday, so the
+weekend before it is all the run-up you get.
 
-📌 Saturday 7 November — that quarter's update is due to HMRC.
+📌 Saturday 7 November — MTD quarterly update for 6 July to 5 October. Work to Friday the 6th.
 
-📌 Monday 19 October — CIS returns for the month to 5 October.
+Nothing else this week. If you did the quarter-end checklist, both of those are already half done.
 
-If your records for July, August and September are currently a bag in the van, this is the week to
-deal with it. Not November.
-
-All week I'm posting a quarter-end checklist — one thing a day, each takes under twenty minutes.
-
-#MakingTaxDigital #CIS #Construction
+#CIS #MakingTaxDigital #Construction
 ```
 
 ---
----
 
-# WEEK 4 — "Quarter end"
-### Mon 28 September – Sun 4 October
-
-*This is the conversion week. Everything before it earned the right to ask.*
+# WEEK 5 — "The next deadline."
+### Mon 12 – Tue 13 October
 
 ---
 
-## DAY 22 — Monday 28 September · ANCHOR — COUNTDOWN STARTS
+## DAY 29 — Monday 12 October · ANCHOR — THE 19th AND THE 7th
 
 ### 🔷 LinkedIn (Craig)
 ```
-Seven days until the MTD quarter closes on 5 October.
+The 19th is a Monday this month. That is worse than it sounds.
 
-If you're in Making Tax Digital for Income Tax — sole trader or landlord, qualifying income over
-£50,000 — then everything from 6 July to 5 October needs to be in digital records, and the update
-goes to HMRC by 7 November.
+Most contractors file the CIS return in the gap — the hour on a Sunday night, or the twenty minutes
+before the first call on Monday. When the 19th is midweek there is slack either side of it. When it
+is a Monday there is a weekend, and then there is no slack at all.
 
-Here's the honest position most people are in right now: July and August are a folder of photos on a
-phone and a bag in the van, and September hasn't happened yet.
+So: CIS returns for the month to 5 October are due Monday 19 October. One week today.
 
-That's recoverable in a week. It is not recoverable on 6 November.
+Three things to have done before then, in this order.
 
-So, one job a day for the next seven days. Each under twenty minutes.
+1. VERIFICATION. Any subbie you paid for the first time since 5 September — is he verified? If you
+cannot show the verification, HMRC's position is that you should have deducted 30%, and they come to
+you for the 10% difference. Not to him. You have already paid him.
 
-Day 1 (today): BANK
-Get every business bank account connected to your software. Not exported — connected, so it feeds
-automatically. If you're still typing statements in by hand, this single change saves you more time
-than everything else on this list put together.
+2. MATERIALS. CIS comes off labour. It does not come off materials the subcontractor genuinely paid
+for. If his invoice does not split them out, ask him for one that does, this week, while he can still
+remember what he bought.
 
-I'll post one a day. By Sunday you'll be closed off and ahead of the deadline instead of six weeks
-behind it.
+3. THE NIL RETURN. Paid nobody in the month to 5 October? You still file. A nil return is two minutes
+and skipping it is the most common £100 in the scheme.
 
-If you don't know whether you're even in MTD — qualifying income is your GROSS self-employment and
-property income added together, before expenses and before CIS deductions. Not what landed in the
-bank. If that number was over £50,000 for 2024/25, you're in.
+And then the one after it: your MTD quarterly update for 6 July to 5 October is due 7 November. That
+is a Saturday, so work to Friday the 6th. Twenty-six days.
 
-Ask me in the comments. I'll tell you straight.
+If you did the quarter-end checklist a fortnight ago, that update is already sitting there finished.
+If you did not, this is the week, not the first week of November.
 
-#MakingTaxDigital #CIS #Construction #UKConstruction
+#CIS #MakingTaxDigital #Construction #UKConstruction
 ```
 
 ### 🔷 X
 ```
-7 days until the MTD quarter closes (5 October). Update due 7 November.
+CIS returns for the month to 5 October are due Monday 19 October.
 
-If July and August are currently a bag in the van, that's fixable this week and not fixable in
-November.
+One week.
 
-One job a day, each under 20 minutes. Starting today: connect your bank feed.
+Before then:
+— Verified every new subbie? If not, it is 30%, and HMRC comes to you for the difference.
+— Materials split out on his invoice? CIS comes off labour only.
+— Paid nobody? Still file. Nil returns are two minutes and £100 if you skip them.
 
-I'll post the rest daily.
+Then MTD, 7 November.
 ```
 
-### 🔷 Facebook + GBP
+### 🔷 Facebook
 ```
-⏳ Seven days until the MTD quarter ends — Monday 5 October.
+Two dates, one week apart, and then you are clear until the new year.
 
-Everything from 6 July to 5 October has to be in digital records, and the update is due to HMRC by
-7 November.
+📌 Monday 19 October — CIS returns and payment for the month to 5 October.
+📌 Saturday 7 November — the MTD quarterly update for 6 July to 5 October. It is a weekend, so work
+to Friday the 6th.
 
-We're posting one quarter-end job a day this week. Each takes under twenty minutes.
+The 19th is a Monday this month, which means the weekend before it is the only run-up you get. Do it
+Thursday.
 
-TODAY: connect your bank feed. Properly connected, not exported and typed in. It's the single biggest
-time-saver there is and most people still haven't done it.
+Quick check before you file: every subbie verified, materials split out on his invoice, and a nil
+return going in even if you paid nobody. Those three are where the money leaks.
 
-Follow along and you'll be closed off by Sunday.
+Free CIS deduction calculator, no email needed: klyara.com/tools.html
 ```
+
+### 🔷 GBP post — type: *Update*
+```
+CIS returns for the month to 5 October are due Monday 19 October. Late filing starts at £100 on day
+one.
+
+Klyara files CIS returns for construction firms in Guildford, Woking, Godalming and Farnham every
+month, on time, as part of a fixed monthly fee.
+
+Free CIS deduction calculator at klyara.com/tools.html.
+```
+*Button: Learn more → klyara.com/tools.html*
 
 ---
 
-## DAY 23 — Tuesday 29 September · CHECKLIST DAY 2 + SHORT VIDEO
-
-**Video:** `04-quarter-end-countdown.mp4` (29s)
-
-### 🔷 All channels
-```
-Quarter-end job 2 of 7: RECEIPTS.
-
-Every photo on your phone, every crumpled thing in the van, every "I'll remember what that was for" —
-in, today.
-
-Do it as one job while the kettle's on. Twenty minutes for three months of receipts, because you're
-only entering the ones that aren't already on the bank feed.
-
-The ones you'll lose money on if you skip: fuel, parking, tools under £100, materials paid cash,
-trade counter purchases on a personal card, phone, van insurance, PPE, and anything bought on a
-Sunday because a job needed it.
-
-Missed receipts aren't a compliance problem. They're just tax you didn't need to pay.
-
-Job 3 tomorrow.
-```
-
-### 🔷 TikTok / Reels / Shorts caption
-```
-Every receipt photo sat in your camera roll is money you're about to hand HMRC for no reason.
-
-Fuel. Parking. Tools under £100. Trade counter stuff on the personal card. PPE. The Sunday emergency
-screwfix run.
-
-Twenty minutes with the kettle on and it's done.
-
-Quarter ends 5 October.
-
-#ukbuilders #tradesmen #tax #selfemployed #cis
-```
-
----
-
-## DAY 24 — Wednesday 30 September · CHECKLIST DAY 3 + CAROUSEL
-
-**Asset:** `carousel-quarterend-8slides/`
-
-### 🔷 All channels
-```
-Quarter-end job 3 of 7: THE MIXED-USE STUFF.
-
-The things you pay for personally that are partly business, and that most builders either claim
-wrongly or don't claim at all.
-
-VAN — if it's a genuine commercial vehicle and private use is incidental, it's a business cost. Keep
-it that way. Don't start school runs in it.
-
-PHONE — split it. If it's 70% business, claim 70%. Pick a defensible number and be consistent.
-
-HOME OFFICE — if you do the paperwork at the kitchen table, HMRC's simplified flat rate is the
-easiest defensible claim there is. Not huge, but it's yours and it takes no records.
-
-TOOLS — most are an allowable cost. Larger items may need capital allowances rather than a
-straight deduction. If it's over about £1,000 and it'll last years, flag it rather than guessing.
-
-CLOTHING — protective gear and branded workwear: yes. Ordinary jeans and boots you also wear down the
-pub: no, however muddy they get.
-
-TRAINING — keeping an existing qualification current: usually fine. A brand new qualification that
-takes you into new work: usually not.
-
-The rule that keeps you out of trouble: claim what's genuinely business, be consistent, and write down
-why you picked the split. HMRC has never once objected to a defensible number that was applied
-consistently.
-
-Job 4 tomorrow.
-```
-
-### 🔷 Instagram carousel caption
-```
-Quarter-end: the 8-slide checklist. 👉
-
-1. Connect the bank feed
-2. Receipts in
-3. Mixed-use costs — van, phone, home, tools
-4. Reconcile every account
-5. Match CIS deductions to statements
-6. Check the reverse charge coding
-7. Chase what's owed before quarter end
-8. Look at the number
-
-Quarter ends Monday 5 October. Update due 7 November.
-
-Save this and work through it. One a day, under 20 minutes each.
-
-#makingtaxdigital #cis #ukbuilders #constructionuk #selfemployeduk #tradesmenuk #tax #bookkeeping
-#subcontractor #ukbusiness
-```
-
----
-
-## DAY 25 — Thursday 1 October · CHECKLIST DAY 4 + LONG VIDEO
-
-**YouTube:** *"Quarter-End in Under an Hour: The MTD Checklist for Builders"*
-
-### 🔷 All channels
-```
-Quarter-end job 4 of 7: RECONCILE.
-
-Every business account, every card, matched to the bank feed. Zero unmatched transactions.
-
-This is the boring one and it's the one that matters, because an unreconciled account means your
-figures are wrong and you don't yet know which direction.
-
-What you're looking for:
-- Transactions on the feed with nothing matched to them
-- Payments in you can't identify (that's usually a customer who paid and you never marked the invoice)
-- Duplicates from a manual entry AND a bank feed for the same thing
-- Anything personal that's gone through the business account
-
-That last one — just recategorise it as drawings and move on. Everyone does it. It only becomes a
-problem when it's left as an unexplained business cost.
-
-If you find a payment in that you can't identify, don't leave it. Nine times out of ten it's an
-invoice you'd have chased next week for money you already had.
-
-Job 5 tomorrow: CIS statements.
-```
-
-### 🔷 YouTube description
-```
-The full quarter-end routine for a small building firm, done in under an hour. Seven jobs, in order,
-with the specific things to look for at each step.
-
-Written for MTD for Income Tax quarterly updates, but it's the same routine whether you're filing
-quarterly or annually.
-
-00:00 Why quarter-end is now a real event
-00:50 1. Bank feeds — connect, don't export
-02:00 2. Receipts — the ones people lose money on
-03:30 3. Mixed-use costs — van, phone, home, tools, clothing
-05:15 4. Reconciling — zero unmatched, and what to look for
-06:50 5. CIS deductions vs subcontractor statements
-08:20 6. Reverse charge coding — the check that takes 2 minutes
-09:30 7. Chasing before quarter end
-10:20 The one number to look at when you're done
-
-🧮 Free calculators: klyara.com/tools.html
-📘 Free MTD guide: klyara.com/guide.html
-
-#MakingTaxDigital #CIS #Construction
-```
-
----
-
-## DAY 26 — Friday 2 October · CHECKLIST DAY 5
-
-### 🔷 All channels
-```
-Quarter-end job 5 of 7: CIS RECONCILIATION.
-
-This is the one that quietly costs subcontractors thousands, so read it properly.
-
-IF YOU'RE A SUBCONTRACTOR:
-Every contractor who deducted CIS from you must give you a payment and deduction statement, within 14
-days of the end of the tax month.
-
-Get them all out. Add up the deductions. Now compare that total to what your own records say was
-taken.
-
-They will not match. They never do. Common causes: a contractor deducted 30% because they never
-verified you, a contractor deducted on materials they shouldn't have, or a statement was never sent
-at all.
-
-Every pound of CIS deducted is a pound already paid toward your tax bill. If you can't evidence it,
-you can't claim it, and you'll pay it twice.
-
-Chase the missing statements NOW, while the contractor still remembers the job. In February they
-won't.
-
-IF YOU'RE A CONTRACTOR:
-Check you issued a statement to every subbie you deducted from. It's a legal obligation, not a
-courtesy, and it's a penalty if you don't.
-
-Also check your verification records. Anyone you deducted 20% from — can you show you verified them?
-If not, HMRC's position is you should have deducted 30%, and they will come to you for the
-difference.
-
-Free CIS calculator: klyara.com/tools.html
-
-Job 6 tomorrow.
-```
-
----
-
-## DAY 27 — Saturday 3 October · CHECKLIST DAY 6
-
-### 🔷 All channels
-```
-Quarter-end job 6 of 7: THE REVERSE CHARGE CHECK. Two minutes.
-
-Open your last ten sales invoices. For each one, answer:
-
-Was this construction work under CIS? Yes/No
-Is the customer VAT registered? Yes/No
-Is the customer CIS registered? Yes/No
-Did the customer confirm IN WRITING they're an end user? Yes/No
-
-If the first three are yes and the fourth is no → reverse charge applies. You should NOT have charged
-VAT.
-
-If you charged VAT when you shouldn't have, you've collected money that isn't yours and you'll owe it
-to HMRC anyway. Fix it with a credit note and reissue.
-
-If you DIDN'T charge VAT when you should have — because your customer is actually an end user and
-told you so — you owe HMRC that VAT out of your own pocket unless you can go back and charge it.
-
-Now do the same on your last ten purchase invoices. Did a subbie charge you VAT on a reverse-charge
-supply? If so, you can't reclaim it. Send it back.
-
-Two minutes, ten invoices. It's the single highest-value two minutes in this whole checklist.
-
-Last job tomorrow.
-```
-
----
-
-## DAY 28 — Sunday 4 October · CHECKLIST DAY 7 — THE ASK
-
-### 🔷 LinkedIn (Craig) — the conversion post ⛔ HOLD variant below
-```
-Quarter-end job 7 of 7: LOOK AT THE NUMBER.
-
-Not the turnover. Everyone knows their turnover. It's the number people quote in the pub and it tells
-you almost nothing.
-
-Look at these four instead:
-
-1. GROSS MARGIN BY JOB. Which jobs actually made money. Not which felt busy.
-2. WHAT YOU'RE OWED, by age. Under 30 days, 30–60, 60–90, over 90. The over-90 column is the one.
-3. RETENTIONS OUTSTANDING, with release dates.
-4. WHAT'S IN THE BANK versus what's due out in the next 30 days.
-
-That's the whole dashboard. Four numbers. If you know those four on the first of every month, you're
-running a business. If you don't, you're doing a job that happens to have your name on the van.
-
-The quarter closes tomorrow — 5 October. The update is due 7 November.
-
-That's the end of the checklist. Thank you for following it — the response to this week has been
-well beyond what I expected for a firm that's four weeks old.
-
-One last thing, and then I'll go back to just posting useful stuff.
-
-I've spent this month explaining what the back office of a building firm should look like. Klyara is
-me doing it for you: bookkeeping, CIS returns, reverse charge coding, payroll and MTD quarterly
-filing, for a fixed monthly fee from £59 + VAT.
-
-⛔ HOLD-UNTIL-AML VERSION — use this until supervision is confirmed:
-"We open for clients shortly, and I'm keeping the founding rate for the first ten firms who join the
-list. No payment, no commitment — you go on a list and I call you when we open. If you'd rather just
-keep reading the free stuff, that's genuinely fine too. klyara.com"
-
-✅ POST-AML VERSION — swap to this once supervised:
-"If you want that off your plate, book a free discovery call. Twenty minutes, I'll tell you what your
-situation actually needs, and if that's nothing, I'll tell you that too. klyara.com"
-
-#MakingTaxDigital #CIS #Construction #SmallBusinessUK
-```
-
-### 🔷 X + Facebook + Instagram + GBP
-```
-Quarter-end job 7 of 7: look at the number.
-
-Not turnover. These four:
-
-→ Gross margin by job
-→ What you're owed, by age
-→ Retentions outstanding, with release dates
-→ Bank balance vs what's due out in 30 days
-
-Know those four on the 1st of every month and you're running a business.
-
-Quarter closes tomorrow. Update due 7 November.
-
-That's the checklist done. If you want it as one page, it's on the site — free, no email.
-klyara.com
-```
-
----
----
-
-# WEEK 5 — "Quarter closed. Now what."
-### Mon 5 – Tue 6 October
-
----
-
-## DAY 29 — Monday 5 October · QUARTER END DAY
-
-### 🔷 All channels
-```
-The MTD quarter closes today.
-
-6 July to 5 October is now a closed period. Nothing else goes in it.
-
-What happens next:
-📌 The quarterly update is due by 7 November. That's 33 days.
-📌 The next quarter runs 6 October to 5 January, due 7 February.
-📌 The final declaration for the year is 31 January, same as always.
-
-If you worked through last week's checklist, you're done — genuinely done, six weeks early, and you
-can forget about it until November.
-
-If you didn't: you've got 33 days, and it's a weekend's work rather than a crisis. Start with the
-bank feed. Everything else follows from it.
-
-The full seven-step checklist is on the site as one page. Free, no email, no signup.
-klyara.com
-```
-
-### 🔷 LinkedIn (Craig)
-```
-Quarter closed.
-
-Four weeks ago I started posting because I couldn't find a single explanation of MTD, CIS or the
-reverse charge written for the person who actually has to deal with it rather than for other
-accountants.
-
-Since then:
-— A lot of people found out they were in MTD and hadn't realised, because qualifying income is
-  measured gross and their bank balance told them a different story
-— More than one person went and counted their retentions after that post, and messaged me about what
-  they found
-— Several found reverse charge coded wrong on live invoices
-
-None of that needed an accountant. It needed someone to say it out loud in plain English.
-
-I'll keep doing that. Next month: gross payment status — the application, the three tests, and why
-most firms who'd pass have never applied.
-
-The seven-step quarter-end checklist is on the site as a single page. Free, no email capture, take
-it and use it whether you ever speak to me or not.
-
-klyara.com
-
-#MakingTaxDigital #CIS #Construction
-```
-
----
-
-## DAY 30 — Tuesday 6 October · RECAP + FORWARD
+## DAY 30 — Tuesday 13 October · RECAP + FORWARD
 
 ### 🔷 LinkedIn + Facebook + X
 ```
@@ -1525,34 +1617,36 @@ GETTING PAID
 
 Everything above is on the site, free, no email required.
 
-Next month: gross payment status, and how to pass the three tests.
+Next month: gross payment status — the three tests, the application, and why most firms who would
+pass have never bothered.
 
-klyara.com
+If you'd rather it came to you, the newsletter is one email a fortnight and nothing else. Sign up and
+there's 10% off your first three months whenever you're ready. klyara.com
 
 #CIS #MakingTaxDigital #Construction #UKConstruction
 ```
 
-### 🔷 GBP post
+### 🔷 GBP post ⛔ HOLD variant below
 ```
 Thirty days of free guidance on CIS, VAT reverse charge and Making Tax Digital — all now collected in
 one place at klyara.com. No email required.
 
 Klyara is the back office for small construction firms: bookkeeping, CIS returns, payroll and MTD
-quarterly filing, for a fixed monthly fee from £59 + VAT.
+quarterly filing, for a fixed monthly fee from £59 ex VAT.
 
-Book a free discovery call at klyara.com.
+Book a free fifteen-minute discovery call at klyara.com.
 ```
+*⛔ HOLD version of the last line, until AML supervision is granted: "Join the founding-client list at klyara.com."*
 
 ---
 ---
-
 # What happens on day 31
 
 Do not stop. The 30 days build the audience; months 2 and 3 convert it. The rhythm carries on
 unchanged — Monday anchor, Tuesday video, Wednesday carousel, Thursday long video, Friday practical,
 Sunday deadlines.
 
-**Month 2 themes (Oct–Nov):**
+**Month 2 themes (mid-Oct to mid-Nov):**
 | Week | Theme | Peg |
 |---|---|---|
 | 1 | Gross payment status — the three tests | Evergreen, high value |
@@ -1560,7 +1654,7 @@ Sunday deadlines.
 | 3 | Taking on your first employee — PAYE, pensions, the real cost | Evergreen |
 | 4 | **7 November — MTD update deadline** | Hard date, run a countdown |
 
-**Month 3 themes (Nov–Dec):**
+**Month 3 themes (mid-Nov to mid-Dec):**
 | Week | Theme | Peg |
 |---|---|---|
 | 1 | Year-end planning for builders | Seasonal |
@@ -1578,7 +1672,7 @@ You will never run out of content. Set a recurring reminder against each one.
 ---
 
 # MONTHS 4–6 — so the calendar never runs dry
-### December 2026 to February 2027
+### mid-December 2026 to mid-March 2027
 
 *The 30 days get you launched. This is what stops it stalling in month four, which is when most
 content plans quietly die.*
@@ -1594,9 +1688,9 @@ bookkeeper, and most firms sleep through it.
 
 | Week | Anchor theme | Why now | Source text |
 |---|---|---|---|
-| 1 | **The January hole** | Five weeks of reduced income followed by the largest payment of the year. Genuinely frightening, genuinely fixable, and nobody warns them. | `docs/05 §8 №7` |
-| 2 | **Get every invoice out before the 18th** | Anything invoiced after that sits until the second week of January regardless of terms. | `docs/05 §8 №8` |
-| 3 | **The shutdown checklist** | Nine items, one hour. Highly practical, highly shared, and it positions you for January enquiries. | `docs/05 §8 №8` |
+| 1 | **The January hole** | Five weeks of reduced income followed by the largest payment of the year. Genuinely frightening, genuinely fixable, and nobody warns them. | `docs/05 №7 (Thu 10 Dec)` |
+| 2 | **Get every invoice out before the 18th** | Anything invoiced after that sits until the second week of January regardless of terms. | `docs/05 №8 (Thu 17 Dec)` |
+| 3 | **The shutdown checklist** | Nine items, one hour. Highly practical, highly shared, and it positions you for January enquiries. | `docs/05 №8 (Thu 17 Dec)` |
 | 4 | **Quiet week** | One post. CIS due 21 Dec (the 19th is a Saturday). Then stop until 5 January. | `docs/13 W16` |
 
 **December's one job:** be the firm that warned them about January while there was still time to do

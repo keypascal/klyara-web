@@ -1,13 +1,14 @@
 # Klyara — Channel Map
-### Every place Klyara should exist, in priority order
-*Prepared 26 August 2026. Launch target: Monday 7 September 2026.*
+### Every place Klyara should exist, in priority order.
+*Prepared 26 August 2026. Setup phase Tuesday 1 September to Sunday 13 September 2026.
+Launch: Monday 14 September 2026. Day 90: Saturday 12 December 2026.*
 
 ---
 
 ## How to read this
 
 Channels are ranked **by expected return per hour of Craig's time**, not by audience size. A UK
-construction back-office firm selling £59–£329/month recurring services does not win on reach. It
+construction back-office firm selling £59–£329 a month ex VAT does not win on reach. It
 wins on **local intent** (someone searching "CIS accountant near me"), **trust proof** (reviews,
 directories, a real face) and **community credibility** (being the person who answered the CIS
 question properly, six months before the sale).
@@ -17,6 +18,11 @@ account shadowbanned and the domain blacklisted, which is unrecoverable on Reddi
 Treat them as hard constraints.
 
 **Effort key:** ⚡ = under 30 min setup, near-zero upkeep · ⚙ = weekly upkeep · 🔧 = real ongoing work
+
+Every Tier 1 entry carries a **Cadence** and a **Measure**. The cadence is what one person can hold
+every week for a year, not what an agency would do. The measure is the one number worth checking at
+the end of the month. If a channel misses its measure two months running, cut the cadence in half
+and put the hours into the channel above it.
 
 ---
 
@@ -30,75 +36,114 @@ supervision is in place**. Everything in this pack is therefore written in one o
 - **Hold until supervised** — "hire us", pricing-led ads, discovery-call CTAs framed as
   engagement. Written and ready, marked `⛔ HOLD` throughout.
 
-This is not a limitation. A four-to-six week education-first run before you can take money is
-exactly what a good launch looks like anyway — it builds the waitlist that converts on day one of
-trading.
+The dates: Craig applies for the ICB practice licence on Tuesday 1 September 2026 and the licence
+carries a 28-day lead time, so supervision should land at the end of September, roughly a fortnight
+after the 14 September launch. Everything between launch and that date is education, waitlist and
+partner conversations.
+
+This is not a limitation. A short education-first run before you can take money is what a good
+launch looks like anyway. It builds the waitlist that converts on the day trading starts.
 
 ---
 
 # TIER 1 — Do these first. Non-negotiable.
 
-### 1. Google Business Profile ⚙ — **the single highest-ROI channel**
+### 1. Google Business Profile ⚙ — **the single highest-return channel**
 - **URL:** business.google.com
-- **Why:** "bookkeeper for builders [town]", "CIS accountant near me" — this is where the money is.
-  A verified GBP with 10+ reviews outranks paid ads for local intent and costs nothing.
+- **Why:** "bookkeeper for builders [town]", "CIS accountant near me". This is where the money is.
+  A verified profile with reviews on it competes with paid ads for local intent and costs nothing.
 - **Category:** Primary → *Bookkeeping service*. Secondary → *Accountant*, *Tax preparation service*,
   *Payroll service*, *Business management consultant*.
 - **Requires:** A verifiable business address (postcard or video verification). If Klyara is
-  home-based, use a **service-area business** — hide the address, set a 10–15 mile radius.
-- **Promo rule:** N/A — it's your own listing. But GBP posts expire after 7 days, so post weekly.
-- **Critical:** Verification takes 5–14 days. **Start it today, before anything else on this list.**
+  home-based, use a **service-area business** — hide the address and name the primary towns in
+  docs/11 §2 rather than setting a radius.
+- **Cadence:** one post a week, twenty minutes, Monday morning. Reply to every review inside 24
+  hours. Answer any Q&A the same day.
+- **Measure:** calls and direction requests from the profile each month, and total reviews. The
+  standing target is **twenty-plus** — 47% of consumers filter out a business under 20 reviews
+  (`docs/17 §3`), which is why the old "ten is credible" figure was raised. Two a month, forever.
+  Realistic milestone by Day 90 with 3–5 clients: **5+ real reviews**, on the way to twenty-plus.
+- **Promo rule:** none needed, it is your own listing. Posts expire after 7 days, so weekly is the
+  floor, not the ambition.
+- **Critical:** Verification takes 5–14 days. **Start it in the setup phase, before anything else on
+  this list.**
 
 ### 2. LinkedIn — Company Page + Craig's personal profile 🔧 — **the B2B engine**
 - **Why:** Two audiences at once: (a) small construction firm owners and office managers,
-  (b) **year-end accountants and brokers** — your Layer D referral partners. LinkedIn is where the
+  (b) **year-end accountants and brokers**, the Layer D referral partners. LinkedIn is where the
   partnership deals get done, and partnerships are cheaper than ads.
-- **Split:** The Company Page is the shopfront. **Craig's personal profile does the actual work** —
-  personal posts get 5–10× company-page reach on LinkedIn. Craig posts; the page reshares.
-- **Promo rule:** Open, but soft. Value posts outperform pitch posts heavily. No outbound DM spam —
-  LinkedIn throttles it and it burns the partnership audience specifically.
+- **Split:** The Company Page is the shopfront. **Craig's personal profile does the actual work.**
+  Personal posts reach further than company-page posts on LinkedIn. Craig posts; the page reshares.
+- **Cadence:** three posts a week from Craig, page reshares each one. 15 connection requests a week
+  and the message sequence in docs/23 §2. Roughly two hours a week in total.
+- **Measure:** conversations started, not impressions. Four new conversations a week, one of them
+  with an accountant.
+- **Promo rule:** open, but soft. Value posts outperform pitch posts. No automated DMs — LinkedIn
+  throttles them and they burn the partnership audience specifically.
 
 ### 3. Facebook — Page + Groups 🔧 — **where UK builders actually are**
-- **Why:** The single biggest concentration of UK small-builder owners aged 35–60. Trade groups
+- **Why:** The biggest concentration of UK small-builder owners aged 35 to 60. Trade groups
   ("UK Builders", "Tradesmen UK", county-level trade groups) run hot daily with exactly your
   audience complaining about exactly your problems.
-- **Split:** Page = credibility and retargeting pixel. **Groups = the actual channel.**
-- **Promo rule:** ⚠️ Most trade groups ban outright promotion and will remove you. The play is
+- **Split:** Page = credibility and the retargeting pixel. **Groups = the actual channel.**
+- **Cadence:** twenty minutes on two days a week, matched to the outbound rhythm in docs/23 §7
+  (cold calls 08:00–08:30 Monday and Wednesday; group answering Tuesday and Thursday).
+  Eight genuine answers a week. One page post a week, cross-posted from LinkedIn.
+- **Measure:** profile clicks and inbound messages from group activity. Two a week by month three.
+- **Promo rule:** most trade groups ban outright promotion and will remove you. The play is
   **answer questions as Craig, from Craig's personal profile, with no link**, and let people click
-  through to the profile. Many groups run a weekly self-promo thread — that's your slot.
+  through to the profile. Many groups run a weekly self-promo thread. That is your slot.
   Read each group's pinned rules before your first comment. Full protocol in §Community Protocol.
 
 ### 4. YouTube ⚙ — **the compounding asset**
 - **Why:** "How does the VAT reverse charge work" and "CIS deductions explained" get searched
-  forever. A 6-minute video ranks for years and does the selling while Craig sleeps. It's also the
-  library your other channels cut clips from — one long video = 5 Shorts/Reels/TikToks.
-- **Promo rule:** Open. Links in description fine.
+  forever. A six-minute video ranks for years. It is also the library the other channels cut clips
+  from: one long video makes five Shorts, Reels or TikToks.
+- **Cadence:** one long video a month, filmed in a single session with the next month's script.
+  Cut into five shorts the same afternoon.
+- **Measure:** watch time on the long videos and search impressions in YouTube Studio. Ignore
+  subscriber count for the first year.
+- **Promo rule:** open. Links in the description are fine.
 
-### 5. X / Twitter ⚡ — **low cost, keep it claimed**
-- **Why:** Honestly, moderate value for UK trades. But: it's free, HMRC and accountancy press are
-  active there, and it's where you catch MTD news cycles same-day. Cheap to maintain via scheduler.
-- **Promo rule:** Open.
-
-### 6. Instagram ⚙ — **proof and personality**
-- **Why:** Builders use Instagram heavily for job photos. Klyara's angle isn't job photos — it's
-  **carousels** (swipeable explainers: "CIS in 6 slides") and **Reels**. Strong for the under-45
+### 5. Instagram ⚙ — **proof and personality**
+- **Why:** Builders use Instagram heavily for job photos. Klyara's angle is not job photos, it is
+  **carousels** (swipeable explainers, "CIS in six slides") and **Reels**. Strong for the under-45
   segment and for making a bookkeeping firm look like it belongs on a site.
-- **Promo rule:** Open. Link in bio only (one link — use the site or a link hub).
+- **Cadence:** two posts a week, both repurposed. One carousel from a blog piece, one Reel from the
+  month's YouTube video. No original shooting.
+- **Measure:** saves and shares, which predict reach here better than likes. Profile visits monthly.
+- **Promo rule:** open. Link in bio only, so make it the tools page.
 
-### 7. TikTok ⚙ — **underrated for UK trades**
-- **Why:** UK trades TikTok is large and active. Short, blunt, no-nonsense tax explainers perform
-  well because nobody else in accountancy makes them watchable. Highest organic reach ceiling of any
-  channel on this list for zero spend.
-- **Promo rule:** Open. Be aware: financial content sometimes gets reduced reach — keep it
-  educational, avoid "guaranteed savings" language.
+### 6. TikTok ⚙ — **underrated for UK trades**
+- **Why:** UK trades TikTok is large and active. Short, blunt tax explainers do well because
+  nobody else in accountancy makes them watchable. Highest organic reach ceiling on this list for
+  zero spend.
+- **Cadence:** the same five shorts a month that go to YouTube Shorts and Reels. No extra filming.
+- **Measure:** views per video and profile clicks. If three months produce no profile clicks, drop
+  to handle-only and give the time to GBP.
+- **Promo rule:** open. Financial content sometimes gets reduced reach, so keep it educational and
+  avoid "guaranteed savings" language.
 
-### 8. Reddit 🔧 — **highest trust, highest risk**
+### 7. Reddit 🔧 — **highest trust, highest risk**
 - **Why:** UK tax and trade subreddits are full of high-intent questions. One genuinely good answer
-  on r/UKPersonalFinance about MTD reaches thousands and stays indexed by Google for years.
-- **Promo rule:** ⚠️⚠️ **Hardest rules on the internet.** Most relevant subs auto-remove links and
-  ban accounts with promotional history. Reddit's sitewide guidance is roughly the 10:1 rule —
-  9 genuine contributions for every 1 self-referential one. New accounts posting links get
-  shadowbanned in days. See §Reddit Protocol — it is written to keep the account alive.
+  on r/UKPersonalFinance about MTD is read by thousands and stays indexed by Google for years.
+- **Cadence:** ten comments a week for the first three months, then one text post a week on top.
+  Thirty minutes, twice a week.
+- **Measure:** comment karma in the first quarter, then referral traffic in analytics. Value shows
+  up at 8 to 12 weeks, not before.
+- **Promo rule:** hardest rules on the internet. Most relevant subs auto-remove links and ban
+  accounts with promotional history. Reddit's guidance is the 9:1 rule: nine genuine contributions
+  for every one that mentions you. New accounts posting links get shadowbanned in days. See
+  §Reddit Protocol, which is written to keep the account alive.
+
+### 8. X / Twitter ⚡ — **low cost, keep it claimed**
+- **Why:** moderate value for UK trades, and it sits below the rest of Tier 1 for that reason. It
+  earns its place because it is free, HMRC and the accountancy press are active there, and it is
+  where MTD news breaks the same day.
+- **Cadence:** scheduled only. Queue a fortnight of posts in one sitting each month. React to MTD
+  news when it lands, otherwise leave it alone.
+- **Measure:** none worth tracking. Treat it as a claimed handle with a pulse.
+- **Promo rule:** open.
 
 ---
 
@@ -109,12 +154,15 @@ exact string once and never vary it. Suggested canonical:
 
 ```
 Klyara
-[Registered address, line 1]
-[Town] [Postcode]
+[Registered address, line 1]      <- Craig to confirm before the first citation goes out
+[Town] [Postcode]                 <- must match Companies House exactly
 020 8058 1496
 hello@klyara.com
 https://klyara.com
 ```
+
+Do not start Tier 2 until that address string is fixed. Changing it later means editing every
+citation by hand, and inconsistent citations do more harm than no citations.
 
 | # | Directory | Cost | Why it earns its place |
 |---|---|---|---|
@@ -131,6 +179,9 @@ https://klyara.com
 ---
 
 # TIER 3 — Professional platforms. These generate *inbound* leads, not just presence.
+
+Weeks in the Timing column are counted from launch week, Monday 14 September 2026. Months are
+counted the same way, so Month 2 begins mid-October.
 
 | # | Platform | Why | Timing |
 |---|---|---|---|
@@ -179,8 +230,9 @@ Verify each still exists and re-read its rules on the day you join; subreddit ru
 | **BuildHub.org.uk** | Self-builders — mostly clients of your clients, but VAT questions come up constantly. |
 | **AccountingWEB Any Answers** | Peer/partnership, as above. |
 
-**Forum protocol:** register, complete the profile, read for a week, answer 8–10 questions with no
-link, *then* add a signature. Signature format: `Craig — construction bookkeeping & CIS | klyara.com`.
+**Forum protocol:** register, complete the profile, read for a week, answer eight to ten questions
+with no link, *then* add a signature. Budget one forum a fortnight, so the list above takes the
+first six months rather than the first month. Signature format: `Craig — construction bookkeeping & CIS | klyara.com`.
 Never post a thread whose only purpose is the link.
 
 ## Facebook groups
@@ -197,7 +249,8 @@ Scaffolders UK       Carpenters & Joiners UK Bricklayers UK
 ```
 
 **Vetting:** join only groups with (a) 3,000+ members, (b) posts in the last 48 hours, (c) visible
-moderation. Target **12–15 groups**. More than that and you can't participate genuinely in any.
+moderation. Target **six to ten groups**, the same number as docs/23 §6. More than that and one
+person cannot participate genuinely in any of them.
 
 **Also worth joining:** county-level "Trades Recommendations" groups where homeowners ask for
 builders — you're not selling there, you're watching which local firms are busy. Those firms are
@@ -215,7 +268,7 @@ scheduler, expect little.
 | **Threads** | ⚡ Claim it. Cross-posts from Instagram in one click. Free reach. |
 | **Bluesky** | ⚡ Claim it. Zero-cost handle protection. |
 | **Pinterest** | ⚡ Claim it. Infographics and checklists occasionally get long-tail search traffic. |
-| **Snapchat** | ⚡ Claim the handle and stop there. **Straight answer: Snapchat is a poor fit.** Its UK audience skews well below the 35–60 owner-operator you're selling to, it has no search discovery, no link-in-bio equivalent worth having, and content evaporates. You asked for it, so it's in the setup pack with a profile written — but do not spend content hours here. If you want a second short-video channel, the hours go to **YouTube Shorts**, which is searchable and permanent. |
+| **Snapchat** | ⚡ Claim the handle and stop there. **Snapchat is a poor fit.** Its UK audience sits well below the 35 to 60 owner-operator you sell to, there is no search discovery, no link in bio worth having, and the content evaporates. A profile is written and in the setup pack, but spend no content hours here. If you want a second short-video channel, the hours go to **YouTube Shorts**, which is searchable and permanent. |
 | **Quora** | ⚡ Answer UK tax questions occasionally. Indexes well, ages well. |
 | **Medium / Substack** | ⚡ Optional newsletter mirror for SEO. Only if the newsletter is running well. |
 | **Discord** | ⚡ A few UK trade servers exist but are small. Low priority. |
@@ -229,10 +282,11 @@ These aren't social, but they're where a local construction back office actually
 them because leaving them out would make this pack look complete when it isn't.
 
 1. **Builders' merchant noticeboards** — Travis Perkins, Jewson, Selco, Howdens, MKM, Buildbase.
-   A £40 print run of A5 cards on trade counters in a 15-mile radius reaches your exact buyer at the
-   moment they're thinking about the business, not the job. Design included in this pack.
-2. **Van livery / site boards** — the Manual specifies a van-legible mark for a reason. If either
-   founder drives, that's free permanent local advertising.
+   250 A5 cards costs roughly £30–£45 and puts you on trade counters inside a 15-mile radius, in
+   front of your exact buyer at the moment they are thinking about the business rather than the
+   job. Design included in this pack. The round is in docs/11 §7.
+2. **Van livery / site boards** — the Manual specifies a van-legible mark for a reason. Craig's
+   vehicle carrying the mark is free permanent local advertising in the right postcodes.
 3. **Trade counter partnerships** — merchant staff know which local firms are growing. A referral
    arrangement with two trade counter managers beats a month of ads.
 4. **Local accountant partnerships** — the Manual's Layer D. Year-end accountants who don't want
@@ -249,7 +303,7 @@ them because leaving them out would make this pack look complete when it isn't.
 # Community Protocol — the rules that keep the accounts alive
 
 **The 9:1 rule.** Nine genuine contributions for every one that mentions Klyara. Track it. If you
-can't be bothered to contribute nine times, don't join the community.
+cannot be bothered to contribute nine times, do not join the community.
 
 **Craig posts, not "Klyara".** In every community — Reddit, Facebook groups, forums — a named human
 with a face and a specialism outperforms a brand account and survives moderation. The brand account
@@ -273,12 +327,12 @@ and it takes the whole estate down.
 **Week 1 — do nothing but read.** Create the account. Fill in the profile. Subscribe to the target
 subs. Post nothing.
 
-**Weeks 1–3 — comment only, no links, at all.** Target 30–40 genuine comments. Answer CIS, VAT
+**Weeks 2–4 — comment only, no links at all.** Target 30 to 40 genuine comments. Answer CIS, VAT
 reverse charge, MTD and self-assessment questions properly. This builds the comment karma that most
-subs gate posting behind, and teaches you each sub's tolerance.
+subs gate posting behind, and it teaches you each sub's tolerance.
 
-**Week 4 onward — one text post per week, maximum, and only where rules permit.** Long-form, useful,
-no link in the body. If someone asks for a resource in the comments, *then* link.
+**Week 5 onward — one text post a week, maximum, and only where the rules permit.** Long form,
+useful, no link in the body. If someone asks for a resource in the comments, *then* link.
 
 **Never:**
 - Link in your first 30 days

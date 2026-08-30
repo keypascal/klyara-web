@@ -1,12 +1,14 @@
-# Klyara — Video & Animation Pack
+# Klyara — Video and Animation Pack
+*Revised 28 August 2026. Calendar days are counted from launch: Day 1 is Monday 14 September 2026,
+Day 90 is Saturday 12 December 2026.*
 
 ---
 
 ## What's rendered and ready
 
-Fourteen vertical videos (1080×1920, H.264, no audio, burned-in kinetic typography). They work silently —
-which matters, because most social video is watched on mute — and they're brand-locked to the same
-pine/orange system as everything else.
+Thirteen vertical videos (1080×1920, H.264, no audio, burned-in kinetic typography). They work
+silently — which matters, because most social video is watched on mute — and they use the same
+pine and brass system as everything else. Cream, deep green, brass accent. Nothing else.
 
 | File | Length | Use on | Calendar day |
 |---|---|---|---|
@@ -32,6 +34,25 @@ pine/orange system as everything else.
 - Add a text hook in the platform's own caption overlay for the first 1.5s — platform-native text is
   weighted by the algorithm in a way burned-in text isn't.
 - Post 12:00–13:00 or 18:00–20:00 UK. Builders check phones at lunch and after they've packed up.
+
+**Caption CTAs — rotate them, never run the same one twice in a week**
+
+The video carries the point. The caption carries the ask, and the ask changes. Full captions sit in
+the 30-day content calendar; these are the closing lines to draw from.
+
+| For | Closing line |
+|---|---|
+| MTD videos | Free MTD guide, fifteen pages, no email needed. Link in bio. |
+| CIS videos | Free CIS deduction calculator on the site. No sign-up, no email wall. |
+| Retentions | Twelve free calculators on klyara.com. Go and count your retentions. |
+| Reverse charge | Free reverse charge checker. Two questions and you'll know. |
+| Quarter end | Put the four dates in your phone. We'll send them if you'd rather: one email a fortnight. |
+| Guildford / local | Guildford, Woking, Godalming, Farnham. Fifteen-minute call, no pitch. 020 8058 1496. |
+| Switching | Thirty days' notice, no lock-in, and the software stays in your name. |
+| What a bookkeeper does | Plans from £59 a month, ex VAT. Book a free fifteen-minute call. |
+
+Never end two videos in a row with "book a call". A feed that only ever asks is a feed people scroll
+past.
 
 ---
 
@@ -65,8 +86,8 @@ Manual's stack at ~£25/mo combined).
 >
 > **[2:05 — THE GROSS TRAP]**
 >
-> Here's the part that catches subcontractors, and I want to be really clear about it because I've
-> had this conversation a dozen times in the last month.
+> Here's the part that catches subcontractors, and I want to be really clear about it, because it is
+> the single thing people get wrong.
 >
 > Qualifying income means your gross self-employment income plus your gross property income, added
 > together. Gross. Before expenses. And before CIS deductions.
@@ -209,7 +230,7 @@ Walk through the seven jobs from Week 4, one per chapter, showing each on screen
 
 ---
 
-## Shorts extraction — get 5 clips from every long video
+## Shorts extraction — clips from every long video
 
 Every long-form video should produce **at least four Shorts**. Cut at the natural chapter marks:
 

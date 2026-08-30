@@ -1,9 +1,14 @@
 # Klyara — The Answer Bank
-### 22 pre-written answers for Reddit, forums and Facebook groups
+### 26 pre-written answers: 20 for forums, 4 sales objections, 2 for awkward threads
 
 *The community strategy in `docs/01` fails for one reason: writing a good answer takes twenty minutes
 and Craig doesn't have twenty minutes on a Wednesday evening. These are written. Adapt, don't paste
 verbatim — copy-paste answers read as copy-paste answers, and this audience notices.*
+
+*Answers 1–20 are for Reddit, forums and Facebook groups. Answers 21–24 are the four objections that
+decide a sale; they are written for the phone, the website FAQ and email, not for forums — quoting
+your own prices in a subreddit is the thing that gets you removed. Every price in them matches the
+pricing page.*
 
 ---
 
@@ -294,8 +299,10 @@ others often do too.
 More than most people realise.
 
 On a business-to-business debt you're entitled to statutory interest at 8% above the Bank of England
-base rate, plus a fixed compensation sum per invoice — £40, £70 or £100 depending on the size of the
-debt — plus reasonable costs of recovering it. You don't need any of that in your contract. It applies
+base rate. Base was 3.75% at the end of July 2026, so that's 11.75% a year — check the current base
+before you put a figure on anything. On top of the interest you get a fixed compensation sum per
+invoice — £40, £70 or £100 depending on the size of the debt — plus your reasonable costs of
+recovering it. You don't need any of that in your contract. It applies
 by default under the late payment legislation.
 
 Almost nobody invoices it, usually out of a reasonable fear of losing the customer. Fair enough. But
@@ -323,8 +330,8 @@ completion and half at the end of the defects liability period — check the con
 release, and ask in writing with the dates in it. A polite email with specifics beats a phone call
 with "you owe me some money".
 
-Most firms who do this exercise properly for the first time find several thousand pounds they'd
-mentally written off.
+Do it once properly and you will usually find money on the list you had stopped counting as money.
+That is the whole point of writing it down.
 ```
 
 ### 17. "Should I be charging late payment interest?"
@@ -389,29 +396,109 @@ on top of your CIS ones. That's the bit people underestimate more than the money
 
 ### 20. "How much should a bookkeeper cost?"
 ```
-Depends enormously on what's included, and the honest answer is that comparing quotes in this trade
-is difficult because nobody scopes the same way.
+For context first, because I'm not neutral: this is my day job.
 
-Things that move the number: whether VAT returns are in it, whether CIS returns are in it, whether
-payroll is in it, how many transactions you have, how many bank accounts, whether they're cleaning up
-a backlog first, and whether you're on a fixed monthly fee or hourly.
+A sole trader subbie wanting monthly books, CIS and MTD filing is a £59-a-month ex VAT job. A five to
+fifteen person firm with VAT, CIS and payroll in the mix is nearer £199 a month ex VAT. Those are my
+own published prices, so treat them as one data point rather than the market — but they're real
+numbers and most people asking this question have never been given one.
 
-What I'd say to look for rather than a price:
+What moves the figure: whether VAT returns are in it, whether CIS returns are in it, whether payroll
+is in it, transaction volume, number of bank accounts, and whether someone has to clean up a backlog
+first.
 
-Fixed monthly rather than hourly, so you know what you're paying and they're not incentivised to be
-slow. Clear scope in writing — specifically whether CIS and VAT are included or extra. Software in
-your own name, so you can leave and take your books. And notice terms that aren't a twelve-month
-tie-in.
+Four things to check on any quote you get:
 
-For context so I'm not being sneaky: this is my day job, so I'm not a neutral party. But those four
-things are worth checking whoever you go with.
+Fixed monthly, not hourly — so you know the number and nobody is paid to be slow.
+Scope in writing — specifically whether CIS and VAT are included or billed as extras.
+Software in your own name — so you can leave and take the books with you.
+Notice in months, not years — a twelve-month tie-in on bookkeeping is a red flag.
+
+Get those four right and the price sorts itself out.
+```
+
+---
+
+# The four that decide a sale
+
+*Phone, website FAQ and email only. Do not use these in a forum — quoting your own prices in a
+subreddit is what gets the account removed. Prices here are the published ones, all ex VAT, rolling
+monthly with 30 days notice.*
+
+### 21. "£199 a month is a lot. Why should I pay that?"
+```
+Because it's the cheapest of the three ways to get this work done, and you're already paying one of
+the other two.
+
+Klyara Trade is £199 a month ex VAT. A high-street accountant doing the same monthly scope is about
+£395. Doing it yourself costs about £640 a month once you price your own evenings at your day rate —
+and those are the evenings you're spending now.
+
+£199 against £640 is £441 a month, and you get your Sundays back.
+
+If £199 is more than the work is worth to you today, start on Solo at £59 or Start at £99 and move up
+when the firm does. It's rolling monthly with 30 days notice. You aren't signing up for a year.
+```
+
+### 22. "Why wouldn't I just use my accountant?"
+```
+Because your accountant does your year end. This is the other eleven months.
+
+Most high-street accountants have a handful of building clients, so CIS is the awkward job at the end
+of the month rather than the everyday work. We only do construction. Gross payment status, 20% and
+30% deductions, the domestic reverse charge, materials splits, retentions, subcontractor
+verification, the return by the 19th — that's the whole day here.
+
+You don't have to sack anyone. Keep your accountant for the annual accounts and the corporation tax
+return. We hand them clean books in January instead of a carrier bag, which usually makes their bill
+smaller too.
+
+If your accountant is already doing your monthly bookkeeping, CIS returns and MTD filing well, stay
+where you are. That's a straight answer and it's the right one for some people.
+```
+
+### 23. "You're new. Why would I trust you with my books?"
+
+> **Do not use this answer until the ICB practice licence is actually issued.** The application has a
+> 28-day lead time from 1 September 2026, so the licence lands around Tuesday 29 September — after the
+> 14 September launch date. Until it is in hand, cut the licence paragraph and say the application is
+> in. See the setup-order note in the Account Setup Pack.
+
+```
+Fair question, and the only useful answer is a straight one: Klyara opened on 14 September 2026. The
+firm is new.
+
+Here's what that does and doesn't mean. It doesn't mean unsupervised — Klyara holds an ICB practice
+licence and is supervised for anti-money-laundering under it. Ask for the number and check it. Ask
+for the professional indemnity cover too. Any firm that hesitates over either question is the one to
+worry about.
+
+It doesn't mean locked in. Your accounting software is in your own name, so the books are yours and
+you can take them anywhere. Rolling monthly, 30 days notice. You're live within five working days of
+signing, so you find out quickly whether this works rather than slowly.
+
+And the founding client rate is held for twelve months from the day you start, with the first review
+in September 2027. A new firm needs clients more than clients need a new firm, and the price says so.
+```
+
+### 24. "What if it doesn't work out — can I leave?"
+```
+Yes. Thirty days notice, and you take your books with you.
+
+Rolling monthly. No twelve-month tie-in, no exit fee, no charge for handing your data over. The
+accounting software subscription is in your name, not ours, so when you go you keep the file, the
+history and the bank feeds. We hand back the payroll and CIS records and give whoever takes over a
+handover call.
+
+We say that plainly because a firm that makes leaving hard is telling you what it thinks of its own
+work.
 ```
 
 ---
 
 # Two answers for when it's not your question
 
-### 21. When someone is clearly being given bad advice in the thread
+### 25. When someone is clearly being given bad advice in the thread
 ```
 I'd gently push back on [X] above — [correct position], and it's worth checking because [consequence].
 
@@ -420,7 +507,7 @@ Not having a go at anyone, this one catches a lot of people out.
 **Never** name the person, never say "wrong", and never do this more than once in a thread. Correct
 the fact, not the human.
 
-### 22. When you genuinely don't know
+### 26. When you genuinely don't know
 ```
 I don't know that one well enough to answer properly, and it sounds like the kind of thing where the
 detail matters. I'd ring HMRC's [CIS/VAT] helpline rather than take an answer off a forum — including
@@ -433,11 +520,14 @@ true.
 
 ## How to run this
 
-**Weeks 1–3:** comment only, no links, anywhere. Target 30–40 genuine answers from this bank,
-adapted. That builds the karma most subreddits gate posting behind, and it teaches you each
-community's tolerance.
+**The first 30 days — Monday 14 September to Tuesday 13 October 2026:** comment only. No links
+anywhere, in any bio, any signature, any reply. Target 30–40 genuine answers from this bank, adapted.
+That builds the karma most subreddits gate posting behind and it teaches you each community's
+tolerance. This is the same 30-day rule as the Reddit section of the Account Setup Pack; the two
+documents mean the same thing.
 
-**Week 4 onward:** one text post a week maximum, only where the rules allow.
+**From Wednesday 14 October 2026:** one text post a week maximum, only where the rules allow, and a
+link only when someone asks for one in the replies.
 
 **Track what gets asked.** Every question you answer three times is a page on your site, and it
 should be written in the exact words people used to ask it — not in mine.

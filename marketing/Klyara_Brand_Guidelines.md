@@ -1,13 +1,16 @@
 # Klyara — Brand Guidelines
 ### Extracted from klyara.com, not invented. Hand this to anyone who touches the brand.
 
+*Revised 28 August 2026. Re-checked against the live site.*
+
 *Every value below is taken directly from the site's own CSS custom properties and its embedded
-font files. Where an earlier version of this pack said navy and safety orange, that was wrong and
-has been corrected throughout.*
+font files. The palette is cream and deep green with a brass accent. An early written direction
+in an earlier pack said navy and safety orange; that direction was never built, it does not match
+the site, and it must not be reintroduced anywhere.*
 
 ---
 
-# 1. Colour
+## 1. Colour
 
 These are the site's `:root` tokens, verbatim. Use the token name in conversation, not the hex.
 
@@ -33,7 +36,7 @@ On paper:  #D6D0C2 (16%)   #B4AE9E (32%)
 On pine:   #2A4A3C (16%)   #3E5D4E (32%)
 ```
 
-## How the colours actually behave
+### How the colours actually behave
 
 **There are two grounds, and you pick one per asset.** Paper (cream) or pine (deep green). Never a
 gradient between them, never a third ground.
@@ -49,23 +52,23 @@ than meaning something, it is wrong.
 **Terracotta is for bad news only.** Penalties, missed deadlines, the losing side of a comparison
 chart. Never for emphasis.
 
-## Contrast, checked
+### Contrast, checked
 
 | Text | On | Verdict |
 |---|---|---|
-| `--paper` | `--pine` | ✅ Strong. The main dark combination. |
-| `--dim` | `--pine` | ✅ Body text on pine |
-| `--ink` | `--paper` / `--card` | ✅ Strong. The main light combination. |
-| `--mute` | `--paper` | ✅ Body text on paper |
-| `--brass` | `--pine` | ✅ Kickers, numerals, small bold |
-| `--em2` | `--paper` | ✅ Table row labels, section leads |
-| `--brass` | `--paper` | ⚠️ Large and bold only. Never body text, never small caps. |
-| `--pine2` | `--pine` | Ghost numerals only — deliberately low contrast, decorative, never carries meaning |
-| `--em` | `--pine` | ❌ Too close. Use brass or paper on pine. |
+| `--paper` | `--pine` | Pass. The main dark combination. |
+| `--dim` | `--pine` | Pass. Body text on pine. |
+| `--ink` | `--paper` / `--card` | Pass. The main light combination. |
+| `--mute` | `--paper` | Pass. Body text on paper. |
+| `--brass` | `--pine` | Pass. Kickers, numerals, small bold. |
+| `--em2` | `--paper` | Pass. Table row labels, section leads. |
+| `--brass` | `--paper` | Care. Large and bold only. Never body text, never small caps. |
+| `--pine2` | `--pine` | Ghost numerals only. Deliberately low contrast, decorative, never carries meaning. |
+| `--em` | `--pine` | Fail. Too close. Use brass or paper on pine. |
 
 ---
 
-# 2. Typography
+## 2. Typography
 
 Three faces, three jobs. All three are embedded in the site and included in this pack as static TTF
 instances at `brand/fonts/`.
@@ -86,19 +89,19 @@ Spline Sans Mono      Utility. Kickers, eyebrows, tags, chips, footers, dates,
                       +8–10% on footers and tags.
 ```
 
-## The kicker is the brand's signature
+### The kicker is the brand's signature
 
 More than any colour, the thing that makes a piece of Klyara material recognisable is the
 **small uppercase brass mono label** sitting above a large Bricolage headline.
 
 ```
-CHAPTER 02  ————
+CHAPTER 02  ––––
 Are you a contractor?
 ```
 
 Get that pairing right and almost everything else follows.
 
-## Headline rules
+### Headline rules
 
 **Headlines end with a full stop.** "Run the jobs. We run the rest." "Are you in?" "MTD readiness
 checklist." "Verification." This is consistent across the whole site and all four PDFs. It is not
@@ -115,7 +118,14 @@ h3    1.06 → 1.26rem    body 1.0 → 1.08rem    lede 1.1 → 1.3rem
 
 **Measure:** the site sets `.lede { max-width: 58ch }`. Keep running text at 58–65 characters.
 
-## ⚠️ The font subset constraint — read this before making anything
+### Money and numbers
+
+Every price carries the £ sign. Never "59 pounds", never a bare "59". Ranges take an en dash and
+repeat the sign: £29–£59, £149–£399. Where a price is being quoted to a prospect, say **ex VAT**
+next to it, because the site does and the engagement letter does. A monthly price is written
+£59/mo in a table and "£59 a month" in a sentence.
+
+### The font subset constraint — read this before making anything
 
 The fonts embedded in the site are **subsets of 108 glyphs**. These characters do **not** exist and
 will render as blank gaps:
@@ -133,7 +143,7 @@ The `·` mid dot is the brand's natural separator and it is present in all three
 
 ---
 
-# 3. The mark
+## 3. The mark
 
 An angular **K** drawn as a single polygon, not a typeset letter. The exact coordinates, in an
 88 × 88 box:
@@ -144,14 +154,14 @@ An angular **K** drawn as a single polygon, not a typeset letter. The exact coor
 
 That polygon is the mark. Do not substitute a K from any typeface, including Bricolage.
 
-## Two containers
+### Two containers
 
 **Disc** — a brass circle with the K in pine, sitting inside at 60% of the disc width.
 Used in print headers, avatars, and anywhere the mark needs to hold its own.
 
 **Plain** — the bare K in bone, no container. Used in the site header, where it sits on pine.
 
-## The wordmark
+### The wordmark
 
 Two forms, both correct in their place:
 
@@ -161,7 +171,7 @@ Two forms, both correct in their place:
 
 Mark-to-wordmark gap: 42% of the mark's height.
 
-## Never
+### Never
 - Retype the K in another font
 - Recolour the disc away from brass
 - Add a gradient, shadow, glow or outline
@@ -174,9 +184,9 @@ Mark-to-wordmark gap: 42% of the mark's height.
 
 ---
 
-# 4. Layout
+## 4. Layout
 
-## The two page architectures
+### The two page architectures
 
 **Cover / full-bleed (pine).**
 Brass rule across the very top. Wordmark and mono strapline top-left. A large amount of empty pine.
@@ -191,18 +201,18 @@ below. Mono footer, with the page number in emerald.
 
 That ghosted numeral is doing a lot of work. Keep it.
 
-## Radii
+### Radii
 ```
 --r     16px   cards, callouts, tables
 --r-lg  24px   large panels
 99px           pills, tags, chips
 ```
 
-## Shadow
+### Shadow
 One only: `0 26px 70px rgba(20,35,28,.14)`. Soft, large, low opacity, green-tinted. Never a hard
 drop shadow, never black.
 
-## Components
+### Components
 - **Pine callout** — deep green box, brass mono label, brass bullet dots, paper text. For the
   "one-minute version" style summary block.
 - **Quote box** — card ground, emerald left bar 3px, brass mono label. For the aside that matters.
@@ -211,7 +221,7 @@ drop shadow, never black.
 - **Table** — mono brass column headers, hairline under the header, hairlines between rows, emerald
   row labels in the first column. No vertical rules, no filled header block.
 
-## Margins
+### Margins
 ```
 Social graphic   7.5% of width
 A4 print         19mm
@@ -221,7 +231,7 @@ Max width        1240px
 
 ---
 
-# 5. Voice
+## 5. Voice
 
 **Short sentences. Then a shorter one.**
 
@@ -238,13 +248,13 @@ Klyara sounds and it is why it is trusted.
 
 **Lead with the reader's problem, never with Klyara.**
 
-## Words to use
+### Words to use
 ```
 straight · sorted · handled · filed · on time · what it actually costs
 the bit that catches people · gross means gross · plain English
 ```
 
-## Words never to use
+### Words never to use
 ```
 solution · synergy · leverage (verb) · best-in-class · seamless · world-class
 revolutionise · empower · "we're passionate about" · "unlock your potential"
@@ -253,11 +263,12 @@ revolutionise · empower · "we're passionate about" · "unlock your potential"
 Also banned: exclamation marks in marketing copy, emoji in email subject lines, and any sentence
 beginning "In today's fast-paced business environment".
 
-## Emoji
-Functional and rare. `📅` for dates, `📌` for a deadline. Never decorative, never in a headline,
-never in a subject line. The site itself uses almost none — follow it.
+### Emoji
+Don't. Not in headlines, not in subject lines, not as bullets, not as section markers. The site
+uses none and the audience does not want them from a bookkeeper. They also fall outside the font
+subsets, so in anything the generators render they come out as a gap.
 
-## The disclaimer — non-negotiable
+### The disclaimer — non-negotiable
 Every piece of public tax content carries a version of the site's own line:
 
 > General guidance, not tax advice. Rules move — check gov.uk or ask us before acting.
@@ -266,7 +277,7 @@ Keep it. You are publishing tax guidance under a bookkeeping firm's name.
 
 ---
 
-# 6. Photography
+## 6. Photography
 
 **Real over stock, always.** The site's own imagery is real construction. A slightly badly-lit photo
 of an actual Guildford site beats a perfect stock image of models in clean hi-vis, and this audience
@@ -283,7 +294,7 @@ than dropping text onto the image.
 
 ---
 
-# 7. Making new assets
+## 7. Making new assets
 
 Everything in this pack is generated from Python, and the generators ship with it. Use them rather
 than rebuilding by hand — it guarantees the tokens and the fonts are right.
@@ -306,7 +317,7 @@ brand/fonts/             The site's own fonts, converted to static TTF.
 
 ---
 
-# 8. Asset sizes
+## 8. Asset sizes
 
 | Where | Size | Folder |
 |---|---|---|
@@ -327,7 +338,7 @@ brand/fonts/             The site's own fonts, converted to static TTF.
 
 ---
 
-# 9. The test
+## 9. The test
 
 Before anything goes out:
 

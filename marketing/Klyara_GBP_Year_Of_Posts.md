@@ -13,7 +13,7 @@ Posting weekly forever is trivially easy for two weeks and then quietly stops ha
 year of them, dated, tied to the real deadline calendar, ready to schedule.
 
 **Rules that make GBP posts work:**
-- 150–300 words is the sweet spot. Google truncates around 1,500 characters but nobody reads that far.
+- 80–120 words is the sweet spot. Google truncates around 1,500 characters but nobody reads that far.
 - **First sentence carries the whole thing** — that's what shows in the preview.
 - One CTA button. `Learn more` pre-AML, `Book` once supervised.
 - Add a photo to every post. Use the rendered assets in `assets/posts/`.
@@ -26,7 +26,7 @@ year of them, dated, tied to the real deadline calendar, ready to schedule.
 
 # Q1 — September to November 2026
 
-**W1 · Mon 7 Sep — Launch**
+**W1 · Mon 14 Sep — Launch**
 ```
 Klyara is open — the back office for building firms across Guildford, Woking, Godalming and Farnham.
 
@@ -38,33 +38,19 @@ Construction only. Not general accountants who happen to have a few building cli
 Free MTD guide and twelve calculators at klyara.com — no email required.
 ```
 
-**W2 · Mon 14 Sep — CIS deadline**
-```
-CIS returns are due by the 19th of every month. Friday this week.
-
-Late filing starts at £100 the day you miss it, £200 at two months, and £300 or 5% of your deductions
-at six. That's on a single return.
-
-The one people pay for nothing: if you're registered as a contractor and paid no subcontractors this
-month, you still file a nil return. Two minutes, or £100.
-
-Free CIS calculator at klyara.com.
-```
-
-**W3 · Mon 21 Sep — Retentions**
+**W2 · Mon 21 Sep — Retentions**
 ```
 Go and count your retentions. Actually count them, not "roughly".
 
 3% held on jobs that finished eighteen months ago. Defects liability period long over. Nobody ever
 asked for it back, so nobody ever sent it.
 
-Every Surrey firm we look at finds somewhere between four and fifteen thousand pounds they'd mentally
-written off.
+Every Surrey firm we look at finds somewhere between £4,000 and £15,000 they had mentally written off.
 
 The whole system is three columns: job, amount held, release date. Free tracker at klyara.com.
 ```
 
-**W4 · Mon 28 Sep — Quarter end countdown**
+**W3 · Mon 28 Sep — Quarter end countdown**
 ```
 The MTD quarter closes on Monday 5 October, and the update is due 7 November.
 
@@ -77,7 +63,7 @@ most of the job.
 Free seven-step quarter-end checklist at klyara.com.
 ```
 
-**W5 · Mon 5 Oct — Quarter closed**
+**W4 · Mon 5 Oct — Quarter closed**
 ```
 The MTD quarter closed today. 6 July to 5 October is now a closed period.
 
@@ -87,10 +73,10 @@ October to 5 January, due 7 February. The final declaration stays 31 January, as
 If you worked through the checklist, you're done six weeks early. If not, 33 days is comfortable —
 but start now, not in November.
 
-klyara.com
+Fifteen minutes on the phone will tell you where you stand: 020 8058 1496.
 ```
 
-**W6 · Mon 12 Oct — Reverse charge, local angle**
+**W5 · Mon 12 Oct — Reverse charge, local angle**
 ```
 A Guildford-specific VAT problem worth twenty minutes of your time.
 
@@ -104,7 +90,7 @@ invoice.
 Firms doing both get it wrong in both directions. Free checker at klyara.com.
 ```
 
-**W7 · Mon 19 Oct — CIS deadline**
+**W6 · Mon 19 Oct — CIS deadline**
 ```
 CIS returns due today for the month to 5 October. Electronic payment by the 22nd.
 
@@ -116,7 +102,7 @@ you forget one.
 Klyara files CIS for building firms across Guildford and Surrey, every month, on time.
 ```
 
-**W8 · Mon 26 Oct — Gross payment status**
+**W7 · Mon 26 Oct — Gross payment status**
 ```
 If you're a subcontractor having 20% deducted from every invoice and you've never applied for gross
 payment status, you may be lending HMRC a lot of money for free.
@@ -127,10 +113,10 @@ you don't get it back until you reconcile, which can be a year later.
 Three tests: business, turnover, compliance. The compliance one catches people, but it only looks at
 the last twelve months. Failed before? Twelve clean months and you can apply again.
 
-klyara.com
+One call and we will tell you whether you would pass today. klyara.com
 ```
 
-**W9 · Mon 2 Nov — MTD deadline imminent**
+**W8 · Mon 2 Nov — MTD deadline imminent**
 ```
 Your MTD quarterly update is due Saturday, 7 November, for the period 6 July to 5 October.
 
@@ -140,10 +126,10 @@ categorise in bulk rather than one at a time, add the cash purchases, submit.
 Remember what this submission is — a summary of totals. It is not a tax return, there is nothing to
 pay, and you can correct it later. Something reasonable on time beats something perfect late.
 
-klyara.com
+The free 15-page MTD guide covers the whole submission: klyara.com
 ```
 
-**W10 · Mon 9 Nov — Pricing and margin**
+**W9 · Mon 9 Nov — Pricing and margin**
 ```
 Three costs that never make it into a builder's quote.
 
@@ -158,7 +144,7 @@ The jobs that didn't happen. Quote six to win two and the four you lost belong i
 Free job margin calculator at klyara.com.
 ```
 
-**W11 · Mon 16 Nov — CIS deadline**
+**W10 · Mon 16 Nov — CIS deadline**
 ```
 CIS returns due Thursday, 19 November, for the month to 5 November.
 
@@ -169,10 +155,10 @@ payment and deduction statements. Every contractor who deducted from you has to 
 Every pound you can't evidence is tax you'll pay twice. Chase them now while the contractor still
 remembers the job — in February, they won't.
 
-klyara.com
+Free CIS calculator at klyara.com — check every statement against it.
 ```
 
-**W12 · Mon 23 Nov — Late payment**
+**W11 · Mon 23 Nov — Late payment**
 ```
 You are not a bank, but you keep being treated like one.
 
@@ -183,15 +169,15 @@ you don't need it in your contract.
 Almost nobody claims it. But putting the entitlement on your invoice template costs nothing and
 quietly moves you up the payment run.
 
-klyara.com
+Add the wording to your invoice template this week. klyara.com
 ```
 
-**W13 · Mon 30 Nov — The January hole**
+**W12 · Mon 30 Nov — The January hole**
 ```
 Plan for January now, because January is where building firms come unstuck.
 
 Sites shut around the 20th of December. Nobody pays invoices between Christmas and New Year. You come
-back on the 5th to slow starts and bad weather. Then on 31 January HMRC wants your tax bill and your
+back in the first week of January to slow starts and bad weather. Then on 31 January HMRC wants your tax bill and your
 first payment on account — which can be 150% of what you were expecting.
 
 Five weeks of reduced income, then the largest payment of your year.
@@ -203,7 +189,7 @@ Work out what you'll owe on 31 January. Now, not then. klyara.com
 
 # Q2 — December 2026 to February 2027
 
-**W14 · Mon 7 Dec — Shutdown checklist**
+**W13 · Mon 7 Dec — Shutdown checklist**
 ```
 One hour before you shut down for Christmas makes January materially easier.
 
@@ -217,7 +203,7 @@ And know your 31 January number before you go.
 Free checklist at klyara.com.
 ```
 
-**W15 · Mon 14 Dec — Deadlines**
+**W14 · Mon 14 Dec — Deadlines**
 ```
 Dates before the break, for anyone running a building firm in Surrey.
 
@@ -228,23 +214,23 @@ Sun 7 Feb — MTD quarterly update due.
 
 Put them in your phone now. Nobody diarises anything in the first week of January.
 
-klyara.com
+Every deadline for the year ahead is on klyara.com.
 ```
 
-**W16 · Mon 21 Dec — Quiet week**
+**W15 · Mon 21 Dec — Quiet week**
 ```
 CIS returns are due today for the month to 5 December.
 
 After that: have a proper break. The paperwork will still be there in January and it will not have
 got any worse.
 
-We're back on 5 January. If something urgent comes up over the break, the number still works —
+We're back on Monday 4 January. If something urgent comes up over the break, the number still works —
 020 8058 1496.
 
 Klyara — the back office for building firms across Guildford, Woking, Godalming and Farnham.
 ```
 
-**W17 · Mon 4 Jan — Back**
+**W16 · Mon 4 Jan — Back**
 ```
 Back, and there are two dates in the next month that matter.
 
@@ -257,7 +243,7 @@ paid in advance, on top of what you already owe.
 Work out the number this week. klyara.com
 ```
 
-**W18 · Mon 11 Jan — Payments on account**
+**W17 · Mon 11 Jan — Payments on account**
 ```
 On 31 January you may be paying two things, not one.
 
@@ -269,10 +255,10 @@ So a £6,000 bill with nothing on account is £9,000 on 31 January, not £6,000.
 If CIS has been deducted from you all year, you may be owed a refund instead — but only for
 deductions you can evidence. Chase the missing statements this week.
 
-klyara.com
+Twelve free calculators at klyara.com. Work the number out before the 31st, not on it.
 ```
 
-**W19 · Mon 18 Jan — CIS + countdown**
+**W18 · Mon 18 Jan — CIS + countdown**
 ```
 Two deadlines this fortnight.
 
@@ -285,10 +271,10 @@ are separate, and filing on time takes the worst one off the table entirely.
 If you can't pay, set up Time to Pay with HMRC before the 31st. That conversation is administrative
 before the deadline and expensive after it.
 
-klyara.com
+Same working day reply on hello@klyara.com if you would rather hand it over.
 ```
 
-**W20 · Mon 25 Jan — Six days**
+**W19 · Mon 25 Jan — Six days**
 ```
 Six days to 31 January.
 
@@ -300,10 +286,10 @@ aside monthly. A separate account, a standing order, 25 to 30% of what lands.
 
 Everyone knows this. Almost nobody does it. The ones who do never have a bad January again.
 
-klyara.com
+Start the standing order this week, not next January. klyara.com
 ```
 
-**W21 · Mon 1 Feb — Next deadline**
+**W20 · Mon 1 Feb — Next deadline**
 ```
 Filed on the 31st? Good. Now put 7 February in the diary.
 
@@ -316,7 +302,7 @@ Ten minutes if your records are current.
 Klyara handles the quarters for building firms across Guildford and Surrey, from £59 + VAT a month.
 ```
 
-**W22 · Mon 8 Feb — Capital allowances**
+**W21 · Mon 8 Feb — Capital allowances**
 ```
 Buying a van or plant before 5 April? The date on the invoice decides which tax year it lands in.
 
@@ -328,10 +314,10 @@ money, potentially a different tax rate.
 
 But don't buy things for tax reasons. Spending £30,000 to save at 20% leaves you £24,000 down.
 
-klyara.com
+Ask before you buy, not after. klyara.com
 ```
 
-**W23 · Mon 15 Feb — CIS + the £30k wave**
+**W22 · Mon 15 Feb — CIS + the £30k wave**
 ```
 CIS returns due Friday 19 February for the month to 5 February.
 
@@ -344,7 +330,7 @@ most full-time subbies round here are in that wave and don't know it.
 Check the turnover box on your last return, not your bank statement. klyara.com
 ```
 
-**W24 · Mon 22 Feb — Six weeks to April**
+**W23 · Mon 22 Feb — Six weeks to April**
 ```
 Six weeks until the £30,000 MTD threshold arrives, and the biggest mistake the first wave made was
 waiting for the start date.
@@ -357,7 +343,7 @@ Four dates to know: quarters end 5 Jul, 5 Oct, 5 Jan, 5 Apr. Updates due 7 Aug, 
 Free 15-page MTD guide at klyara.com, no email required.
 ```
 
-**W25 · Mon 1 Mar — Year end approaching**
+**W24 · Mon 1 Mar — Year end approaching**
 ```
 Five weeks to the tax year end on 5 April. Worth doing before then:
 
@@ -369,7 +355,7 @@ deduction statement while contractors still remember the jobs.
 Klyara — construction bookkeeping across Guildford, Woking, Godalming and Farnham. klyara.com
 ```
 
-**W26 · Mon 8 Mar — Reverse charge refresher**
+**W25 · Mon 8 Mar — Reverse charge refresher**
 ```
 Two minutes that regularly find money.
 
@@ -386,23 +372,22 @@ Free checker at klyara.com.
 
 ---
 
-# Q3 — March to May 2027
+# Q3 — March to early June 2027
 
-**W27 · Mon 15 Mar — CIS + statements**
+**W26 · Mon 15 Mar — CIS + statements**
 ```
-CIS returns due Thursday 19 March for the month to 5 March.
+CIS returns due Friday 19 March for the month to 5 March.
 
-If you are a subcontractor rather than a contractor, this is also the week to chase any missing
-payment and deduction statements. Every contractor who deducted from you has to give you one within
-14 days of the tax month end.
+Then spend ten minutes on last year's statements. You need one from every contractor who deducted
+from you, and the tax year closes on 5 April.
 
-Every pound you cannot evidence is tax you pay twice. Chase them now, while the contractor still
-remembers the job.
+A statement you cannot produce is 20% you pay twice — once when the contractor deducted it, again
+when HMRC will not credit it. On a £40,000 year of labour that is £8,000 of your own money.
 
-klyara.com
+Missing more than a couple? We chase them for our clients. klyara.com
 ```
 
-**W28 · Mon 22 Mar — Two weeks to year end**
+**W27 · Mon 22 Mar — Two weeks to year end**
 ```
 Two weeks to the tax year end on 5 April. Five things worth doing before then.
 
@@ -412,10 +397,10 @@ gross payment status. And chase every outstanding CIS deduction statement.
 
 None of it takes long. All of it is harder in June.
 
-Klyara — construction bookkeeping across Guildford, Woking, Godalming and Farnham. klyara.com
+Construction bookkeeping from Guildford to Farnham. Start at klyara.com.
 ```
 
-**W29 · Mon 29 Mar — The last week**
+**W28 · Mon 29 Mar — The last week**
 ```
 Last week of the tax year. What actually still matters.
 
@@ -428,10 +413,10 @@ twelve months, not on the tax year.
 And if you are in the April 2027 MTD wave, this is the last quiet week before it starts. Get the bank
 feed connected now and April is a non-event.
 
-klyara.com
+Fifteen minutes with us before Sunday: klyara.com
 ```
 
-**W30 · Mon 5 Apr — Tax year ends · the £30k wave begins ⚠️**
+**W29 · Mon 5 Apr — Tax year ends, and the £30k wave begins**
 ```
 The tax year ends today, and Making Tax Digital now applies at £30,000 of qualifying income.
 
@@ -445,7 +430,7 @@ following month.
 Free 15-page MTD guide, no email required: klyara.com
 ```
 
-**W31 · Mon 12 Apr — Your first quarter**
+**W30 · Mon 12 Apr — Your first quarter**
 ```
 In MTD for the first time? Here is what the first quarter actually involves.
 
@@ -458,7 +443,7 @@ is still settled once a year at the final declaration on 31 January.
 If your books are current, it is about twenty minutes. klyara.com
 ```
 
-**W32 · Mon 19 Apr — CIS deadline + new year habits**
+**W31 · Mon 19 Apr — CIS deadline + new year habits**
 ```
 CIS returns due today for the month to 5 April.
 
@@ -468,10 +453,10 @@ recurring reminder on the 15th, not the 19th.
 
 Four days of warning is the difference between a routine job and a bad evening.
 
-klyara.com
+Free CIS calculator, and eleven others, at klyara.com.
 ```
 
-**W33 · Mon 26 Apr — The receipt habit**
+**W32 · Mon 26 Apr — The receipt habit**
 ```
 The single habit that makes everything else easy: photograph the receipt at the counter.
 
@@ -483,10 +468,10 @@ purchases on a personal card, PPE, and the Sunday emergency run.
 
 Missed receipts are not a compliance problem. They are just tax you did not need to pay.
 
-klyara.com
+Snap the next one. Then see what else you have been missing: klyara.com
 ```
 
-**W34 · Mon 3 May — MTD update due 7 May ⚠️**
+**W33 · Mon 3 May — MTD update due 7 May**
 ```
 Your MTD quarterly update for 6 January to 5 April is due this Friday, 7 May.
 
@@ -496,26 +481,26 @@ categorise in bulk rather than one transaction at a time, add the cash purchases
 Something reasonable on time beats something perfect late. It is a summary of totals and you can
 correct it afterwards.
 
-klyara.com
+If it will not be done by Friday, say so today: hello@klyara.com
 ```
 
-**W35 · Mon 10 May — The cost of a first employee**
+**W34 · Mon 10 May — The cost of a first employee**
 ```
 Thinking about taking someone on? The salary is not the cost.
 
 Add employer's National Insurance, employer pension contributions, holiday pay, statutory sick pay
 when it happens, and the paid hours that are not billable. A useful rule of thumb is to budget
-25-30% above gross salary for the direct statutory costs alone.
+25–30% above gross salary for the direct statutory costs alone.
 
 Then think about utilisation — how many of their paid hours you can actually bill. That is the number
 that decides whether the hire works.
 
 And it means running PAYE, with real deadlines every month on top of your CIS ones.
 
-klyara.com
+Payroll and CIS pay from £5 a payslip, ex VAT: klyara.com
 ```
 
-**W36 · Mon 17 May — Verification**
+**W35 · Mon 17 May — Verification**
 ```
 CIS returns due Wednesday 19 May.
 
@@ -530,7 +515,7 @@ Verify first, every time, and keep the reference number.
 Free CIS calculator: klyara.com
 ```
 
-**W37 · Mon 24 May — Why busy firms are skint**
+**W36 · Mon 24 May — Why busy firms are skint**
 ```
 "We are busier than we have ever been and there is no money in the bank."
 
@@ -539,13 +524,13 @@ It is almost never a pricing problem. Four things drain cash while the P&L looks
 Your real payment terms, once you add the days you sat on the invoice. Retentions, held for a year or
 more. The VAT reverse charge float that disappeared in 2021. And CIS deductions sitting with HMRC.
 
-On a firm turning over £400,000 those four together can be £50,000-£80,000 of working capital that
+On a firm turning over £400,000 those four together can be £50,000–£80,000 of working capital that
 exists on paper and not in the bank.
 
 You cannot price your way out of that. You can only shorten it. klyara.com
 ```
 
-**W38 · Mon 31 May — Retentions, again**
+**W37 · Mon 31 May — Retentions, again**
 ```
 Second time of asking, because half the trade still has not done it.
 
@@ -554,13 +539,13 @@ period long over, nobody ever asked for it back.
 
 Job, amount held, release date. Three columns. Diarise the release date and ask on the day.
 
-Most firms that do this properly for the first time find between four and fifteen thousand pounds
-they had mentally written off.
+Most firms that do this properly for the first time find between £4,000 and £15,000 they had mentally
+written off.
 
 Free tracker: klyara.com
 ```
 
-**W39 · Mon 7 Jun — Quoting**
+**W38 · Mon 7 Jun — Quoting**
 ```
 Most lost jobs are not lost on price. They are lost on the fourth day.
 
@@ -573,14 +558,14 @@ I will have a full quote to you by Thursday." That one text keeps you in it.
 
 And a number in a text message is not a quote. It is a number, and numbers only get compared.
 
-klyara.com
+Send the holding message today. klyara.com
 ```
 
 ---
 
-# Q4 — June to August 2027
+# Q4 — June to September 2027
 
-**W40 · Mon 14 Jun — CIS deadline**
+**W39 · Mon 14 Jun — CIS deadline**
 ```
 CIS returns due Monday 21 June this month — the 19th falls on a Saturday, so work to Friday the 18th.
 
@@ -589,10 +574,10 @@ care what day it is, and neither does the penalty.
 
 Nil months still need a nil return. Two minutes, or £100.
 
-klyara.com
+Records in by the 10th and it is filed without you thinking about it. klyara.com
 ```
 
-**W41 · Mon 21 Jun — Getting paid faster**
+**W40 · Mon 21 Jun — Getting paid faster**
 ```
 Four boring things that get builders paid faster. None of them are clever.
 
@@ -605,7 +590,7 @@ Klyara's Trade and Pro plans include automated invoice chasing, so it happens wh
 time. klyara.com
 ```
 
-**W42 · Mon 28 Jun — Quarter end approaching**
+**W41 · Mon 28 Jun — Quarter end approaching**
 ```
 The MTD quarter ends Monday 5 July. Seven jobs, one a day, each under twenty minutes.
 
@@ -618,7 +603,7 @@ Do one a day this week and you are closed off by Sunday, five weeks ahead of the
 Free checklist: klyara.com
 ```
 
-**W43 · Mon 5 Jul — Quarter closed**
+**W42 · Mon 5 Jul — Quarter closed**
 ```
 The MTD quarter closed today. 6 April to 5 July is now a closed period.
 
@@ -627,10 +612,10 @@ The update is due 7 August — 33 days. The next quarter runs 6 July to 5 Octobe
 If you worked through the checklist last week you are done, early, and can forget about it until
 August. If not, 33 days is comfortable. Start with the bank feed.
 
-klyara.com
+The next one closes 5 October. Free quarter-end checklist at klyara.com.
 ```
 
-**W44 · Mon 12 Jul — 31 July payment on account**
+**W43 · Mon 12 Jul — 31 July payment on account**
 ```
 A reminder that catches people every summer: your second payment on account is due 31 July.
 
@@ -640,10 +625,10 @@ month of the year for a lot of building firms.
 If your income this year is genuinely lower than last, you can apply to reduce it — but reduce on
 evidence, not optimism, because HMRC charges interest on the shortfall.
 
-klyara.com
+If July is going to be tight, the time to say so is now: 020 8058 1496.
 ```
 
-**W45 · Mon 19 Jul — CIS + a mid-year check**
+**W44 · Mon 19 Jul — CIS + a mid-year check**
 ```
 CIS returns due today for the month to 5 July.
 
@@ -657,7 +642,7 @@ On £120,000 of labour invoicing, that is £24,000 that stays in your business i
 HMRC. klyara.com
 ```
 
-**W46 · Mon 26 Jul — Payment on account week**
+**W45 · Mon 26 Jul — Payment on account week**
 ```
 31 July this Saturday. Second payment on account due.
 
@@ -666,12 +651,12 @@ agreed in advance is administrative. The same conversation in August, after a mi
 with penalties attached.
 
 And when it is paid: work out what next January looks like and start putting it aside monthly. A
-standing order of 25-30% of what lands is the change that turns January from an event into a date.
+standing order of 25–30% of what lands is the change that turns January from an event into a date.
 
-klyara.com
+Work out next January's number while this one is still fresh. klyara.com
 ```
 
-**W47 · Mon 2 Aug — MTD update due 7 August ⚠️**
+**W46 · Mon 2 Aug — MTD update due 7 August**
 ```
 Your MTD quarterly update for 6 April to 5 July is due this Saturday, 7 August.
 
@@ -680,11 +665,11 @@ correctable later.
 
 File something reasonable on time rather than something perfect late.
 
-Klyara handles the quarters for building firms across Guildford and Surrey, from £59 + VAT a month.
-klyara.com
+We file the quarters for building firms across Guildford, Woking and Farnham, from £59 + VAT a
+month. klyara.com
 ```
 
-**W48 · Mon 9 Aug — The quiet month**
+**W47 · Mon 9 Aug — The quiet month**
 ```
 August is the quietest admin month most building firms get. It is the best time of the year to fix
 the books rather than to ignore them.
@@ -695,10 +680,10 @@ invoices.
 
 None of them are urgent, which is exactly why they never happen in a busy month.
 
-klyara.com
+Start with the retention register. Free tracker at klyara.com.
 ```
 
-**W49 · Mon 16 Aug — CIS deadline**
+**W48 · Mon 16 Aug — CIS deadline**
 ```
 CIS returns due Thursday 19 August for the month to 5 August.
 
@@ -708,10 +693,10 @@ contractor, paying nobody that month, and not filing.
 Two minutes, or £100. And if you have genuinely stopped using subcontractors, ask HMRC to make the
 scheme inactive so it stops being a monthly obligation.
 
-klyara.com
+We file nil returns for clients whether or not they remember. klyara.com
 ```
 
-**W50 · Mon 23 Aug — Planning for autumn**
+**W49 · Mon 23 Aug — Planning for autumn**
 ```
 What a back office should actually look like, going into the busy autumn.
 
@@ -721,10 +706,10 @@ what you are owed by age, retentions outstanding, and the bank against the next 
 
 If that is not what yours looks like, autumn is when it starts to hurt.
 
-klyara.com
+Book the fifteen-minute review before September fills up: klyara.com
 ```
 
-**W51 · Mon 30 Aug — A year of this**
+**W50 · Mon 30 Aug — A year of this**
 ```
 A year of doing the books for building firms around Guildford and Surrey. The three things we found
 most often, in order.
@@ -732,7 +717,7 @@ most often, in order.
 Reverse charge coded wrongly — usually in both directions, because firms here do domestic and
 main-contractor work side by side.
 
-Retentions nobody was tracking. Between four and fifteen thousand pounds, in almost every case.
+Retentions nobody was tracking. Between £4,000 and £15,000, in almost every case.
 
 And gross payment status not applied for, by firms that would comfortably pass all three tests.
 
@@ -740,7 +725,7 @@ None of those are exotic. They are just what happens when construction is the aw
 someone's client book. klyara.com
 ```
 
-**W52 · Mon 6 Sep — The four numbers**
+**W51 · Mon 6 Sep 2027 — The four numbers**
 ```
 If you only look at four numbers on the first of every month, make it these.
 
@@ -752,7 +737,26 @@ Bank balance against what is due out in the next thirty days.
 Know those four and you are running a business. Not knowing them is doing a job that happens to have
 your name on the van.
 
-klyara.com
+Free job margin calculator at klyara.com. Start with the first one.
+```
+
+**W52 · Mon 13 Sep 2027 — One year in**
+```
+Klyara is a year old today. Four things changed for the firms who got their back office straight.
+
+They knew their January number in November, and put it aside monthly, so 31 January stopped being an
+event and went back to being a date.
+
+They got their retentions back. Job, amount held, release date, and somebody asking on the day.
+
+They stopped charging VAT on reverse charge work, and stopped paying it on subbie invoices that
+should never have shown it.
+
+And the CIS return went in every month without anyone having to remember it.
+
+None of that is clever. It is just done, on time, by someone whose job it is.
+
+Free retention tracker at klyara.com. That is where most of it starts.
 ```
 
 ## Rewrite these from real conversations
