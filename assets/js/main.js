@@ -16,8 +16,10 @@ if(veil){
   };
 }
 
-/* inertia smooth scroll (desktop) */
-if(!reduce && !touch){
+/* inertia smooth scroll (desktop only — explicit touch guard) */
+var isTouchDevice = matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+var isNarrow = matchMedia('(max-width: 1060px)').matches;
+if(!reduce && !isTouchDevice && !isNarrow){
   var target=window.scrollY, current=target, raf=null;
   var max=function(){return document.documentElement.scrollHeight-innerHeight};
   addEventListener('wheel',function(e){
@@ -196,7 +198,7 @@ if(stps.length && 'IntersectionObserver' in window){
 }
 
 /* magnetic buttons (desktop) */
-if(!reduce && !touch){
+if(!reduce && !isTouchDevice){
   document.querySelectorAll('.btn-solid,.btn-lg').forEach(function(b){
     b.addEventListener('pointermove',function(e){
       var r=b.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)/r.width,y=(e.clientY-r.top-r.height/2)/r.height;
@@ -235,7 +237,7 @@ document.querySelectorAll('[data-slider]:not([data-w])').forEach(function(sl){sl
   go(0); arm();
 });
 /* v4: card tilt */
-if(!reduce && !touch){
+if(!reduce && !isTouchDevice){
   document.querySelectorAll('.tilt').forEach(function(c){
     c.addEventListener('pointermove',function(e){
       var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
@@ -256,6 +258,25 @@ if(!reduce && !touch){
   });
   document.addEventListener('click',function(e){ if(open && !m.contains(e.target) && !t.contains(e.target)) set(false); });
   m.addEventListener('click',function(e){ if(e.target.closest('a')) set(false); });
+
+  /* Mobile: tap mega-t links inside .ndrop to toggle inline submenu */
+  document.querySelectorAll('.ndrop .mega-t').forEach(function(link){
+    link.addEventListener('click',function(e){
+      if(!matchMedia('(max-width:1060px)').matches) return;
+      e.preventDefault();
+      var drop = link.closest('.ndrop');
+      var was = drop.classList.contains('open');
+      /* close any other open ndrop in the same nav */
+      document.querySelectorAll('.nav .ndrop.open').forEach(function(d){ d.classList.remove('open'); });
+      if(!was) drop.classList.add('open');
+    });
+  });
+  /* Close ndrop submenus when tapping outside */
+  document.addEventListener('click',function(e){
+    if(matchMedia('(max-width:1060px)').matches && !e.target.closest('.ndrop')){
+      document.querySelectorAll('.nav .ndrop.open').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
 })();
 /* v6: animated headers */
 (function(){var hs=document.querySelectorAll('h1.h1,h2.h1');

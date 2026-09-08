@@ -27,7 +27,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{overflow-x:clip;scrollbar-width:thin;scrollbar-color:rgba(20,35,28,.35) transparent}
-body{overflow-x:clip;overscroll-behavior:none;background:var(--paper);color:var(--ink);
+body{overflow-x:clip;overflow-y:auto;overscroll-behavior:auto;background:var(--paper);color:var(--ink);
   font-family:'Instrument',system-ui,sans-serif;font-size:var(--fs-body);line-height:1.66;
   -webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;mix-blend-mode:multiply;
@@ -106,7 +106,8 @@ strong{font-weight:650;color:var(--ink)}
   .burger{display:block}
   .nav{position:fixed;inset:74px 0 auto 0;flex-direction:column;align-items:stretch;background:var(--card);
     border-bottom:1px solid var(--line2);padding:12px var(--pad) 26px;gap:2px;
-    transform:translateY(-130%);transition:transform .35s var(--ease)}
+    max-height:calc(100dvh - 74px);overflow-y:auto;-webkit-overflow-scrolling:touch;
+    transform:translateY(-130%);transition:transform .35s var(--ease);box-shadow:0 20px 40px rgba(20,35,28,.16)}
   .nav-open .nav{transform:none}
   .nav a{padding:14px 10px;font-size:1.05rem}
 }
@@ -1156,7 +1157,21 @@ img.p2{filter:saturate(.85) contrast(1.06) sepia(.12)}
 .tmenu a span{display:block;font-size:.7rem;color:var(--mute)}
 .tmenu a:hover{background:var(--paper)}
 .tmenu a:hover b{color:var(--em)}
-@media(max-width:1060px){.tmenu{display:none}}
+@media(max-width:1060px){
+  .tmenu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;background:transparent;
+    border:none;display:none;padding:0;top:auto;left:auto;right:auto;z-index:auto}
+  .ndrop.open .tmenu{display:block}
+  .tmenu .wrap{grid-template-columns:1fr;gap:4px;padding-block:6px 10px}
+  .tmenu .mcol{padding-inline:0;border-left:0}
+  .tmenu .mlist{display:grid;gap:1px}
+  .tmenu a{padding:10px 12px;border-radius:10px}
+  .tmenu a b{font-size:.92rem}
+  .tmenu a span{font-size:.78rem}
+  .tmenu .mpromo{margin-top:6px}
+  /* Chevron rotation on open */
+  .ndrop .mega-t::after{transition:transform .25s}
+  .ndrop.open .mega-t::after{transform:rotate(225deg) translateY(-2px)}
+}
 /* tool page frame = the app */
 .toolwrap{max-width:440px;margin-inline:auto}
 .toolwrap .appdemo{max-width:100%}
