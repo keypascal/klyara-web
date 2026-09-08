@@ -1926,3 +1926,29 @@ img,svg,video,canvas{max-width:100%}
   .tldr li{font-size:1.02rem}
   input,select,textarea{font-size:16px}   /* stops iOS zooming on focus */
 }
+
+/* ===== MOBILE MENU: Services mega becomes an inline accordion ===== */
+@media(max-width:1060px){
+  .nav .mega{position:static;display:none;opacity:1;transform:none;pointer-events:auto;
+    top:auto;left:auto;right:auto;z-index:auto;box-shadow:none;border:0;
+    background:transparent;margin:0;padding:2px 0 10px;order:0}
+  .nav .mega.open{display:block}
+  .nav .mega .wrap{max-width:none;margin:0;padding:0}
+  .nav .mega .mgrid{grid-template-columns:1fr;gap:14px;padding:0}
+  .nav .mega .mcol{display:block;padding-inline:0;border-left:0}
+  .nav .mega .mcol .h5{height:auto;white-space:normal}
+  .nav .mega .mfoot{flex-direction:column;align-items:stretch;gap:2px;max-width:none;
+    margin:8px 0 0;padding:10px 0 0;border-top:1px solid var(--line)}
+  .nav .mega .mfoot a{display:block;padding:9px 12px;border-radius:10px}
+  .nav .mega .mfoot a.mcta{margin-left:0}
+  /* Tools/Resources dropdowns: single column, full width on mobile */
+  .tmenu .wrap{grid-template-columns:1fr}
+}
+
+/* ===== MOBILE TOPBAR: book-a-call + phone only ===== */
+@media(max-width:700px){
+  .topbar .wrap>span:first-child{display:none}
+}
+@media(max-width:980px){
+  .tb-chip[href^="mailto:"]{display:none}
+}

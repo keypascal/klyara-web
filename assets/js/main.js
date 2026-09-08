@@ -58,7 +58,10 @@ addEventListener('scroll',function(){
 var burger=document.querySelector('.burger');
 if(burger){ burger.addEventListener('click',function(){ document.body.classList.toggle('nav-open');
   burger.setAttribute('aria-expanded',document.body.classList.contains('nav-open')); });
-  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open')})});
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){
+    if(a.classList.contains('mega-t')) return;  /* accordion parents handled separately */
+    document.body.classList.remove('nav-open');
+  })});
 }
 
 /* reveal system (one config) */
@@ -248,33 +251,55 @@ if(!reduce && !isTouchDevice){
 }
 /* v4: mega menu */
 (function(){
-  var t=document.querySelector('.mega-t'), m=document.querySelector('.mega'); if(!t||!m) return;
+  var t=document.querySelector('.mega-t'), m=document.querySelector('.mega');
+  var isMobile=function(){ return matchMedia('(max-width:1060px)').matches; };
   var open=false, hideT=null;
-  function set(o){ open=o; m.classList.toggle('open',o); t.classList.toggle('open',o); }
-  t.addEventListener('click',function(e){ if(matchMedia('(max-width:1060px)').matches) return; e.preventDefault(); set(!open); });
-  [t,m].forEach(function(el){
-    el.addEventListener('pointerenter',function(){ if(matchMedia('(max-width:1060px)').matches)return; clearTimeout(hideT); set(true); });
-    el.addEventListener('pointerleave',function(){ if(matchMedia('(max-width:1060px)').matches)return; hideT=setTimeout(function(){set(false)},260); });
-  });
-  document.addEventListener('click',function(e){ if(open && !m.contains(e.target) && !t.contains(e.target)) set(false); });
-  m.addEventListener('click',function(e){ if(e.target.closest('a')) set(false); });
+  function set(o){ open=o; if(m){m.classList.toggle('open',o);} if(t){t.classList.toggle('open',o);} }
 
-  /* Mobile: tap mega-t links inside .ndrop to toggle inline submenu */
-  document.querySelectorAll('.ndrop .mega-t').forEach(function(link){
+  /* Desktop: hover + click for the Services mega panel */
+  if(t && m){
+    t.addEventListener('click',function(e){ if(isMobile()) return; e.preventDefault(); set(!open); });
+    [t,m].forEach(function(el){
+      el.addEventListener('pointerenter',function(){ if(isMobile())return; clearTimeout(hideT); set(true); });
+      el.addEventListener('pointerleave',function(){ if(isMobile())return; hideT=setTimeout(function(){set(false)},260); });
+    });
+    document.addEventListener('click',function(e){ if(open && !m.contains(e.target) && !t.contains(e.target)) set(false); });
+    m.addEventListener('click',function(e){ if(e.target.closest('a')) set(false); });
+  }
+
+  /* Mobile: pull the Services mega panel inline so it can expand as an accordion.
+     (On desktop it is position:fixed, so moving it in the DOM is invisible there.) */
+  var nav=document.querySelector('.nav');
+  function repositionMega(){
+    if(!nav || !m || !t) return;
+    if(isMobile()){
+      if(m.parentElement !== nav){ t.after(m); }
+    } else {
+      var hdr=document.querySelector('.hdr');
+      if(hdr && m.parentElement === nav){ hdr.appendChild(m); }
+    }
+  }
+  repositionMega();
+  addEventListener('resize',repositionMega);
+
+  /* Mobile accordion: Services + Tools + Resources toggle inline */
+  document.querySelectorAll('.nav .mega-t').forEach(function(link){
     link.addEventListener('click',function(e){
-      if(!matchMedia('(max-width:1060px)').matches) return;
+      if(!isMobile()) return;
       e.preventDefault();
-      var drop = link.closest('.ndrop');
-      var was = drop.classList.contains('open');
-      /* close any other open ndrop in the same nav */
-      document.querySelectorAll('.nav .ndrop.open').forEach(function(d){ d.classList.remove('open'); });
-      if(!was) drop.classList.add('open');
+      var parent=link.parentElement;
+      var drop=parent.classList.contains('ndrop') ? parent : m;
+      var was=drop.classList.contains('open');
+      document.querySelectorAll('.nav .ndrop.open, .nav .mega.open, .nav .mega-t.open').forEach(function(d){ d.classList.remove('open'); });
+      if(!was){ drop.classList.add('open'); link.classList.add('open'); }
     });
   });
-  /* Close ndrop submenus when tapping outside */
+
+  /* Close accordions when tapping outside the nav */
   document.addEventListener('click',function(e){
-    if(matchMedia('(max-width:1060px)').matches && !e.target.closest('.ndrop')){
-      document.querySelectorAll('.nav .ndrop.open').forEach(function(d){ d.classList.remove('open'); });
+    if(!isMobile()) return;
+    if(!e.target.closest('.nav')){
+      document.querySelectorAll('.nav .ndrop.open, .nav .mega.open, .nav .mega-t.open').forEach(function(d){ d.classList.remove('open'); });
     }
   });
 })();
