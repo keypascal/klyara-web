@@ -211,14 +211,39 @@ if(!reduce && !isTouchDevice){
   });
 }
 
-/* forms: demo mode until Brevo action wired */
+/* forms: real submissions to the send-lead edge function (Brevo) */
+var SB_URL='https://mybbdioddjpupcdkmoli.supabase.co/functions/v1/send-lead';
+var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15YmJkaW9kZGpwdXBjZGttb2xpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc5NTAyNDgsImV4cCI6MjEwMzUyNjI0OH0.b03QT5ktXvPmgAsbpVKLvMkzAFGgyI6pSnEOfn-ycDg';
+function sbPost(kind,f,extra){
+  var data={kind:kind};
+  ['name','firm','email','phone','trade','shape','message'].forEach(function(k){
+    var el=f.querySelector('[name="'+k+'"]'); if(el&&el.value)data[k]=el.value;
+  });
+  for(var k2 in (extra||{}))data[k2]=extra[k2];
+  return fetch(SB_URL,{method:'POST',headers:{'apikey':SB_KEY,'content-type':'application/json'},body:JSON.stringify(data)});
+}
 document.querySelectorAll('form[data-demo]').forEach(function(f){
   f.addEventListener('submit',function(ev){ ev.preventDefault();
     var em=f.querySelector('input[type="email"]');
     if(em && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)){em.focus();em.style.borderColor='#A6592E';return}
+    var kind=/waitlist/i.test(f.getAttribute('aria-label')||'')?'waitlist':
+           /download|guide/i.test(f.getAttribute('aria-label')||'')?'guide':'enquiry';
     for(var i=0;i<f.elements.length;i++)f.elements[i].disabled=true;
     var ok=f.querySelector('.okmsg'); if(ok)ok.classList.add('show');
-    var dl=f.getAttribute('data-download'); if(dl)setTimeout(function(){location.href=dl},900);
+    sbPost(kind,f).catch(function(){}).then(function(){
+      var dl=f.getAttribute('data-download'); if(dl)setTimeout(function(){location.href=dl},900);
+    });
+  });
+});
+/* footer newsletter join button */
+document.querySelectorAll('.fnp-join').forEach(function(b){
+  b.addEventListener('click',function(){
+    var box=document.querySelector('.fnp-field input[type="email"]');
+    if(!box||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(box.value)){if(box){box.focus();box.style.borderColor='#A6592E'}return}
+    var btn=b; btn.disabled=true; btn.textContent='Joining…';
+    sbPost('newsletter',document.createElement('form'),{email:box.value}).catch(function(){}).then(function(){
+      btn.textContent='Joined ✓'; box.disabled=true;
+    });
   });
 });
 
